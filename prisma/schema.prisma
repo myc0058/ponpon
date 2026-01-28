@@ -17,7 +17,8 @@ model Quiz {
   title       String
   description String
   imageUrl    String?
-  resultType  ResultType @default(SCORE_BASED)
+  resultType      ResultType @default(SCORE_BASED)
+  typeCodeLimit   Int        @default(2) // 조합형에서 상위 몇 개의 코드를 합칠지 결정
   createdAt   DateTime   @default(now())
   updatedAt   DateTime   @updatedAt
   plays       Int        @default(0)

@@ -1,4 +1,5 @@
 import { getQuizWithDetails, updateQuiz, deleteQuiz } from '@/actions/quiz'
+export const dynamic = 'force-dynamic'
 import styles from '../edit/editor.module.css'
 import Link from 'next/link'
 import { ArrowLeft, Save } from 'lucide-react'
@@ -9,9 +10,12 @@ export default async function QuizSettingsPage({ params }: { params: Promise<{ i
     const { id } = await params
     const quiz = await getQuizWithDetails(id)
 
+    // Forced refresh at 2026-01-28 11:18
     if (!quiz) {
         return <div>Quiz not found</div>
     }
+
+    console.log(`[SettingsPage Render] ID: ${id}, typeCodeLimit: ${quiz.typeCodeLimit}`)
 
     async function handleDelete() {
         'use server'
@@ -82,6 +86,22 @@ export default async function QuizSettingsPage({ params }: { params: Promise<{ i
                             </select>
                             <p style={{ fontSize: '0.85rem', color: '#666', marginTop: '0.5rem' }}>
                                 ⚠️ 결과 타입을 변경하면 기존 질문/결과 설정을 다시 확인해야 합니다.
+                            </p>
+                        </div>
+                        <div>
+                            <label className={styles.label}>
+                                결과 도출 코드 개수 (조합형 전용)
+                            </label>
+                            <input
+                                name="typeCodeLimit"
+                                type="number"
+                                defaultValue={quiz.typeCodeLimit}
+                                className={styles.input}
+                                min={1}
+                                max={10}
+                            />
+                            <p style={{ fontSize: '0.85rem', color: '#666', marginTop: '0.5rem' }}>
+                                선택된 답변 중 빈도수가 높은 상위 N개의 코드를 합쳐 결과를 만듭니다. (예: 2 설정 시 'E'+'T' = 'ET')
                             </p>
                         </div>
                         <button type="submit" className={styles.button} style={{ alignSelf: 'flex-start' }}>

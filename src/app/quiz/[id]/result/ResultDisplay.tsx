@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import styles from './result.module.css'
-import { Share2, Home, Lock } from 'lucide-react'
+import { Share2, Home, Lock, Link as LinkIcon } from 'lucide-react'
 
 type Result = {
     id: string
@@ -36,9 +36,6 @@ export default function ResultDisplay({
 
     const handlePayment = async () => {
         setIsPaymentLoading(true)
-
-        // TODO: Integrate Toss Payments
-        // For now, simulate payment
         setTimeout(() => {
             setIsPaid(true)
             setIsPaymentLoading(false)
@@ -50,16 +47,25 @@ export default function ResultDisplay({
         const text = `나는 "${quiz.title}" 퀴즈에서 "${result.title}" 결과가 나왔어요!`
 
         switch (platform) {
-            case 'kakao':
-                // TODO: Implement Kakao Share SDK
-                alert('카카오톡 공유 기능은 준비 중입니다.')
-                break
             case 'facebook':
                 window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`, '_blank')
                 break
             case 'twitter':
                 window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank')
                 break
+            case 'kakao':
+                alert('카카오톡 공유 기능은 준비 중입니다.')
+                break
+        }
+    }
+
+    const handleCopyLink = async () => {
+        try {
+            await navigator.clipboard.writeText(window.location.href)
+            alert('링크가 클립보드에 복사되었습니다!')
+        } catch (err) {
+            console.error('Failed to copy: ', err)
+            alert('링크 복사에 실패했습니다.')
         }
     }
 
@@ -119,10 +125,11 @@ export default function ResultDisplay({
                                     카카오톡
                                 </button>
                                 <button
-                                    className={`${styles.shareButton} ${styles.facebook}`}
-                                    onClick={() => handleShare('facebook')}
+                                    className={`${styles.shareButton} ${styles.copy}`}
+                                    onClick={handleCopyLink}
                                 >
-                                    페이스북
+                                    <LinkIcon size={16} style={{ marginRight: '4px', verticalAlign: 'middle' }} />
+                                    링크 복사
                                 </button>
                                 <button
                                     className={`${styles.shareButton} ${styles.twitter}`}
@@ -141,7 +148,6 @@ export default function ResultDisplay({
                 </Link>
             </div>
 
-            {/* Ad placeholder */}
             <div className={styles.adPlaceholder}>
                 <div className={styles.adLabel}>광고</div>
                 <div className={styles.adContent}>Google AdSense 영역</div>

@@ -14,6 +14,7 @@ export async function createQuiz(formData: FormData) {
             title,
             description,
             imageUrl,
+            typeCodeLimit: parseInt(formData.get('typeCodeLimit') as string) || 2,
         },
     })
 
@@ -35,7 +36,7 @@ export async function deleteQuiz(id: string) {
 }
 
 export async function getQuizWithDetails(id: string) {
-    return await prisma.quiz.findUnique({
+    const quiz = await prisma.quiz.findUnique({
         where: { id },
         include: {
             questions: {
@@ -46,7 +47,32 @@ export async function getQuizWithDetails(id: string) {
                 orderBy: { minScore: 'asc' }
             }
         }
-    })
+    }) as any
+
+    if (quiz) {
+        console.log(`[getQuizWithDetails] ID: ${id}`)
+
+        // 필드가 유실된 경우 (Prisma Client 캐시 문제 등) 를 위해 생쿼리(Raw Query)로 직접 DB 조회
+        if (quiz.typeCodeLimit === undefined || quiz.typeCodeLimit === null) {
+            try {
+                const rawData: any = await prisma.$queryRawUnsafe(
+                    'SELECT typeCodeLimit FROM Quiz WHERE id = ?',
+                    id
+                )
+                if (rawData && rawData.length > 0 && rawData[0].typeCodeLimit !== undefined) {
+                    console.log(`- typeCodeLimit found via Raw Query: ${rawData[0].typeCodeLimit}`)
+                    quiz.typeCodeLimit = rawData[0].typeCodeLimit
+                } else {
+                    console.error('CRITICAL: typeCodeLimit is missing even in Raw Query!')
+                    quiz.typeCodeLimit = 2
+                }
+            } catch (rawError) {
+                console.error('Raw Query failed:', rawError)
+                quiz.typeCodeLimit = 2
+            }
+        }
+    }
+    return quiz
 }
 
 // Questions
@@ -130,15 +156,32 @@ export async function updateQuiz(id: string, formData: FormData) {
     const imageUrl = formData.get('imageUrl') as string
     const resultType = formData.get('resultType') as 'SCORE_BASED' | 'TYPE_BASED'
 
+    const typeCodeLimit = parseInt(formData.get('typeCodeLimit') as string) || 2
+    console.log(`[UpdateQuiz] ID: ${id}, typeCodeLimit: ${typeCodeLimit}`)
+
     await prisma.quiz.update({
         where: { id },
         data: {
             title,
             description,
             imageUrl,
-            resultType
+            resultType,
+            typeCodeLimit
         }
     })
+
+    // Prisma Client가 예전 버전일 경우를 대비해 Raw Query로 한 번 더 확실히 업데이트
+    try {
+        await prisma.$executeRawUnsafe(
+            'UPDATE Quiz SET typeCodeLimit = ? WHERE id = ?',
+            typeCodeLimit,
+            id
+        )
+        console.log(`[UpdateQuiz] Raw fallback updated typeCodeLimit to ${typeCodeLimit}`)
+    } catch (e) {
+        console.error('Raw update failed:', e)
+    }
+
     revalidatePath(`/admin/${id}/edit`)
     revalidatePath(`/admin/${id}/settings`)
     revalidatePath('/admin')

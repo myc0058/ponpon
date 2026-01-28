@@ -17,7 +17,7 @@ export default async function Home() {
       </div>
 
       <div className={styles.grid}>
-        {quizzes.map((quiz) => (
+        {quizzes.map((quiz: any) => (
           <Link href={`/quiz/${quiz.id}`} key={quiz.id} className={styles.card}>
             {/* Using img tag for simplicity for now, optimize with next/image later if needed */}
             {/* eslint-disable-next-line @next/next/no-img-element */}

@@ -64,7 +64,7 @@ export default async function EditQuizPage({ params }: { params: Promise<{ id: s
             <div className={styles.section}>
                 <h2 className={styles.sectionTitle}>질문 관리</h2>
                 <div className={styles.list}>
-                    {quiz.questions.map((q) => (
+                    {quiz.questions.map((q: any) => (
                         <div key={q.id} className={styles.item}>
                             <div className={styles.itemHeader}>
                                 <span className={styles.itemContent}>Q{q.order}: {q.content}</span>
@@ -77,7 +77,7 @@ export default async function EditQuizPage({ params }: { params: Promise<{ id: s
 
                             {/* 옵션 리스트 */}
                             <div className={styles.optionsList}>
-                                {q.options.map((opt) => (
+                                {q.options.map((opt: any) => (
                                     <div key={opt.id} className={styles.optionItem}>
                                         <span>
                                             {opt.content}
@@ -141,7 +141,7 @@ export default async function EditQuizPage({ params }: { params: Promise<{ id: s
             <div className={styles.section}>
                 <h2 className={styles.sectionTitle}>결과 관리</h2>
                 <div className={styles.list}>
-                    {quiz.results.map((r) => (
+                    {quiz.results.map((r: any) => (
                         <div key={r.id} className={styles.item}>
                             <div className={styles.itemHeader}>
                                 <span className={styles.itemContent}>{r.title}</span>

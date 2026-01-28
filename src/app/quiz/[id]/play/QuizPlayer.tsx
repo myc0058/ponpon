@@ -34,6 +34,7 @@ type Quiz = {
     id: string
     title: string
     resultType: 'SCORE_BASED' | 'TYPE_BASED'
+    typeCodeLimit: number
     questions: Question[]
     results: Result[]
 }
@@ -71,38 +72,14 @@ export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
             counts[t] = (counts[t] || 0) + 1
         })
 
-        // Check if MBTI (is there a 4-letter typeCode in results?)
-        const hasMBTIResults = quiz.results.some(r => r.typeCode && r.typeCode.length === 4)
+        // 빈도수 높은 순으로 정렬 (빈도수 같으면 알파벳 순)
+        const sortedTypes = Object.entries(counts)
+            .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+            .map(item => item[0])
 
-        if (hasMBTIResults) {
-            const getWinner = (a: string, b: string) => {
-                const countA = counts[a] || 0
-                const countB = counts[b] || 0
-                if (countA === 0 && countB === 0) return ''
-                return countA >= countB ? a : b
-            }
-
-            const mbti =
-                getWinner('E', 'I') +
-                getWinner('S', 'N') +
-                getWinner('T', 'F') +
-                getWinner('J', 'P')
-
-            if (mbti.length > 0) return mbti
-        }
-
-        // Default: Most Frequent Type
-        let maxCount = 0
-        let winner = ''
-
-        for (const [type, count] of Object.entries(counts)) {
-            if (count > maxCount) {
-                maxCount = count
-                winner = type
-            }
-        }
-
-        return winner
+        // 설정된 limit만큼 상위 코드들을 합쳐서 반환
+        const limit = quiz.typeCodeLimit || 2
+        return sortedTypes.slice(0, limit).join('')
     }
 
     const handleAnswer = (option: Option) => {

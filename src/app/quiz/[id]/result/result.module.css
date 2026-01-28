@@ -155,6 +155,10 @@
     background-color: #1da1f2;
 }
 
+.copy {
+    background-color: #4b5563;
+}
+
 .homeButton {
     display: flex;
     align-items: center;

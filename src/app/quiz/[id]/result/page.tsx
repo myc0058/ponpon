@@ -26,12 +26,24 @@ export default async function QuizResultPage({
     // Find matching result
     let result = null
     if (quiz.resultType === 'TYPE_BASED' && typeParam) {
-        // Match exact typeCode (e.g. "INTJ") or find partial matches if needed
-        // For simplicity, let's look for exact match first
-        result = quiz.results.find(r => r.typeCode === typeParam)
+        // Smart Matching: Find the result that has the most overlapping characters with the user's result
+        const userCodes = typeParam.split('')
+        let maxOverlap = -1
+
+        quiz.results.forEach((r: any) => {
+            if (!r.typeCode) return
+            const resultCodes = r.typeCode.split('')
+            // Count how many of userCodes are in resultCodes
+            const overlap = userCodes.filter(c => resultCodes.includes(c)).length
+            // If overlap is higher, or if same overlap but result code length is closer
+            if (overlap > maxOverlap) {
+                maxOverlap = overlap
+                result = r
+            }
+        })
     } else {
         result = quiz.results.find(
-            r => score >= r.minScore && score <= r.maxScore
+            (r: any) => score >= r.minScore && score <= r.maxScore
         )
     }
 
