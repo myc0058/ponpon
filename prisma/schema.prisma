@@ -1,0 +1,58 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+enum ResultType {
+  SCORE_BASED  // 점수 기반 (기존 방식)
+  TYPE_BASED   // 타입 기반 (MBTI 방식)
+}
+
+model Test {
+  id          String     @id @default(cuid())
+  title       String
+  description String
+  imageUrl    String?
+  resultType  ResultType @default(SCORE_BASED)
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+  plays       Int        @default(0)
+  questions   Question[]
+  results     Result[]
+}
+
+model Question {
+  id        String   @id @default(cuid())
+  testId    String
+  test      Test     @relation(fields: [testId], references: [id], onDelete: Cascade)
+  content   String
+  imageUrl  String?
+  order     Int
+  options   Option[]
+}
+
+model Option {
+  id             String   @id @default(cuid())
+  questionId     String
+  question       Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  content        String
+  score          Int      @default(0)
+  resultTypeCode String?  // E, I, S, N, T, F, J, P 등
+}
+
+model Result {
+  id          String  @id @default(cuid())
+  testId      String
+  test        Test    @relation(fields: [testId], references: [id], onDelete: Cascade)
+  title       String
+  description String
+  imageUrl    String?
+  minScore    Int     @default(0)
+  maxScore    Int     @default(0)
+  typeCode    String? // INTJ, ENFP 등 (TYPE_BASED일 때만 사용)
+  isPremium   Boolean @default(false)
+}
