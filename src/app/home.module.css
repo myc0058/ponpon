@@ -9,11 +9,15 @@
 
 .logoSection {
     text-align: center;
-    padding: 3rem 0 2rem;
+    padding: 0.5rem 0;
+    /* Minimal padding */
 }
 
 .logo {
-    font-size: 3rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    margin: 0;
+    /* No default margin */
     font-weight: 900;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     -webkit-background-clip: text;

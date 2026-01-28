@@ -97,6 +97,8 @@ export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
         if (quiz.resultType === 'SCORE_BASED') {
             const newScore = totalScore + option.score
             if (!isLastQuestion) {
+                // Reset image loaded state immediately BEFORE changing index to prevent flash
+                setIsImageLoaded(false)
                 setTotalScore(newScore)
                 setCurrentQuestionIndex(nextIndex)
             } else {
@@ -110,6 +112,8 @@ export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
             }
 
             if (!isLastQuestion) {
+                // Reset image loaded state immediately BEFORE changing index to prevent flash
+                setIsImageLoaded(false)
                 setSelectedTypes(newTypes)
                 setCurrentQuestionIndex(nextIndex)
             } else {
@@ -150,38 +154,62 @@ export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
         )
     }
 
+    const [isImageLoaded, setIsImageLoaded] = useState(false)
+
+    // useEffect(() => {
+    //     setIsImageLoaded(false)
+    // }, [currentQuestionIndex])
+
+    // ... (rest of code)
+
     return (
         <main className={styles.container}>
-            <div className={styles.progressBar}>
-                <div className={styles.progressFill} style={{ width: `${progress}%` }} />
-            </div>
-
             <div className={styles.questionCard}>
-                <div className={styles.questionNumber}>
-                    질문 {currentQuestionIndex + 1} / {quiz.questions.length}
+                <div className={styles.progressSection}>
+                    <div className={styles.progressText}>
+                        <span className={styles.currentStep}>{currentQuestionIndex + 1}</span>
+                        <span className={styles.totalStep}>/{quiz.questions.length}</span>
+                    </div>
+                    <div className={styles.customProgressBar}>
+                        <div
+                            className={styles.customProgressFill}
+                            style={{ width: `${progress}%` }}
+                        />
+                    </div>
                 </div>
 
                 {currentQuestion.imageUrl && (
-                    <img
-                        src={currentQuestion.imageUrl}
-                        alt="Question"
-                        className={styles.questionImage}
-                    />
+                    <div className={styles.imageWrapper}>
+                        {!isImageLoaded && (
+                            <div className={styles.loader} style={{ position: 'absolute' }} />
+                        )}
+                        <img
+                            src={currentQuestion.imageUrl}
+                            alt="Question"
+                            className={styles.questionImage}
+                            onLoad={() => setIsImageLoaded(true)}
+                            style={{ opacity: isImageLoaded ? 1 : 0, transition: 'opacity 0.3s' }}
+                        />
+                    </div>
                 )}
 
-                <h2 className={styles.questionText}>{currentQuestion.content}</h2>
+                {(!currentQuestion.imageUrl || isImageLoaded) && (
+                    <div className={styles.contentAnimation} key={currentQuestion.id}>
+                        <h2 className={styles.questionText}>{currentQuestion.content}</h2>
 
-                <div className={styles.options}>
-                    {currentQuestion.options.map((option) => (
-                        <button
-                            key={option.id}
-                            className={styles.optionButton}
-                            onClick={() => handleAnswer(option)}
-                        >
-                            {option.content}
-                        </button>
-                    ))}
-                </div>
+                        <div className={styles.options}>
+                            {currentQuestion.options.map((option) => (
+                                <button
+                                    key={option.id}
+                                    className={styles.optionButton}
+                                    onClick={() => handleAnswer(option)}
+                                >
+                                    {option.content}
+                                </button>
+                            ))}
+                        </div>
+                    </div>
+                )}
             </div>
         </main>
     )
