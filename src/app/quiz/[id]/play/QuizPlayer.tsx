@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import styles from './play.module.css'
 
@@ -19,31 +19,39 @@ type Question = {
     options: Option[]
 }
 
-type Result = {
-    id: string
-    title: string
-    description: string
-    imageUrl: string | null
-    minScore: number
-    maxScore: number
-    typeCode: string | null
-    isPremium: boolean
-}
-
 type Quiz = {
     id: string
     title: string
     resultType: 'SCORE_BASED' | 'TYPE_BASED'
     typeCodeLimit: number
     questions: Question[]
-    results: Result[]
 }
 
 export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
     const [totalScore, setTotalScore] = useState(0)
     const [selectedTypes, setSelectedTypes] = useState<string[]>([])
+    const [isCalculating, setIsCalculating] = useState(false)
+    const [calculationProgress, setCalculationProgress] = useState(0)
+    const [showResultButton, setShowResultButton] = useState(false)
+    const [finalUrl, setFinalUrl] = useState('')
     const router = useRouter()
+
+    useEffect(() => {
+        if (isCalculating) {
+            const timer = setInterval(() => {
+                setCalculationProgress((prev) => {
+                    if (prev >= 100) {
+                        clearInterval(timer)
+                        setShowResultButton(true)
+                        return 100
+                    }
+                    return prev + 1.5 // 약 6-7초 동안 진행
+                })
+            }, 100)
+            return () => clearInterval(timer)
+        }
+    }, [isCalculating])
 
     // Safety check: if no questions, show error
     if (!quiz.questions || quiz.questions.length === 0) {
@@ -92,7 +100,8 @@ export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
                 setTotalScore(newScore)
                 setCurrentQuestionIndex(nextIndex)
             } else {
-                router.push(`/quiz/${quiz.id}/result?score=${newScore}`)
+                setFinalUrl(`/quiz/${quiz.id}/result?score=${newScore}`)
+                setIsCalculating(true)
             }
         } else {
             const newTypes = [...selectedTypes]
@@ -105,9 +114,40 @@ export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
                 setCurrentQuestionIndex(nextIndex)
             } else {
                 const finalType = calculateResult(newTypes)
-                router.push(`/quiz/${quiz.id}/result?type=${finalType}`)
+                setFinalUrl(`/quiz/${quiz.id}/result?type=${finalType}`)
+                setIsCalculating(true)
             }
         }
+    }
+
+    if (isCalculating) {
+        return (
+            <main className={styles.container}>
+                <div className={styles.questionCard}>
+                    <h2 className={styles.calculatingTitle}>
+                        {showResultButton ? '분석이 완료되었습니다!' : '데이터를 정밀 분석 중...'}
+                    </h2>
+
+                    <div className={styles.calculatingProgress}>
+                        <div
+                            className={styles.calculatingBar}
+                            style={{ width: `${calculationProgress}%` }}
+                        />
+                    </div>
+
+                    {!showResultButton ? (
+                        <p className={styles.calculatingText}>{Math.floor(calculationProgress)}% 완료</p>
+                    ) : (
+                        <button
+                            className={styles.resultButton}
+                            onClick={() => router.push(finalUrl)}
+                        >
+                            결과 확인하기
+                        </button>
+                    )}
+                </div>
+            </main>
+        )
     }
 
     return (
@@ -122,7 +162,6 @@ export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
                 </div>
 
                 {currentQuestion.imageUrl && (
-                    // eslint-disable-next-line @next/next/no-img-element
                     <img
                         src={currentQuestion.imageUrl}
                         alt="Question"

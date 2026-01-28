@@ -2,6 +2,19 @@
     padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .header {
@@ -160,4 +173,31 @@
 .premiumBadge {
     background-color: #fef3c7;
     color: #d97706;
+}
+
+.itemMain {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.thumbnail {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    border: 1px solid #e2e8f0;
+}
+
+.itemHeaderContent {
+    flex: 1;
+}
+
+.saveButton {
+    background-color: #10b981;
+    color: white;
+}
+
+.saveButton:hover {
+    background-color: #059669;
 }

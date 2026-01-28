@@ -97,6 +97,22 @@ export async function deleteQuestion(id: string, quizId: string) {
     revalidatePath(`/admin/${quizId}/edit`)
 }
 
+export async function updateQuestion(id: string, quizId: string, formData: FormData) {
+    const content = formData.get('content') as string
+    const imageUrl = formData.get('imageUrl') as string
+    const order = parseInt(formData.get('order') as string) || 0
+
+    await prisma.question.update({
+        where: { id },
+        data: {
+            content,
+            imageUrl,
+            order
+        }
+    })
+    revalidatePath(`/admin/${quizId}/edit`)
+}
+
 // Options
 export async function createOption(questionId: string, quizId: string, formData: FormData) {
     const content = formData.get('content') as string

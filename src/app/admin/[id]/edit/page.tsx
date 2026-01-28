@@ -1,7 +1,7 @@
-import { getQuizWithDetails, createQuestion, deleteQuestion, createOption, deleteOption, createResult, deleteResult } from '@/actions/quiz'
+import { getQuizWithDetails, createQuestion, deleteQuestion, updateQuestion, createOption, deleteOption, createResult, deleteResult } from '@/actions/quiz'
 import styles from './editor.module.css'
 import Link from 'next/link'
-import { ArrowLeft, Trash2, Plus } from 'lucide-react'
+import { ArrowLeft, Trash2, Plus, Save } from 'lucide-react'
 
 export default async function EditQuizPage({ params }: { params: Promise<{ id: string }> }) {
     const { id } = await params
@@ -27,6 +27,12 @@ export default async function EditQuizPage({ params }: { params: Promise<{ id: s
                 </Link>
             </div>
 
+            {/* 도움말 섹션 */}
+            <div className={styles.section} style={{ backgroundColor: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: '8px', padding: '1rem', marginBottom: '1rem' }}>
+                <p style={{ fontSize: '0.9rem', color: '#64748b', margin: 0 }}>
+                    💡 <strong>Tip:</strong> 질문에 이미지를 넣으려면 Unsplash나 외부 이미지 URL을 입력하세요. 결과와 질문 모두 이미지가 있으면 더 풍성해집니다.
+                </p>
+            </div>
             {/* 도움말 섹션 */}
             {quiz.resultType === 'SCORE_BASED' ? (
                 <div className={styles.section} style={{ backgroundColor: '#eff6ff', border: '2px solid #3b82f6', borderRadius: '8px', padding: '1.5rem' }}>
@@ -67,7 +73,24 @@ export default async function EditQuizPage({ params }: { params: Promise<{ id: s
                     {quiz.questions.map((q: any) => (
                         <div key={q.id} className={styles.item}>
                             <div className={styles.itemHeader}>
-                                <span className={styles.itemContent}>Q{q.order}: {q.content}</span>
+                                <div className={styles.itemMain}>
+                                    {q.imageUrl && (
+                                        // eslint-disable-next-line @next/next/no-img-element
+                                        <img src={q.imageUrl} alt="Thumbnail" className={styles.thumbnail} />
+                                    )}
+                                    <div className={styles.itemHeaderContent}>
+                                        <form action={updateQuestion.bind(null, q.id, quiz.id)} className={styles.form} style={{ border: 'none', padding: 0, marginTop: 0, backgroundColor: 'transparent' }}>
+                                            <div style={{ display: 'flex', gap: '0.5rem', width: '100%', alignItems: 'center' }}>
+                                                <input name="order" type="number" defaultValue={q.order} className={styles.input} style={{ width: '50px' }} />
+                                                <input name="content" defaultValue={q.content} className={styles.input} style={{ flex: 1, fontWeight: 'bold' }} />
+                                                <input name="imageUrl" defaultValue={q.imageUrl || ''} placeholder="이미지 URL" className={styles.input} style={{ flex: 1, fontSize: '0.8rem' }} />
+                                                <button type="submit" className={`${styles.button} ${styles.saveButton}`}>
+                                                    <Save size={14} />
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
                                 <form action={deleteQuestion.bind(null, q.id, quiz.id)}>
                                     <button type="submit" className={`${styles.button} ${styles.deleteButton}`}>
                                         <Trash2 size={16} />
