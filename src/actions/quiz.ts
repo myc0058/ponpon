@@ -67,6 +67,16 @@ export async function deleteQuiz(id: string) {
     revalidatePath('/admin')
 }
 
+export async function toggleQuizFeatured(id: string, isFeatured: boolean) {
+    'use server'
+    await prisma.quiz.update({
+        where: { id },
+        data: { isFeatured }
+    })
+    revalidatePath('/admin')
+    revalidatePath('/')
+}
+
 export async function getQuizWithDetails(id: string) {
     const quiz = await prisma.quiz.findUnique({
         where: { id },

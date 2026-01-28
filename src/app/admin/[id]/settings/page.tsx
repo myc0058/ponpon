@@ -1,10 +1,12 @@
 import { getQuizWithDetails, updateQuiz, deleteQuiz } from '@/actions/quiz'
-export const dynamic = 'force-dynamic'
 import styles from '../edit/editor.module.css'
 import Link from 'next/link'
 import { ArrowLeft, Save } from 'lucide-react'
 import { redirect } from 'next/navigation'
 import DeleteQuizButton from './DeleteQuizButton'
+import ImageUploader from '@/components/ImageUploader'
+
+export const dynamic = 'force-dynamic'
 
 export default async function QuizSettingsPage({ params }: { params: Promise<{ id: string }> }) {
     const { id } = await params
@@ -62,13 +64,12 @@ export default async function QuizSettingsPage({ params }: { params: Promise<{ i
                         </div>
                         <div>
                             <label className={styles.label}>
-                                이미지 URL
+                                대표 이미지
                             </label>
-                            <input
+                            <ImageUploader
                                 name="imageUrl"
-                                defaultValue={quiz.imageUrl || ''}
-                                className={styles.input}
-                                placeholder="https://example.com/image.jpg"
+                                defaultValue={quiz.imageUrl}
+                                placeholder="퀴즈 썸네일 이미지 업로드"
                             />
                         </div>
                         <div>

@@ -1,9 +1,13 @@
 import { getQuizzes } from '@/actions/quiz'
 import Link from 'next/link'
 import styles from './admin.module.css'
-import { Plus, Edit } from 'lucide-react'
+import { Plus, Edit, Star } from 'lucide-react'
+import FeaturedToggle from './FeaturedToggle'
+
+export const dynamic = 'force-dynamic'
 
 export default async function AdminPage() {
+    // Fetch quizzes (ensure latest data)
     const quizzes = await getQuizzes()
 
     return (
@@ -28,9 +32,28 @@ export default async function AdminPage() {
                             </div>
                         )}
                         <div className={styles.cardContent}>
-                            <h2 className={styles.cardTitle}>{quiz.title}</h2>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
+                                <h2 className={styles.cardTitle} style={{ margin: 0 }}>{quiz.title}</h2>
+                                {quiz.isFeatured && (
+                                    <span style={{
+                                        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                                        color: 'white',
+                                        padding: '0.25rem 0.5rem',
+                                        borderRadius: '0.25rem',
+                                        fontSize: '0.75rem',
+                                        fontWeight: '600',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        gap: '0.25rem'
+                                    }}>
+                                        <Star size={12} fill="white" />
+                                        Featured
+                                    </span>
+                                )}
+                            </div>
                             <p className={styles.cardDescription}>{quiz.description}</p>
                             <div className={styles.cardActions}>
+                                <FeaturedToggle quizId={quiz.id} initialFeatured={quiz.isFeatured} />
                                 <Link href={`/admin/${quiz.id}/edit`}>
                                     <button className={styles.actionButton} title="Edit Content">
                                         <Edit size={18} />
