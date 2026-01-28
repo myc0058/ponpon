@@ -16,7 +16,7 @@ async function main() {
         data: {
             title: '나의 강력한 멘탈 회복탄력성 테스트',
             description: '힘든 상황이 닥쳤을 때 당신은 얼마나 빨리 일어설 수 있나요? 과학적인 지표를 바탕으로 당신의 마음 근육을 체크해보세요.',
-            imageUrl: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80',
+            imageUrl: 'https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/seed/resilience-cover.jpg',
             resultType: ResultType.SCORE_BASED,
             questions: {
                 create: [
@@ -89,28 +89,28 @@ async function main() {
                         description: '축하합니다! 당신은 어떤 비바람에도 흔들리지 않는 뿌리 깊은 나무와 같습니다. 높은 회복탄력성으로 주변 사람들에게도 긍정적인 에너지를 전파하고 있네요.',
                         minScore: 41,
                         maxScore: 50,
-                        imageUrl: 'https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=400&q=80'
+                        imageUrl: 'https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/seed/resilience-res-1.jpg'
                     },
                     {
                         title: '유연한 대나무 마음 🎋',
                         description: '당신은 적절한 유연성을 가진 건강한 마음의 소유자입니다. 때로는 힘들어도 금방 자신만의 페이스를 찾는 능력이 탁월하시군요.',
                         minScore: 26,
                         maxScore: 40,
-                        imageUrl: 'https://images.unsplash.com/photo-1473448912268-2022ce9509d8?w=400&q=80'
+                        imageUrl: 'https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/seed/resilience-res-2.jpg'
                     },
                     {
                         title: '섬세한 유리 조각 🎐',
                         description: '지금은 마음이 조금 지쳐있는 상태일지도 몰라요. 작은 충격에도 쉽게 상처받을 수 있으니, 자신을 따뜻하게 안아주고 충분한 휴식을 선물해 주세요.',
                         minScore: 11,
                         maxScore: 25,
-                        imageUrl: 'https://images.unsplash.com/photo-1509233725247-49e657c54213?w=400&q=80'
+                        imageUrl: 'https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/seed/resilience-res-3.jpg'
                     },
                     {
                         title: '깊은 쉼이 필요한 파도 🌊',
                         description: '마음의 폭풍우 속에 계신 것 같아요. 혼자서 이겨내기보다는 신뢰할 수 있는 사람에게 도움을 청하거나, 나만의 안식처에서 에너지를 회복하는 시간이 절실합니다.',
                         minScore: 0,
                         maxScore: 10,
-                        imageUrl: 'https://images.unsplash.com/photo-1439405326854-01523a114f9e?w=400&q=80'
+                        imageUrl: 'https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/seed/resilience-res-4.jpg'
                     }
                 ]
             }
@@ -122,7 +122,7 @@ async function main() {
         data: {
             title: '나의 전설속 판타지 직업 찾기',
             description: '당신의 성향을 분석하여 판타지 세계에서 어떤 능력을 가진 영웅이 될지 3가지 속성을 조합해 알려드립니다!',
-            imageUrl: 'https://images.unsplash.com/photo-1514539079130-25950c84af65?w=800&q=80',
+            imageUrl: 'https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/seed/fantasy-cover.jpg',
             resultType: ResultType.TYPE_BASED,
             typeCodeLimit: 3,
             questions: {
@@ -201,25 +201,25 @@ async function main() {
                         title: '전설의 성스러운 수호자 (WPL)',
                         description: '강인한 힘(W)과 따뜻한 치유(P), 그리고 정의감(L)을 모두 갖춘 당신! 전장의 최전선에서 모두를 지키는 상징적인 리더입니다.',
                         typeCode: 'WPL',
-                        imageUrl: 'https://images.unsplash.com/photo-1599305090598-fe179d501227?w=400&q=80'
+                        imageUrl: 'https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/seed/fantasy-res-1.jpg'
                     },
                     {
                         title: '그림자 속의 마법 탐험가 (MRS)',
                         description: '지적인 마법 실력(M)과 은밀함(S), 그리고 민첩함(R)을 가진 당신! 아무도 도달하지 못한 비밀의 땅을 가장 먼저 밝혀내는 탐험 전문가입니다.',
                         typeCode: 'MRS',
-                        imageUrl: 'https://images.unsplash.com/photo-1519074063912-ad25b57b984a?w=400&q=80'
+                        imageUrl: 'https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/seed/fantasy-res-2.jpg'
                     },
                     {
                         title: '자유로운 유랑 시인 (BRS)',
                         description: '재치 있는 입담(B)과 자유로운 영혼(R), 그리고 눈에 인식되지 않는 은밀함(S)을 가졌군요. 세상을 여행하며 전설을 노래하는 음유시인입니다.',
                         typeCode: 'BRS',
-                        imageUrl: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400&q=80'
+                        imageUrl: 'https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/seed/fantasy-res-3.jpg'
                     },
                     {
                         title: '심연의 마법 전사 (MSW)',
                         description: '강한 근력(W)과 깊은 지식(M), 그리고 신비로운 분위기(S)를 가진 당신. 마법과 검술을 동시에 다루는 신비로운 전사입니다.',
                         typeCode: 'MSW',
-                        imageUrl: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?w=400&q=80'
+                        imageUrl: 'https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/seed/fantasy-res-4.jpg'
                     }
                 ]
             }
