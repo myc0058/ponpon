@@ -1,13 +1,13 @@
-import { getTests } from '@/actions/test'
+import { getQuizzes } from '@/actions/quiz'
 import Link from 'next/link'
 import styles from './home.module.css'
 import { PlayCircle } from 'lucide-react'
 
 // Placeholder for missing thumbnails
-const DEFAULT_THUMBNAIL = 'https://placehold.co/600x400/png?text=Test'
+const DEFAULT_THUMBNAIL = 'https://placehold.co/600x400/png?text=Quiz'
 
 export default async function Home() {
-  const tests = await getTests()
+  const quizzes = await getQuizzes()
 
   return (
     <main className={styles.container}>
@@ -17,21 +17,21 @@ export default async function Home() {
       </div>
 
       <div className={styles.grid}>
-        {tests.map((test) => (
-          <Link href={`/test/${test.id}`} key={test.id} className={styles.card}>
+        {quizzes.map((quiz) => (
+          <Link href={`/quiz/${quiz.id}`} key={quiz.id} className={styles.card}>
             {/* Using img tag for simplicity for now, optimize with next/image later if needed */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={test.imageUrl || DEFAULT_THUMBNAIL}
-              alt={test.title}
+              src={quiz.imageUrl || DEFAULT_THUMBNAIL}
+              alt={quiz.title}
               className={styles.thumbnail}
             />
             <div className={styles.cardContent}>
-              <h2 className={styles.cardTitle}>{test.title}</h2>
-              <p className={styles.cardDesc}>{test.description}</p>
+              <h2 className={styles.cardTitle}>{quiz.title}</h2>
+              <p className={styles.cardDesc}>{quiz.description}</p>
               <div className={styles.playCount}>
                 <PlayCircle size={14} />
-                <span>{test.plays.toLocaleString()} plays</span>
+                <span>{quiz.plays.toLocaleString()} plays</span>
               </div>
             </div>
           </Link>

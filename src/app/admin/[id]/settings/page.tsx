@@ -1,21 +1,21 @@
-import { getTestWithDetails, updateTest, deleteTest } from '@/actions/test'
+import { getQuizWithDetails, updateQuiz, deleteQuiz } from '@/actions/quiz'
 import styles from '../edit/editor.module.css'
 import Link from 'next/link'
 import { ArrowLeft, Save } from 'lucide-react'
 import { redirect } from 'next/navigation'
-import DeleteTestButton from './DeleteTestButton'
+import DeleteQuizButton from './DeleteQuizButton'
 
-export default async function TestSettingsPage({ params }: { params: Promise<{ id: string }> }) {
+export default async function QuizSettingsPage({ params }: { params: Promise<{ id: string }> }) {
     const { id } = await params
-    const test = await getTestWithDetails(id)
+    const quiz = await getQuizWithDetails(id)
 
-    if (!test) {
-        return <div>Test not found</div>
+    if (!quiz) {
+        return <div>Quiz not found</div>
     }
 
     async function handleDelete() {
         'use server'
-        await deleteTest(id)
+        await deleteQuiz(id)
         redirect('/admin')
     }
 
@@ -25,13 +25,13 @@ export default async function TestSettingsPage({ params }: { params: Promise<{ i
                 <Link href={`/admin/${id}/edit`}>
                     <ArrowLeft />
                 </Link>
-                <h1 className={styles.title}>테스트 설정</h1>
+                <h1 className={styles.title}>퀴즈 설정</h1>
             </div>
 
-            {/* Test Metadata Form */}
+            {/* Quiz Metadata Form */}
             <div className={styles.section}>
                 <h2 className={styles.sectionTitle}>기본 정보</h2>
-                <form action={updateTest.bind(null, id)} className={styles.form}>
+                <form action={updateQuiz.bind(null, id)} className={styles.form}>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                         <div>
                             <label className={styles.label}>
@@ -39,7 +39,7 @@ export default async function TestSettingsPage({ params }: { params: Promise<{ i
                             </label>
                             <input
                                 name="title"
-                                defaultValue={test.title}
+                                defaultValue={quiz.title}
                                 className={styles.input}
                                 required
                             />
@@ -50,7 +50,7 @@ export default async function TestSettingsPage({ params }: { params: Promise<{ i
                             </label>
                             <textarea
                                 name="description"
-                                defaultValue={test.description}
+                                defaultValue={quiz.description}
                                 className={styles.input}
                                 rows={3}
                                 required
@@ -62,7 +62,7 @@ export default async function TestSettingsPage({ params }: { params: Promise<{ i
                             </label>
                             <input
                                 name="imageUrl"
-                                defaultValue={test.imageUrl || ''}
+                                defaultValue={quiz.imageUrl || ''}
                                 className={styles.input}
                                 placeholder="https://example.com/image.jpg"
                             />
@@ -73,7 +73,7 @@ export default async function TestSettingsPage({ params }: { params: Promise<{ i
                             </label>
                             <select
                                 name="resultType"
-                                defaultValue={test.resultType}
+                                defaultValue={quiz.resultType}
                                 className={styles.input}
                                 style={{ padding: '0.75rem' }}
                             >
@@ -100,9 +100,9 @@ export default async function TestSettingsPage({ params }: { params: Promise<{ i
             }}>
                 <h2 style={{ color: '#dc2626', marginBottom: '1rem' }}>위험 구역</h2>
                 <p style={{ marginBottom: '1rem', color: '#7f1d1d' }}>
-                    테스트를 삭제하면 모든 질문, 옵션, 결과가 함께 삭제됩니다. 이 작업은 되돌릴 수 없습니다.
+                    퀴즈를 삭제하면 모든 질문, 옵션, 결과가 함께 삭제됩니다. 이 작업은 되돌릴 수 없습니다.
                 </p>
-                <DeleteTestButton onDelete={handleDelete} />
+                <DeleteQuizButton onDelete={handleDelete} />
             </div>
         </div>
     )

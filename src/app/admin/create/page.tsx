@@ -1,11 +1,11 @@
 'use client'
 
-import { createTest } from '@/actions/test'
+import { createQuiz } from '@/actions/quiz'
 import styles from '../admin.module.css'
 import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
 
-export default function CreateTestPage() {
+export default function CreateQuizPage() {
     return (
         <div className={styles.container}>
             <div className={styles.header}>
@@ -13,11 +13,11 @@ export default function CreateTestPage() {
                     <Link href="/admin" className={styles.actionButton}>
                         <ArrowLeft size={24} />
                     </Link>
-                    <h1 className={styles.title}>Create New Test</h1>
+                    <h1 className={styles.title}>Create New Quiz</h1>
                 </div>
             </div>
 
-            <form action={createTest} className={styles.form}>
+            <form action={createQuiz} className={styles.form}>
                 <div className={styles.formGroup}>
                     <label htmlFor="title" className={styles.label}>Title</label>
                     <input
@@ -37,7 +37,7 @@ export default function CreateTestPage() {
                         name="description"
                         className={styles.textarea}
                         required
-                        placeholder="A short description of the test..."
+                        placeholder="A short description of the quiz..."
                     />
                 </div>
 
@@ -53,7 +53,7 @@ export default function CreateTestPage() {
                 </div>
 
                 <button type="submit" className={styles.submitButton}>
-                    Create Test
+                    Create Quiz
                 </button>
             </form>
         </div>

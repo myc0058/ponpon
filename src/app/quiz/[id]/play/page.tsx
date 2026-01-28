@@ -1,9 +1,9 @@
 import { prisma } from '@/lib/prisma'
-import TestPlayer from './TestPlayer'
+import QuizPlayer from './QuizPlayer'
 
-export default async function TestPlayPage({ params }: { params: Promise<{ id: string }> }) {
+export default async function QuizPlayPage({ params }: { params: Promise<{ id: string }> }) {
     const { id } = await params
-    const test = await prisma.test.findUnique({
+    const quiz = await prisma.quiz.findUnique({
         where: { id },
         include: {
             questions: {
@@ -16,9 +16,9 @@ export default async function TestPlayPage({ params }: { params: Promise<{ id: s
         }
     })
 
-    if (!test) {
-        return <div>Test not found</div>
+    if (!quiz) {
+        return <div>Quiz not found</div>
     }
 
-    return <TestPlayer test={test} />
+    return <QuizPlayer quiz={quiz} />
 }

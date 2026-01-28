@@ -1,14 +1,14 @@
-import { getTestWithDetails, createQuestion, deleteQuestion, createOption, deleteOption, createResult, deleteResult } from '@/actions/test'
+import { getQuizWithDetails, createQuestion, deleteQuestion, createOption, deleteOption, createResult, deleteResult } from '@/actions/quiz'
 import styles from './editor.module.css'
 import Link from 'next/link'
 import { ArrowLeft, Trash2, Plus } from 'lucide-react'
 
-export default async function EditTestPage({ params }: { params: Promise<{ id: string }> }) {
+export default async function EditQuizPage({ params }: { params: Promise<{ id: string }> }) {
     const { id } = await params
-    const test = await getTestWithDetails(id)
+    const quiz = await getQuizWithDetails(id)
 
-    if (!test) {
-        return <div>Test not found</div>
+    if (!quiz) {
+        return <div>Quiz not found</div>
     }
 
     return (
@@ -17,9 +17,9 @@ export default async function EditTestPage({ params }: { params: Promise<{ id: s
                 <Link href="/admin">
                     <ArrowLeft />
                 </Link>
-                <h1 className={styles.title}>Edit: {test.title}</h1>
+                <h1 className={styles.title}>Edit: {quiz.title}</h1>
                 <Link
-                    href={`/admin/${test.id}/settings`}
+                    href={`/admin/${quiz.id}/settings`}
                     className={styles.button}
                     style={{ marginLeft: 'auto' }}
                 >
@@ -28,7 +28,7 @@ export default async function EditTestPage({ params }: { params: Promise<{ id: s
             </div>
 
             {/* 도움말 섹션 */}
-            {test.resultType === 'SCORE_BASED' ? (
+            {quiz.resultType === 'SCORE_BASED' ? (
                 <div className={styles.section} style={{ backgroundColor: '#eff6ff', border: '2px solid #3b82f6', borderRadius: '8px', padding: '1.5rem' }}>
                     <h3 style={{ fontSize: '1.1rem', fontWeight: '700', marginBottom: '1rem', color: '#1e40af', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                         💡 점수 기반 결과 시스템 사용 방법
@@ -64,11 +64,11 @@ export default async function EditTestPage({ params }: { params: Promise<{ id: s
             <div className={styles.section}>
                 <h2 className={styles.sectionTitle}>질문 관리</h2>
                 <div className={styles.list}>
-                    {test.questions.map((q) => (
+                    {quiz.questions.map((q) => (
                         <div key={q.id} className={styles.item}>
                             <div className={styles.itemHeader}>
                                 <span className={styles.itemContent}>Q{q.order}: {q.content}</span>
-                                <form action={deleteQuestion.bind(null, q.id, test.id)}>
+                                <form action={deleteQuestion.bind(null, q.id, quiz.id)}>
                                     <button type="submit" className={`${styles.button} ${styles.deleteButton}`}>
                                         <Trash2 size={16} />
                                     </button>
@@ -81,14 +81,14 @@ export default async function EditTestPage({ params }: { params: Promise<{ id: s
                                     <div key={opt.id} className={styles.optionItem}>
                                         <span>
                                             {opt.content}
-                                            {test.resultType === 'TYPE_BASED' && opt.resultTypeCode && (
+                                            {quiz.resultType === 'TYPE_BASED' && opt.resultTypeCode && (
                                                 <span className={styles.badge}>타입: {opt.resultTypeCode}</span>
                                             )}
-                                            {test.resultType === 'SCORE_BASED' && (
+                                            {quiz.resultType === 'SCORE_BASED' && (
                                                 <span className={styles.badge}>점수: {opt.score}</span>
                                             )}
                                         </span>
-                                        <form action={deleteOption.bind(null, opt.id, test.id)}>
+                                        <form action={deleteOption.bind(null, opt.id, quiz.id)}>
                                             <button type="submit" className={`${styles.button} ${styles.deleteButton}`}>
                                                 <Trash2 size={14} />
                                             </button>
@@ -97,9 +97,9 @@ export default async function EditTestPage({ params }: { params: Promise<{ id: s
                                 ))}
 
                                 {/* 옵션 추가 폼 */}
-                                <form action={createOption.bind(null, q.id, test.id)} className={styles.form}>
+                                <form action={createOption.bind(null, q.id, quiz.id)} className={styles.form}>
                                     <input name="content" placeholder="옵션 내용" className={styles.input} required />
-                                    {test.resultType === 'SCORE_BASED' ? (
+                                    {quiz.resultType === 'SCORE_BASED' ? (
                                         <input name="score" type="number" placeholder="점수" className={styles.input} defaultValue={0} style={{ width: '80px' }} />
                                     ) : (
                                         <input name="resultTypeCode" placeholder="코드 (E/I)" className={styles.input} style={{ width: '100px' }} />
@@ -112,10 +112,10 @@ export default async function EditTestPage({ params }: { params: Promise<{ id: s
                 </div>
 
                 {/* 질문 추가 폼 */}
-                <form action={createQuestion.bind(null, test.id)} className={styles.form} style={{ marginTop: '2rem' }}>
+                <form action={createQuestion.bind(null, quiz.id)} className={styles.form} style={{ marginTop: '2rem' }}>
                     <h4>새 질문 추가</h4>
                     <div style={{ display: 'flex', gap: '0.5rem', width: '100%', flexWrap: 'wrap' }}>
-                        <input name="order" type="number" placeholder="순서" className={styles.input} style={{ width: '70px' }} defaultValue={test.questions.length + 1} />
+                        <input name="order" type="number" placeholder="순서" className={styles.input} style={{ width: '70px' }} defaultValue={quiz.questions.length + 1} />
                         <input name="content" placeholder="질문 내용을 입력하세요" className={styles.input} style={{ flex: 1, minWidth: '200px' }} required />
                         <input name="imageUrl" placeholder="이미지 URL (선택 사항)" className={styles.input} style={{ flex: 1, minWidth: '200px' }} />
                         <button type="submit" className={styles.button}><Plus size={16} /> 질문 추가</button>
@@ -125,12 +125,12 @@ export default async function EditTestPage({ params }: { params: Promise<{ id: s
 
             {/* 결과 섹션 */}
             <div className={styles.section} style={{
-                backgroundColor: test.resultType === 'SCORE_BASED' ? '#fef3c7' : '#f0f9ff',
-                border: `2px solid ${test.resultType === 'SCORE_BASED' ? '#f59e0b' : '#3b82f6'}`,
+                backgroundColor: quiz.resultType === 'SCORE_BASED' ? '#fef3c7' : '#f0f9ff',
+                border: `2px solid ${quiz.resultType === 'SCORE_BASED' ? '#f59e0b' : '#3b82f6'}`,
                 borderRadius: '8px', padding: '1rem', marginBottom: '1rem'
             }}>
-                <p style={{ fontSize: '0.9rem', color: test.resultType === 'SCORE_BASED' ? '#92400e' : '#1e40af', margin: 0 }}>
-                    {test.resultType === 'SCORE_BASED' ? (
+                <p style={{ fontSize: '0.9rem', color: quiz.resultType === 'SCORE_BASED' ? '#92400e' : '#1e40af', margin: 0 }}>
+                    {quiz.resultType === 'SCORE_BASED' ? (
                         <><strong>⚠️ 점수 범위 설정:</strong> 결과 범위(Min~Max)가 겹치지 않게 주의하세요.</>
                     ) : (
                         <><strong>ℹ️ 타입 매칭:</strong> 결과 코드가 옵션에서 사용된 코드들과 일치해야 결과가 도출됩니다.</>
@@ -141,19 +141,19 @@ export default async function EditTestPage({ params }: { params: Promise<{ id: s
             <div className={styles.section}>
                 <h2 className={styles.sectionTitle}>결과 관리</h2>
                 <div className={styles.list}>
-                    {test.results.map((r) => (
+                    {quiz.results.map((r) => (
                         <div key={r.id} className={styles.item}>
                             <div className={styles.itemHeader}>
                                 <span className={styles.itemContent}>{r.title}</span>
                                 <div>
-                                    {test.resultType === 'TYPE_BASED' ? (
+                                    {quiz.resultType === 'TYPE_BASED' ? (
                                         <span className={styles.badge}>타입: {r.typeCode || '미지정'}</span>
                                     ) : (
                                         <span className={styles.badge}>범위: {r.minScore} - {r.maxScore}</span>
                                     )}
                                     {r.isPremium && <span className={`${styles.badge} ${styles.premiumBadge}`}>프리미엄</span>}
                                 </div>
-                                <form action={deleteResult.bind(null, r.id, test.id)}>
+                                <form action={deleteResult.bind(null, r.id, quiz.id)}>
                                     <button type="submit" className={`${styles.button} ${styles.deleteButton}`}>
                                         <Trash2 size={16} />
                                     </button>
@@ -165,14 +165,14 @@ export default async function EditTestPage({ params }: { params: Promise<{ id: s
                 </div>
 
                 {/* 결과 추가 폼 */}
-                <form action={createResult.bind(null, test.id)} className={styles.form} style={{ marginTop: '2rem' }}>
+                <form action={createResult.bind(null, quiz.id)} className={styles.form} style={{ marginTop: '2rem' }}>
                     <h4>새 결과 추가</h4>
                     <div style={{ display: 'grid', gap: '0.75rem', width: '100%', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))' }}>
                         <input name="title" placeholder="결과 제목" className={styles.input} required />
                         <input name="imageUrl" placeholder="결과 이미지 URL" className={styles.input} />
                         <textarea name="description" placeholder="결과에 대한 자세한 설명을 입력하세요" className={styles.input} style={{ gridColumn: '1 / -1' }} required />
 
-                        {test.resultType === 'SCORE_BASED' ? (
+                        {quiz.resultType === 'SCORE_BASED' ? (
                             <>
                                 <input name="minScore" type="number" placeholder="최소 점수" className={styles.input} required />
                                 <input name="maxScore" type="number" placeholder="최대 점수" className={styles.input} required />

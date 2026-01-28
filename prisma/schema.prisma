@@ -8,11 +8,11 @@ datasource db {
 }
 
 enum ResultType {
-  SCORE_BASED  // 점수 기반 (기존 방식)
-  TYPE_BASED   // 타입 기반 (MBTI 방식)
+  SCORE_BASED // 점수 기반 (기존 방식)
+  TYPE_BASED // 타입 기반 (MBTI 방식)
 }
 
-model Test {
+model Quiz {
   id          String     @id @default(cuid())
   title       String
   description String
@@ -26,13 +26,13 @@ model Test {
 }
 
 model Question {
-  id        String   @id @default(cuid())
-  testId    String
-  test      Test     @relation(fields: [testId], references: [id], onDelete: Cascade)
-  content   String
-  imageUrl  String?
-  order     Int
-  options   Option[]
+  id       String   @id @default(cuid())
+  quizId   String
+  quiz     Quiz     @relation(fields: [quizId], references: [id], onDelete: Cascade)
+  content  String
+  imageUrl String?
+  order    Int
+  options  Option[]
 }
 
 model Option {
@@ -41,13 +41,13 @@ model Option {
   question       Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
   content        String
   score          Int      @default(0)
-  resultTypeCode String?  // E, I, S, N, T, F, J, P 등
+  resultTypeCode String? // E, I, S, N, T, F, J, P 등
 }
 
 model Result {
   id          String  @id @default(cuid())
-  testId      String
-  test        Test    @relation(fields: [testId], references: [id], onDelete: Cascade)
+  quizId      String
+  quiz        Quiz    @relation(fields: [quizId], references: [id], onDelete: Cascade)
   title       String
   description String
   imageUrl    String?

@@ -1,11 +1,11 @@
 import { prisma } from '@/lib/prisma'
 import Link from 'next/link'
-import styles from './test.module.css'
+import styles from './quiz.module.css'
 import { PlayCircle } from 'lucide-react'
 
-export default async function TestIntroPage({ params }: { params: Promise<{ id: string }> }) {
+export default async function QuizIntroPage({ params }: { params: Promise<{ id: string }> }) {
     const { id } = await params
-    const test = await prisma.test.findUnique({
+    const quiz = await prisma.quiz.findUnique({
         where: { id },
         include: {
             questions: true,
@@ -13,33 +13,33 @@ export default async function TestIntroPage({ params }: { params: Promise<{ id: 
         }
     })
 
-    if (!test) {
-        return <div>Test not found</div>
+    if (!quiz) {
+        return <div>Quiz not found</div>
     }
 
     return (
         <main className={styles.container}>
             <div className={styles.introCard}>
-                {test.imageUrl && (
+                {quiz.imageUrl && (
                     // eslint-disable-next-line @next/next/no-img-element
-                    <img src={test.imageUrl} alt={test.title} className={styles.coverImage} />
+                    <img src={quiz.imageUrl} alt={quiz.title} className={styles.coverImage} />
                 )}
                 <div className={styles.content}>
-                    <h1 className={styles.title}>{test.title}</h1>
-                    <p className={styles.description}>{test.description}</p>
+                    <h1 className={styles.title}>{quiz.title}</h1>
+                    <p className={styles.description}>{quiz.description}</p>
 
                     <div className={styles.stats}>
                         <div className={styles.stat}>
                             <span className={styles.statLabel}>질문 수</span>
-                            <span className={styles.statValue}>{test.questions.length}</span>
+                            <span className={styles.statValue}>{quiz.questions.length}</span>
                         </div>
                         <div className={styles.stat}>
                             <span className={styles.statLabel}>참여 수</span>
-                            <span className={styles.statValue}>{test.plays.toLocaleString()}</span>
+                            <span className={styles.statValue}>{quiz.plays.toLocaleString()}</span>
                         </div>
                     </div>
 
-                    <Link href={`/test/${test.id}/play`} className={styles.startButton}>
+                    <Link href={`/quiz/${quiz.id}/play`} className={styles.startButton}>
                         <PlayCircle size={24} />
                         시작하기
                     </Link>

@@ -13,19 +13,19 @@ type Result = {
     isPremium: boolean
 }
 
-type Test = {
+type Quiz = {
     id: string
     title: string
 }
 
 export default function ResultDisplay({
-    test,
+    quiz,
     result,
     score,
     resultType,
     typeCode
 }: {
-    test: Test
+    quiz: Quiz
     result: Result
     score: number
     resultType: 'SCORE_BASED' | 'TYPE_BASED'
@@ -47,7 +47,7 @@ export default function ResultDisplay({
 
     const handleShare = (platform: string) => {
         const url = window.location.href
-        const text = `나는 "${test.title}" 테스트에서 "${result.title}" 결과가 나왔어요!`
+        const text = `나는 "${quiz.title}" 퀴즈에서 "${result.title}" 결과가 나왔어요!`
 
         switch (platform) {
             case 'kakao':
@@ -69,7 +69,7 @@ export default function ResultDisplay({
         <main className={styles.container}>
             <div className={styles.resultCard}>
                 <div className={styles.header}>
-                    <h3 className={styles.testTitle}>{test.title}</h3>
+                    <h3 className={styles.quizTitle}>{quiz.title}</h3>
                     <div className={styles.scoreDisplay}>
                         {resultType === 'TYPE_BASED' ? `나의 타입: ${typeCode || 'N/A'}` : `나의 점수: ${score}점`}
                     </div>

@@ -30,7 +30,7 @@ type Result = {
     isPremium: boolean
 }
 
-type Test = {
+type Quiz = {
     id: string
     title: string
     resultType: 'SCORE_BASED' | 'TYPE_BASED'
@@ -38,19 +38,19 @@ type Test = {
     results: Result[]
 }
 
-export default function TestPlayer({ test }: { test: Test }) {
+export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
     const [totalScore, setTotalScore] = useState(0)
     const [selectedTypes, setSelectedTypes] = useState<string[]>([])
     const router = useRouter()
 
     // Safety check: if no questions, show error
-    if (!test.questions || test.questions.length === 0) {
+    if (!quiz.questions || quiz.questions.length === 0) {
         return (
             <main className={styles.container}>
                 <div className={styles.questionCard}>
                     <h2 style={{ textAlign: 'center', color: '#ef4444' }}>
-                        이 테스트에는 아직 질문이 없습니다.
+                        이 퀴즈에는 아직 질문이 없습니다.
                     </h2>
                     <p style={{ textAlign: 'center', marginTop: '1rem' }}>
                         관리자 페이지에서 질문을 추가해주세요.
@@ -60,8 +60,8 @@ export default function TestPlayer({ test }: { test: Test }) {
         )
     }
 
-    const currentQuestion = test.questions[currentQuestionIndex]
-    const progress = ((currentQuestionIndex + 1) / test.questions.length) * 100
+    const currentQuestion = quiz.questions[currentQuestionIndex]
+    const progress = ((currentQuestionIndex + 1) / quiz.questions.length) * 100
 
     const calculateResult = (types: string[]) => {
         if (types.length === 0) return ''
@@ -72,7 +72,7 @@ export default function TestPlayer({ test }: { test: Test }) {
         })
 
         // Check if MBTI (is there a 4-letter typeCode in results?)
-        const hasMBTIResults = test.results.some(r => r.typeCode && r.typeCode.length === 4)
+        const hasMBTIResults = quiz.results.some(r => r.typeCode && r.typeCode.length === 4)
 
         if (hasMBTIResults) {
             const getWinner = (a: string, b: string) => {
@@ -107,15 +107,15 @@ export default function TestPlayer({ test }: { test: Test }) {
 
     const handleAnswer = (option: Option) => {
         const nextIndex = currentQuestionIndex + 1
-        const isLastQuestion = nextIndex === test.questions.length
+        const isLastQuestion = nextIndex === quiz.questions.length
 
-        if (test.resultType === 'SCORE_BASED') {
+        if (quiz.resultType === 'SCORE_BASED') {
             const newScore = totalScore + option.score
             if (!isLastQuestion) {
                 setTotalScore(newScore)
                 setCurrentQuestionIndex(nextIndex)
             } else {
-                router.push(`/test/${test.id}/result?score=${newScore}`)
+                router.push(`/quiz/${quiz.id}/result?score=${newScore}`)
             }
         } else {
             const newTypes = [...selectedTypes]
@@ -128,7 +128,7 @@ export default function TestPlayer({ test }: { test: Test }) {
                 setCurrentQuestionIndex(nextIndex)
             } else {
                 const finalType = calculateResult(newTypes)
-                router.push(`/test/${test.id}/result?type=${finalType}`)
+                router.push(`/quiz/${quiz.id}/result?type=${finalType}`)
             }
         }
     }
@@ -141,7 +141,7 @@ export default function TestPlayer({ test }: { test: Test }) {
 
             <div className={styles.questionCard}>
                 <div className={styles.questionNumber}>
-                    질문 {currentQuestionIndex + 1} / {test.questions.length}
+                    질문 {currentQuestionIndex + 1} / {quiz.questions.length}
                 </div>
 
                 {currentQuestion.imageUrl && (

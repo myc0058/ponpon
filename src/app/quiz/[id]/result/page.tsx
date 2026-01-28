@@ -1,7 +1,7 @@
 import { prisma } from '@/lib/prisma'
 import ResultDisplay from './ResultDisplay'
 
-export default async function ResultPage({
+export default async function QuizResultPage({
     params,
     searchParams
 }: {
@@ -12,35 +12,35 @@ export default async function ResultPage({
     const { score: scoreParam, type: typeParam } = await searchParams
     const score = parseInt(scoreParam || '0')
 
-    const test = await prisma.test.findUnique({
+    const quiz = await prisma.quiz.findUnique({
         where: { id },
         include: {
             results: true
         }
     })
 
-    if (!test) {
-        return <div>테스트를 찾을 수 없습니다.</div>
+    if (!quiz) {
+        return <div>퀴즈를 찾을 수 없습니다.</div>
     }
 
     // Find matching result
     let result = null
-    if (test.resultType === 'TYPE_BASED' && typeParam) {
+    if (quiz.resultType === 'TYPE_BASED' && typeParam) {
         // Match exact typeCode (e.g. "INTJ") or find partial matches if needed
         // For simplicity, let's look for exact match first
-        result = test.results.find(r => r.typeCode === typeParam)
+        result = quiz.results.find(r => r.typeCode === typeParam)
     } else {
-        result = test.results.find(
+        result = quiz.results.find(
             r => score >= r.minScore && score <= r.maxScore
         )
     }
 
     // Fallback if no matching result found
     if (!result) {
-        result = test.results[0]
+        result = quiz.results[0]
     }
 
-    // If still no result (test has no results added), show error
+    // If still no result (quiz has no results added), show error
     if (!result) {
         return (
             <div style={{ padding: '2rem', textAlign: 'center' }}>
@@ -51,10 +51,10 @@ export default async function ResultPage({
     }
 
     // Increment play count
-    await prisma.test.update({
+    await prisma.quiz.update({
         where: { id },
         data: { plays: { increment: 1 } }
     })
 
-    return <ResultDisplay test={test} result={result} score={score} resultType={test.resultType} typeCode={typeParam} />
+    return <ResultDisplay quiz={quiz} result={result} score={score} resultType={quiz.resultType} typeCode={typeParam} />
 }

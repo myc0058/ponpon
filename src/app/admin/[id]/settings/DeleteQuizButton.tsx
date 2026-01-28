@@ -3,11 +3,11 @@
 import { Trash2 } from 'lucide-react'
 import styles from '../edit/editor.module.css'
 
-interface DeleteTestButtonProps {
+interface DeleteQuizButtonProps {
     onDelete: () => Promise<void>;
 }
 
-export default function DeleteTestButton({ onDelete }: DeleteTestButtonProps) {
+export default function DeleteQuizButton({ onDelete }: DeleteQuizButtonProps) {
     return (
         <button
             type="button"
@@ -20,12 +20,12 @@ export default function DeleteTestButton({ onDelete }: DeleteTestButtonProps) {
                 marginTop: '1rem'
             }}
             onClick={async () => {
-                if (confirm('정말로 이 테스트를 삭제하시겠습니까? 이 작업은 되돌릴 수 없습니다.')) {
+                if (confirm('정말로 이 퀴즈를 삭제하시겠습니까? 이 작업은 되돌릴 수 없습니다.')) {
                     await onDelete()
                 }
             }}
         >
-            <Trash2 size={16} /> 테스트 삭제
+            <Trash2 size={16} /> 퀴즈 삭제
         </button>
     )
 }

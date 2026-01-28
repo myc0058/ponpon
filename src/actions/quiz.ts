@@ -4,12 +4,12 @@ import { prisma } from '@/lib/prisma'
 import { revalidatePath } from 'next/cache'
 import { redirect } from 'next/navigation'
 
-export async function createTest(formData: FormData) {
+export async function createQuiz(formData: FormData) {
     const title = formData.get('title') as string
     const description = formData.get('description') as string
     const imageUrl = formData.get('imageUrl') as string
 
-    await prisma.test.create({
+    await prisma.quiz.create({
         data: {
             title,
             description,
@@ -21,21 +21,21 @@ export async function createTest(formData: FormData) {
     redirect('/admin')
 }
 
-export async function getTests() {
-    return await prisma.test.findMany({
+export async function getQuizzes() {
+    return await prisma.quiz.findMany({
         orderBy: { createdAt: 'desc' },
     })
 }
 
-export async function deleteTest(id: string) {
-    await prisma.test.delete({
+export async function deleteQuiz(id: string) {
+    await prisma.quiz.delete({
         where: { id },
     })
     revalidatePath('/admin')
 }
 
-export async function getTestWithDetails(id: string) {
-    return await prisma.test.findUnique({
+export async function getQuizWithDetails(id: string) {
+    return await prisma.quiz.findUnique({
         where: { id },
         include: {
             questions: {
@@ -50,29 +50,29 @@ export async function getTestWithDetails(id: string) {
 }
 
 // Questions
-export async function createQuestion(testId: string, formData: FormData) {
+export async function createQuestion(quizId: string, formData: FormData) {
     const content = formData.get('content') as string
     const imageUrl = formData.get('imageUrl') as string
     const order = parseInt(formData.get('order') as string) || 0
 
     await prisma.question.create({
         data: {
-            testId,
+            quizId,
             content,
             imageUrl,
             order
         }
     })
-    revalidatePath(`/admin/${testId}/edit`)
+    revalidatePath(`/admin/${quizId}/edit`)
 }
 
-export async function deleteQuestion(id: string, testId: string) {
+export async function deleteQuestion(id: string, quizId: string) {
     await prisma.question.delete({ where: { id } })
-    revalidatePath(`/admin/${testId}/edit`)
+    revalidatePath(`/admin/${quizId}/edit`)
 }
 
 // Options
-export async function createOption(questionId: string, testId: string, formData: FormData) {
+export async function createOption(questionId: string, quizId: string, formData: FormData) {
     const content = formData.get('content') as string
     const score = parseInt(formData.get('score') as string) || 0
     const resultTypeCode = formData.get('resultTypeCode') as string | null
@@ -85,16 +85,16 @@ export async function createOption(questionId: string, testId: string, formData:
             resultTypeCode: resultTypeCode || null
         }
     })
-    revalidatePath(`/admin/${testId}/edit`)
+    revalidatePath(`/admin/${quizId}/edit`)
 }
 
-export async function deleteOption(id: string, testId: string) {
+export async function deleteOption(id: string, quizId: string) {
     await prisma.option.delete({ where: { id } })
-    revalidatePath(`/admin/${testId}/edit`)
+    revalidatePath(`/admin/${quizId}/edit`)
 }
 
 // Results
-export async function createResult(testId: string, formData: FormData) {
+export async function createResult(quizId: string, formData: FormData) {
     const title = formData.get('title') as string
     const description = formData.get('description') as string
     const imageUrl = formData.get('imageUrl') as string
@@ -105,7 +105,7 @@ export async function createResult(testId: string, formData: FormData) {
 
     await prisma.result.create({
         data: {
-            testId,
+            quizId,
             title,
             description,
             imageUrl,
@@ -115,22 +115,22 @@ export async function createResult(testId: string, formData: FormData) {
             isPremium
         }
     })
-    revalidatePath(`/admin/${testId}/edit`)
+    revalidatePath(`/admin/${quizId}/edit`)
 }
 
-export async function deleteResult(id: string, testId: string) {
+export async function deleteResult(id: string, quizId: string) {
     await prisma.result.delete({ where: { id } })
-    revalidatePath(`/admin/${testId}/edit`)
+    revalidatePath(`/admin/${quizId}/edit`)
 }
 
-// Update Test
-export async function updateTest(id: string, formData: FormData) {
+// Update Quiz
+export async function updateQuiz(id: string, formData: FormData) {
     const title = formData.get('title') as string
     const description = formData.get('description') as string
     const imageUrl = formData.get('imageUrl') as string
     const resultType = formData.get('resultType') as 'SCORE_BASED' | 'TYPE_BASED'
 
-    await prisma.test.update({
+    await prisma.quiz.update({
         where: { id },
         data: {
             title,
@@ -146,7 +146,7 @@ export async function updateTest(id: string, formData: FormData) {
 }
 
 // Update Option (for type codes)
-export async function updateOption(id: string, testId: string, formData: FormData) {
+export async function updateOption(id: string, quizId: string, formData: FormData) {
     const content = formData.get('content') as string
     const score = parseInt(formData.get('score') as string) || 0
     const resultTypeCode = formData.get('resultTypeCode') as string | null
@@ -159,11 +159,11 @@ export async function updateOption(id: string, testId: string, formData: FormDat
             resultTypeCode: resultTypeCode || null
         }
     })
-    revalidatePath(`/admin/${testId}/edit`)
+    revalidatePath(`/admin/${quizId}/edit`)
 }
 
 // Update Result (for type codes)
-export async function updateResult(id: string, testId: string, formData: FormData) {
+export async function updateResult(id: string, quizId: string, formData: FormData) {
     const title = formData.get('title') as string
     const description = formData.get('description') as string
     const imageUrl = formData.get('imageUrl') as string
@@ -184,5 +184,5 @@ export async function updateResult(id: string, testId: string, formData: FormDat
             isPremium
         }
     })
-    revalidatePath(`/admin/${testId}/edit`)
+    revalidatePath(`/admin/${quizId}/edit`)
 }
