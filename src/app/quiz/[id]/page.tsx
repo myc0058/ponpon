@@ -2,6 +2,30 @@ import { prisma } from '@/lib/prisma'
 import Link from 'next/link'
 import styles from './quiz.module.css'
 import { PlayCircle } from 'lucide-react'
+import QuizShareUI from './QuizShareUI'
+import { Metadata } from 'next'
+
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+    const { id } = await params
+    const quiz = await prisma.quiz.findUnique({ where: { id } })
+    if (!quiz) return { title: 'Quiz Not Found' }
+
+    return {
+        title: `${quiz.title} - 폰폰`,
+        description: quiz.description,
+        openGraph: {
+            title: quiz.title,
+            description: quiz.description,
+            images: quiz.imageUrl ? [quiz.imageUrl] : [],
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title: quiz.title,
+            description: quiz.description,
+            images: quiz.imageUrl ? [quiz.imageUrl] : [],
+        }
+    }
+}
 
 export default async function QuizIntroPage({ params }: { params: Promise<{ id: string }> }) {
     const { id } = await params
@@ -39,10 +63,13 @@ export default async function QuizIntroPage({ params }: { params: Promise<{ id: 
                         </div>
                     </div>
 
-                    <Link href={`/quiz/${quiz.id}/play`} className={styles.startButton}>
-                        <PlayCircle size={24} />
-                        시작하기
-                    </Link>
+                    <div className={styles.actionButtons}>
+                        <QuizShareUI quiz={quiz} />
+                        <Link href={`/quiz/${quiz.id}/play`} className={styles.startButton}>
+                            <PlayCircle size={24} />
+                            시작하기
+                        </Link>
+                    </div>
                 </div>
             </div>
         </main>

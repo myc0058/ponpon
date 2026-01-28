@@ -81,15 +81,20 @@
     color: #111827;
 }
 
-.startButton {
+.actionButtons {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+}
+
+.startButton,
+.secondaryButton {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    width: 100%;
+    flex: 1;
     padding: 1rem;
-    background: linear-gradient(to right, #ec4899, #8b5cf6);
-    color: white;
     border: none;
     border-radius: 0.75rem;
     font-size: 1.125rem;
@@ -99,7 +104,135 @@
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.startButton:hover {
+.startButton {
+    background: linear-gradient(to right, #ec4899, #8b5cf6);
+    color: white;
+}
+
+.secondaryButton {
+    background-color: #f3f4f6;
+    color: #374151;
+}
+
+.startButton:hover,
+.secondaryButton:hover {
     transform: translateY(-2px);
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.shareSection {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e5e7eb;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.shareTitle {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.shareButtons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+}
+
+.shareButton {
+    padding: 0.75rem 0.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    transition: transform 0.2s;
+    text-align: center;
+}
+
+.shareButton:hover {
+    transform: translateY(-2px);
+}
+
+.kakao {
+    background-color: #fee500;
+    color: #3c1e1e;
+}
+
+.facebook {
+    background-color: #1877f2;
+}
+
+.twitter {
+    background-color: #1da1f2;
+}
+
+.copy {
+    background-color: #4b5563;
+}
+
+.previewCard {
+    margin-top: 1.5rem;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.75rem;
+    overflow: hidden;
+}
+
+.previewLabel {
+    padding: 0.5rem 1rem;
+    background: #e2e8f0;
+    color: #475569;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.previewContent {
+    display: flex;
+    padding: 0.75rem;
+    gap: 0.75rem;
+}
+
+.previewThumb {
+    width: 60px;
+    height: 60px;
+    border-radius: 0.25rem;
+    object-fit: cover;
+}
+
+.previewInfo {
+    flex: 1;
+}
+
+.previewTitle {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #1e293b;
+    margin-bottom: 0.25rem;
+}
+
+.previewDesc {
+    font-size: 0.8rem;
+    color: #64748b;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+@media (max-width: 480px) {
+    .actionButtons {
+        flex-direction: column;
+    }
+
+    .shareButtons {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
