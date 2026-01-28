@@ -2,6 +2,8 @@ import { getQuizWithDetails, createQuestion, deleteQuestion, updateQuestion, cre
 import styles from './editor.module.css'
 import Link from 'next/link'
 import { ArrowLeft, Trash2, Plus, Save } from 'lucide-react'
+import ImageUploader from '@/components/ImageUploader'
+import { QuestionUpdateForm } from './QuestionUpdateForm'
 
 export default async function EditQuizPage({ params }: { params: Promise<{ id: string }> }) {
     const { id } = await params
@@ -30,10 +32,10 @@ export default async function EditQuizPage({ params }: { params: Promise<{ id: s
             {/* 도움말 섹션 */}
             <div className={styles.section} style={{ backgroundColor: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: '8px', padding: '1rem', marginBottom: '1rem' }}>
                 <p style={{ fontSize: '0.9rem', color: '#64748b', margin: 0 }}>
-                    💡 <strong>Tip:</strong> 질문에 이미지를 넣으려면 Unsplash나 외부 이미지 URL을 입력하세요. 결과와 질문 모두 이미지가 있으면 더 풍성해집니다.
+                    💡 <strong>Tip:</strong> 이미지를 업로드하면 질문과 결과 화면을 더 풍성하게 만들 수 있습니다. 업로드 버튼을 눌러 이미지를 선택하세요.
                 </p>
             </div>
-            {/* 도움말 섹션 */}
+
             {quiz.resultType === 'SCORE_BASED' ? (
                 <div className={styles.section} style={{ backgroundColor: '#eff6ff', border: '2px solid #3b82f6', borderRadius: '8px', padding: '1.5rem' }}>
                     <h3 style={{ fontSize: '1.1rem', fontWeight: '700', marginBottom: '1rem', color: '#1e40af', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
@@ -74,21 +76,19 @@ export default async function EditQuizPage({ params }: { params: Promise<{ id: s
                         <div key={q.id} className={styles.item}>
                             <div className={styles.itemHeader}>
                                 <div className={styles.itemMain}>
-                                    {q.imageUrl && (
-                                        // eslint-disable-next-line @next/next/no-img-element
-                                        <img src={q.imageUrl} alt="Thumbnail" className={styles.thumbnail} />
-                                    )}
                                     <div className={styles.itemHeaderContent}>
-                                        <form action={updateQuestion.bind(null, q.id, quiz.id)} className={styles.form} style={{ border: 'none', padding: 0, marginTop: 0, backgroundColor: 'transparent' }}>
-                                            <div style={{ display: 'flex', gap: '0.5rem', width: '100%', alignItems: 'center' }}>
+                                        <QuestionUpdateForm action={updateQuestion.bind(null, q.id, quiz.id)}>
+                                            <div style={{ display: 'flex', gap: '0.5rem', width: '100%', alignItems: 'center', flexWrap: 'wrap' }}>
                                                 <input name="order" type="number" defaultValue={q.order} className={styles.input} style={{ width: '50px' }} />
-                                                <input name="content" defaultValue={q.content} className={styles.input} style={{ flex: 1, fontWeight: 'bold' }} />
-                                                <input name="imageUrl" defaultValue={q.imageUrl || ''} placeholder="이미지 URL" className={styles.input} style={{ flex: 1, fontSize: '0.8rem' }} />
+                                                <input name="content" defaultValue={q.content} className={styles.input} style={{ flex: 1, fontWeight: 'bold', minWidth: '200px' }} />
+                                                <div style={{ minWidth: '250px', flex: 1 }}>
+                                                    <ImageUploader name="imageUrl" defaultValue={q.imageUrl} placeholder="질문 이미지 업로드" />
+                                                </div>
                                                 <button type="submit" className={`${styles.button} ${styles.saveButton}`}>
                                                     <Save size={14} />
                                                 </button>
                                             </div>
-                                        </form>
+                                        </QuestionUpdateForm>
                                     </div>
                                 </div>
                                 <form action={deleteQuestion.bind(null, q.id, quiz.id)}>
@@ -137,11 +137,13 @@ export default async function EditQuizPage({ params }: { params: Promise<{ id: s
                 {/* 질문 추가 폼 */}
                 <form action={createQuestion.bind(null, quiz.id)} className={styles.form} style={{ marginTop: '2rem' }}>
                     <h4>새 질문 추가</h4>
-                    <div style={{ display: 'flex', gap: '0.5rem', width: '100%', flexWrap: 'wrap' }}>
+                    <div style={{ display: 'flex', gap: '0.5rem', width: '100%', flexWrap: 'wrap', alignItems: 'flex-start' }}>
                         <input name="order" type="number" placeholder="순서" className={styles.input} style={{ width: '70px' }} defaultValue={quiz.questions.length + 1} />
                         <input name="content" placeholder="질문 내용을 입력하세요" className={styles.input} style={{ flex: 1, minWidth: '200px' }} required />
-                        <input name="imageUrl" placeholder="이미지 URL (선택 사항)" className={styles.input} style={{ flex: 1, minWidth: '200px' }} />
-                        <button type="submit" className={styles.button}><Plus size={16} /> 질문 추가</button>
+                        <div style={{ minWidth: '200px', flex: 1 }}>
+                            <ImageUploader name="imageUrl" placeholder="이미지 업로드 (선택)" />
+                        </div>
+                        <button type="submit" className={styles.button} style={{ height: '42px' }}><Plus size={16} /> 질문 추가</button>
                     </div>
                 </form>
             </div>
@@ -167,7 +169,13 @@ export default async function EditQuizPage({ params }: { params: Promise<{ id: s
                     {quiz.results.map((r: any) => (
                         <div key={r.id} className={styles.item}>
                             <div className={styles.itemHeader}>
-                                <span className={styles.itemContent}>{r.title}</span>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                                    {r.imageUrl && (
+                                        // eslint-disable-next-line @next/next/no-img-element
+                                        <img src={r.imageUrl} alt="Result" style={{ width: '40px', height: '40px', objectFit: 'cover', borderRadius: '4px' }} />
+                                    )}
+                                    <span className={styles.itemContent}>{r.title}</span>
+                                </div>
                                 <div>
                                     {quiz.resultType === 'TYPE_BASED' ? (
                                         <span className={styles.badge}>타입: {r.typeCode || '미지정'}</span>
@@ -192,7 +200,9 @@ export default async function EditQuizPage({ params }: { params: Promise<{ id: s
                     <h4>새 결과 추가</h4>
                     <div style={{ display: 'grid', gap: '0.75rem', width: '100%', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))' }}>
                         <input name="title" placeholder="결과 제목" className={styles.input} required />
-                        <input name="imageUrl" placeholder="결과 이미지 URL" className={styles.input} />
+                        <div style={{ gridColumn: 'span 1' }}>
+                            <ImageUploader name="imageUrl" placeholder="결과 이미지 업로드" />
+                        </div>
                         <textarea name="description" placeholder="결과에 대한 자세한 설명을 입력하세요" className={styles.input} style={{ gridColumn: '1 / -1' }} required />
 
                         {quiz.resultType === 'SCORE_BASED' ? (

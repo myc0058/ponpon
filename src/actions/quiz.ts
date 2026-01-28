@@ -3,6 +3,36 @@
 import { prisma } from '@/lib/prisma'
 import { revalidatePath } from 'next/cache'
 import { redirect } from 'next/navigation'
+import { supabaseAdmin } from '@/lib/supabase-admin'
+
+// 이미지 삭제 헬퍼 함수
+async function deleteImageFromStorage(imageUrl: string | null) {
+    if (!imageUrl) return
+
+    try {
+        // URL에서 파일 경로 추출
+        // 예: .../storage/v1/object/public/quiz-images/filename.jpg -> filename.jpg
+        const urlObj = new URL(imageUrl)
+        const pathParts = urlObj.pathname.split('/')
+        // 'quiz-images' 다음부터가 실제 경로
+        const bucketIndex = pathParts.indexOf('quiz-images')
+
+        if (bucketIndex !== -1 && bucketIndex < pathParts.length - 1) {
+            const filePath = pathParts.slice(bucketIndex + 1).join('/')
+            console.log(`Deleting image from storage: ${filePath}`)
+
+            const { error } = await supabaseAdmin.storage
+                .from('quiz-images')
+                .remove([filePath])
+
+            if (error) {
+                console.error('Failed to delete image from Supabase:', error)
+            }
+        }
+    } catch (e) {
+        console.error('Error parsing image URL for deletion:', e)
+    }
+}
 
 export async function createQuiz(formData: FormData) {
     const title = formData.get('title') as string
@@ -29,6 +59,8 @@ export async function getQuizzes() {
 }
 
 export async function deleteQuiz(id: string) {
+    // 퀴즈 삭제 시 관련 모든 이미지 삭제 로직이 필요할 수 있음
+    // 현재는 질문/결과 개별 삭제 시 이미지 삭제 로직만 구현
     await prisma.quiz.delete({
         where: { id },
     })
@@ -93,6 +125,16 @@ export async function createQuestion(quizId: string, formData: FormData) {
 }
 
 export async function deleteQuestion(id: string, quizId: string) {
+    // 삭제 전 이미지 정보 조회를 위해 먼저 findUnique
+    const question = await prisma.question.findUnique({
+        where: { id },
+        select: { imageUrl: true }
+    })
+
+    if (question?.imageUrl) {
+        await deleteImageFromStorage(question.imageUrl)
+    }
+
     await prisma.question.delete({ where: { id } })
     revalidatePath(`/admin/${quizId}/edit`)
 }
@@ -101,6 +143,16 @@ export async function updateQuestion(id: string, quizId: string, formData: FormD
     const content = formData.get('content') as string
     const imageUrl = formData.get('imageUrl') as string
     const order = parseInt(formData.get('order') as string) || 0
+
+    // 기존 이미지와 비교하여 변경되었으면 이전 이미지 삭제
+    const oldQuestion = await prisma.question.findUnique({
+        where: { id },
+        select: { imageUrl: true }
+    })
+
+    if (oldQuestion?.imageUrl && oldQuestion.imageUrl !== imageUrl) {
+        await deleteImageFromStorage(oldQuestion.imageUrl)
+    }
 
     await prisma.question.update({
         where: { id },
@@ -161,6 +213,15 @@ export async function createResult(quizId: string, formData: FormData) {
 }
 
 export async function deleteResult(id: string, quizId: string) {
+    const result = await prisma.result.findUnique({
+        where: { id },
+        select: { imageUrl: true }
+    })
+
+    if (result?.imageUrl) {
+        await deleteImageFromStorage(result.imageUrl)
+    }
+
     await prisma.result.delete({ where: { id } })
     revalidatePath(`/admin/${quizId}/edit`)
 }
@@ -230,6 +291,15 @@ export async function updateResult(id: string, quizId: string, formData: FormDat
     const maxScore = parseInt(formData.get('maxScore') as string) || 0
     const typeCode = formData.get('typeCode') as string | null
     const isPremium = formData.get('isPremium') === 'on'
+
+    const oldResult = await prisma.result.findUnique({
+        where: { id },
+        select: { imageUrl: true }
+    })
+
+    if (oldResult?.imageUrl && oldResult.imageUrl !== imageUrl) {
+        await deleteImageFromStorage(oldResult.imageUrl)
+    }
 
     await prisma.result.update({
         where: { id },
