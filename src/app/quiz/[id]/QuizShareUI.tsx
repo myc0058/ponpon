@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Share2, Link as LinkIcon } from 'lucide-react'
+import { Share2, Link as LinkIcon, X } from 'lucide-react'
 import styles from './quiz.module.css'
 
 type Quiz = {
@@ -45,44 +45,51 @@ export default function QuizShareUI({ quiz }: { quiz: Quiz }) {
         <>
             <button
                 className={styles.secondaryButton}
-                onClick={() => setShowShare(!showShare)}
+                onClick={() => setShowShare(true)}
             >
                 <Share2 size={24} />
                 공유하기
             </button>
 
             {showShare && (
-                <div className={styles.shareSection}>
-                    <h3 className={styles.shareTitle}>
-                        <Share2 size={18} />
-                        친구에게 공유하기
-                    </h3>
+                <div className={styles.shareOverlay} onClick={() => setShowShare(false)}>
+                    <div className={styles.shareModal} onClick={(e) => e.stopPropagation()}>
+                        <div className={styles.shareHeader}>
+                            <h3 className={styles.shareTitle} style={{ marginBottom: 0 }}>
+                                <Share2 size={18} />
+                                친구에게 공유하기
+                            </h3>
+                            <button className={styles.closeButton} onClick={() => setShowShare(false)}>
+                                <X size={24} />
+                            </button>
+                        </div>
 
-                    <div className={styles.shareButtons}>
-                        <button className={`${styles.shareButton} ${styles.kakao}`} onClick={() => handleShare('kakao')}>
-                            카카오톡
-                        </button>
-                        <button className={`${styles.shareButton} ${styles.facebook}`} onClick={() => handleShare('facebook')}>
-                            페이스북
-                        </button>
-                        <button className={`${styles.shareButton} ${styles.twitter}`} onClick={() => handleShare('twitter')}>
-                            트위터
-                        </button>
-                        <button className={`${styles.shareButton} ${styles.copy}`} onClick={handleCopyLink}>
-                            <LinkIcon size={14} style={{ marginRight: '4px' }} />
-                            링크복사
-                        </button>
-                    </div>
+                        <div className={styles.shareButtons}>
+                            <button className={`${styles.shareButton} ${styles.kakao}`} onClick={() => handleShare('kakao')}>
+                                카카오톡
+                            </button>
+                            <button className={`${styles.shareButton} ${styles.facebook}`} onClick={() => handleShare('facebook')}>
+                                페이스북
+                            </button>
+                            <button className={`${styles.shareButton} ${styles.twitter}`} onClick={() => handleShare('twitter')}>
+                                트위터
+                            </button>
+                            <button className={`${styles.shareButton} ${styles.copy}`} onClick={handleCopyLink}>
+                                <LinkIcon size={14} style={{ marginRight: '4px' }} />
+                                링크복사
+                            </button>
+                        </div>
 
-                    <div className={styles.previewCard}>
-                        <div className={styles.previewLabel}>공유 미리보기</div>
-                        <div className={styles.previewContent}>
-                            {quiz.imageUrl && (
-                                <img src={quiz.imageUrl} alt="Preview" className={styles.previewThumb} />
-                            )}
-                            <div className={styles.previewInfo}>
-                                <div className={styles.previewTitle}>{quiz.title}</div>
-                                <div className={styles.previewDesc}>{quiz.description}</div>
+                        <div className={styles.previewCard}>
+                            <div className={styles.previewLabel}>공유 미리보기</div>
+                            <div className={styles.previewContent}>
+                                {quiz.imageUrl && (
+                                    <img src={quiz.imageUrl} alt="Preview" className={styles.previewThumb} />
+                                )}
+                                <div className={styles.previewInfo}>
+                                    <div className={styles.previewTitle}>{quiz.title}</div>
+                                    <div className={styles.previewDesc}>{quiz.description}</div>
+                                </div>
                             </div>
                         </div>
                     </div>
