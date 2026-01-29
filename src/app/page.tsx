@@ -26,8 +26,8 @@ export default async function Home() {
       </div>
 
       <div className={styles.grid}>
-        {quizzes.map((quiz) => (
-          <QuizCard key={quiz.id} quiz={quiz} />
+        {quizzes.map((quiz, index) => (
+          <QuizCard key={quiz.id} quiz={quiz} priority={index < 4} />
         ))}
       </div>
     </main>

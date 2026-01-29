@@ -6,11 +6,12 @@ import styles from './QuizCard.module.css'
 
 interface QuizCardProps {
     quiz: Quiz
+    priority?: boolean
 }
 
 const DEFAULT_THUMBNAIL = 'https://placehold.co/600x400/png?text=Quiz'
 
-export default function QuizCard({ quiz }: QuizCardProps) {
+export default function QuizCard({ quiz, priority = false }: QuizCardProps) {
     return (
         <Link href={`/quiz/${quiz.id}`} className={styles.card}>
             <div className={styles.imageWrapper}>
@@ -18,6 +19,7 @@ export default function QuizCard({ quiz }: QuizCardProps) {
                     src={quiz.imageUrl || DEFAULT_THUMBNAIL}
                     alt={quiz.title}
                     fill
+                    priority={priority}
                     className={styles.thumbnail}
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />

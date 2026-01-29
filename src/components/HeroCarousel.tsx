@@ -11,7 +11,7 @@ interface HeroCarouselProps {
 }
 
 export default function HeroCarousel({ quizzes }: HeroCarouselProps) {
-    const [currentIndex, setCurrentIndex] = useState(1) // Start at 1 for cloned slide
+    const [currentIndex, setCurrentIndex] = useState(quizzes.length > 1 ? 1 : 0) // Start at 1 for cloned slide if multiple loops exist
     const [isDragging, setIsDragging] = useState(false)
     const [startX, setStartX] = useState(0)
     const [dragOffset, setDragOffset] = useState(0)
@@ -147,7 +147,7 @@ export default function HeroCarousel({ quizzes }: HeroCarouselProps) {
                                         className={styles.heroImage}
                                         draggable={false}
                                         sizes="(max-width: 768px) 100vw, 1200px"
-                                        priority={index === 1} // Index 1 is the first real slide because of cloning
+                                        priority={quizzes.length > 1 ? index === 1 : index === 0}
                                     />
                                 ) : (
                                     <div className={styles.placeholderImage}>
