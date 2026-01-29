@@ -40,7 +40,7 @@ export async function createQuiz(formData: FormData) {
     const rawData = {
         title: formData.get('title'),
         description: formData.get('description'),
-        imageUrl: formData.get('imageUrl'),
+        imageUrl: formData.get('imageUrl') || undefined,
         typeCodeLimit: parseInt(formData.get('typeCodeLimit') as string) || 2,
         isVisible: formData.get('isVisible') === 'on',
     }
@@ -108,7 +108,7 @@ export async function getQuizWithDetails(id: string) {
 export async function createQuestion(quizId: string, formData: FormData) {
     const rawData = {
         content: formData.get('content'),
-        imageUrl: formData.get('imageUrl'),
+        imageUrl: formData.get('imageUrl') || undefined,
         order: parseInt(formData.get('order') as string) || 0,
     }
 
@@ -145,7 +145,7 @@ export async function deleteQuestion(id: string, quizId: string) {
 export async function updateQuestion(id: string, quizId: string, formData: FormData) {
     const rawData = {
         content: formData.get('content'),
-        imageUrl: formData.get('imageUrl'),
+        imageUrl: formData.get('imageUrl') || undefined,
         order: parseInt(formData.get('order') as string) || 0,
     }
 
@@ -205,7 +205,7 @@ export async function createResult(quizId: string, formData: FormData) {
     const rawData = {
         title: formData.get('title'),
         description: formData.get('description'),
-        imageUrl: formData.get('imageUrl'),
+        imageUrl: formData.get('imageUrl') || undefined,
         minScore: parseInt(formData.get('minScore') as string) || 0,
         maxScore: parseInt(formData.get('maxScore') as string) || 0,
         typeCode: formData.get('typeCode'),
@@ -246,8 +246,8 @@ export async function updateQuiz(id: string, formData: FormData) {
     const rawData = {
         title: formData.get('title'),
         description: formData.get('description'),
-        imageUrl: formData.get('imageUrl'),
-        resultType: formData.get('resultType'),
+        imageUrl: formData.get('imageUrl') || undefined,
+        resultType: formData.get('resultType') || undefined,
         typeCodeLimit: parseInt(formData.get('typeCodeLimit') as string) || 2,
         isVisible: formData.get('isVisible') === 'on',
     }
@@ -295,7 +295,7 @@ export async function updateResult(id: string, quizId: string, formData: FormDat
     const rawData = {
         title: formData.get('title'),
         description: formData.get('description'),
-        imageUrl: formData.get('imageUrl'),
+        imageUrl: formData.get('imageUrl') || undefined,
         minScore: parseInt(formData.get('minScore') as string) || 0,
         maxScore: parseInt(formData.get('maxScore') as string) || 0,
         typeCode: formData.get('typeCode'),

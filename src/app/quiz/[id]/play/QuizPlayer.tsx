@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 import styles from './play.module.css'
+import { calculateTypeResult } from '@/lib/quiz-logic'
 
 type Option = {
     id: string
@@ -76,23 +77,7 @@ export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
     const currentQuestion = quiz.questions[currentQuestionIndex]
     const progress = ((currentQuestionIndex + 1) / quiz.questions.length) * 100
 
-    const calculateResult = (types: string[]) => {
-        if (types.length === 0) return ''
 
-        const counts: Record<string, number> = {}
-        types.forEach(t => {
-            counts[t] = (counts[t] || 0) + 1
-        })
-
-        // 빈도수 높은 순으로 정렬 (빈도수 같으면 알파벳 순)
-        const sortedTypes = Object.entries(counts)
-            .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
-            .map(item => item[0])
-
-        // 설정된 limit만큼 상위 코드들을 합쳐서 반환
-        const limit = quiz.typeCodeLimit || 2
-        return sortedTypes.slice(0, limit).join('')
-    }
 
     const handleAnswer = (option: Option) => {
         const nextIndex = currentQuestionIndex + 1
@@ -117,7 +102,8 @@ export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
                 setSelectedTypes(newTypes)
                 setCurrentQuestionIndex(nextIndex)
             } else {
-                const finalType = calculateResult(newTypes)
+                // Use the imported utility
+                const finalType = calculateTypeResult(newTypes, quiz.typeCodeLimit)
                 setFinalUrl(`/quiz/${quiz.id}/result?type=${finalType}`)
                 setIsCalculating(true)
             }
