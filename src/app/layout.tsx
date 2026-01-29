@@ -46,8 +46,10 @@ export default function RootLayout({
             })
           }}
         />
-        <Header />
-        {children}
+        <div className="app-wrapper">
+          <Header />
+          {children}
+        </div>
       </body>
     </html>
   );
