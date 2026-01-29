@@ -55,3 +55,8 @@
 ## 3. 유틸리티 및 검증
 - [x] **스키마 검증 (Zod)** - **테스트 완료 (`src/lib/__tests__/schema.test.ts`)**
 - [x] **URL 단축 로직** - **테스트 완료 (`src/lib/__tests__/url-shortener.test.ts`)**
+
+## 4. SEO 및 메타데이터
+- [x] **동적 사이트맵(Sitemap) 생성** - **테스트 완료 (`src/app/__tests__/seo.test.ts`)**
+- [x] **Robots.txt 생성** - **테스트 완료 (`src/app/__tests__/seo.test.ts`)**
+- [x] **구조화된 데이터(JSON-LD) 삽입** - **구현 완료 (검증 도구 확인 필요)**

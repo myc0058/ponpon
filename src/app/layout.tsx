@@ -8,6 +8,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'https://fonfon.vercel.app'),
   title: "폰폰 (PonPon) - 전설의 테스트",
   description: "당신을 닮은 전설의 존재를 찾아보세요. 가장 정밀한 성향 분석 퀴즈 플랫폼, 폰폰.",
   openGraph: {

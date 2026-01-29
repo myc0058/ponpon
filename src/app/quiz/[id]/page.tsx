@@ -5,6 +5,9 @@ import { PlayCircle } from 'lucide-react'
 import QuizShareUI from './QuizShareUI'
 import { Metadata } from 'next'
 
+export const revalidate = 60
+
+
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
     const { id } = await params
     const quiz = await prisma.quiz.findUnique({ where: { id } })
@@ -62,6 +65,27 @@ export default async function QuizIntroPage({ params }: { params: Promise<{ id: 
                             <span className={styles.statValue}>{quiz.plays.toLocaleString()}</span>
                         </div>
                     </div>
+
+                    <script
+                        type="application/ld+json"
+                        dangerouslySetInnerHTML={{
+                            __html: JSON.stringify({
+                                '@context': 'https://schema.org',
+                                '@type': 'Quiz',
+                                name: quiz.title,
+                                description: quiz.description,
+                                image: quiz.imageUrl,
+                                url: `${process.env.NEXT_PUBLIC_BASE_URL || 'https://fonfon.vercel.app'}/quiz/${quiz.id}`,
+                                dateCreated: quiz.createdAt,
+                                numberOfQuestions: quiz.questions.length,
+                                interactionStatistic: {
+                                    '@type': 'InteractionCounter',
+                                    interactionType: 'https://schema.org/TakeAction',
+                                    userInteractionCount: quiz.plays
+                                }
+                            })
+                        }}
+                    />
 
                     <div className={styles.actionButtons}>
                         <QuizShareUI quiz={quiz} />

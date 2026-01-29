@@ -4,6 +4,9 @@ import HeroCarousel from '@/components/HeroCarousel'
 import QuizCard from '@/components/QuizCard'
 import { Quiz } from '@/types'
 
+export const revalidate = 60
+
+
 export default async function Home() {
   const quizzes = (await getQuizzes()) as unknown as Quiz[]
   const featuredQuizzes = quizzes.filter((quiz) => quiz.isFeatured)
