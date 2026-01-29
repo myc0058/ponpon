@@ -2,14 +2,9 @@
 
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import styles from './HeroCarousel.module.css'
-
-interface Quiz {
-    id: string
-    title: string
-    description: string
-    imageUrl: string | null
-}
+import { Quiz } from '@/types'
 
 interface HeroCarouselProps {
     quizzes: Quiz[]
@@ -145,12 +140,14 @@ export default function HeroCarousel({ quizzes }: HeroCarouselProps) {
                         >
                             <div className={styles.imageContainer}>
                                 {quiz.imageUrl ? (
-                                    // eslint-disable-next-line @next/next/no-img-element
-                                    <img
+                                    <Image
                                         src={quiz.imageUrl}
                                         alt={quiz.title}
+                                        fill
                                         className={styles.heroImage}
                                         draggable={false}
+                                        sizes="(max-width: 768px) 100vw, 1200px"
+                                        priority={index === 1} // Index 1 is the first real slide because of cloning
                                     />
                                 ) : (
                                     <div className={styles.placeholderImage}>

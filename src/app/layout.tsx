@@ -26,6 +26,23 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body className={outfit.className}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'WebSite',
+              name: '폰폰 (PonPon)',
+              url: 'https://fonfon.vercel.app', // Replace with actual URL if known, assuming deployment URL
+              description: '당신을 닮은 전설의 존재를 찾아보세요. 가장 정밀한 성향 분석 퀴즈 플랫폼',
+              potentialAction: {
+                '@type': 'SearchAction',
+                target: 'https://fonfon.vercel.app/search?q={search_term_string}',
+                'query-input': 'required name=search_term_string'
+              }
+            })
+          }}
+        />
         {children}
       </body>
     </html>

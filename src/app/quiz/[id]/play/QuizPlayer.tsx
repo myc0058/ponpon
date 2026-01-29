@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
+import Image from 'next/image'
 import styles from './play.module.css'
 
 type Option = {
@@ -97,8 +98,6 @@ export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
         if (quiz.resultType === 'SCORE_BASED') {
             const newScore = totalScore + option.score
             if (!isLastQuestion) {
-                // Reset image loaded state immediately BEFORE changing index to prevent flash
-                setIsImageLoaded(false)
                 setTotalScore(newScore)
                 setCurrentQuestionIndex(nextIndex)
             } else {
@@ -112,8 +111,6 @@ export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
             }
 
             if (!isLastQuestion) {
-                // Reset image loaded state immediately BEFORE changing index to prevent flash
-                setIsImageLoaded(false)
                 setSelectedTypes(newTypes)
                 setCurrentQuestionIndex(nextIndex)
             } else {
@@ -139,12 +136,13 @@ export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
                         />
                     </div>
 
-                    {!showResultButton ? (
-                        <p className={styles.calculatingText}>{Math.floor(calculationProgress)}% 완료</p>
-                    ) : (
+                    <p className={styles.calculatingText}>{Math.floor(calculationProgress)}% 완료</p>
+
+                    {showResultButton && (
                         <button
                             className={styles.resultButton}
                             onClick={() => router.push(finalUrl)}
+                            style={{ marginTop: '1rem' }}
                         >
                             결과 확인하기
                         </button>
@@ -154,7 +152,7 @@ export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
         )
     }
 
-    const [isImageLoaded, setIsImageLoaded] = useState(false)
+
 
     // useEffect(() => {
     //     setIsImageLoaded(false)
@@ -180,36 +178,33 @@ export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
 
                 {currentQuestion.imageUrl && (
                     <div className={styles.imageWrapper}>
-                        {!isImageLoaded && (
-                            <div className={styles.loader} style={{ position: 'absolute' }} />
-                        )}
-                        <img
+                        <Image
                             src={currentQuestion.imageUrl}
                             alt="Question"
                             className={styles.questionImage}
-                            onLoad={() => setIsImageLoaded(true)}
-                            style={{ opacity: isImageLoaded ? 1 : 0, transition: 'opacity 0.3s' }}
+                            fill
+                            sizes="(max-width: 768px) 100vw, 400px"
+                            priority
                         />
                     </div>
                 )}
 
-                {(!currentQuestion.imageUrl || isImageLoaded) && (
-                    <div className={styles.contentAnimation} key={currentQuestion.id}>
-                        <h2 className={styles.questionText}>{currentQuestion.content}</h2>
+                <div className={styles.contentAnimation} key={currentQuestion.id}>
+                    <h2 className={styles.questionText}>{currentQuestion.content}</h2>
 
-                        <div className={styles.options}>
-                            {currentQuestion.options.map((option) => (
-                                <button
-                                    key={option.id}
-                                    className={styles.optionButton}
-                                    onClick={() => handleAnswer(option)}
-                                >
-                                    {option.content}
-                                </button>
-                            ))}
-                        </div>
+                    <div className={styles.options}>
+                        {currentQuestion.options.map((option) => (
+                            <button
+                                key={option.id}
+                                className={styles.optionButton}
+                                onClick={() => handleAnswer(option)}
+                            >
+                                {option.content}
+                            </button>
+                        ))}
                     </div>
-                )}
+                </div>
+
             </div>
         </main>
     )
