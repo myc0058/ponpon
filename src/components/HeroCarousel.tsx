@@ -159,28 +159,15 @@ export default function HeroCarousel({ quizzes }: HeroCarouselProps) {
                             <div className={styles.textContent}>
                                 <h2 className={styles.heroTitle}>{quiz.title}</h2>
                                 <p className={styles.heroDescription}>{quiz.description}</p>
-                                <button className={styles.playButton} onClick={(e) => e.preventDefault()}>
+                                <div className={styles.playButton}>
                                     지금 시작하기 →
-                                </button>
+                                </div>
                             </div>
                         </Link>
                     ))}
                 </div>
 
-                {quizzes.length > 1 && (
-                    <div className={styles.dots}>
-                        {quizzes.map((_, index) => (
-                            <button
-                                key={index}
-                                className={`${styles.dot} ${index === actualIndex ? styles.dotActive : ''}`}
-                                onClick={(e) => {
-                                    e.stopPropagation()
-                                    goToSlide(index)
-                                }}
-                            />
-                        ))}
-                    </div>
-                )}
+
             </div>
         </div>
     )
