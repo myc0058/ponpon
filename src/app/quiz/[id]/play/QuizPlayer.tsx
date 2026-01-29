@@ -47,9 +47,12 @@ export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
                         setShowResultButton(true)
                         return 100
                     }
-                    return prev + 1.5 // 약 6-7초 동안 진행
+                    // Accelerating progress: base speed + acceleration based on current progress
+                    // Adjusted for slower completion (approx +2s)
+                    const increment = 0.2 + (prev * 0.05)
+                    return Math.min(100, prev + increment)
                 })
-            }, 100)
+            }, 50) // Update more frequently for smoother animation
             return () => clearInterval(timer)
         }
     }, [isCalculating])

@@ -8,13 +8,20 @@
 }
 
 .logoSection {
-    text-align: center;
-    padding: 0.5rem 0;
-    /* Minimal padding */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1.5rem;
+    /* Balanced top spacing */
+    padding-bottom: 2rem;
+    /* Balanced bottom spacing */
+    min-height: 3rem;
+    /* Minimum height to ensure vertical centering has space */
 }
 
 .logo {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
+    /* Slightly larger for better presence */
     line-height: 1;
     margin: 0;
     /* No default margin */
