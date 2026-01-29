@@ -1,12 +1,11 @@
 .container {
-    height: 100dvh;
+    min-height: 100dvh;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    padding: 1rem;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 0;
+    background: white;
     animation: fadeIn 0.6s ease-out;
-    overflow: hidden;
 }
 
 @keyframes fadeIn {
@@ -23,26 +22,21 @@
 
 .introCard {
     background: white;
-    border-radius: 1.5rem;
-    overflow: hidden;
-    max-width: 500px;
+    max-width: 600px;
     width: 100%;
-    max-height: 100%;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
 .coverImage {
     width: 100%;
-    height: 200px;
+    height: 320px;
     object-fit: cover;
     flex-shrink: 0;
 }
 
 .content {
     padding: 1.5rem;
-    overflow-y: auto;
     display: flex;
     flex-direction: column;
 }
@@ -58,15 +52,15 @@
 .description {
     color: #374151;
     line-height: 1.5;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     font-size: 0.95rem;
 }
 
 .stats {
     display: flex;
     gap: 1rem;
-    margin-bottom: 1.5rem;
-    padding: 1rem;
+    margin-bottom: 1rem;
+    padding: 0.75rem;
     background: #f9fafb;
     border-radius: 0.75rem;
     flex-shrink: 0;
@@ -104,14 +98,15 @@
     justify-content: center;
     gap: 0.5rem;
     flex: 1;
-    padding: 1rem;
+    padding: 0.75rem 0.5rem;
     border: none;
     border-radius: 0.75rem;
-    font-size: 1.125rem;
+    font-size: 1rem;
     font-weight: 700;
     cursor: pointer;
     text-decoration: none;
     transition: transform 0.2s, box-shadow 0.2s;
+    white-space: nowrap;
 }
 
 .startButton {
@@ -239,7 +234,7 @@
 
 @media (max-width: 480px) {
     .actionButtons {
-        flex-direction: column;
+        flex-direction: row;
     }
 
     .shareButtons {

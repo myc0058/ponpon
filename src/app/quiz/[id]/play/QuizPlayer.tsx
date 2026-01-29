@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 import styles from './play.module.css'
@@ -42,6 +42,7 @@ export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
     const [calculationProgress, setCalculationProgress] = useState(0)
     const [showResultButton, setShowResultButton] = useState(false)
     const [finalUrl, setFinalUrl] = useState('')
+    const progressRef = useRef<HTMLDivElement>(null)
     const router = useRouter()
 
     useEffect(() => {
@@ -53,9 +54,8 @@ export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
                         setShowResultButton(true)
                         return 100
                     }
-                    // Accelerating progress: base speed + acceleration based on current progress
-                    // Adjusted for slower completion (approx +2s)
-                    const increment = 0.2 + (prev * 0.05)
+                    // Linear progress to exactly 5 seconds: 1% every 50ms (100 * 50ms = 5000ms)
+                    const increment = 1
                     return Math.min(100, prev + increment)
                 })
             }, 50) // Update more frequently for smoother animation
@@ -63,9 +63,11 @@ export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
         }
     }, [isCalculating])
 
-    // Scroll to top when question changes or calculation starts
+    // Scroll to progress bar when question changes or calculation starts
     useEffect(() => {
-        window.scrollTo({ top: 0, behavior: 'smooth' })
+        if (progressRef.current) {
+            progressRef.current.scrollIntoView({ behavior: 'smooth' })
+        }
     }, [currentQuestionIndex, isCalculating])
 
     // Safety check: if no questions, show error
@@ -181,7 +183,7 @@ export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
     return (
         <main className={styles.container}>
             <div className={styles.questionCard}>
-                <div className={styles.progressSection}>
+                <div className={styles.progressSection} ref={progressRef}>
                     <div className={styles.progressText}>
                         <span className={styles.currentStep}>{currentQuestionIndex + 1}</span>
                         <span className={styles.totalStep}>/{quiz.questions.length}</span>
