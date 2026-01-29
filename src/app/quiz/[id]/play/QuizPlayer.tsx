@@ -37,6 +37,7 @@ export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
     const [totalScore, setTotalScore] = useState(0)
     const [selectedTypes, setSelectedTypes] = useState<string[]>([])
+    const [weightedScores, setWeightedScores] = useState<Record<string, number>>({})
     const [isCalculating, setIsCalculating] = useState(false)
     const [calculationProgress, setCalculationProgress] = useState(0)
     const [showResultButton, setShowResultButton] = useState(false)
@@ -61,6 +62,11 @@ export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
             return () => clearInterval(timer)
         }
     }, [isCalculating])
+
+    // Scroll to top when question changes or calculation starts
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+    }, [currentQuestionIndex, isCalculating])
 
     // Safety check: if no questions, show error
     if (!quiz.questions || quiz.questions.length === 0) {
@@ -98,17 +104,35 @@ export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
             }
         } else {
             const newTypes = [...selectedTypes]
+            const newWeightedScores = { ...weightedScores }
+
             if (option.resultTypeCode) {
                 newTypes.push(option.resultTypeCode)
+                // Accumulate weighted score (default to 1 if score is 0 or undefined, though currently score is optional in Option type but present)
+                // Actually the user wants to use `score` field which is likely option.score.
+                // If option.score is 0 (default for type-based?), we might want to default to 1?
+                // But the user said "make it +0.5 +1", so if it is explicitly set, use it.
+                // If it's a legacy quiz, score might be 0.
+
+                // Let's assume if score is explicitly provided (even 0), we use it. 
+                // However, for backward compatibility, if all scores are 0, the logic in calculateTypeResult handles fallback.
+
+                const scoreToAdd = option.score ?? 1; // Default to 1 if undefined? Or just use option.score. 
+                // The Option type has score: number.
+
+                newWeightedScores[option.resultTypeCode] = (newWeightedScores[option.resultTypeCode] || 0) + scoreToAdd
             }
 
             if (!isLastQuestion) {
                 setSelectedTypes(newTypes)
+                setWeightedScores(newWeightedScores)
                 setCurrentQuestionIndex(nextIndex)
             } else {
                 // Use the imported utility with validation
                 const validCodes = quiz.results.map(r => r.typeCode).filter(Boolean) as string[]
-                const finalType = calculateTypeResult(newTypes, quiz.typeCodeLimit, validCodes)
+
+                // Pass newWeightedScores to the calculation
+                const finalType = calculateTypeResult(newTypes, quiz.typeCodeLimit, validCodes, newWeightedScores)
                 setFinalUrl(`/quiz/${quiz.id}/result?type=${finalType}`)
                 setIsCalculating(true)
             }

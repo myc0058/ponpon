@@ -25,7 +25,11 @@ async function main() {
 
     console.log(`Seeding quiz: ${data.title}`)
 
-    // Transform simple JSON to Prisma nested create format
+    // Check if quiz already exists
+    const existingQuiz = await prisma.quiz.findFirst({
+        where: { title: data.title }
+    })
+
     const quizData = {
         title: data.title,
         description: data.description,
@@ -59,11 +63,35 @@ async function main() {
         }
     }
 
-    const quiz = await prisma.quiz.create({
-        data: quizData
-    })
+    let quiz;
+    if (existingQuiz) {
+        console.log(`Updating existing quiz: ${existingQuiz.id}`)
+        quiz = await prisma.quiz.update({
+            where: { id: existingQuiz.id },
+            data: {
+                title: data.title,
+                description: data.description,
+                imageUrl: data.imageUrl,
+                resultType: data.resultType,
+                typeCodeLimit: data.typeCodeLimit,
+                questions: {
+                    deleteMany: {},
+                    create: quizData.questions.create
+                },
+                results: {
+                    deleteMany: {},
+                    create: quizData.results.create
+                }
+            }
+        })
+    } else {
+        console.log('Creating new quiz...')
+        quiz = await prisma.quiz.create({
+            data: quizData
+        })
+    }
 
-    console.log(`✅ Quiz created successfully! ID: ${quiz.id}`)
+    console.log(`✅ Quiz handled successfully! ID: ${quiz.id}`)
 }
 
 main()

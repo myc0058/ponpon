@@ -19,6 +19,8 @@ export const metadata: Metadata = {
   },
 };
 
+import Header from "@/components/Header";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -44,6 +46,7 @@ export default function RootLayout({
             })
           }}
         />
+        <Header />
         {children}
       </body>
     </html>

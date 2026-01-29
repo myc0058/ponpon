@@ -13,11 +13,6 @@ export default async function Home() {
 
   return (
     <main className={styles.container}>
-      {/* Logo Section */}
-      <div className={styles.logoSection}>
-        <h1 className={styles.logo}>PonPon</h1>
-      </div>
-
       {/* Hero Carousel Section */}
       {featuredQuizzes.length > 0 && (
         <HeroCarousel quizzes={featuredQuizzes} />

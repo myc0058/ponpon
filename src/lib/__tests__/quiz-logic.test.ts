@@ -69,4 +69,42 @@ describe('Quiz Logic - Type Calculation', () => {
         // logic: F vs R (tie -> F), S vs T (tie -> S) => FS
         expect(calculateTypeResult(['F', 'R', 'S', 'T'], 2, validCodes)).toBe('FS')
     })
+
+    // Weighted Scoring Tests
+    it('should use weighted scores when provided (Legacy/Frequency Mode)', () => {
+        const types = ['A', 'B'] // Dummy types since we provide weights
+        const weightedScores = { 'A': 0.5, 'B': 1.0, 'C': 2.0 }
+        // C=2.0 > B=1.0 > A=0.5
+        // Limit 2 -> BC (sorted alphabetically) -> BC
+        expect(calculateTypeResult(types, 2, undefined, weightedScores)).toBe('BC')
+    })
+
+    it('should use weighted scores when provided (Dimensional Mode)', () => {
+        const validCodes = ['FS', 'FT', 'RS', 'RT']
+        const types = ['F', 'T'] // Dummy types
+
+        // Axis 0: F vs R
+        // Axis 1: S vs T
+
+        const weightedScores = {
+            'F': 0.5,
+            'R': 1.0, // R wins Axis 0
+            'S': 2.0, // S wins Axis 1
+            'T': 1.5
+        }
+
+        // Result -> RS
+        expect(calculateTypeResult(types, 2, validCodes, weightedScores)).toBe('RS')
+    })
+
+    it('should fall back to frequency if weightedScores are zero', () => {
+        const validCodes = ['FS', 'FT', 'RS', 'RT']
+        const types = ['F', 'F', 'T']
+        // F=2, T=1
+        // Frequency -> FT
+
+        const weightedScores = { 'F': 0, 'R': 0, 'S': 0, 'T': 0 }
+
+        expect(calculateTypeResult(types, 2, validCodes, weightedScores)).toBe('FT')
+    })
 })

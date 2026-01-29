@@ -63,6 +63,7 @@ export default function ResultDisplay({
             }
         }
         fetchShortUrl()
+        window.scrollTo({ top: 0, behavior: 'smooth' })
     }, [])
 
     const handleShare = async (platform: string) => {
