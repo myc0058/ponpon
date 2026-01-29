@@ -8,7 +8,7 @@ export const dynamic = 'force-dynamic'
 
 export default async function AdminPage() {
     // Fetch quizzes (ensure latest data)
-    const quizzes = await getQuizzes()
+    const quizzes = await getQuizzes({ includeHidden: true })
 
     return (
         <div className={styles.container}>
@@ -48,6 +48,19 @@ export default async function AdminPage() {
                                     }}>
                                         <Star size={12} fill="white" />
                                         Featured
+                                    </span>
+                                )}
+                                {!quiz.isVisible && (
+                                    <span style={{
+                                        backgroundColor: '#f3f4f6',
+                                        color: '#6b7280',
+                                        padding: '0.25rem 0.5rem',
+                                        borderRadius: '0.25rem',
+                                        fontSize: '0.75rem',
+                                        fontWeight: '600',
+                                        border: '1px solid #e5e7eb'
+                                    }}>
+                                        비공개 (접근 가능)
                                     </span>
                                 )}
                             </div>

@@ -21,6 +21,7 @@ model Quiz {
   resultType      ResultType @default(SCORE_BASED)
   typeCodeLimit   Int        @default(2) // 조합형에서 상위 몇 개의 코드를 합칠지 결정
   isFeatured  Boolean    @default(false) // Hero section에 표시 여부
+  isVisible   Boolean    @default(false) // 사용자에게 공개 여부
   createdAt   DateTime   @default(now())
   updatedAt   DateTime   @updatedAt
   plays       Int        @default(0)

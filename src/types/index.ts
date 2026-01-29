@@ -6,6 +6,7 @@ export interface Quiz {
     resultType: 'SCORE_BASED' | 'TYPE_BASED'
     typeCodeLimit: number
     isFeatured: boolean
+    isVisible: boolean
     createdAt: Date
     updatedAt: Date
     plays: number

@@ -42,6 +42,7 @@ export async function createQuiz(formData: FormData) {
         description: formData.get('description'),
         imageUrl: formData.get('imageUrl'),
         typeCodeLimit: parseInt(formData.get('typeCodeLimit') as string) || 2,
+        isVisible: formData.get('isVisible') === 'on',
     }
 
     const validatedFields = quizSchema.safeParse(rawData)
@@ -58,8 +59,10 @@ export async function createQuiz(formData: FormData) {
     redirect('/admin')
 }
 
-export async function getQuizzes() {
+export async function getQuizzes(options?: { includeHidden?: boolean }) {
+    const where = options?.includeHidden ? {} : { isVisible: true }
     return await prisma.quiz.findMany({
+        where,
         orderBy: { createdAt: 'desc' },
     })
 }
@@ -246,6 +249,7 @@ export async function updateQuiz(id: string, formData: FormData) {
         imageUrl: formData.get('imageUrl'),
         resultType: formData.get('resultType'),
         typeCodeLimit: parseInt(formData.get('typeCodeLimit') as string) || 2,
+        isVisible: formData.get('isVisible') === 'on',
     }
 
     const validatedFields = quizSchema.safeParse(rawData)

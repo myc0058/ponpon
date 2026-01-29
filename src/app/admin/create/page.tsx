@@ -52,6 +52,18 @@ export default function CreateQuizPage() {
                     />
                 </div>
 
+                <div className={styles.formGroup} style={{ flexDirection: 'row', alignItems: 'center', gap: '0.5rem' }}>
+                    <input
+                        type="checkbox"
+                        id="isVisible"
+                        name="isVisible"
+                        style={{ width: 'auto', margin: 0 }}
+                    />
+                    <label htmlFor="isVisible" className={styles.label} style={{ marginBottom: 0 }}>
+                        공개 설정 (체크 시 사용자에게 퀴즈가 노출됩니다)
+                    </label>
+                </div>
+
                 <button type="submit" className={styles.submitButton}>
                     Create Quiz
                 </button>

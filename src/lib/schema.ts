@@ -6,6 +6,7 @@ export const quizSchema = z.object({
     imageUrl: z.string().optional(),
     typeCodeLimit: z.number().int().min(1).default(2),
     resultType: z.enum(['SCORE_BASED', 'TYPE_BASED']).default('SCORE_BASED'),
+    isVisible: z.boolean().default(false),
 })
 
 export const questionSchema = z.object({

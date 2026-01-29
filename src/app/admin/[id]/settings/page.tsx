@@ -17,7 +17,7 @@ export default async function QuizSettingsPage({ params }: { params: Promise<{ i
         return <div>Quiz not found</div>
     }
 
-    console.log(`[SettingsPage Render] ID: ${id}, typeCodeLimit: ${quiz.typeCodeLimit}`)
+    console.log(`[SettingsPage Render] ID: ${id}, typeCodeLimit: ${quiz.typeCodeLimit}, isVisible: ${quiz.isVisible}`)
 
     async function handleDelete() {
         'use server'
@@ -103,6 +103,20 @@ export default async function QuizSettingsPage({ params }: { params: Promise<{ i
                             />
                             <p style={{ fontSize: '0.85rem', color: '#666', marginTop: '0.5rem' }}>
                                 선택된 답변 중 빈도수가 높은 상위 N개의 코드를 합쳐 결과를 만듭니다. (예: 2 설정 시 'E'+'T' = 'ET')
+                            </p>
+                        </div>
+                        <div>
+                            <label className={styles.label} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer' }}>
+                                <input
+                                    type="checkbox"
+                                    name="isVisible"
+                                    defaultChecked={quiz.isVisible}
+                                    style={{ width: '1.2rem', height: '1.2rem' }}
+                                />
+                                공개 설정 (체크 시 메인 목록에 노출)
+                            </label>
+                            <p style={{ fontSize: '0.85rem', color: '#666', marginTop: '0.5rem', marginLeft: '1.8rem' }}>
+                                해제 시 링크를 아는 사람만 접근할 수 있습니다 (테스트 용도).
                             </p>
                         </div>
                         <button type="submit" className={styles.button} style={{ alignSelf: 'flex-start' }}>
