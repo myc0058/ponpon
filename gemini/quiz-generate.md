@@ -52,7 +52,7 @@
 ## 3. 이미지 생성 (Asset Production)
 `generate_image` 도구를 사용하여 이미지를 생성합니다.
 
-1.  **이미지 컨셉 선정**: 퀴즈의 주제와 타겟 연령층에 가장 잘 어울리는 화풍(Art Style)을 선정합니다.
+1.  **이미지 컨셉 선정**: 퀴즈의 주제와 타겟 연령층에 가장 잘 어울리는 화풍(Art Style)을 선정합니다. (참고: [Style Guide](style-guide.md))
     *   **Style Examples**:
         *   **3D Pixar style**: 귀엽고 생동감 있는 캐릭터 중심 (범용적/대중적)
         *   **Studio Ghibli style**: 따뜻하고 감성적인 수채화 느낌 (힐링/추억/서정적)
