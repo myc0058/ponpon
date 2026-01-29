@@ -226,13 +226,14 @@ export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
                 </div>
 
                 {/* Preload next image */}
+                {/* Preload next image with exact same props as main image to ensure cache hit */}
                 {quiz.questions[currentQuestionIndex + 1]?.imageUrl && (
-                    <div style={{ display: 'none' }}>
+                    <div style={{ position: 'absolute', width: '1px', height: '1px', padding: 0, margin: -1, overflow: 'hidden', clip: 'rect(0, 0, 0, 0)', whiteSpace: 'nowrap', border: 0 }}>
                         <Image
                             src={quiz.questions[currentQuestionIndex + 1].imageUrl!}
                             alt="preload"
-                            width={10}
-                            height={10}
+                            fill
+                            sizes="(max-width: 768px) 100vw, 400px"
                             priority
                         />
                     </div>
