@@ -1,9 +1,10 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import styles from './result.module.css'
 import { Share2, Home, Lock, Link as LinkIcon } from 'lucide-react'
+import { generateShortUrl } from '@/app/actions/shorten-url'
 
 type Result = {
     id: string
@@ -42,8 +43,28 @@ export default function ResultDisplay({
         }, 1500)
     }
 
-    const handleShare = (platform: string) => {
-        const url = window.location.href
+    const [shortUrl, setShortUrl] = useState<string>('')
+
+    useEffect(() => {
+        const fetchShortUrl = async () => {
+            try {
+                const currentUrl = window.location.href
+                const result = await generateShortUrl(currentUrl)
+                if (result.success) {
+                    setShortUrl(`${window.location.origin}/s/${result.id}`)
+                } else {
+                    setShortUrl(currentUrl)
+                }
+            } catch (e) {
+                console.error('Failed to shorten URL:', e)
+                setShortUrl(window.location.href)
+            }
+        }
+        fetchShortUrl()
+    }, [])
+
+    const handleShare = async (platform: string) => {
+        const url = shortUrl || window.location.href
         const text = `나는 "${quiz.title}" 퀴즈에서 "${result.title}" 결과가 나왔어요!`
 
         switch (platform) {
@@ -61,8 +82,9 @@ export default function ResultDisplay({
 
     const handleCopyLink = async () => {
         try {
-            await navigator.clipboard.writeText(window.location.href)
-            alert('링크가 클립보드에 복사되었습니다!')
+            const url = shortUrl || window.location.href
+            await navigator.clipboard.writeText(url)
+            alert('단축 링크가 클립보드에 복사되었습니다!')
         } catch (err) {
             console.error('Failed to copy: ', err)
             alert('링크 복사에 실패했습니다.')

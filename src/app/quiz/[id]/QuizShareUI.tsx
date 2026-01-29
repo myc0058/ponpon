@@ -1,8 +1,9 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Share2, Link as LinkIcon, X } from 'lucide-react'
 import styles from './quiz.module.css'
+import { generateShortUrl } from '@/app/actions/shorten-url'
 
 type Quiz = {
     id: string
@@ -13,9 +14,30 @@ type Quiz = {
 
 export default function QuizShareUI({ quiz }: { quiz: Quiz }) {
     const [showShare, setShowShare] = useState(false)
+    const [shortUrl, setShortUrl] = useState<string>('')
 
-    const handleShare = (platform: string) => {
-        const url = typeof window !== 'undefined' ? window.location.href : ''
+    useEffect(() => {
+        if (showShare && !shortUrl) {
+            const fetchShortUrl = async () => {
+                try {
+                    const currentUrl = window.location.href
+                    const result = await generateShortUrl(currentUrl)
+                    if (result.success) {
+                        setShortUrl(`${window.location.origin}/s/${result.id}`)
+                    } else {
+                        setShortUrl(currentUrl)
+                    }
+                } catch (e) {
+                    console.error('Failed to shorten URL:', e)
+                    setShortUrl(window.location.href)
+                }
+            }
+            fetchShortUrl()
+        }
+    }, [showShare, shortUrl])
+
+    const handleShare = async (platform: string) => {
+        const url = shortUrl || window.location.href
         const text = `이 퀴즈 한번 풀어보세요! "${quiz.title}"`
 
         switch (platform) {
@@ -33,8 +55,9 @@ export default function QuizShareUI({ quiz }: { quiz: Quiz }) {
 
     const handleCopyLink = async () => {
         try {
-            await navigator.clipboard.writeText(window.location.href)
-            alert('링크가 클립보드에 복사되었습니다!')
+            const url = shortUrl || window.location.href
+            await navigator.clipboard.writeText(url)
+            alert('단축 링크가 클립보드에 복사되었습니다!')
         } catch (err) {
             console.error('Failed to copy: ', err)
             alert('링크 복사에 실패했습니다.')

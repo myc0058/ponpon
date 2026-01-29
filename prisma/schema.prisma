@@ -60,3 +60,10 @@ model Result {
   typeCode    String? // INTJ, ENFP 등 (TYPE_BASED일 때만 사용)
   isPremium   Boolean @default(false)
 }
+
+model ShortUrl {
+  id          String   @id
+  originalUrl String
+  createdAt   DateTime @default(now())
+  visits      Int      @default(0)
+}
