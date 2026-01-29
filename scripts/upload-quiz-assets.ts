@@ -4,6 +4,7 @@ import { createClient } from '@supabase/supabase-js'
 import { readFileSync, writeFileSync, existsSync } from 'fs'
 import path from 'path'
 import mime from 'mime-types'
+import sharp from 'sharp'
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
 const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY || ''
@@ -28,34 +29,40 @@ async function uploadFile(filename: string): Promise<string | null> {
         return null
     }
 
-    const fileBuffer = readFileSync(localFilePath)
-    const mimeType = mime.lookup(localFilePath) || 'application/octet-stream'
+    // Optimization: Convert to WebP using sharp
+    const fileNameWithoutExt = path.parse(filename).name
+    const webpFileName = `${fileNameWithoutExt}.webp`
+    const remotePath = `${path.basename(dirPath)}/${webpFileName}`
 
-    // Use a timestamp to avoid caching issues or overwrites if needed, 
-    // but for now keeping filename simple or prefixing with quiz slug could be good.
-    // Actually, use random string + filename to ensure uniqueness or put in folder.
-    // Let's put in 'quiz-assets/{filename}'
-    const remotePath = `${path.basename(dirPath)}/${filename}`
+    console.log(`Optimizing and Uploading ${filename} to ${remotePath}...`)
 
-    console.log(`Uploading ${filename} to ${remotePath}...`)
+    try {
+        const webpBuffer = await sharp(localFilePath)
+            .resize(1200, 1200, { fit: 'inside', withoutEnlargement: true })
+            .webp({ quality: 80 })
+            .toBuffer()
 
-    const { error } = await supabase.storage
-        .from('quiz-images')
-        .upload(remotePath, fileBuffer, {
-            contentType: mimeType,
-            upsert: true
-        })
+        const { error } = await supabase.storage
+            .from('quiz-images')
+            .upload(remotePath, webpBuffer, {
+                contentType: 'image/webp',
+                upsert: true
+            })
 
-    if (error) {
-        console.error(`Error uploading ${filename}:`, error)
+        if (error) {
+            console.error(`Error uploading ${filename}:`, error)
+            return null
+        }
+
+        const { data } = supabase.storage
+            .from('quiz-images')
+            .getPublicUrl(remotePath)
+
+        return data.publicUrl
+    } catch (err) {
+        console.error(`Error processing ${filename}:`, err)
         return null
     }
-
-    const { data } = supabase.storage
-        .from('quiz-images')
-        .getPublicUrl(remotePath)
-
-    return data.publicUrl
 }
 
 async function main() {

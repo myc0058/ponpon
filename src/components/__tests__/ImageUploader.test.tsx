@@ -56,6 +56,45 @@ describe('ImageUploader', () => {
     it('should handle file upload successfully', async () => {
         const file = new File(['(⌐□_□)'], 'chucknorris.png', { type: 'image/png' })
 
+        // Mock URL.createObjectURL and FileReader for image optimization
+        const mockDataUrl = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg=='
+
+        // Mocking FileReader
+        const originalFileReader = window.FileReader;
+        (window as any).FileReader = jest.fn().mockImplementation(() => ({
+            readAsDataURL: jest.fn().mockImplementation(function (this: any) {
+                this.onload({ target: { result: mockDataUrl } })
+            }),
+        }));
+
+        // Mocking Image and Canvas
+        const originalImage = window.Image;
+        (window as any).Image = jest.fn().mockImplementation(() => {
+            const img = {
+                onload: null as any,
+                onerror: null as any,
+                set src(s: string) {
+                    setTimeout(() => { if (img.onload) img.onload() }, 0)
+                },
+                width: 100,
+                height: 100
+            };
+            return img;
+        });
+
+        const originalCreateElement = document.createElement;
+        document.createElement = jest.fn().mockImplementation((tagName) => {
+            if (tagName === 'canvas') {
+                return {
+                    getContext: () => ({ drawImage: jest.fn() }),
+                    toBlob: (cb: any) => cb(new Blob(['compressed'], { type: 'image/avif' })),
+                    width: 0,
+                    height: 0
+                }
+            }
+            return originalCreateElement.call(document, tagName)
+        })
+
         let resolveUpload: any
         const uploadPromise = new Promise((resolve) => { resolveUpload = resolve })
 
@@ -64,7 +103,7 @@ describe('ImageUploader', () => {
 
             // Mock public URL generation
             ; ((supabase.storage as any).getPublicUrl as jest.Mock).mockReturnValue({
-                data: { publicUrl: 'https://supabase.co/storage/v1/object/public/test-bucket/path/to/image.png' }
+                data: { publicUrl: 'https://supabase.co/storage/v1/object/public/test-bucket/path/to/image.avif' }
             })
 
         render(<ImageUploader {...defaultProps} />)
@@ -85,7 +124,7 @@ describe('ImageUploader', () => {
         // Verify successful state update
         await waitFor(() => {
             const img = screen.getByRole('img', { name: 'Preview' })
-            expect(img).toHaveAttribute('src', 'https://supabase.co/storage/v1/object/public/test-bucket/path/to/image.png')
+            expect(img).toHaveAttribute('src', 'https://supabase.co/storage/v1/object/public/test-bucket/path/to/image.avif')
         })
 
         // Check loading state removed

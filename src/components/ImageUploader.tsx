@@ -27,15 +27,20 @@ export default function ImageUploader({
 
         setIsUploading(true)
         try {
-            // 파일명 생성: 날짜 + 랜덤문자열 + 확장자
-            const fileExt = file.name.split('.').pop()
-            const fileName = `${Date.now()}_${Math.random().toString(36).substring(7)}.${fileExt}`
+            // 이미지 압축 및 WebP 변환
+            const optimizedFile = await optimizeImage(file)
+
+            // 파일명 생성: 날짜 + 랜덤문자열 + 확장자 (.webp로 고정)
+            const fileName = `${Date.now()}_${Math.random().toString(36).substring(7)}.webp`
             const filePath = `${fileName}`
 
             // Supabase 스토리지에 업로드
             const { error: uploadError } = await supabase.storage
                 .from(bucketName)
-                .upload(filePath, file)
+                .upload(filePath, optimizedFile, {
+                    contentType: 'image/webp',
+                    upsert: true
+                })
 
             if (uploadError) {
                 throw uploadError
@@ -57,6 +62,56 @@ export default function ImageUploader({
                 fileInputRef.current.value = ''
             }
         }
+    }
+
+    // 클라이언트 사이드 이미지 최적화 함수
+    const optimizeImage = (file: File): Promise<Blob> => {
+        return new Promise((resolve, reject) => {
+            const reader = new FileReader()
+            reader.readAsDataURL(file)
+            reader.onload = (event) => {
+                const img = new Image()
+                img.src = event.target?.result as string
+                img.onload = () => {
+                    const canvas = document.createElement('canvas')
+                    const MAX_WIDTH = 1200
+                    const MAX_HEIGHT = 1200
+                    let width = img.width
+                    let height = img.height
+
+                    if (width > height) {
+                        if (width > MAX_WIDTH) {
+                            height *= MAX_WIDTH / width
+                            width = MAX_WIDTH
+                        }
+                    } else {
+                        if (height > MAX_HEIGHT) {
+                            width *= MAX_HEIGHT / height
+                            height = MAX_HEIGHT
+                        }
+                    }
+
+                    canvas.width = width
+                    canvas.height = height
+                    const ctx = canvas.getContext('2d')
+                    ctx?.drawImage(img, 0, 0, width, height)
+
+                    canvas.toBlob(
+                        (blob) => {
+                            if (blob) {
+                                resolve(blob)
+                            } else {
+                                reject(new Error('Canvas toBlob failed'))
+                            }
+                        },
+                        'image/webp',
+                        0.8 // 품질 설정
+                    )
+                }
+                img.onerror = (err) => reject(err)
+            }
+            reader.onerror = (err) => reject(err)
+        })
     }
 
     const handleRemove = (e: React.MouseEvent) => {
