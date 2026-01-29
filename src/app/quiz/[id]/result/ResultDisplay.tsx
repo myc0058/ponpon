@@ -3,8 +3,9 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import styles from './result.module.css'
-import { Share2, Home, Lock, Link as LinkIcon } from 'lucide-react'
+import { Share2, Home, Lock, Link as LinkIcon, RotateCcw } from 'lucide-react'
 import { generateShortUrl } from '@/app/actions/shorten-url'
+import ShareDrawer from '@/components/ShareDrawer'
 
 type Result = {
     id: string
@@ -34,6 +35,7 @@ export default function ResultDisplay({
 }) {
     const [isPaid, setIsPaid] = useState(false)
     const [isPaymentLoading, setIsPaymentLoading] = useState(false)
+    const [isShareOpen, setIsShareOpen] = useState(false)
 
     const handlePayment = async () => {
         setIsPaymentLoading(true)
@@ -91,6 +93,8 @@ export default function ResultDisplay({
         }
     }
 
+
+
     const showPremiumLock = result.isPremium && !isPaid
 
     return (
@@ -120,18 +124,20 @@ export default function ResultDisplay({
                     </div>
                 ) : (
                     <>
-                        {result.imageUrl && (
-                            // eslint-disable-next-line @next/next/no-img-element
-                            <img
-                                src={result.imageUrl}
-                                alt={result.title}
-                                className={styles.resultImage}
-                            />
-                        )}
+                        <div id="result-content">
+                            {result.imageUrl && (
+                                // eslint-disable-next-line @next/next/no-img-element
+                                <img
+                                    src={result.imageUrl}
+                                    alt={result.title}
+                                    className={styles.resultImage}
+                                />
+                            )}
 
-                        <div className={styles.content}>
-                            <h1 className={styles.resultTitle}>{result.title}</h1>
-                            <p className={styles.resultDescription}>{result.description}</p>
+                            <div className={styles.content}>
+                                <h1 className={styles.resultTitle}>{result.title}</h1>
+                                <p className={styles.resultDescription}>{result.description}</p>
+                            </div>
                         </div>
 
                         <div className={styles.shareSection}>
@@ -139,26 +145,18 @@ export default function ResultDisplay({
                                 <Share2 size={20} />
                                 결과 공유하기
                             </h3>
-                            <div className={styles.shareButtons}>
+                            <div className={styles.actionButtons}>
                                 <button
-                                    className={`${styles.shareButton} ${styles.kakao}`}
-                                    onClick={() => handleShare('kakao')}
+                                    className={`${styles.actionButton} ${styles.shareButton}`}
+                                    onClick={() => setIsShareOpen(true)}
                                 >
-                                    카카오톡
+                                    <Share2 size={24} />
+                                    공유하기
                                 </button>
-                                <button
-                                    className={`${styles.shareButton} ${styles.copy}`}
-                                    onClick={handleCopyLink}
-                                >
-                                    <LinkIcon size={16} style={{ marginRight: '4px', verticalAlign: 'middle' }} />
-                                    링크 복사
-                                </button>
-                                <button
-                                    className={`${styles.shareButton} ${styles.twitter}`}
-                                    onClick={() => handleShare('twitter')}
-                                >
-                                    트위터
-                                </button>
+                                <Link href={`/quiz/${quiz.id}`} className={`${styles.actionButton} ${styles.retryButton}`}>
+                                    <RotateCcw size={24} />
+                                    다시하기
+                                </Link>
                             </div>
                         </div>
                     </>
@@ -174,6 +172,16 @@ export default function ResultDisplay({
                 <div className={styles.adLabel}>광고</div>
                 <div className={styles.adContent}>Google AdSense 영역</div>
             </div>
+
+            <ShareDrawer
+                isOpen={isShareOpen}
+                onClose={() => setIsShareOpen(false)}
+                onShare={handleShare}
+                onCopy={handleCopyLink}
+                title={result.title}
+                description={result.description}
+                imageUrl={result.imageUrl}
+            />
         </main>
     )
 }

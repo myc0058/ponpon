@@ -144,7 +144,7 @@ describe('ResultDisplay', () => {
         jest.useRealTimers()
     })
 
-    it('should generate and copy short link', async () => {
+    it('should show share drawer when share button is clicked', async () => {
         await act(async () => {
             render(
                 <ResultDisplay
@@ -156,27 +156,84 @@ describe('ResultDisplay', () => {
             )
         })
 
-        // Wait for short url generation to complete
+        // Share button should be visible
+        const shareBtn = screen.getByText('공유하기')
+        expect(shareBtn).toBeInTheDocument()
+
+        // Drawer content should not be visible initially
+        expect(screen.queryByText('카카오톡')).not.toBeInTheDocument()
+
+        // Click share button
+        await act(async () => {
+            fireEvent.click(shareBtn)
+        })
+
+        // Drawer content should now be visible
+        expect(screen.getByText('카카오톡')).toBeInTheDocument()
+        expect(screen.getByText('페이스북')).toBeInTheDocument()
+        expect(screen.getByText('트위터')).toBeInTheDocument()
+        expect(screen.getByText('링크복사')).toBeInTheDocument()
+
+        // Preview card should be visible matching title and description
+        const titles = screen.getAllByText('Result Title')
+        expect(titles.length).toBeGreaterThanOrEqual(2)
+
+        const descriptions = screen.getAllByText('Result Description')
+        expect(descriptions.length).toBeGreaterThanOrEqual(2)
+
+        // "Preview" button should NOT be there anymore (it's now a card)
+        expect(screen.queryByText('미리보기')).not.toBeInTheDocument()
+    })
+
+    it('should generate and copy short link via drawer', async () => {
+        await act(async () => {
+            render(
+                <ResultDisplay
+                    quiz={mockQuiz}
+                    result={mockResult}
+                    score={80}
+                    resultType="SCORE_BASED"
+                />
+            )
+        })
+
+        // Wait for short url generation
         await waitFor(() => {
             expect(generateShortUrl).toHaveBeenCalled()
         })
 
-        // Wait for state update to settle
+        // Open share drawer
+        const shareBtn = screen.getByText('공유하기')
         await act(async () => {
-            await new Promise(resolve => setTimeout(resolve, 50))
+            fireEvent.click(shareBtn)
         })
 
-        const copyBtn = screen.getByText('링크 복사')
+        // Find copy button in drawer
+        const copyBtn = screen.getByText('링크복사')
 
         await act(async () => {
             fireEvent.click(copyBtn)
         })
 
-        // Expect short id 'short123' to be in the copied text
-        // The full URL will be http://localhost/s/short123 in JSDOM
         expect(mockWriteText).toHaveBeenCalledWith(
             expect.stringContaining('/s/short123')
         )
         expect(window.alert).toHaveBeenCalledWith('단축 링크가 클립보드에 복사되었습니다!')
+    })
+
+    it('should match retry link', async () => {
+        await act(async () => {
+            render(
+                <ResultDisplay
+                    quiz={mockQuiz}
+                    result={mockResult}
+                    score={80}
+                    resultType="SCORE_BASED"
+                />
+            )
+        })
+
+        const retryLink = screen.getByText('다시하기')
+        expect(retryLink.closest('a')).toHaveAttribute('href', '/quiz/quiz1')
     })
 })

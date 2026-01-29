@@ -38,7 +38,7 @@ async function main() {
                 content: q.content,
                 imageUrl: q.imageUrl,
                 options: {
-                    create: q.options.map((o: any) => ({
+                    create: (q.options || []).map((o: any) => ({
                         content: o.content,
                         score: o.score || 0,
                         resultTypeCode: o.resultTypeCode
@@ -47,7 +47,7 @@ async function main() {
             }))
         },
         results: {
-            create: data.results.map((r: any) => ({
+            create: (data.results || []).map((r: any) => ({
                 typeCode: r.typeCode,
                 title: r.title,
                 description: r.description,

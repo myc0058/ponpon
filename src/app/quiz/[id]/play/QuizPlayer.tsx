@@ -27,6 +27,10 @@ type Quiz = {
     resultType: 'SCORE_BASED' | 'TYPE_BASED'
     typeCodeLimit: number
     questions: Question[]
+    results: {
+        id: string
+        typeCode: string | null
+    }[]
 }
 
 export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
@@ -102,8 +106,9 @@ export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
                 setSelectedTypes(newTypes)
                 setCurrentQuestionIndex(nextIndex)
             } else {
-                // Use the imported utility
-                const finalType = calculateTypeResult(newTypes, quiz.typeCodeLimit)
+                // Use the imported utility with validation
+                const validCodes = quiz.results.map(r => r.typeCode).filter(Boolean) as string[]
+                const finalType = calculateTypeResult(newTypes, quiz.typeCodeLimit, validCodes)
                 setFinalUrl(`/quiz/${quiz.id}/result?type=${finalType}`)
                 setIsCalculating(true)
             }

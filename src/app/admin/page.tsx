@@ -1,7 +1,7 @@
 import { getQuizzes } from '@/actions/quiz'
 import Link from 'next/link'
 import styles from './admin.module.css'
-import { Plus, Edit, Star } from 'lucide-react'
+import { Plus, Edit, Star, Play } from 'lucide-react'
 import FeaturedToggle from './FeaturedToggle'
 
 export const dynamic = 'force-dynamic'
@@ -67,6 +67,12 @@ export default async function AdminPage() {
                             <p className={styles.cardDescription}>{quiz.description}</p>
                             <div className={styles.cardActions}>
                                 <FeaturedToggle quizId={quiz.id} initialFeatured={quiz.isFeatured} />
+                                <Link href={`/quiz/${quiz.id}`} target="_blank">
+                                    <button className={styles.actionButton} title="Play Quiz">
+                                        <Play size={18} />
+                                        <span style={{ marginLeft: '0.4rem', fontSize: '0.85rem' }}>Play</span>
+                                    </button>
+                                </Link>
                                 <Link href={`/admin/${quiz.id}/edit`}>
                                     <button className={styles.actionButton} title="Edit Content">
                                         <Edit size={18} />

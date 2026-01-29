@@ -1,0 +1,171 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.drawer {
+    background: white;
+    width: 100%;
+    max-width: 600px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 1.5rem;
+    animation: slideUp 0.3s ease-out;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0;
+}
+
+.closeButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    color: #6b7280;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+.closeButton:hover {
+    background-color: #f3f4f6;
+}
+
+.previewCard {
+    background-color: #f3f4f6;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    border: 1px solid #e5e7eb;
+}
+
+.previewImage {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background-color: #e5e7eb;
+}
+
+.previewContent {
+    padding: 1rem;
+}
+
+.previewTitle {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 0.25rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.previewDescription {
+    font-size: 0.875rem;
+    color: #6b7280;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.4;
+}
+
+.shareGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.shareItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    color: #4b5563;
+    font-size: 0.875rem;
+    transition: transform 0.2s;
+}
+
+.shareItem:hover {
+    transform: translateY(-2px);
+}
+
+.iconWrapper {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.kakao {
+    background-color: #fee500;
+    color: #3c1e1e;
+}
+
+.facebook {
+    background-color: #1877f2;
+}
+
+.twitter {
+    background-color: #1da1f2;
+}
+
+.copy {
+    background-color: #e5e7eb;
+    color: #374151;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
