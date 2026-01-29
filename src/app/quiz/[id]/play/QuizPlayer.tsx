@@ -225,6 +225,19 @@ export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
                     </div>
                 </div>
 
+                {/* Preload next image */}
+                {quiz.questions[currentQuestionIndex + 1]?.imageUrl && (
+                    <div style={{ display: 'none' }}>
+                        <Image
+                            src={quiz.questions[currentQuestionIndex + 1].imageUrl!}
+                            alt="preload"
+                            width={10}
+                            height={10}
+                            priority
+                        />
+                    </div>
+                )}
+
             </div>
         </main>
     )
