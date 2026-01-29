@@ -85,7 +85,7 @@ describe('SEO Integration Tests', () => {
 
             const result = await sitemap()
 
-            expect(result[0].url).toBe('https://fonfon.vercel.app')
+            expect(result[0].url).toBe('https://ponpon.factorization.co.kr')
         })
     })
 
@@ -107,7 +107,7 @@ describe('SEO Integration Tests', () => {
             delete process.env.NEXT_PUBLIC_BASE_URL
             const result = robots()
 
-            expect(result.sitemap).toBe('https://fonfon.vercel.app/sitemap.xml')
+            expect(result.sitemap).toBe('https://ponpon.factorization.co.kr/sitemap.xml')
         })
     })
 })

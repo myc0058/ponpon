@@ -114,7 +114,7 @@ export async function GET(request: NextRequest) {
                             fontWeight: 600,
                         }}
                     >
-                        fonfon.vercel.app
+                        ponpon.factorization.co.kr
                     </div>
                 </div>
             ),

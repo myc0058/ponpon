@@ -59,7 +59,7 @@ export async function generateMetadata({
         }
     }
 
-    const ogUrl = new URL(`${process.env.NEXT_PUBLIC_BASE_URL || 'https://fonfon.vercel.app'}/api/og`)
+    const ogUrl = new URL(`${process.env.NEXT_PUBLIC_BASE_URL || 'https://ponpon.factorization.co.kr'}/api/og`)
     ogUrl.searchParams.set('title', result.title)
     ogUrl.searchParams.set('description', result.description.slice(0, 100))
     ogUrl.searchParams.set('quizTitle', quiz.title)

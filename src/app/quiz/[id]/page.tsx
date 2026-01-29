@@ -75,7 +75,7 @@ export default async function QuizIntroPage({ params }: { params: Promise<{ id: 
                                 name: quiz.title,
                                 description: quiz.description,
                                 image: quiz.imageUrl,
-                                url: `${process.env.NEXT_PUBLIC_BASE_URL || 'https://fonfon.vercel.app'}/quiz/${quiz.id}`,
+                                url: `${process.env.NEXT_PUBLIC_BASE_URL || 'https://ponpon.factorization.co.kr'}/quiz/${quiz.id}`,
                                 dateCreated: quiz.createdAt,
                                 numberOfQuestions: quiz.questions.length,
                                 interactionStatistic: {
