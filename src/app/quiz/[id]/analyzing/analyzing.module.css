@@ -1,0 +1,87 @@
+.container {
+    min-height: 100dvh;
+    background: white;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.questionCard {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1rem 0;
+    width: 100%;
+    gap: 1rem;
+    margin: 0;
+}
+
+.calculatingTitle {
+    color: #111827;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.calculatingProgress {
+    width: calc(100% - 2.5rem);
+    margin-inline: auto;
+    height: 12px;
+    background-color: #f3f4f6;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+
+.calculatingBar {
+    height: 100%;
+    background: linear-gradient(to right, #10b981, #3b82f6);
+    transition: width 0.1s linear;
+}
+
+.calculatingText {
+    color: #111827;
+    font-size: 1.125rem;
+    opacity: 0.8;
+}
+
+.resultButton {
+    background-color: #6366f1;
+    color: white;
+    border: none;
+    border-radius: 1rem;
+    padding: 1.25rem 2.5rem;
+    font-size: 1.25rem;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
