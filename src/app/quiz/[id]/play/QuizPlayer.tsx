@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 import styles from './play.module.css'
 import { calculateTypeResult } from '@/lib/quiz-logic'
+import { getBustedImageUrl } from '@/lib/image-utils'
 
 type Option = {
     id: string
@@ -179,7 +180,7 @@ export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
                 {currentQuestion.imageUrl && (
                     <div className={styles.imageWrapper}>
                         <Image
-                            src={currentQuestion.imageUrl}
+                            src={getBustedImageUrl(currentQuestion.imageUrl)}
                             alt="Question"
                             className={styles.questionImage}
                             fill
@@ -210,7 +211,7 @@ export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
                 {quiz.questions[currentQuestionIndex + 1]?.imageUrl && (
                     <div style={{ position: 'absolute', width: '1px', height: '1px', padding: 0, margin: -1, overflow: 'hidden', clip: 'rect(0, 0, 0, 0)', whiteSpace: 'nowrap', border: 0 }}>
                         <Image
-                            src={quiz.questions[currentQuestionIndex + 1].imageUrl!}
+                            src={getBustedImageUrl(quiz.questions[currentQuestionIndex + 1].imageUrl)!}
                             alt="preload"
                             fill
                             sizes="(max-width: 768px) 100vw, 400px"

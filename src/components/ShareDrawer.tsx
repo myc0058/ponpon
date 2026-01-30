@@ -3,6 +3,7 @@
 import React, { useEffect } from 'react'
 import styles from './ShareDrawer.module.css'
 import { X, Link, Facebook, Twitter, MessageCircle } from 'lucide-react'
+import { getBustedImageUrl } from '@/lib/image-utils'
 
 interface ShareDrawerProps {
     isOpen: boolean
@@ -49,7 +50,7 @@ export default function ShareDrawer({
                 <div className={styles.previewCard}>
                     {imageUrl ? (
                         // eslint-disable-next-line @next/next/no-img-element
-                        <img src={imageUrl} alt={title} className={styles.previewImage} />
+                        <img src={getBustedImageUrl(imageUrl)} alt={title} className={styles.previewImage} />
                     ) : (
                         <div className={styles.previewImage} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#94a3b8' }}>
                             No Image

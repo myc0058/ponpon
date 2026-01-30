@@ -5,6 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import styles from './HeroCarousel.module.css'
 import { Quiz } from '@/types'
+import { getBustedImageUrl } from '@/lib/image-utils'
 
 interface HeroCarouselProps {
     quizzes: Quiz[]
@@ -141,7 +142,7 @@ export default function HeroCarousel({ quizzes }: HeroCarouselProps) {
                             <div className={styles.imageContainer}>
                                 {quiz.imageUrl ? (
                                     <Image
-                                        src={quiz.imageUrl}
+                                        src={getBustedImageUrl(quiz.imageUrl)}
                                         alt={quiz.title}
                                         fill
                                         className={styles.heroImage}

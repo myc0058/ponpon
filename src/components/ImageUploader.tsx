@@ -3,6 +3,7 @@
 import { useState, useRef } from 'react'
 import { supabase } from '@/lib/supabase'
 import { Image as ImageIcon, Upload, X, Loader2 } from 'lucide-react'
+import { getBustedImageUrl } from '@/lib/image-utils'
 
 interface ImageUploaderProps {
     defaultValue?: string | null
@@ -17,7 +18,7 @@ export default function ImageUploader({
     bucketName = 'quiz-images',
     placeholder = '이미지 업로드'
 }: ImageUploaderProps) {
-    const [imageUrl, setImageUrl] = useState<string | null>(defaultValue || null)
+    const [imageUrl, setImageUrl] = useState<string | null>(defaultValue ? getBustedImageUrl(defaultValue) : null)
     const [isUploading, setIsUploading] = useState(false)
     const fileInputRef = useRef<HTMLInputElement>(null)
 
@@ -51,7 +52,7 @@ export default function ImageUploader({
                 .from(bucketName)
                 .getPublicUrl(filePath)
 
-            setImageUrl(data.publicUrl)
+            setImageUrl(getBustedImageUrl(data.publicUrl))
         } catch (error) {
             console.error('Error uploading image:', error)
             alert('이미지 업로드에 실패했습니다.')
@@ -136,7 +137,7 @@ export default function ImageUploader({
                     <div style={{ position: 'relative', width: '40px', height: '40px' }}>
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
-                            src={imageUrl}
+                            src={getBustedImageUrl(imageUrl)}
                             alt="Preview"
                             style={{
                                 width: '100%',
@@ -185,7 +186,7 @@ export default function ImageUploader({
 
                 <div style={{ flex: 1, overflow: 'hidden' }}>
                     <div style={{ fontSize: '0.8rem', color: '#64748b', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-                        {imageUrl ? imageUrl.split('/').pop() : placeholder}
+                        {imageUrl ? imageUrl.split('?')[0].split('/').pop() : placeholder}
                     </div>
                 </div>
 

@@ -6,6 +6,7 @@ import styles from './result.module.css'
 import { Share2, Home, Lock, Link as LinkIcon, RotateCcw } from 'lucide-react'
 import { generateShortUrl } from '@/app/actions/shorten-url'
 import ShareDrawer from '@/components/ShareDrawer'
+import { getBustedImageUrl } from '@/lib/image-utils'
 
 type Result = {
     id: string
@@ -129,7 +130,7 @@ export default function ResultDisplay({
                             {result.imageUrl && (
                                 // eslint-disable-next-line @next/next/no-img-element
                                 <img
-                                    src={result.imageUrl}
+                                    src={getBustedImageUrl(result.imageUrl)}
                                     alt={result.title}
                                     className={styles.resultImage}
                                 />
@@ -181,7 +182,7 @@ export default function ResultDisplay({
                 onCopy={handleCopyLink}
                 title={result.title}
                 description={result.description}
-                imageUrl={result.imageUrl}
+                imageUrl={getBustedImageUrl(result.imageUrl)}
             />
         </main>
     )

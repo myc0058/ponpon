@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { PlayCircle } from 'lucide-react'
 import { Quiz } from '@/types'
 import styles from './QuizCard.module.css'
+import { getBustedImageUrl } from '@/lib/image-utils'
 
 interface QuizCardProps {
     quiz: Quiz
@@ -16,7 +17,7 @@ export default function QuizCard({ quiz, priority = false }: QuizCardProps) {
         <Link href={`/quiz/${quiz.id}`} className={styles.card}>
             <div className={styles.imageWrapper}>
                 <Image
-                    src={quiz.imageUrl || DEFAULT_THUMBNAIL}
+                    src={getBustedImageUrl(quiz.imageUrl) || DEFAULT_THUMBNAIL}
                     alt={quiz.title}
                     fill
                     priority={priority}
