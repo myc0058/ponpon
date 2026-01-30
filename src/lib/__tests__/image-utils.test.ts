@@ -28,10 +28,10 @@ describe('getBustedImageUrl', () => {
         expect(result).toContain(`&v=${IMAGE_VERSION}`);
     });
 
-    it('updates existing version if present', () => {
-        const url = 'https://example.com/image.png?v=old';
-        const result = getBustedImageUrl(url, 'new');
-        expect(result).toBe('https://example.com/image.png?v=new');
+    it('respects existing version if present', () => {
+        const url = 'https://example.com/image.png?v=99';
+        const result = getBustedImageUrl(url, '1');
+        expect(result).toBe('https://example.com/image.png?v=99');
     });
 
     it('handles relative URLs correctly', () => {

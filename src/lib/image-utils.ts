@@ -20,16 +20,8 @@ export function getBustedImageUrl(url: string | null | undefined, version: strin
         // If it's a relative URL, we need to handle it carefully to avoid adding the dummy base to the output
         const isRelative = !url.startsWith('http://') && !url.startsWith('https://');
 
-        if (url.includes('?')) {
-            // Already has params, check if v already exists to avoid duplication? 
-            // For simplicity, we'll append. But better to use URLSearchParams
-            // If the original URL was relative, urlObj.searchParams works relative to the dummy base
-            if (urlObj.searchParams.has('v')) {
-                urlObj.searchParams.set('v', version);
-            } else {
-                urlObj.searchParams.append('v', version);
-            }
-        } else {
+        // Check if v already exists, if not append default version
+        if (!urlObj.searchParams.has('v')) {
             urlObj.searchParams.append('v', version);
         }
 
@@ -43,7 +35,9 @@ export function getBustedImageUrl(url: string | null | undefined, version: strin
 
     } catch (e) {
         // If URL parsing fails, fall back to simple string appending
-        // This handles cases that might trip up the URL constructor or edge cases
+        if (url.includes('v=')) {
+            return url;
+        }
         const linkChar = url.includes('?') ? '&' : '?';
         return `${url}${linkChar}v=${version}`;
     }
