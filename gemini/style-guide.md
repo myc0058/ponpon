@@ -99,3 +99,32 @@
 - **특징**: 낙서 같은 자유로운 선, 다이어리 꾸미기 감성.
 - **용도**: 일상 공감, 친근한 연애 퀴즈.
 - **이미지**: ![Doodle Style](file:///home/myc0058/projects/ponpon/gemini/images/style_doodle.png)
+
+### Watercolor/Pastel
+- **특징**: 맑고 투명한 수채화 느낌, 부드러운 파스텔 톤, 몽환적인 분위기.
+- **용도**: 힐링, 심리, 감성적인 주제.
+- **이미지**: ![Watercolor Style](file:///home/myc0058/projects/ponpon/gemini/images/style_watercolor.png)
+
+### Paper Cutout/Craft
+- **특징**: 종이를 오려 붙인 듯한 그림자와 입체감, 스크랩북 감성.
+- **용도**: 포근함, DIY, 아동용, 따뜻한 퀴즈.
+- **이미지**: (준비 중 - 쿼터 대기)
+
+---
+
+## 6. Bold & Graphic (강렬/그래픽)
+
+### American Comic Book
+- **특징**: 벤데이 점(Ben-Day dots), 말풍선, 역동적인 구도, 선명한 투박한 선.
+- **용도**: 영웅, 액션, 유머러스한 주제.
+- **이미지**: ![Comic Style](file:///home/myc0058/projects/ponpon/gemini/images/style_comic.png)
+
+### Stained Glass
+- **특징**: 깨진 유리 조각 같은 모자이크 패턴, 빛의 투과 효과, 굵은 검은 윤곽선.
+- **용도**: 운세, 성격유형, 종교/신비적 주제.
+- **이미지**: ![Stained Glass Style](file:///home/myc0058/projects/ponpon/gemini/images/style_stained_glass.png)
+
+### Holographic/Iridescent
+- **특징**: 빛에 따라 변하는 무지개빛 색감, 메탈릭하고 글로시한 미래적 질감.
+- **용도**: 트렌디, 뷰티, 패션, 사이버틱.
+- **이미지**: (준비 중 - 쿼터 대기)
