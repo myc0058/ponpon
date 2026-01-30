@@ -41,39 +41,9 @@ export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
     const [weightedScores, setWeightedScores] = useState<Record<string, number>>({})
     const progressRef = useRef<HTMLDivElement>(null)
     const router = useRouter()
-    const [isLoaded, setIsLoaded] = useState(false)
 
-    // Restore state on mount
-    useEffect(() => {
-        const savedState = sessionStorage.getItem(`quiz_progress_${quiz.id}`)
-        if (savedState) {
-            try {
-                const parsed = JSON.parse(savedState)
-                if (parsed.currentQuestionIndex < quiz.questions.length) {
-                    setCurrentQuestionIndex(parsed.currentQuestionIndex)
-                    setTotalScore(parsed.totalScore)
-                    setSelectedTypes(parsed.selectedTypes)
-                    setWeightedScores(parsed.weightedScores)
-                }
-            } catch (e) {
-                console.error('Failed to parse saved state', e)
-            }
-        }
-        setIsLoaded(true)
-    }, [quiz.id, quiz.questions.length])
 
-    // Save state on change
-    useEffect(() => {
-        if (!isLoaded) return
 
-        const state = {
-            currentQuestionIndex,
-            totalScore,
-            selectedTypes,
-            weightedScores
-        }
-        sessionStorage.setItem(`quiz_progress_${quiz.id}`, JSON.stringify(state))
-    }, [quiz.id, currentQuestionIndex, totalScore, selectedTypes, weightedScores, isLoaded])
 
     // Scroll to progress bar when question changes
     useEffect(() => {
@@ -146,8 +116,7 @@ export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
                 }))
             }
 
-            // Clear progress
-            sessionStorage.removeItem(`quiz_progress_${quiz.id}`)
+
 
             router.push(`/quiz/${quiz.id}/analyzing`)
         }
