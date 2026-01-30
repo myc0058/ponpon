@@ -58,7 +58,7 @@ async function uploadFile(filename: string): Promise<string | null> {
             .from('quiz-images')
             .getPublicUrl(remotePath)
 
-        return data.publicUrl
+        return `${data.publicUrl}?v=${Date.now()}`
     } catch (err) {
         console.error(`Error processing ${filename}:`, err)
         return null
