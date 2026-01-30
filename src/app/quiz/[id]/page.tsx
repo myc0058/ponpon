@@ -19,13 +19,13 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
         openGraph: {
             title: quiz.title,
             description: quiz.description,
-            images: quiz.imageUrl ? [quiz.imageUrl] : [],
+            images: quiz.imageUrl ? [quiz.imageUrl] : ['https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/og/default.webp'],
         },
         twitter: {
             card: 'summary_large_image',
             title: quiz.title,
             description: quiz.description,
-            images: quiz.imageUrl ? [quiz.imageUrl] : [],
+            images: quiz.imageUrl ? [quiz.imageUrl] : ['https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/og/default.webp'],
         }
     }
 }

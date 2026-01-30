@@ -1,0 +1,151 @@
+{
+    "title": "나의 인생 토핑 테스트",
+    "description": "2026년 대유행 트렌드 '토핑경제' 반영! 밋밋한 도우 같은 일상에 맛을 더해줄 나만의 찰떡 토핑은 무엇일까요? #심리테스트 #2026트렌드",
+    "resultType": "TYPE_BASED",
+    "typeCodeLimit": 2,
+    "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/life-topping-test/main-cover.webp",
+    "questions": [
+        {
+            "order": 1,
+            "content": "오랜만에 찾아온 꿀 같은 휴일! 어떻게 보낼까?",
+            "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/life-topping-test/q1.webp",
+            "imagePrompt": "claymation style, split screen, left side cozy bedroom with Netflix on TV, right side sunny street with trendy cafe, cute plasticine texture, warm lighting",
+            "options": [
+                {
+                    "content": "이불 밖은 위험해! 침대와 한 몸으로 넷플릭스 정주행",
+                    "resultTypeCode": "I"
+                },
+                {
+                    "content": "날씨가 아까워! 핫한 팝업스토어나 새로 생긴 카페 탐방",
+                    "resultTypeCode": "E"
+                }
+            ]
+        },
+        {
+            "order": 2,
+            "content": "친구들과 모임 메뉴를 정하는 시간! 나의 포지션은?",
+            "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/life-topping-test/q2.webp",
+            "imagePrompt": "claymation style, cute clay characters sitting around a table with a menu, one character pointing enthusiastically, others listening, food on table",
+            "options": [
+                {
+                    "content": "내가 찾아온 리스트 공유! '여기랑 저기 중에 골라봐'",
+                    "resultTypeCode": "E"
+                },
+                {
+                    "content": "너희가 먹고 싶은 걸로 먹자! (결정장애 오기 전 떠넘기기)",
+                    "resultTypeCode": "I"
+                }
+            ]
+        },
+        {
+            "order": 3,
+            "content": "우울하다는 친구의 전화, 나의 첫 마디는?",
+            "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/life-topping-test/q3.webp",
+            "imagePrompt": "claymation style, a clay character holding a smartphone looking concerned, speech bubble with question mark and heart, soft background",
+            "options": [
+                {
+                    "content": "무슨 일이야? 누구야? (상황 파악부터 빠르게)",
+                    "resultTypeCode": "T"
+                },
+                {
+                    "content": "헐 무슨 일이야 ㅠㅠ 목소리가 안 좋은데... (걱정 한가득)",
+                    "resultTypeCode": "F"
+                }
+            ]
+        },
+        {
+            "order": 4,
+            "content": "2026년 새해 목표, 어떻게 세웠어?",
+            "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/life-topping-test/q4.webp",
+            "imagePrompt": "claymation style, a diary open with a checklist vs a character dreaming with a thought bubble, desk setting",
+            "options": [
+                {
+                    "content": "월별/주별 계획 꼼꼼하게! 달성률 체크는 필수",
+                    "resultTypeCode": "T"
+                },
+                {
+                    "content": "올해는 더 행복하기! 대략적인 큰 그림만 그리기",
+                    "resultTypeCode": "F"
+                }
+            ]
+        },
+        {
+            "order": 5,
+            "content": "갖고 싶었던 물건을 발견했다! 나의 행동은?",
+            "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/life-topping-test/q5.webp",
+            "imagePrompt": "claymation style, confused character holding a wallet, looking at a shiny item, price tag visible, thinking bubbles",
+            "options": [
+                {
+                    "content": "최저가 비교, 후기 검색, 할인 쿠폰까지 야무지게 체크",
+                    "resultTypeCode": "T"
+                },
+                {
+                    "content": "이건 사야 해! 내 행복을 위해 바로 결제 (금융치료)",
+                    "resultTypeCode": "F"
+                }
+            ]
+        },
+        {
+            "order": 6,
+            "content": "예상치 못한 문제가 생겼을 때 나는?",
+            "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/life-topping-test/q6.webp",
+            "imagePrompt": "claymation style, a character facing a blocked road or a puzzle, scratching head, exclamation mark overhead",
+            "options": [
+                {
+                    "content": "원인이 뭐지? 해결 방법부터 논리적으로 분석",
+                    "resultTypeCode": "T"
+                },
+                {
+                    "content": "어떡하지? 멘붕 오지만 주변에 도움 요청하거나 차분히 생각",
+                    "resultTypeCode": "F"
+                }
+            ]
+        },
+        {
+            "order": 7,
+            "content": "단체 사진 찍을 때 나의 위치는?",
+            "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/life-topping-test/q7.webp",
+            "imagePrompt": "claymation style, group of smiling clay characters posing for a photo, camera visible",
+            "options": [
+                {
+                    "content": "센터는 나의 것! 자신감 있게 포즈 취하기",
+                    "resultTypeCode": "E"
+                },
+                {
+                    "content": "사이드나 뒷줄에서 조용히 브이 하기",
+                    "resultTypeCode": "I"
+                }
+            ]
+        }
+    ],
+    "results": [
+        {
+            "typeCode": "ET",
+            "title": "화끈한 존재감 '페퍼로니'",
+            "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/life-topping-test/result-et.webp",
+            "description": "열정 만수르! 어디서나 존재감을 뽐내는 당신은 인생의 주인공이에요. 목표를 향해 직진하는 에너지로 주변을 이끄는 리더 스타일!",
+            "imagePrompt": "claymation style, a slice of pizza topped with smiling red pepperoni faces wearing sunglasses, confetti background, vibrant energy, plasticine texture"
+        },
+        {
+            "typeCode": "EF",
+            "title": "달콤한 힐러 '고구마 무스'",
+            "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/life-topping-test/result-ef.webp",
+            "description": "다정함의 의인화! 주변 사람들을 기분 좋게 만드는 당신은 인기쟁이 분위기 메이커. 달콤한 말과 공감으로 모두를 녹여버려요.",
+            "imagePrompt": "claymation style, a slice of pizza with smooth yellow sweet potato mousse swirls, warm emotional atmosphere, hearts and flowers, plasticine texture"
+        },
+        {
+            "typeCode": "IT",
+            "title": "시크한 매력 '블랙 올리브'",
+            "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/life-topping-test/result-it.webp",
+            "description": "알면 알수록 진국! 남다른 취향과 깊이 있는 내면을 가진 당신은 매력적인 마니아. 혼자만의 시간을 즐길 줄 아는 멋진 사람이에요.",
+            "imagePrompt": "claymation style, a slice of pizza with shiny black olives, cool dark blue and purple background, chic and mysterious vibe, plasticine texture"
+        },
+        {
+            "typeCode": "IF",
+            "title": "풍미 가득 '치즈 폭탄'",
+            "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/life-topping-test/result-if.webp",
+            "description": "부드러운 평화주의자! 누구와도 잘 어울리는 유연함과 따뜻한 포용력을 가졌어요. 겉은 조용하지만 속은 깊은 치즈처럼 진한 사람.",
+            "imagePrompt": "claymation style, a slice of pizza overflowing with melted gooey cheese, soft warm yellow lighting, cozy and comfortable vibe, plasticine texture"
+        }
+    ]
+}

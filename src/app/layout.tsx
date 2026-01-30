@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const outfit = Outfit({
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
     siteName: "PonPon",
     images: [
       {
-        url: "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/og/default.png",
+        url: "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/og/default.webp",
         width: 1200,
         height: 630,
         alt: "폰폰(PonPon) - 미니게임, 운세, 심리테스트를 즐기는 종합 놀이터",
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "폰폰(PonPon) | 심리테스트부터 랭킹 게임, 운세까지!",
     description: "내 성격 분석부터 전 세계 랭킹 도전까지! 폰폰에서 미니게임과 심리테스트, 운세를 무료로 즐겨보세요.",
-    images: ["https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/og/default.png"],
+    images: ["https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/og/default.webp"],
   },
 };
 
@@ -45,6 +46,19 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body className={outfit.className}>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-RRJNBF781Z"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-RRJNBF781Z');
+          `}
+        </Script>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

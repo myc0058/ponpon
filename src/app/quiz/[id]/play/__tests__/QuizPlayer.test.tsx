@@ -54,7 +54,8 @@ describe('QuizPlayer', () => {
         title: 'Test Quiz',
         resultType: 'SCORE_BASED' as const,
         typeCodeLimit: 0,
-        questions: mockQuestions
+        questions: mockQuestions,
+        results: []
     }
 
     beforeEach(() => {
@@ -128,7 +129,8 @@ describe('QuizPlayer', () => {
         const typeQuiz = {
             ...mockQuiz,
             resultType: 'TYPE_BASED' as const,
-            typeCodeLimit: 1
+            typeCodeLimit: 1,
+            results: [{ id: 'r1', typeCode: 'A' }, { id: 'r2', typeCode: 'B' }]
         }
 
         render(<QuizPlayer quiz={typeQuiz} />)
