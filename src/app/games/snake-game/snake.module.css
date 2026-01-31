@@ -26,15 +26,15 @@
 }
 
 .snakeHead {
-    background-color: #27ae60;
-    border: 1px solid #1e8449;
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/snake/head.webp?v=1769858310782');
+    background-size: cover;
     z-index: 2;
 }
 
 .food {
-    background-color: #e74c3c;
-    border: 1px solid #c0392b;
-    border-radius: 50%;
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/snake/apple.webp?v=1769858310588');
+    background-size: contain;
+    background-repeat: no-repeat;
     animation: pulse 1s infinite alternate;
 }
 

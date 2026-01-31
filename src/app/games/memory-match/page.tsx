@@ -4,7 +4,16 @@ import { useState, useEffect, useCallback } from 'react';
 import GameContainer from '@/components/games/GameContainer';
 import styles from './memory.module.css';
 
-const ICONS = ['🍎', '🍌', '🍇', '🍉', '🥝', '🫐', '🍋', '🍐'];
+const ICONS = [
+    'https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/memory-match/card1.webp?v=1769859798083',
+    'https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/memory-match/card2.webp?v=1769859798369',
+    'https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/memory-match/card3.webp?v=1769859798579',
+    'https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/memory-match/card4.webp?v=1769859798839',
+    'https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/memory-match/card5.webp?v=1769859799042',
+    'https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/memory-match/card6.webp?v=1769859799299',
+    'https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/memory-match/card7.webp?v=1769859799547',
+    'https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/memory-match/card8.webp?v=1769859799764',
+];
 
 interface Card {
     id: number;
@@ -95,7 +104,9 @@ function MemoryGame({ onGameOver }: { onGameOver: (score: number) => void }) {
                         onClick={() => handleCardClick(card.id)}
                     >
                         <div className={styles.cardBack}>?</div>
-                        <div className={styles.cardFront}>{card.icon}</div>
+                        <div className={styles.cardFront}>
+                            <img src={card.icon} alt="card icon" />
+                        </div>
                     </div>
                 ))}
             </div>

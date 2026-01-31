@@ -41,7 +41,7 @@ async function generateWithAiStudio(prompt: string, filename: string) {
             `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-image:generateContent?key=${apiKey}`,
             {
                 contents: [{
-                    parts: [{ text: `Generate a high quality 512x512 image of: ${prompt}. Return only the image data.` }]
+                    parts: [{ text: `Generate a high quality 512x512 image of: ${prompt}. DO NOT include any text, letters, or numbers in the image. Return only the image data.` }]
                 }]
             }
         )
@@ -82,7 +82,7 @@ async function main() {
         { prompt: quizData.imagePrompt || quizData.description, filename: 'main-cover.png', label: 'Main Cover' },
         ...quizData.questions.map((q: any) => ({
             prompt: q.imagePrompt || q.content,
-            filename: `q${q.order}.js`,
+            filename: `q${q.order}.png`,
             label: `Question ${q.order}`
         })),
         ...quizData.results.map((r: any) => ({
@@ -93,6 +93,12 @@ async function main() {
     ]
 
     for (const job of jobs) {
+        const savePath = path.join(imagesDir, job.filename)
+        if (existsSync(savePath)) {
+            console.log(`\n--- Skipping ${job.label} (already exists) ---`)
+            continue
+        }
+
         console.log(`\n--- Processing ${job.label} ---`)
         if (useAiStudio && apiKey) {
             await generateWithAiStudio(job.prompt, job.filename)
@@ -101,6 +107,7 @@ async function main() {
         } else {
             console.log(`[ACTION] generate_image: "${job.prompt}" -> ${job.filename} (Style: NanoBanana)`)
         }
+
     }
 
     console.log('\n✅ Pipeline operation logged.')

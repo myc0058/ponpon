@@ -3,6 +3,8 @@
     max-width: 400px;
     margin: 0 auto;
     background-color: #1e293b;
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/memory-sound/bg.webp?v=1769870234731');
+    background-size: cover;
     padding: 30px;
     border-radius: 50%;
     aspect-ratio: 1/1;
@@ -20,7 +22,9 @@
     border-radius: 20px;
     cursor: pointer;
     transition: opacity 0.1s, transform 0.1s, filter 0.1s;
-    opacity: 0.6;
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/memory-sound/button_off.webp?v=1769870234503');
+    background-size: cover;
+    opacity: 0.8;
 }
 
 .pad:active {
@@ -30,7 +34,8 @@
 
 .active {
     opacity: 1 !important;
-    filter: brightness(1.5) drop-shadow(0 0 15px currentColor);
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/memory-sound/button_on.webp?v=1769870234388') !important;
+    filter: brightness(1.2) drop-shadow(0 0 15px currentColor);
 }
 
 .blue {

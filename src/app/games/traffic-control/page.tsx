@@ -11,6 +11,7 @@ interface Car {
     direction: 'H' | 'V';
     isStopped: boolean;
     speed: number;
+    type: 'RED' | 'BLUE';
 }
 
 function TrafficGame({ onGameOver }: { onGameOver: (score: number) => void }) {
@@ -29,7 +30,8 @@ function TrafficGame({ onGameOver }: { onGameOver: (score: number) => void }) {
             y: direction === 'V' ? -100 : 225,
             direction,
             isStopped: false,
-            speed: 2 + Math.random() * 2
+            speed: 2 + Math.random() * 2,
+            type: Math.random() > 0.5 ? 'RED' : 'BLUE'
         };
         carsRef.current.push(newCar);
         setCars([...carsRef.current]);
@@ -98,7 +100,7 @@ function TrafficGame({ onGameOver }: { onGameOver: (score: number) => void }) {
             {cars.map(c => (
                 <div
                     key={c.id}
-                    className={`${styles.car} ${c.isStopped ? styles.stopped : ''}`}
+                    className={`${styles.car} ${c.type === 'BLUE' ? styles.carBlue : ''} ${c.isStopped ? styles.stopped : ''}`}
                     style={{
                         left: c.x,
                         top: c.y,

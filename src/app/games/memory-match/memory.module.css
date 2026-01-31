@@ -41,13 +41,21 @@
 }
 
 .cardBack {
-    background-color: #a78bfa;
-    color: white;
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/memory-match/back.webp?v=1769859797371');
+    background-size: cover;
+    background-position: center;
+    color: transparent;
 }
 
 .cardFront {
     background-color: white;
     transform: rotateY(180deg);
+}
+
+.cardFront img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
 }
 
 .cardMatched {

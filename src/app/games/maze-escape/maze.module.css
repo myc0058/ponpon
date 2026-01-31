@@ -22,7 +22,8 @@
 }
 
 .wall {
-    background-color: #444;
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/maze-escape/wall.webp?v=1769870235311');
+    background-size: cover;
 }
 
 .path {
@@ -30,17 +31,17 @@
 }
 
 .player {
-    background-color: #38bdf8;
-    border-radius: 50%;
-    box-shadow: 0 0 10px #38bdf8;
-    position: relative;
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/maze-escape/player.webp?v=1769870235023');
+    background-size: contain;
+    background-repeat: no-repeat;
     z-index: 5;
 }
 
 .exit {
-    background-color: #10b981;
-    box-shadow: 0 0 10px #10b981;
-    background-image: radial-gradient(circle, #064e3b, #10b981);
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/maze-escape/exit.webp?v=1769870235552');
+    background-size: contain;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 15px #10b981;
 }
 
 .ui {

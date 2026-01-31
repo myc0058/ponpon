@@ -73,7 +73,7 @@ function WhackAMoleGame({ onGameOver }: { onGameOver: (score: number) => void })
                             className={`${styles.mole} ${activeHole === i ? styles.moleActive : ''} ${activeHole === i && isHit ? styles.moleHit : ''}`}
                             onClick={() => handleWhack(i)}
                         >
-                            {isHit ? '😵' : '🐹'}
+                            {/* Image handled by CSS */}
                         </div>
                     </div>
                 ))}

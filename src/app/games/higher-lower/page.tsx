@@ -57,11 +57,11 @@ function HigherLowerGame({ onGameOver }: { onGameOver: (score: number) => void }
             <div className={styles.streak}>SCORE: {score}</div>
 
             <div className={styles.cardArea}>
-                <div className={styles.card}>
+                <div className={`${styles.card} ${styles.flipped}`}>
                     <span className={styles.cardLabel}>Current</span>
                     {currentNum}
                 </div>
-                <div className={`${styles.card} ${isRevealing ? styles.revealing : ''}`} style={{ backgroundColor: status === 'LOSE' ? '#7f1d1d' : status === 'WIN' ? '#064e3b' : '' }}>
+                <div className={`${styles.card} ${isRevealing ? styles.revealing : ''} ${isRevealing ? styles.flipped : ''}`} style={{ backgroundColor: status === 'LOSE' ? '#7f1d1d' : status === 'WIN' ? '#064e3b' : '' }}>
                     <span className={styles.cardLabel}>Next</span>
                     {isRevealing ? nextNum : '?'}
                 </div>

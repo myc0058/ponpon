@@ -2,13 +2,16 @@
     width: 100%;
     max-width: 450px;
     margin: 0 auto;
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/math-quickie/bg.webp?v=1769861353347');
+    background-size: cover;
+    background-repeat: no-repeat;
     background-color: #064e3b;
-    /* Chalkboard green */
+    /* Chalkboard green fallback */
     padding: 40px;
     border-radius: 8px;
     border: 8px solid #4b2c20;
     /* Wooden frame */
-    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.7);
     text-align: center;
     position: relative;
     color: white;

@@ -37,7 +37,18 @@
 }
 
 .cellMine {
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/minesweeper/mine.webp?v=1769859800256');
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
     background-color: #ef4444;
+}
+
+.cellFlagged {
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/minesweeper/flag.webp?v=1769859800049');
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .header {

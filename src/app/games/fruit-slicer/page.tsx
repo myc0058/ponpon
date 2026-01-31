@@ -135,7 +135,7 @@ function FruitSlicerGame({ onGameOver }: { onGameOver: (score: number) => void }
             {fruits.map(f => (
                 <div
                     key={f.id}
-                    className={styles.fruit}
+                    className={`${styles.fruit} ${f.type === '🍎' ? styles.apple : f.type === '🍌' ? styles.banana : ''}`}
                     style={{ left: f.x - 20, top: f.y - 20, opacity: f.isSliced ? 0.3 : 1 }}
                 >
                     {f.type}

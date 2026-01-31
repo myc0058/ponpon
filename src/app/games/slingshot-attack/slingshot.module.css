@@ -15,31 +15,31 @@
     position: absolute;
     bottom: 40px;
     left: 80px;
-    width: 20px;
-    height: 60px;
-    background-color: #78350f;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    width: 60px;
+    height: 80px;
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/slingshot-attack/sling.webp?v=1769870233488');
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 5;
 }
 
 .projectile {
     position: absolute;
-    width: 15px;
-    height: 15px;
-    background-color: #475569;
-    border-radius: 50%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    width: 20px;
+    height: 20px;
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/slingshot-attack/projectile.webp?v=1769870233682');
+    background-size: contain;
+    background-repeat: no-repeat;
     z-index: 10;
 }
 
 .target {
     position: absolute;
-    width: 30px;
-    height: 30px;
-    background-color: #ef4444;
-    border: 2px solid #b91c1c;
-    border-radius: 4px;
-    box-shadow: 0 4px #7f1d1d;
+    width: 40px;
+    height: 40px;
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/slingshot-attack/target.webp?v=1769870233888');
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .ground {

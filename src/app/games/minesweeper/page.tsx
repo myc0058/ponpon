@@ -126,11 +126,11 @@ function MinesweeperGame({ onGameOver }: { onGameOver: (score: number) => void }
                 {board.map((cell, i) => (
                     <div
                         key={i}
-                        className={`${styles.cell} ${cell.isRevealed ? styles.cellRevealed : ''} ${cell.isRevealed && cell.isMine ? styles.cellMine : ''}`}
+                        className={`${styles.cell} ${cell.isRevealed ? styles.cellRevealed : ''} ${cell.isRevealed && cell.isMine ? styles.cellMine : ''} ${!cell.isRevealed && cell.isFlagged ? styles.cellFlagged : ''}`}
                         onClick={() => revealCell(i)}
                         onContextMenu={(e) => toggleFlag(e, i)}
                     >
-                        {cell.isRevealed ? (cell.isMine ? '💣' : (cell.neighborCount || '')) : (cell.isFlagged ? '🚩' : '')}
+                        {cell.isRevealed ? (cell.isMine ? '' : (cell.neighborCount || '')) : ''}
                     </div>
                 ))}
             </div>

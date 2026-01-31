@@ -5,6 +5,7 @@
     background-color: #78350f;
     padding: 20px;
     border-radius: 12px;
+    cursor: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/whack-a-mole/hammer.webp?v=1769859801321'), auto;
 }
 
 .grid {
@@ -25,17 +26,18 @@
 .mole {
     width: 80%;
     height: 80%;
-    background-color: #b45309;
-    border-radius: 50% 50% 20% 20%;
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/whack-a-mole/mole.webp?v=1769859801508');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom center;
     position: absolute;
     bottom: -100%;
     left: 10%;
     transition: bottom 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 24px;
+    color: transparent;
 }
 
 .moleActive {
@@ -43,7 +45,7 @@
 }
 
 .moleHit {
-    background-color: #ef4444;
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/whack-a-mole/mole_hit.webp?v=1769859801710');
     transform: scale(0.95);
 }
 

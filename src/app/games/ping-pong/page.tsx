@@ -100,8 +100,8 @@ function PingPongGame({ onGameOver }: { onGameOver: (score: number) => void }) {
                 <span>{scores.p1}</span>
                 <span>{scores.p2}</span>
             </div>
-            <div className={styles.paddle} style={{ left: 20, top: p1Y }} />
-            <div className={styles.paddle} style={{ right: 20, top: p2Y }} />
+            <div className={styles.paddle} style={{ left: 20, top: p1Y, backgroundImage: `url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/ping-pong/paddle_red.webp?v=1769861017048')`, backgroundSize: '100% 100%' }} />
+            <div className={styles.paddle} style={{ right: 20, top: p2Y, backgroundImage: `url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/ping-pong/paddle_blue.webp?v=1769861016857')`, backgroundSize: '100% 100%' }} />
             <div className={styles.ball} style={{ left: ball.x, top: ball.y }} />
             {!isPlaying && (
                 <div style={{ position: 'absolute', inset: 0, display: 'flex', justifyContent: 'center', alignItems: 'center', background: 'rgba(0,0,0,0.5)', color: 'white' }}>

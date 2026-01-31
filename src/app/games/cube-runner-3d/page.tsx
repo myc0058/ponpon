@@ -34,19 +34,31 @@ function CubeRunnerGame({ onGameOver }: { onGameOver: (score: number) => void })
         pointLight.position.set(0, 5, 0);
         scene.add(pointLight);
 
+        // Texture Loading
+        const loader = new THREE.TextureLoader();
+        const floorTexture = loader.load('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/cube-runner-3d/floor.webp?v=1769861353139');
+        floorTexture.wrapS = THREE.RepeatWrapping;
+        floorTexture.wrapT = THREE.RepeatWrapping;
+        floorTexture.repeat.set(10, 100);
+
+        const cubeTexture = loader.load('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/cube-runner-3d/cube.webp?v=1769861352932');
+        const bgTexture = loader.load('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/cube-runner-3d/bg.webp?v=1769861352745');
+        scene.background = bgTexture;
+
         // Floor
         const planeGeo = new THREE.PlaneGeometry(100, 1000);
         const planeMat = new THREE.MeshStandardMaterial({
-            color: 0x111111,
-            wireframe: true
+            map: floorTexture,
+            color: 0x888888
         });
         const floor = new THREE.Mesh(planeGeo, planeMat);
         floor.rotation.x = -Math.PI / 2;
+        floor.position.y = -0.5;
         scene.add(floor);
 
         // Player
         const playerGeo = new THREE.BoxGeometry(1, 1, 1);
-        const playerMat = new THREE.MeshStandardMaterial({ color: 0x00ff00, emissive: 0x00ff00 });
+        const playerMat = new THREE.MeshStandardMaterial({ map: cubeTexture, color: 0x00ffff });
         const player = new THREE.Mesh(playerGeo, playerMat);
         player.position.y = 0.5;
         scene.add(player);
@@ -55,7 +67,7 @@ function CubeRunnerGame({ onGameOver }: { onGameOver: (score: number) => void })
         const obstacles: THREE.Mesh[] = [];
         const spawnObstacle = () => {
             const geo = new THREE.BoxGeometry(1, 1, 1);
-            const mat = new THREE.MeshStandardMaterial({ color: 0xff0000 });
+            const mat = new THREE.MeshStandardMaterial({ map: cubeTexture, color: 0xff0000 });
             const mesh = new THREE.Mesh(geo, mat);
             mesh.position.set(Math.random() * 10 - 5, 0.5, -50);
             scene.add(mesh);

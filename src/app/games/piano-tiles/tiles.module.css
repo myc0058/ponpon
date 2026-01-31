@@ -4,6 +4,8 @@
     height: 500px;
     margin: 0 auto;
     background-color: #fff;
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/piano-tiles/bg.webp?v=1769870017155');
+    background-size: cover;
     border: 4px solid #333;
     display: flex;
     position: relative;
@@ -12,9 +14,11 @@
 
 .lane {
     flex: 1;
-    border-right: 1px solid #eee;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
     height: 100%;
     position: relative;
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/piano-tiles/tile_white.webp?v=1769870017532');
+    background-size: 100% 125px;
 }
 
 .lane:last-child {
@@ -27,6 +31,8 @@
     height: 125px;
     /* 1/4 of container height */
     background-color: #000;
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/piano-tiles/tile_black.webp?v=1769870017336');
+    background-size: cover;
     cursor: pointer;
 }
 

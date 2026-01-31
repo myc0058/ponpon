@@ -40,11 +40,19 @@
 }
 
 .cellX {
-    color: #ef4444;
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/tic-tac-toe/x.webp?v=1769859801118');
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: transparent;
 }
 
 .cellO {
-    color: #3b82f6;
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/tic-tac-toe/o.webp?v=1769859800941');
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: transparent;
 }
 
 .winner {

@@ -3,6 +3,8 @@
     max-width: 500px;
     margin: 0 auto;
     background-color: #064e3b;
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/card-solitaire/bg.webp?v=1769870010488');
+    background-size: cover;
     padding: 20px;
     border-radius: 12px;
     display: grid;
@@ -14,6 +16,8 @@
 .tile {
     aspect-ratio: 3/4;
     background-color: #fef3c7;
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/card-solitaire/card_back.webp?v=1769870010299');
+    background-size: cover;
     border-radius: 4px;
     border: 1px solid #d97706;
     border-bottom: 4px solid #b45309;
@@ -24,6 +28,8 @@
     font-size: 24px;
     transition: transform 0.1s, background-color 0.2s;
     user-select: none;
+    color: transparent;
+    /* Hide icon when not selected */
 }
 
 .tile:hover {
@@ -31,7 +37,9 @@
 }
 
 .selected {
-    background-color: #fbbf24 !important;
+    background-color: #fffbeb !important;
+    background-image: none !important;
+    color: initial !important;
     transform: translateY(-4px);
     border-bottom-width: 6px;
 }

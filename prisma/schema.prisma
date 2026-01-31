@@ -8,59 +8,53 @@ datasource db {
   directUrl = env("DIRECT_URL")
 }
 
-enum ResultType {
-  SCORE_BASED // 점수 기반 (기존 방식)
-  TYPE_BASED // 타입 기반 (MBTI 방식)
-}
-
 model Quiz {
-  id          String     @id @default(cuid())
-  title       String
-  description String
-  imageUrl    String?
-  resultType      ResultType @default(SCORE_BASED)
-  typeCodeLimit   Int        @default(2) // 조합형에서 상위 몇 개의 코드를 합칠지 결정
-  isFeatured  Boolean    @default(false) // Hero section에 표시 여부
-  isVisible   Boolean    @default(false) // 사용자에게 공개 여부
-  createdAt   DateTime   @default(now())
-  updatedAt   DateTime   @updatedAt
-  plays       Int        @default(0)
-  questions   Question[]
-  results     Result[]
+  id            String     @id @default(cuid())
+  title         String
+  description   String
+  imageUrl      String?
+  resultType    ResultType @default(SCORE_BASED)
+  typeCodeLimit Int        @default(2)
+  isFeatured    Boolean    @default(false)
+  isVisible     Boolean    @default(false)
+  createdAt     DateTime   @default(now())
+  updatedAt     DateTime   @updatedAt
+  plays         Int        @default(0)
+  questions     Question[]
+  results       Result[]
 }
 
 model Question {
   id       String   @id @default(cuid())
   quizId   String
-  quiz     Quiz     @relation(fields: [quizId], references: [id], onDelete: Cascade)
   content  String
   imageUrl String?
   order    Int
   options  Option[]
+  quiz     Quiz     @relation(fields: [quizId], references: [id], onDelete: Cascade)
 }
 
 model Option {
   id             String   @id @default(cuid())
   questionId     String
-  question       Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
   content        String
   score          Int      @default(0)
-  resultTypeCode String? // E, I, S, N, T, F, J, P 등
+  resultTypeCode String?
+  question       Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
 }
 
 model Result {
   id          String  @id @default(cuid())
   quizId      String
-  quiz        Quiz    @relation(fields: [quizId], references: [id], onDelete: Cascade)
   title       String
   description String
   imageUrl    String?
   minScore    Int     @default(0)
   maxScore    Int     @default(0)
-  typeCode    String? // INTJ, ENFP 등 (TYPE_BASED일 때만 사용)
+  typeCode    String?
   isPremium   Boolean @default(false)
+  quiz        Quiz    @relation(fields: [quizId], references: [id], onDelete: Cascade)
 }
-
 
 model ShortUrl {
   id          String   @id
@@ -70,13 +64,18 @@ model ShortUrl {
 }
 
 model MiniGame {
-    id           String   @id @default(cuid())
-    slug         String   @unique
-    title        String
-    description  String
-    thumbnailUrl String?
-    isActive     Boolean  @default(true)
-    isFeatured   Boolean  @default(false)
-    createdAt    DateTime @default(now())
-    updatedAt    DateTime @updatedAt
+  id           String   @id @default(cuid())
+  slug         String   @unique
+  title        String
+  description  String
+  thumbnailUrl String?
+  isActive     Boolean  @default(true)
+  isFeatured   Boolean  @default(false)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+enum ResultType {
+  SCORE_BASED
+  TYPE_BASED
 }

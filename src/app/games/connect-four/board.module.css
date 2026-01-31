@@ -3,6 +3,8 @@
     max-width: 450px;
     margin: 0 auto;
     background-color: #1d4ed8;
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/connect-four/board.webp?v=1769870010862');
+    background-size: 100% 100%;
     /* Blue board */
     padding: 15px;
     border-radius: 8px;
@@ -31,13 +33,15 @@
 }
 
 .red {
-    background: radial-gradient(circle at 30% 30%, #ef4444, #7f1d1d);
-    box-shadow: 0 4px #7f1d1d;
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/connect-four/red_chip.webp?v=1769870011072');
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .yellow {
-    background: radial-gradient(circle at 30% 30%, #fde047, #a16207);
-    box-shadow: 0 4px #a16207;
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/connect-four/yellow_chip.webp?v=1769870011308');
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 @keyframes drop {
