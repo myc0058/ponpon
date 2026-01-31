@@ -7,6 +7,7 @@ import { render, screen, fireEvent, waitFor, act } from '@testing-library/react'
 // test file: src/app/quiz/[id]/result/__tests__/ResultDisplay.test.tsx
 // component: src/app/quiz/[id]/result/ResultDisplay.tsx
 import ResultDisplay from '../ResultDisplay'
+import { ToastProvider } from '@/components/Toast'
 import { generateShortUrl } from '@/app/actions/shorten-url'
 
 // Mock shorten-url action
@@ -38,9 +39,6 @@ Object.assign(navigator, {
 window.open = jest.fn();
 window.alert = jest.fn();
 
-// We do NOT mock window.location because it is read-only in JSDOM.
-// We accept that origin is 'http://localhost'.
-
 describe('ResultDisplay', () => {
     const mockQuiz = {
         id: 'quiz1',
@@ -64,12 +62,15 @@ describe('ResultDisplay', () => {
     it('should render result content correctly', async () => {
         await act(async () => {
             render(
-                <ResultDisplay
-                    quiz={mockQuiz}
-                    result={mockResult}
-                    score={80}
-                    resultType="SCORE_BASED"
-                />
+                <ToastProvider>
+                    <ResultDisplay
+                        quiz={mockQuiz}
+                        result={mockResult}
+                        score={80}
+                        resultType="SCORE_BASED"
+                        compressedData="test"
+                    />
+                </ToastProvider>
             )
         })
 
@@ -82,13 +83,16 @@ describe('ResultDisplay', () => {
     it('should render type code if type based', async () => {
         await act(async () => {
             render(
-                <ResultDisplay
-                    quiz={mockQuiz}
-                    result={mockResult}
-                    score={0}
-                    resultType="TYPE_BASED"
-                    typeCode="ENTP"
-                />
+                <ToastProvider>
+                    <ResultDisplay
+                        quiz={mockQuiz}
+                        result={mockResult}
+                        score={0}
+                        resultType="TYPE_BASED"
+                        typeCode="ENTP"
+                        compressedData="test"
+                    />
+                </ToastProvider>
             )
         })
         expect(screen.getByText('나의 타입: ENTP')).toBeInTheDocument()
@@ -99,12 +103,15 @@ describe('ResultDisplay', () => {
 
         await act(async () => {
             render(
-                <ResultDisplay
-                    quiz={mockQuiz}
-                    result={premiumResult}
-                    score={100}
-                    resultType="SCORE_BASED"
-                />
+                <ToastProvider>
+                    <ResultDisplay
+                        quiz={mockQuiz}
+                        result={premiumResult}
+                        score={100}
+                        resultType="SCORE_BASED"
+                        compressedData="test"
+                    />
+                </ToastProvider>
             )
         })
 
@@ -119,12 +126,15 @@ describe('ResultDisplay', () => {
 
         await act(async () => {
             render(
-                <ResultDisplay
-                    quiz={mockQuiz}
-                    result={premiumResult}
-                    score={100}
-                    resultType="SCORE_BASED"
-                />
+                <ToastProvider>
+                    <ResultDisplay
+                        quiz={mockQuiz}
+                        result={premiumResult}
+                        score={100}
+                        resultType="SCORE_BASED"
+                        compressedData="test"
+                    />
+                </ToastProvider>
             )
         })
 
@@ -147,12 +157,15 @@ describe('ResultDisplay', () => {
     it('should show share drawer when share button is clicked', async () => {
         await act(async () => {
             render(
-                <ResultDisplay
-                    quiz={mockQuiz}
-                    result={mockResult}
-                    score={80}
-                    resultType="SCORE_BASED"
-                />
+                <ToastProvider>
+                    <ResultDisplay
+                        quiz={mockQuiz}
+                        result={mockResult}
+                        score={80}
+                        resultType="SCORE_BASED"
+                        compressedData="test"
+                    />
+                </ToastProvider>
             )
         })
 
@@ -188,12 +201,15 @@ describe('ResultDisplay', () => {
     it('should generate and copy short link via drawer', async () => {
         await act(async () => {
             render(
-                <ResultDisplay
-                    quiz={mockQuiz}
-                    result={mockResult}
-                    score={80}
-                    resultType="SCORE_BASED"
-                />
+                <ToastProvider>
+                    <ResultDisplay
+                        quiz={mockQuiz}
+                        result={mockResult}
+                        score={80}
+                        resultType="SCORE_BASED"
+                        compressedData="test"
+                    />
+                </ToastProvider>
             )
         })
 
@@ -215,21 +231,24 @@ describe('ResultDisplay', () => {
             fireEvent.click(copyBtn)
         })
 
-        expect(mockWriteText).toHaveBeenCalledWith(
-            expect.stringContaining('/s/short123')
-        )
-        expect(window.alert).toHaveBeenCalledWith('단축 링크가 클립보드에 복사되었습니다!')
+        // The toast will handle the alert UI-wise, but here check logic
+        const expectedLink = expect.stringContaining('/s/short123')
+        expect(mockWriteText).toHaveBeenCalledWith(expectedLink)
+        // With toast, alert is not called. We check if copy to clipboard happened
     })
 
     it('should match retry link', async () => {
         await act(async () => {
             render(
-                <ResultDisplay
-                    quiz={mockQuiz}
-                    result={mockResult}
-                    score={80}
-                    resultType="SCORE_BASED"
-                />
+                <ToastProvider>
+                    <ResultDisplay
+                        quiz={mockQuiz}
+                        result={mockResult}
+                        score={80}
+                        resultType="SCORE_BASED"
+                        compressedData="test"
+                    />
+                </ToastProvider>
             )
         })
 

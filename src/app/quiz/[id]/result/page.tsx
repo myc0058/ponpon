@@ -82,24 +82,22 @@ export async function generateMetadata({
         }
     }
 
-    const ogUrl = new URL(`${process.env.NEXT_PUBLIC_BASE_URL || 'https://ponpon.factorization.co.kr'}/api/og`)
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://ponpon.factorization.co.kr'
+    const quizUrl = new URL(`${baseUrl}/quiz/${id}`)
 
-    // 데이터를 압축해서 'o' 파라미터로 전달 (DB 저장 없이 파라미터로만 전달)
-    const encodedData = o || compressData({
-        t: result.title,
-        d: result.description,
-        q: quiz.title,
-        i: result.imageUrl
-    });
+    const images = []
+    if (result.imageUrl) {
+        const imageUrl = result.imageUrl.startsWith('http')
+            ? result.imageUrl
+            : `${baseUrl}${result.imageUrl}`
 
-    ogUrl.searchParams.set('o', encodedData)
-
-    // if (result.imageUrl) {
-    //     ogUrl.searchParams.set('layoutType', 'result')
-    // }
-
-    // Cache busting
-    ogUrl.searchParams.set('v', '5')
+        images.push({
+            url: imageUrl,
+            width: 800,
+            height: 800,
+            alt: result.title,
+        })
+    }
 
     return {
         title: `${result.title} - ${quiz.title}`,
@@ -107,21 +105,15 @@ export async function generateMetadata({
         openGraph: {
             title: `${result.title} | ${quiz.title}`,
             description: result.description,
-            images: [
-                {
-                    url: ogUrl.toString(),
-                    width: 1200,
-                    height: 630,
-                    alt: result.title,
-                }
-            ],
-            type: 'website',
+            url: quizUrl.toString(),
+            images: images,
+            type: 'article',
         },
         twitter: {
             card: 'summary_large_image',
             title: `${result.title} | ${quiz.title}`,
             description: result.description,
-            images: [ogUrl.toString()],
+            images: images.length > 0 ? [images[0].url] : [],
         },
     }
 }

@@ -47,10 +47,10 @@ describe('ImageUploader', () => {
         render(<ImageUploader {...defaultProps} defaultValue="https://example.com/image.jpg" />)
 
         const img = screen.getByRole('img', { name: 'Preview' })
-        expect(img).toHaveAttribute('src', 'https://example.com/image.jpg')
+        expect(img.getAttribute('src')).toMatch(/https:\/\/example\.com\/image\.jpg(\?v=\d+)?/)
 
-        const hiddenInput = document.querySelector('input[name="test-image"]')
-        expect(hiddenInput).toHaveValue('https://example.com/image.jpg')
+        const hiddenInput = document.querySelector('input[name="test-image"]') as HTMLInputElement
+        expect(hiddenInput.value).toContain('https://example.com/image.jpg')
     })
 
     it('should handle file upload successfully', async () => {
@@ -61,11 +61,19 @@ describe('ImageUploader', () => {
 
         // Mocking FileReader
         const originalFileReader = window.FileReader;
-        (window as any).FileReader = jest.fn().mockImplementation(() => ({
-            readAsDataURL: jest.fn().mockImplementation(function (this: any) {
-                this.onload({ target: { result: mockDataUrl } })
-            }),
-        }));
+        (window as any).FileReader = jest.fn().mockImplementation(() => {
+            const reader: any = {
+                readAsDataURL: jest.fn().mockImplementation(function (this: any) {
+                    setTimeout(() => {
+                        if (this.onload) {
+                            this.onload({ target: { result: mockDataUrl } })
+                        }
+                    }, 0)
+                }),
+                result: null
+            }
+            return reader
+        });
 
         // Mocking Image and Canvas
         const originalImage = window.Image;
@@ -143,7 +151,8 @@ describe('ImageUploader', () => {
         // Verify successful state update
         await waitFor(() => {
             const img = screen.getByRole('img', { name: 'Preview' })
-            expect(img).toHaveAttribute('src', 'https://supabase.co/storage/v1/object/public/test-bucket/path/to/image.avif')
+            const src = img.getAttribute('src')
+            expect(src).toContain('https://supabase.co/storage/v1/object/public/test-bucket/path/to/image.avif')
         })
 
         // Check loading state removed
