@@ -1,22 +1,57 @@
 import { ImageResponse } from 'next/og'
 import { NextRequest } from 'next/server'
+import { prisma } from '@/lib/prisma'
+import { decompressData } from '@/lib/compression'
 
-export const runtime = 'edge'
+// DB 조회를 위해 Node.js runtime 사용 (기본값)
+// export const runtime = 'edge'
 
 export async function GET(request: NextRequest) {
     try {
         const { searchParams } = new URL(request.url)
 
         // 파라미터 추출
-        const hasTitle = searchParams.has('title')
-        const title = hasTitle
-            ? searchParams.get('title')?.slice(0, 60) // 100자에서 60자로 줄임
-            : '나의 결과는?'
-        const description = searchParams.get('description')?.slice(0, 100) || '퀴즈 결과를 확인해보세요!'
-        const quizTitle = searchParams.get('quizTitle')?.slice(0, 100) || 'FonFon Quiz'
-        const imageUrl = searchParams.get('imageUrl')
-
+        let title = searchParams.get('title')?.slice(0, 60) || '나의 결과는?'
+        let description = searchParams.get('description')?.slice(0, 100) || '퀴즈 결과를 확인해보세요!'
+        let quizTitle = searchParams.get('quizTitle')?.slice(0, 100) || 'FonFon Quiz'
+        let imageUrl = searchParams.get('imageUrl')
         const layoutType = searchParams.get('layoutType')
+        const rid = searchParams.get('rid')
+        const compressedData = searchParams.get('o')
+
+        // 1. compressedData ('o') 가 있으면 압축 해제해서 사용 (최우선)
+        if (compressedData) {
+            const decoded = decompressData(compressedData)
+            if (decoded) {
+                title = decoded.t?.slice(0, 60) || title
+                description = decoded.d?.slice(0, 100) || description
+                quizTitle = decoded.q?.slice(0, 100) || quizTitle
+                imageUrl = decoded.i || imageUrl
+
+                // 이미지 URL이 상대 경로이면 절대 경로로 변환
+                if (imageUrl && !imageUrl.startsWith('http')) {
+                    imageUrl = `${process.env.NEXT_PUBLIC_BASE_URL || 'https://ponpon.factorization.co.kr'}${imageUrl}`
+                }
+            }
+        }
+        // 2. rid(resultId)가 있으면 DB에서 정보를 가져옴 (데이터가 주소에 없을 때 백업)
+        else if (rid) {
+            const resultData = await prisma.result.findUnique({
+                where: { id: rid },
+                include: { quiz: true }
+            })
+
+            if (resultData) {
+                title = resultData.title.slice(0, 60)
+                description = resultData.description.slice(0, 100)
+                quizTitle = resultData.quiz.title.slice(0, 100)
+                if (resultData.imageUrl) {
+                    imageUrl = resultData.imageUrl.startsWith('http')
+                        ? resultData.imageUrl
+                        : `${process.env.NEXT_PUBLIC_BASE_URL || 'https://ponpon.factorization.co.kr'}${resultData.imageUrl}`
+                }
+            }
+        }
 
         // 결과 페이지용 이미지 생성 (텍스트 없이 이미지만 강조)
         if (layoutType === 'result' && imageUrl) {
@@ -33,7 +68,7 @@ export async function GET(request: NextRequest) {
                             background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
                         }}
                     >
-                        {/* 배경 장식 (선택사항, 단순함을 위해 생략 가능 하지만 깊이감을 위해 추가) */}
+                        {/* 배경 장식 */}
                         <div
                             style={{
                                 position: 'absolute',
@@ -45,15 +80,15 @@ export async function GET(request: NextRequest) {
                             }}
                         />
 
+                        {/* 이미지 표시 */}
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
                             src={imageUrl}
                             alt="Result"
-                            height="630"
                             style={{
-                                height: '100%',
-                                width: 'auto',
+                                width: '800px',
+                                height: '630px',
                                 objectFit: 'contain',
-                                filter: 'drop-shadow(0 20px 50px rgba(0,0,0,0.4))', // 그림자 효과로 깊이감 추가
                             }}
                         />
                     </div>

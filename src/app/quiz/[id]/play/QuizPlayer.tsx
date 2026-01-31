@@ -6,6 +6,7 @@ import Image from 'next/image'
 import styles from './play.module.css'
 import { calculateTypeResult } from '@/lib/quiz-logic'
 import { getBustedImageUrl } from '@/lib/image-utils'
+import { formatContent } from '@/lib/string-utils'
 
 type Option = {
     id: string
@@ -160,7 +161,7 @@ export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
                 )}
 
                 <div className={styles.contentAnimation} key={currentQuestion.id}>
-                    <h2 className={styles.questionText}>{currentQuestion.content}</h2>
+                    <h2 className={styles.questionText}>{formatContent(currentQuestion.content)}</h2>
 
                     <div className={styles.options}>
                         {currentQuestion.options.map((option) => (
@@ -169,7 +170,7 @@ export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
                                 className={styles.optionButton}
                                 onClick={() => handleAnswer(option)}
                             >
-                                {option.content}
+                                {formatContent(option.content)}
                             </button>
                         ))}
                     </div>

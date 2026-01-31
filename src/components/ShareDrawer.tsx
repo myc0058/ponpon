@@ -4,6 +4,7 @@ import React, { useEffect } from 'react'
 import styles from './ShareDrawer.module.css'
 import { X, Link, Facebook, Twitter, MessageCircle } from 'lucide-react'
 import { getBustedImageUrl } from '@/lib/image-utils'
+import { formatContent } from '@/lib/string-utils'
 
 interface ShareDrawerProps {
     isOpen: boolean
@@ -58,7 +59,7 @@ export default function ShareDrawer({
                     )}
                     <div className={styles.previewContent}>
                         <h4 className={styles.previewTitle}>{title}</h4>
-                        <p className={styles.previewDescription}>{description}</p>
+                        <p className={styles.previewDescription}>{formatContent(description)}</p>
                     </div>
                 </div>
 

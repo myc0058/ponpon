@@ -8,6 +8,7 @@ import { generateShortUrl } from '@/app/actions/shorten-url'
 import ShareDrawer from '@/components/ShareDrawer'
 import { getBustedImageUrl } from '@/lib/image-utils'
 import { useToast } from '@/components/Toast'
+import { formatContent } from '@/lib/string-utils'
 
 type Result = {
     id: string
@@ -27,13 +28,15 @@ export default function ResultDisplay({
     result,
     score,
     resultType,
-    typeCode
+    typeCode,
+    compressedData
 }: {
     quiz: Quiz
     result: Result
     score: number
     resultType: 'SCORE_BASED' | 'TYPE_BASED'
     typeCode?: string
+    compressedData: string
 }) {
     const [isPaid, setIsPaid] = useState(false)
     const [isPaymentLoading, setIsPaymentLoading] = useState(false)
@@ -52,12 +55,15 @@ export default function ResultDisplay({
     useEffect(() => {
         const fetchShortUrl = async () => {
             try {
-                const currentUrl = window.location.href
-                const result = await generateShortUrl(currentUrl)
-                if (result.success) {
-                    setShortUrl(`${window.location.origin}/s/${result.id}`)
+                // 압축된 데이터를 포함한 절대 경로 생성
+                const sharePath = `/quiz/${quiz.id}/result?o=${compressedData}`
+                const fullUrl = `${window.location.origin}${sharePath}`
+
+                const res = await generateShortUrl(fullUrl)
+                if (res.success) {
+                    setShortUrl(`${window.location.origin}/s/${res.id}`)
                 } else {
-                    setShortUrl(currentUrl)
+                    setShortUrl(fullUrl)
                 }
             } catch (e) {
                 console.error('Failed to shorten URL:', e)
@@ -66,7 +72,7 @@ export default function ResultDisplay({
         }
         fetchShortUrl()
         window.scrollTo({ top: 0, behavior: 'smooth' })
-    }, [])
+    }, [compressedData, quiz.id])
 
     const { showToast } = useToast()
 
@@ -128,7 +134,7 @@ export default function ResultDisplay({
 
                             <div className={styles.content}>
                                 <h1 className={styles.resultTitle}>{result.title}</h1>
-                                <p className={styles.resultDescription}>{result.description}</p>
+                                <p className={styles.resultDescription}>{formatContent(result.description)}</p>
                             </div>
                         </div>
 

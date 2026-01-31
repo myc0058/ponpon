@@ -4,6 +4,7 @@ import styles from './quiz.module.css'
 import { PlayCircle } from 'lucide-react'
 import QuizShareUI from './QuizShareUI'
 import { Metadata } from 'next'
+import { formatContent } from '@/lib/string-utils'
 
 export const revalidate = 60
 
@@ -53,7 +54,7 @@ export default async function QuizIntroPage({ params }: { params: Promise<{ id: 
                 )}
                 <div className={styles.content}>
                     <h1 className={styles.title}>{quiz.title}</h1>
-                    <p className={styles.description}>{quiz.description}</p>
+                    <p className={styles.description}>{formatContent(quiz.description)}</p>
 
                     <div className={styles.stats}>
                         <div className={styles.stat}>
