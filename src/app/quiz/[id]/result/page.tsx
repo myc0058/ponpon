@@ -85,35 +85,28 @@ export async function generateMetadata({
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://ponpon.factorization.co.kr'
     const quizUrl = new URL(`${baseUrl}/quiz/${id}`)
 
-    const images = []
-    if (result.imageUrl) {
-        const imageUrl = result.imageUrl.startsWith('http')
-            ? result.imageUrl
-            : `${baseUrl}${result.imageUrl}`
-
-        images.push({
-            url: imageUrl,
-            width: 800,
-            height: 800,
-            alt: result.title,
-        })
-    }
-
     return {
-        title: `${result.title} - ${quiz.title}`,
-        description: result.description,
+        title: quiz.title,
+        description: quiz.description,
         openGraph: {
-            title: `${result.title} | ${quiz.title}`,
-            description: result.description,
+            title: quiz.title,
+            description: quiz.description,
             url: quizUrl.toString(),
-            images: images,
+            images: [
+                {
+                    url: quiz.imageUrl || '',
+                    width: 800,
+                    height: 800,
+                    alt: quiz.title,
+                }
+            ],
             type: 'article',
         },
         twitter: {
             card: 'summary_large_image',
-            title: `${result.title} | ${quiz.title}`,
-            description: result.description,
-            images: images.length > 0 ? [images[0].url] : [],
+            title: quiz.title,
+            description: quiz.description,
+            images: [quiz.imageUrl || ''],
         },
     }
 }
