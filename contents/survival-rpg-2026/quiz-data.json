@@ -1,13 +1,13 @@
 {
   "title": "🧟 2026 생존 RPG : 멸망한 세상 속 나의 직업은?",
   "description": "어느 날 눈을 떠보니 서울이 폐허가 되었다! 좀비, 기후재난, AI 폭주... 이 혼란 속에서 당신의 생존 포지션을 찾아드립니다. (생존률 99.9% 보장 못함)",
-  "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/survival-rpg-2026/main-cover.webp",
+  "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/survival-rpg-2026/main-cover.webp?v=1769821676960",
   "resultType": "TYPE_BASED",
   "questions": [
     {
       "order": 1,
       "content": "[속보] 정체불명의 바이러스 퍼져... 도시 기능 마비! 긴급 재난 문자가 울린다. 당신의 첫마디는?",
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/survival-rpg-2026/q1.webp",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/survival-rpg-2026/q1.webp?v=1769821676960",
       "imagePrompt": "8-bit pixel art, alarming smartphone screen with emergency alert, chaotic ruined city background, retro game style",
       "options": [
         {
@@ -35,7 +35,7 @@
     {
       "order": 2,
       "content": "집 밖으로 나왔다. 저 멀리 좀비 떼가 보인다. 내 손에 들려있는 무기는?",
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/survival-rpg-2026/q2.webp",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/survival-rpg-2026/q2.webp?v=1769821676960",
       "imagePrompt": "8-bit pixel art, character holding a weapon facing pixel zombies in distance, street background",
       "options": [
         {
@@ -63,7 +63,7 @@
     {
       "order": 3,
       "content": "생존자 무리를 만났다. 그들이 나를 받아주는 대신 조건을 건다면?",
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/survival-rpg-2026/q3.webp",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/survival-rpg-2026/q3.webp?v=1769821676960",
       "imagePrompt": "8-bit pixel art, meeting a group of survivors around a campfire, dialogue box",
       "options": [
         {
@@ -91,7 +91,7 @@
     {
       "order": 4,
       "content": "식량이 거의 바닥났다. 위험한 마트에 들어가야 하는데, 당신의 작전은?",
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/survival-rpg-2026/q4.webp",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/survival-rpg-2026/q4.webp?v=1769821676960",
       "imagePrompt": "8-bit pixel art, abandoned supermarket front, eerie atmosphere, pixel graphics",
       "options": [
         {
@@ -119,7 +119,7 @@
     {
       "order": 5,
       "content": "동료가 좀비에게 물린 것 같다... 하지만 확실하진 않다. 당신의 선택은?",
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/survival-rpg-2026/q5.webp",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/survival-rpg-2026/q5.webp?v=1769821676960",
       "imagePrompt": "8-bit pixel art, tense moment with an injured teammate, dramatic shadows",
       "options": [
         {
@@ -147,7 +147,7 @@
     {
       "order": 6,
       "content": "폐허가 된 도시에서 유일하게 작동하는 라디오를 주웠다. 어디에 채널을 맞출까?",
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/survival-rpg-2026/q6.webp",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/survival-rpg-2026/q6.webp?v=1769821676960",
       "imagePrompt": "8-bit pixel art, old radio device close up, static noise visual",
       "options": [
         {
@@ -175,7 +175,7 @@
     {
       "order": 7,
       "content": "드디어 안전지대(벙커)에 도착했다. 이곳에서의 나의 역할은?",
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/survival-rpg-2026/q7.webp",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/survival-rpg-2026/q7.webp?v=1769821676960",
       "imagePrompt": "8-bit pixel art, heavy blast door of a bunker, safety sign",
       "options": [
         {
@@ -206,7 +206,7 @@
       "typeCode": "ENTJ",
       "title": "😎 냉철한 사령관 (The Commander)",
       "description": "혼란 속에서도 빛나는 리더십! 당신은 감정에 휘둘리지 않고 최선의 판단을 내리는 사령관입니다. \\n\\n사람들을 규합하고 생존 전략을 짜는 데 탁월합니다. 가끔은 너무 냉정해서 '피도 눈물도 없다'는 소리를 듣지만, 당신 덕분에 다들 살아있는 거예요. 좀비들도 당신의 포스에 눌려 피해갈지도 모릅니다.",
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/survival-rpg-2026/result-entj.webp",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/survival-rpg-2026/result-entj.webp?v=1769821676960",
       "imagePrompt": "8-bit pixel art, cool commander character in tactical gear, sunglasses, standing on a tank or fortress, pixel art style",
       "isPremium": false
     },
@@ -214,7 +214,7 @@
       "typeCode": "ISFP",
       "title": "🛡️ 고독한 벙커 주인 (The Bunker Master)",
       "description": "남들이 밖에서 치고받고 싸울 때, 이미 완벽한 안전 가옥을 확보한 당신! \\n\\n최소한의 움직임으로 최대의 생존 효율을 뽑아냅니다. 침대 밖은 위험하다는 걸 진작에 알고 있었죠. 당신의 벙커에는 없는 게 없지만, 초대받은 사람만 들어갈 수 있습니다. (암호: 1234)",
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/survival-rpg-2026/result-isfp.webp",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/survival-rpg-2026/result-isfp.webp?v=1769821676960",
       "imagePrompt": "8-bit pixel art, cozy bunker interior with snacks and monitors, character relaxing safely, pixel art style",
       "isPremium": false
     },
@@ -222,7 +222,7 @@
       "typeCode": "ENFP",
       "title": "🔥 광란의 매드맥스 (The Berserker)",
       "description": "이 구역의 미친X은 나야! 세상이 망했다고? 오히려 좋아! \\n\\n당신은 이 아포칼립스를 일종의 게임처럼 즐기고 있습니다. 적응력 200%, 똘끼 300%. 좀비보다 당신이 더 무서울 수도 있어요. 우울해하는 생존자들에게 등짝 스매싱을 날리며 의외의 활력을 불어넣는 분위기 메이커입니다.",
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/survival-rpg-2026/result-enfp.webp",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/survival-rpg-2026/result-enfp.webp?v=1769821676960",
       "imagePrompt": "8-bit pixel art, wild character riding a modified motorcycle or holding unusual weapons, chaotic and energetic background, pixel art style",
       "isPremium": false
     },
@@ -230,7 +230,7 @@
       "typeCode": "INFJ",
       "title": "🕊️ 희망의 성자 (The Saint)",
       "description": "모두가 이기적으로 변해갈 때, 끝까지 인간성을 잃지 않는 당신. \\n\\n다친 사람을 치료하고, 싸우는 사람들을 중재하는 힐러 포지션입니다. 당신의 따뜻한 말 한마디가 절망에 빠진 사람들을 구원합니다. 하지만 조심하세요, 너무 착하면 제일 먼저... (이하 생략)",
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/survival-rpg-2026/result-infj.webp",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/survival-rpg-2026/result-infj.webp?v=1769821676960",
       "imagePrompt": "8-bit pixel art, angelic character healing another pixel character, soft glowing light effect, pixel art style",
       "isPremium": false
     }

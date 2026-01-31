@@ -75,9 +75,9 @@
         *   **Paper Cutout/Craft**: 종이를 오려 붙인 듯한 그림자와 질감, 스크랩북 감성 (포근함/DIY/아동)
         *   **Holographic/Iridescent**: 빛에 따라 변하는 색감, 메탈릭하고 글로시한 질감 (트렌디/뷰티/패션)
     *   **CRITICAL RULE**: **단일 퀴즈 내의 모든 이미지(커버, 질문, 결과)는 반드시 동일한 화풍과 톤앤매너를 유지**해야 합니다. (일관성 유지)
-2.  **이미지 생성**: 선정된 스타일을 포함하여 JSON의 `imagePrompt`를 기반으로 `generate_image`를 호출합니다.
+2.  **이미지 생성**: 선정된 스타일을 포함하여 JSON의 `imagePrompt`를 기반으로 `generate_image`를 호출합니다. **주의**: 이미지 사이즈는 반드시 512x512로 생성해야 합니다.
 3.  **파일 저장**: 생성된 이미지는 `contents/[topic-slug]/images/` 폴더에 저장합니다.
-    *   네이밍: `main-cover.png`, `q1.png`, `q2.png`, `result-es.png`, `result-ih.png`... (생성 후 반드시 WebP로 변환하여 업로드, png파일들은 삭제)
+    *   네이밍: `main-cover.png`, `q1.png`, `q2.png`, `result-es.png`, `result-ih.png`... (생성 후 반드시 WebP로 변환하여 업로드하고 webP파일을 남기고, png파일들은 삭제)
 
 ## 4. 배포 및 DB 등록 (Deployment)
 준비된 데이터와 이미지를 실제 서비스에 반영합니다.
@@ -96,3 +96,5 @@
 - [ ] JSON 데이터 문법이 유효한가?
 - [ ] 이미지 스타일이 단일 퀴즈 내에서 일관되게 유지되는가?
 - [ ] DB 등록 후 플레이 테스트가 정상적으로 동작하는가?
+- [ ] 모든 이미지는 중복이 없는가?
+- [ ] 이모지를 사용하지 않았는가?

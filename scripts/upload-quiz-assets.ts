@@ -38,7 +38,7 @@ async function uploadFile(filename: string): Promise<string | null> {
 
     try {
         const webpBuffer = await sharp(localFilePath)
-            .resize(1200, 1200, { fit: 'inside', withoutEnlargement: true })
+            .resize(512, 512, { fit: 'inside', withoutEnlargement: true })
             .webp({ quality: 80 })
             .toBuffer()
 
