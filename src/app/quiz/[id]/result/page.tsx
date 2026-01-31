@@ -63,9 +63,18 @@ export async function generateMetadata({
     ogUrl.searchParams.set('title', result.title)
     ogUrl.searchParams.set('description', result.description.slice(0, 100))
     ogUrl.searchParams.set('quizTitle', quiz.title)
+
     if (result.imageUrl) {
-        ogUrl.searchParams.set('imageUrl', result.imageUrl)
-        ogUrl.searchParams.set('type', 'result')
+        // Ensure absolute URL
+        const fullImageUrl = result.imageUrl.startsWith('http')
+            ? result.imageUrl
+            : `${process.env.NEXT_PUBLIC_BASE_URL || 'https://ponpon.factorization.co.kr'}${result.imageUrl}`
+
+        ogUrl.searchParams.set('imageUrl', fullImageUrl)
+        ogUrl.searchParams.set('layoutType', 'result')
+        // Cache busting v3
+        ogUrl.searchParams.set('v', '3')
+        ogUrl.searchParams.set('ts', new Date().getTime().toString())
     }
 
     return {

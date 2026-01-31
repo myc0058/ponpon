@@ -10,16 +10,16 @@ export async function GET(request: NextRequest) {
         // 파라미터 추출
         const hasTitle = searchParams.has('title')
         const title = hasTitle
-            ? searchParams.get('title')?.slice(0, 100)
+            ? searchParams.get('title')?.slice(0, 60) // 100자에서 60자로 줄임
             : '나의 결과는?'
         const description = searchParams.get('description')?.slice(0, 100) || '퀴즈 결과를 확인해보세요!'
         const quizTitle = searchParams.get('quizTitle')?.slice(0, 100) || 'FonFon Quiz'
         const imageUrl = searchParams.get('imageUrl')
 
-        const type = searchParams.get('type')
+        const layoutType = searchParams.get('layoutType')
 
         // 결과 페이지용 이미지 생성 (텍스트 없이 이미지만 강조)
-        if (type === 'result' && imageUrl) {
+        if (layoutType === 'result' && imageUrl) {
             return new ImageResponse(
                 (
                     <div
