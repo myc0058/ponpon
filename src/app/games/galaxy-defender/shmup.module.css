@@ -1,0 +1,56 @@
+.gameContainer {
+    width: 100%;
+    max-width: 400px;
+    height: 500px;
+    margin: 0 auto;
+    background-color: #020617;
+    background-image:
+        radial-gradient(1px 1px at 25px 35px, white, transparent),
+        radial-gradient(1px 1px at 50px 100px, white, transparent),
+        radial-gradient(1px 1px at 150px 200px, white, transparent),
+        radial-gradient(1px 1px at 300px 400px, white, transparent);
+    position: relative;
+    overflow: hidden;
+    border: 4px solid #1e293b;
+    border-radius: 8px;
+}
+
+.player {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #38bdf8;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    box-shadow: 0 0 10px #38bdf8;
+    z-index: 10;
+}
+
+.bullet {
+    position: absolute;
+    width: 4px;
+    height: 12px;
+    background-color: #fde047;
+    border-radius: 2px;
+    box-shadow: 0 0 5px #fde047;
+}
+
+.enemy {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: #ef4444;
+    clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+    box-shadow: 0 0 10px #ef4444;
+}
+
+.ui {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    font-weight: bold;
+    z-index: 20;
+    pointer-events: none;
+}

@@ -1,0 +1,84 @@
+.gameContainer {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #1e293b;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2px;
+    background-color: #0f172a;
+    padding: 4px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.cell {
+    aspect-ratio: 1/1;
+    border-radius: 1px;
+    transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.colorBtn {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 3px solid #334155;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+.colorBtn:active {
+    transform: scale(0.9);
+}
+
+.ui {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Colors */
+.c0 {
+    background-color: #ef4444;
+}
+
+/* Red */
+.c1 {
+    background-color: #3b82f6;
+}
+
+/* Blue */
+.c2 {
+    background-color: #22c55e;
+}
+
+/* Green */
+.c3 {
+    background-color: #eab308;
+}
+
+/* Yellow */
+.c4 {
+    background-color: #a855f7;
+}
+
+/* Purple */
+.c5 {
+    background-color: #ec4899;
+}
+
+/* Pink */

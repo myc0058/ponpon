@@ -1,0 +1,88 @@
+.gameContainer {
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    background-color: #064e3b;
+    /* Chalkboard green */
+    padding: 40px;
+    border-radius: 8px;
+    border: 8px solid #4b2c20;
+    /* Wooden frame */
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    position: relative;
+    color: white;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.equation {
+    font-size: 56px;
+    margin: 40px 0;
+    text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.2);
+    letter-spacing: 5px;
+}
+
+.input {
+    width: 150px;
+    background: transparent;
+    border: none;
+    border-bottom: 4px dashed white;
+    color: #fbbf24;
+    font-size: 48px;
+    text-align: center;
+    outline: none;
+}
+
+.input::placeholder {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.timer {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: #ef4444;
+}
+
+.score {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    color: #38bdf8;
+}
+
+.feedback {
+    height: 30px;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
+
+    75% {
+        transform: translateX(-5px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.wrong {
+    animation: shake 0.2s;
+    color: #ef4444;
+}

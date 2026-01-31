@@ -1,0 +1,80 @@
+.gameContainer {
+    width: 100%;
+    max-width: 500px;
+    height: 600px;
+    margin: 0 auto;
+    background-color: #0f172a;
+    position: relative;
+    overflow: hidden;
+    border: 4px solid #1e293b;
+    border-radius: 12px;
+}
+
+.word {
+    position: absolute;
+    color: #38bdf8;
+    font-weight: bold;
+    font-size: 20px;
+    text-shadow: 0 0 8px rgba(56, 189, 248, 0.5);
+    white-space: nowrap;
+    transition: transform 0.1s linear;
+}
+
+.inputArea {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    background: rgba(30, 41, 59, 0.9);
+    border-top: 2px solid #334155;
+}
+
+.input {
+    width: 100%;
+    padding: 12px;
+    background: #020617;
+    border: 2px solid #38bdf8;
+    border-radius: 6px;
+    color: #38bdf8;
+    font-size: 18px;
+    outline: none;
+    text-align: center;
+}
+
+.scoreUI {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #94a3b8;
+    font-family: monospace;
+    font-size: 18px;
+    z-index: 10;
+}
+
+.lifeUI {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #ef4444;
+    font-size: 24px;
+    z-index: 10;
+}
+
+.matched {
+    color: #4ade80 !important;
+    text-shadow: 0 0 15px #4ade80 !important;
+}
+
+.missed {
+    animation: flashRed 0.3s;
+}
+
+@keyframes flashRed {
+    from {
+        background-color: rgba(239, 68, 68, 0.3);
+    }
+
+    to {
+        background-color: transparent;
+    }
+}

@@ -95,6 +95,7 @@ export default async function QuizIntroPage({ params }: { params: Promise<{ id: 
                             시작하기
                         </Link>
                     </div>
+
                 </div>
             </div>
         </main>

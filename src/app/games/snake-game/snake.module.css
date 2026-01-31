@@ -1,0 +1,87 @@
+.gameContainer {
+    width: 100%;
+    max-width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    background-color: #2c3e50;
+    position: relative;
+    overflow: hidden;
+    user-select: none;
+    border: 4px solid #34495e;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+}
+
+.cell {
+    width: 100%;
+    height: 100%;
+}
+
+.snake {
+    background-color: #2ecc71;
+    border: 1px solid #27ae60;
+    border-radius: 2px;
+}
+
+.snakeHead {
+    background-color: #27ae60;
+    border: 1px solid #1e8449;
+    z-index: 2;
+}
+
+.food {
+    background-color: #e74c3c;
+    border: 1px solid #c0392b;
+    border-radius: 50%;
+    animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(0.8);
+    }
+
+    to {
+        transform: scale(1.1);
+    }
+}
+
+.scoreUI {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    color: #ecf0f1;
+    font-weight: bold;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.gameStartPrompt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #ecf0f1;
+    z-index: 20;
+    background: rgba(44, 62, 80, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.controlGuide {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    color: #bdc3c7;
+    font-size: 12px;
+    z-index: 5;
+}

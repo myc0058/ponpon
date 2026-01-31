@@ -1,0 +1,59 @@
+.gameContainer {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #0c0a09;
+    padding: 10px;
+    border-radius: 8px;
+    border: 4px solid #444;
+}
+
+.mazeGrid {
+    display: grid;
+    gap: 0;
+    background-color: #0c0a09;
+    border: 1px solid #333;
+}
+
+.cell {
+    width: 100%;
+    aspect-ratio: 1/1;
+    transition: background-color 0.2s;
+}
+
+.wall {
+    background-color: #444;
+}
+
+.path {
+    background-color: #111;
+}
+
+.player {
+    background-color: #38bdf8;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #38bdf8;
+    position: relative;
+    z-index: 5;
+}
+
+.exit {
+    background-color: #10b981;
+    box-shadow: 0 0 10px #10b981;
+    background-image: radial-gradient(circle, #064e3b, #10b981);
+}
+
+.ui {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+.controls {
+    text-align: center;
+    margin-top: 15px;
+    color: #64748b;
+    font-size: 14px;
+}

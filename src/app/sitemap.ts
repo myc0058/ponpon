@@ -29,5 +29,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         priority: 0.8,
     }))
 
-    return [...staticRoutes, ...quizRoutes]
+    // 동적 페이지: 게임 목록 가져오기
+    const games = await prisma.miniGame.findMany({
+        where: { isActive: true },
+        select: { slug: true, updatedAt: true },
+    })
+
+    const gameRoutes = games.map((game: { slug: string; updatedAt: Date }) => ({
+        url: `${baseUrl}/games/${game.slug}`,
+        lastModified: game.updatedAt,
+        changeFrequency: 'weekly' as const,
+        priority: 0.7,
+    }))
+
+    return [...staticRoutes, ...quizRoutes, ...gameRoutes]
 }

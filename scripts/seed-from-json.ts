@@ -35,6 +35,8 @@ async function main() {
         description: data.description,
         imageUrl: data.imageUrl,
         resultType: data.resultType,
+        isVisible: data.isVisible !== undefined ? data.isVisible : true,
+        isFeatured: data.isFeatured !== undefined ? data.isFeatured : true,
         typeCodeLimit: data.typeCodeLimit,
         questions: {
             create: data.questions.map((q: any) => ({
@@ -73,6 +75,8 @@ async function main() {
                 description: data.description,
                 imageUrl: data.imageUrl,
                 resultType: data.resultType,
+                isVisible: data.isVisible !== undefined ? data.isVisible : true,
+                isFeatured: data.isFeatured !== undefined ? data.isFeatured : true,
                 typeCodeLimit: data.typeCodeLimit,
                 questions: {
                     deleteMany: {},

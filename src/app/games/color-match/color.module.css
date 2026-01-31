@@ -1,0 +1,78 @@
+.gameContainer {
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #fafafa;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.wordDisplay {
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 64px;
+    font-weight: 900;
+    margin-bottom: 40px;
+    transition: transform 0.1s;
+}
+
+.shake {
+    animation: shake 0.4s;
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-10px);
+    }
+
+    75% {
+        transform: translateX(10px);
+    }
+}
+
+.buttonGroup {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.choiceButton {
+    padding: 20px;
+    border: none;
+    border-radius: 12px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    transition: transform 0.1s, filter 0.2s;
+}
+
+.choiceButton:active {
+    transform: scale(0.95);
+}
+
+.matchBtn {
+    background-color: #10b981;
+}
+
+.mismatchBtn {
+    background-color: #ef4444;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #666;
+}

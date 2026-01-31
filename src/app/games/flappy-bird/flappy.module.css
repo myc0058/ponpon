@@ -1,0 +1,62 @@
+.gameContainer {
+    width: 100%;
+    height: 500px;
+    background-color: #70c5ce;
+    position: relative;
+    overflow: hidden;
+    user-select: none;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 4px solid #333;
+}
+
+.bird {
+    position: absolute;
+    left: 50px;
+    width: 34px;
+    height: 24px;
+    background-color: #f7d302;
+    border: 2px solid #000;
+    border-radius: 4px;
+    transition: transform 0.1s;
+    z-index: 10;
+}
+
+.pipe {
+    position: absolute;
+    width: 52px;
+    background-color: #73bf2e;
+    border: 2px solid #000;
+}
+
+.scoreUI {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Arial Black', Gadget, sans-serif;
+    font-size: 40px;
+    color: white;
+    text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000;
+    z-index: 20;
+}
+
+.skyline {
+    position: absolute;
+    bottom: 0;
+    width: 200%;
+    height: 100px;
+    background-color: #ded895;
+    border-top: 2px solid #535353;
+}
+
+.gameStartPrompt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 2px #000;
+    z-index: 30;
+}

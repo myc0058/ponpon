@@ -50,9 +50,11 @@
 ```
 
 ## 3. 이미지 생성 (Asset Production)
-`generate_image` 도구를 사용하여 이미지를 생성합니다.
+모든 이미지 생성은 [통합 이미지 생성 프로토콜](image-production-protocol.md)을 엄격히 준수합니다.
 
-1.  **이미지 컨셉 선정**: 퀴즈의 주제와 타겟 연령층에 가장 잘 어울리는 화풍(Art Style)을 선정합니다. 어울리는 스타일이 없다면 새로운 화풍을 추천합니다. PonPon은 다양한 화풍으로 채워질수록 좋습니다.(참고: [Style Guide](style-guide.md))
+`generate_image` 도구를 사용하여 이미지를 생성하며, 쿼터가 부족하거나 대량의 이미지가 필요한 경우 **NanoBanana (Gemini 2.5 Flash Image)** 방식을 우선 사용합니다.
+
+1.  **이미지 컨셉 선정**:
     *   **Style Examples**:
         *   **3D Pixar style**: 귀엽고 생동감 있는 캐릭터 중심 (범용적/대중적)
         *   **Studio Ghibli style**: 따뜻하고 감성적인 수채화 느낌 (힐링/추억/서정적)
@@ -74,9 +76,10 @@
         *   **American Comic Book**: 벤데이 점, 말풍선, 역동적인 기법 (영웅/액션/유머)
         *   **Paper Cutout/Craft**: 종이를 오려 붙인 듯한 그림자와 질감, 스크랩북 감성 (포근함/DIY/아동)
         *   **Holographic/Iridescent**: 빛에 따라 변하는 색감, 메탈릭하고 글로시한 질감 (트렌디/뷰티/패션)
-    *   **CRITICAL RULE**: **단일 퀴즈 내의 모든 이미지(커버, 질문, 결과)는 반드시 동일한 화풍과 톤앤매너를 유지**해야 합니다. (일관성 유지)
+    **CRITICAL RULE**: **단일 퀴즈 내의 모든 이미지(커버, 질문, 결과)는 반드시 동일한 화풍과 톤앤매너를 유지**해야 합니다. (일관성 유지)
 2.  **이미지 생성**: 선정된 스타일을 포함하여 JSON의 `imagePrompt`를 기반으로 `generate_image`를 호출합니다.  
     **주의**: 이미지 사이즈는 반드시 512x512로 생성해야 합니다.
+    **주의**: 만약 이미지 생성 도구(`generate_image`) 사용 중 **쿼터 제한(Limit)**에 걸린다면, 즉시 `scripts/generate-nanobanana-assets.ts --topic=[slug] --use-ai-studio` 명령어를 실행하여 서비스를 중단 없이 이어가야 합니다.
     **주의**: 이미지 생성은 단기 과자 생성으로 인해 생기는 쿨다운 시간을 방지하기 위해 이미지를 한장씩 생성하고 이미지 생성이 완료되면 1분을 쉬고 다음 이미지를 생성한다.
 3.  **파일 저장**: 생성된 이미지는 `contents/[topic-slug]/images/` 폴더에 저장합니다.
     *   네이밍: `main-cover.png`, `q1.png`, `q2.png`, `result-es.png`, `result-ih.png`... (생성 후 반드시 WebP로 변환하여 업로드하고 webP파일을 남기고, png파일들은 삭제)

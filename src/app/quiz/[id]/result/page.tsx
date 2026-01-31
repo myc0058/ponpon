@@ -187,12 +187,14 @@ export default async function QuizResultPage({
         ty: finalTypeParam
     });
 
-    return <ResultDisplay
-        quiz={quiz}
-        result={result}
-        score={finalScore}
-        resultType={quiz.resultType}
-        typeCode={finalTypeParam}
-        compressedData={resultToCompress}
-    />
+    return (
+        <ResultDisplay
+            quiz={quiz}
+            result={result}
+            score={finalScore}
+            resultType={quiz.resultType}
+            typeCode={finalTypeParam}
+            compressedData={resultToCompress}
+        />
+    )
 }

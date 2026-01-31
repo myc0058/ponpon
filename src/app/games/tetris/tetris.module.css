@@ -1,0 +1,59 @@
+.gameContainer {
+    width: 240px;
+    height: 480px;
+    background-color: #111827;
+    border: 4px solid #374151;
+    margin: 0 auto;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+}
+
+.cell {
+    border: 0.1px solid rgba(255, 255, 255, 0.05);
+}
+
+.block {
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+}
+
+/* Tetromino 색상 */
+.typeI {
+    background-color: #06b6d4;
+}
+
+.typeJ {
+    background-color: #3b82f6;
+}
+
+.typeL {
+    background-color: #f97316;
+}
+
+.typeO {
+    background-color: #eab308;
+}
+
+.typeS {
+    background-color: #22c55e;
+}
+
+.typeT {
+    background-color: #a855f7;
+}
+
+.typeZ {
+    background-color: #ef4444;
+}
+
+.scoreUI {
+    position: absolute;
+    top: -40px;
+    width: 100%;
+    text-align: center;
+    color: #4b5563;
+    font-weight: bold;
+    font-size: 18px;
+}
