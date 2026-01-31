@@ -65,6 +65,7 @@ export async function generateMetadata({
     ogUrl.searchParams.set('quizTitle', quiz.title)
     if (result.imageUrl) {
         ogUrl.searchParams.set('imageUrl', result.imageUrl)
+        ogUrl.searchParams.set('type', 'result')
     }
 
     return {

@@ -37,6 +37,7 @@ export const metadata: Metadata = {
 };
 
 import Header from "@/components/Header";
+import { ToastProvider } from "@/components/Toast";
 
 export default function RootLayout({
   children,
@@ -76,10 +77,12 @@ export default function RootLayout({
             })
           }}
         />
-        <div className="app-wrapper">
-          <Header />
-          {children}
-        </div>
+        <ToastProvider>
+          <div className="app-wrapper">
+            <Header />
+            {children}
+          </div>
+        </ToastProvider>
       </body>
     </html>
   );

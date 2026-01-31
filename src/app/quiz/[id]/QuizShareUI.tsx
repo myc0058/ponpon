@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { Share2, Link as LinkIcon, X } from 'lucide-react'
 import styles from './quiz.module.css'
 import { generateShortUrl } from '@/app/actions/shorten-url'
+import { useToast } from '@/components/Toast'
 
 type Quiz = {
     id: string
@@ -36,31 +37,22 @@ export default function QuizShareUI({ quiz }: { quiz: Quiz }) {
         }
     }, [showShare, shortUrl])
 
-    const handleShare = async (platform: string) => {
-        const url = shortUrl || window.location.href
-        const text = `이 퀴즈 한번 풀어보세요! "${quiz.title}"`
+    const { showToast } = useToast()
 
-        switch (platform) {
-            case 'facebook':
-                window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`, '_blank')
-                break
-            case 'twitter':
-                window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank')
-                break
-            case 'kakao':
-                alert('카카오톡 공유 기능은 준비 중입니다.')
-                break
-        }
+    // ... useEffect ...
+
+    const handleShare = async (platform: string) => {
+        showToast('아직 준비 중인 기능입니다. 링크 복사 버튼을 눌러서 공유해주세요!', 'info')
     }
 
     const handleCopyLink = async () => {
         try {
             const url = shortUrl || window.location.href
             await navigator.clipboard.writeText(url)
-            alert('단축 링크가 클립보드에 복사되었습니다!')
+            showToast('링크가 복사되었습니다! 친구와의 대화창이나 SNS에 붙여넣어 퀴즈를 공유해보세요!', 'success')
         } catch (err) {
             console.error('Failed to copy: ', err)
-            alert('링크 복사에 실패했습니다.')
+            showToast('링크 복사에 실패했습니다.', 'error')
         }
     }
 

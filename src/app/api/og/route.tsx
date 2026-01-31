@@ -16,6 +16,55 @@ export async function GET(request: NextRequest) {
         const quizTitle = searchParams.get('quizTitle')?.slice(0, 100) || 'FonFon Quiz'
         const imageUrl = searchParams.get('imageUrl')
 
+        const type = searchParams.get('type')
+
+        // 결과 페이지용 이미지 생성 (텍스트 없이 이미지만 강조)
+        if (type === 'result' && imageUrl) {
+            return new ImageResponse(
+                (
+                    <div
+                        style={{
+                            height: '100%',
+                            width: '100%',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                        }}
+                    >
+                        {/* 배경 장식 (선택사항, 단순함을 위해 생략 가능 하지만 깊이감을 위해 추가) */}
+                        <div
+                            style={{
+                                position: 'absolute',
+                                top: 0,
+                                left: 0,
+                                right: 0,
+                                bottom: 0,
+                                background: 'radial-gradient(circle at 50% 50%, rgba(255,255,255,0.1) 0%, transparent 70%)',
+                            }}
+                        />
+
+                        <img
+                            src={imageUrl}
+                            alt="Result"
+                            height="630"
+                            style={{
+                                height: '100%',
+                                width: 'auto',
+                                objectFit: 'contain',
+                                filter: 'drop-shadow(0 20px 50px rgba(0,0,0,0.4))', // 그림자 효과로 깊이감 추가
+                            }}
+                        />
+                    </div>
+                ),
+                {
+                    width: 1200,
+                    height: 630,
+                }
+            )
+        }
+
         return new ImageResponse(
             (
                 <div
