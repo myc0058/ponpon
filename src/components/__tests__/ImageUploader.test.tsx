@@ -70,11 +70,25 @@ describe('ImageUploader', () => {
         // Mocking Image and Canvas
         const originalImage = window.Image;
         (window as any).Image = jest.fn().mockImplementation(() => {
+            let _onload: any = null;
+            let _src: string = '';
+
             const img = {
-                onload: null as any,
-                onerror: null as any,
+                set onload(fn: any) {
+                    _onload = fn;
+                    if (_src && _onload) {
+                        // Execute asynchronously to allow execution flow to continue
+                        // and mimicking browser behavior
+                        setTimeout(() => _onload(), 0);
+                    }
+                },
+                get onload() { return _onload },
+                set onerror(fn: any) { /* noop */ },
                 set src(s: string) {
-                    setTimeout(() => { if (img.onload) img.onload() }, 0)
+                    _src = s;
+                    if (_src && _onload) {
+                        setTimeout(() => _onload(), 0);
+                    }
                 },
                 width: 100,
                 height: 100
@@ -115,6 +129,11 @@ describe('ImageUploader', () => {
 
         // Check loading state immediately (promise pending)
         expect(screen.getByText('업로드...')).toBeInTheDocument()
+
+        // Wait for optimizeImage to finish and upload start
+        await waitFor(() => {
+            expect((supabase.storage as any).upload).toHaveBeenCalled()
+        })
 
         // Resolve upload
         await act(async () => {

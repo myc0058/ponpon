@@ -2,6 +2,7 @@ import { ImageResponse } from 'next/og'
 import { NextRequest } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { decompressData } from '@/lib/compression'
+import { formatContent } from '@/lib/string-utils'
 
 // DB 조회를 위해 Node.js runtime 사용 (기본값)
 // export const runtime = 'edge'
@@ -11,8 +12,8 @@ export async function GET(request: NextRequest) {
         const { searchParams } = new URL(request.url)
 
         // 파라미터 추출
-        let title = searchParams.get('title')?.slice(0, 60) || '나의 결과는?'
-        let description = searchParams.get('description')?.slice(0, 100) || '퀴즈 결과를 확인해보세요!'
+        let title = formatContent(searchParams.get('title')?.slice(0, 60) || '나의 결과는?')
+        let description = formatContent(searchParams.get('description')?.slice(0, 100) || '퀴즈 결과를 확인해보세요!')
         let quizTitle = searchParams.get('quizTitle')?.slice(0, 100) || 'FonFon Quiz'
         let imageUrl = searchParams.get('imageUrl')
         const layoutType = searchParams.get('layoutType')
@@ -23,8 +24,8 @@ export async function GET(request: NextRequest) {
         if (compressedData) {
             const decoded = decompressData(compressedData)
             if (decoded) {
-                title = decoded.t?.slice(0, 60) || title
-                description = decoded.d?.slice(0, 100) || description
+                title = formatContent(decoded.t?.slice(0, 60) || title)
+                description = formatContent(decoded.d?.slice(0, 100) || description)
                 quizTitle = decoded.q?.slice(0, 100) || quizTitle
                 imageUrl = decoded.i || imageUrl
 
@@ -42,8 +43,8 @@ export async function GET(request: NextRequest) {
             })
 
             if (resultData) {
-                title = resultData.title.slice(0, 60)
-                description = resultData.description.slice(0, 100)
+                title = formatContent(resultData.title.slice(0, 60))
+                description = formatContent(resultData.description.slice(0, 100))
                 quizTitle = resultData.quiz.title.slice(0, 100)
                 if (resultData.imageUrl) {
                     imageUrl = resultData.imageUrl.startsWith('http')
@@ -85,6 +86,8 @@ export async function GET(request: NextRequest) {
                         <img
                             src={imageUrl}
                             alt="Result"
+                            width="800"
+                            height="630"
                             style={{
                                 width: '800px',
                                 height: '630px',
@@ -168,6 +171,7 @@ export async function GET(request: NextRequest) {
                                 textAlign: 'center',
                                 marginBottom: 20,
                                 lineHeight: 1.1,
+                                whiteSpace: 'pre-wrap',
                             }}
                         >
                             {title}
@@ -182,6 +186,7 @@ export async function GET(request: NextRequest) {
                                 textAlign: 'center',
                                 maxWidth: '80%',
                                 lineHeight: 1.4,
+                                whiteSpace: 'pre-wrap',
                             }}
                         >
                             {description}
@@ -208,8 +213,8 @@ export async function GET(request: NextRequest) {
             }
         )
     } catch (e: any) {
-        console.log(`${e.message}`)
-        return new Response(`Failed to generate the image`, {
+        console.error('OG Image Generation Error:', e)
+        return new Response(`Failed to generate the image: ${e.message}`, {
             status: 500,
         })
     }

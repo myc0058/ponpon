@@ -94,9 +94,9 @@ export async function generateMetadata({
 
     ogUrl.searchParams.set('o', encodedData)
 
-    if (result.imageUrl) {
-        ogUrl.searchParams.set('layoutType', 'result')
-    }
+    // if (result.imageUrl) {
+    //     ogUrl.searchParams.set('layoutType', 'result')
+    // }
 
     // Cache busting
     ogUrl.searchParams.set('v', '5')

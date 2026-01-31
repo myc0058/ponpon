@@ -5,6 +5,7 @@ import { Share2, Link as LinkIcon, X } from 'lucide-react'
 import styles from './quiz.module.css'
 import { generateShortUrl } from '@/app/actions/shorten-url'
 import { useToast } from '@/components/Toast'
+import { formatContent } from '@/lib/string-utils'
 
 type Quiz = {
     id: string
@@ -103,7 +104,7 @@ export default function QuizShareUI({ quiz }: { quiz: Quiz }) {
                                 )}
                                 <div className={styles.previewInfo}>
                                     <div className={styles.previewTitle}>{quiz.title}</div>
-                                    <div className={styles.previewDesc}>{quiz.description}</div>
+                                    <div className={styles.previewDesc}>{formatContent(quiz.description)}</div>
                                 </div>
                             </div>
                         </div>
