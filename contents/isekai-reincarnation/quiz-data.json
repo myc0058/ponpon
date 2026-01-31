@@ -1,0 +1,227 @@
+{
+  "title": "눈 떠보니 이세계? 나의 종족과 능력은?",
+  "description": "트럭에 치여 눈을 떠보니 낯선 천장이 보인다... 판타지 세계로 전생한 당신! 과연 어떤 종족으로, 어떤 사기 능력을 가지고 태어났을까?",
+  "resultType": "TYPE_BASED",
+  "questions": [
+    {
+      "order": 1,
+      "content": "이세계 전생 직전, 신이 한 가지 소원을 들어준다면?",
+      "options": [
+        {
+          "content": "절대 죽지 않는 강인한 육체 (체력 몰빵)",
+          "resultTypeCode": "S",
+          "score": 1
+        },
+        {
+          "content": "모든 마법을 한 번에 배우는 천재 두뇌 (지능 몰빵)",
+          "resultTypeCode": "M",
+          "score": 1
+        },
+        {
+          "content": "엄청난 부와 권력 (금수저 스타트)",
+          "resultTypeCode": "N",
+          "score": 1
+        },
+        {
+          "content": "누구든 내 편으로 만드는 매력 (하렘/역하렘)",
+          "resultTypeCode": "V",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/isekai-reincarnation/q1.webp?v=1769864652588"
+    },
+    {
+      "order": 2,
+      "content": "눈을 떴다. 가장 먼저 보이는 풍경은?",
+      "options": [
+        {
+          "content": "고급스러운 왕실 침대 위",
+          "resultTypeCode": "N",
+          "score": 1
+        },
+        {
+          "content": "신비로운 숲속 한가운데",
+          "resultTypeCode": "S",
+          "score": 1
+        },
+        {
+          "content": "오래된 마법 도서관",
+          "resultTypeCode": "M",
+          "score": 1
+        },
+        {
+          "content": "시끌벅적한 모험가 길드",
+          "resultTypeCode": "V",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/isekai-reincarnation/q2.webp?v=1769864652795"
+    },
+    {
+      "order": 3,
+      "content": "첫 번째 퀘스트가 주어졌다. \"슬라임을 처치하세요.\"",
+      "options": [
+        {
+          "content": "주먹 한 방으로 날려버린다. (힘)",
+          "resultTypeCode": "S",
+          "score": 1
+        },
+        {
+          "content": "원거리에서 화려한 마법을 쓴다. (기술)",
+          "resultTypeCode": "M",
+          "score": 1
+        },
+        {
+          "content": "용병을 고용해서 대신 싸우게 한다. (돈)",
+          "resultTypeCode": "N",
+          "score": 1
+        },
+        {
+          "content": "슬라임과 대화해서 친구가 된다. (친화력)",
+          "resultTypeCode": "V",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/isekai-reincarnation/q3.webp?v=1769864653116"
+    },
+    {
+      "order": 4,
+      "content": "마왕이 세상을 멸망시키려 한다. 나의 대처는?",
+      "options": [
+        {
+          "content": "내가 직접 마왕을 쓰러뜨리고 영웅이 된다.",
+          "resultTypeCode": "S",
+          "score": 1
+        },
+        {
+          "content": "마왕군 참모로 들어가서 세계를 지배한다.",
+          "resultTypeCode": "M",
+          "score": 1
+        },
+        {
+          "content": "안전한 곳에 숨어서 조용히 산다.",
+          "resultTypeCode": "N",
+          "score": 1
+        },
+        {
+          "content": "마왕을 설득해서 평화 협정을 맺는다.",
+          "resultTypeCode": "V",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/isekai-reincarnation/q4.webp?v=1769864653263"
+    },
+    {
+      "order": 5,
+      "content": "파트너를 한 명 고를 수 있다. 누구를 선택할까?",
+      "options": [
+        {
+          "content": "충성심 강한 기사",
+          "resultTypeCode": "N",
+          "score": 1
+        },
+        {
+          "content": "지혜로운 엘프 현자",
+          "resultTypeCode": "M",
+          "score": 1
+        },
+        {
+          "content": "귀여운 마스코트 (말하는 고양이)",
+          "resultTypeCode": "V",
+          "score": 1
+        },
+        {
+          "content": "야생의 본능을 가진 수인족",
+          "resultTypeCode": "S",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/isekai-reincarnation/q5.webp?v=1769864653430"
+    },
+    {
+      "order": 6,
+      "content": "이 세계에서 가장 즐거운 순간은?",
+      "options": [
+        {
+          "content": "강한 몬스터를 사냥하고 레벨업 할 때",
+          "resultTypeCode": "S",
+          "score": 1
+        },
+        {
+          "content": "고대 유적의 비밀을 풀었을 때",
+          "resultTypeCode": "M",
+          "score": 1
+        },
+        {
+          "content": "맛있는 이세계 요리를 먹을 때",
+          "resultTypeCode": "V",
+          "score": 1
+        },
+        {
+          "content": "세금이 걷히는 걸 볼 때",
+          "resultTypeCode": "N",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/isekai-reincarnation/q6.webp?v=1769864653660"
+    },
+    {
+      "order": 7,
+      "content": "원래 세계(지구)로 돌아갈 수 있는 포탈이 열렸다.",
+      "options": [
+        {
+          "content": "미련 없이 돌아간다. (치킨 먹고 싶음)",
+          "resultTypeCode": "V",
+          "score": 1
+        },
+        {
+          "content": "여기서 짱 먹었으니 안 돌아감.",
+          "resultTypeCode": "N",
+          "score": 1
+        },
+        {
+          "content": "왔다 갔다 할 수 있게 개조한다.",
+          "resultTypeCode": "M",
+          "score": 1
+        },
+        {
+          "content": "마지막 모험을 끝내고 고민해 본다.",
+          "resultTypeCode": "S",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/isekai-reincarnation/q7.webp?v=1769864653860"
+    }
+  ],
+  "results": [
+    {
+      "typeCode": "S",
+      "title": "먼치킨 용사 '소드마스터' (The Sword Master)",
+      "description": "힘이 곧 정의다! \\n\\n당신은 압도적인 피지컬과 전투 능력을 가진 용사로 전생했습니다. 복잡한 생각보다는 몸으로 부딪히는 스타일. 평소엔 둔해 보이지만 싸울 때만큼은 누구보다 빛납니다. 동료들이 당신만 믿고 따르겠네요. 마왕 목 따러 가시죠!",
+      "isPremium": false,
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/isekai-reincarnation/result-s.webp?v=1769864654034"
+    },
+    {
+      "typeCode": "M",
+      "title": "흑막 대마법사 '현자' (Accession Mage)",
+      "description": "세상의 진리를 꿰뚫는 자. \\n\\n당신은 마나의 축복을 받은 천재 마법사입니다. 육체노동은 질색, 손가락 하나 까딱해서 적을 섬멸합니다. 마법 연구에 미쳐있는 매드 사이언티스트 기질도 있군요. 뒤에서 파티를 조종하는 실질적인 리더일지도 모릅니다.",
+      "isPremium": false,
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/isekai-reincarnation/result-m.webp?v=1769864654230"
+    },
+    {
+      "typeCode": "N",
+      "title": "날로 먹는 '제국 황제' (The Emperor)",
+      "description": "돈과 권력이 최고야! \\n\\n운 좋게 금수저, 아니 다이아 수저를 물고 태어났습니다. 직접 싸우기보다는 부하들을 시켜서 문제를 해결합니다. 정치력과 처세술이 만렙이라 가만히 있어도 사람들이 알아서 기는군요. 이세계 건물을 다 사들여서 건물주가 되는 게 꿈입니다.",
+      "isPremium": false,
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/isekai-reincarnation/result-n.webp?v=1769864654388"
+    },
+    {
+      "typeCode": "V",
+      "title": "사랑받는 '성녀/아이돌' (The Saint)",
+      "description": "귀여운 게 세상을 구한다. \\n\\n전투 능력은 0, 하지만 힐링 능력과 매력은 999! 당신의 미소 한 방이면 적군도 무기를 버립니다. 모든 종족에게 사랑받는 평화의 상징. 어쩌면 마왕조차 당신 앞에서는 얼굴을 붉힐지도 몰라요. 진정한 세계 정복자는 바로 당신!",
+      "isPremium": false,
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/isekai-reincarnation/result-v.webp?v=1769864654606"
+    }
+  ],
+  "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/isekai-reincarnation/main-cover.webp?v=1769864654818"
+}

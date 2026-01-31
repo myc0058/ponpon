@@ -1,0 +1,176 @@
+{
+  "title": "뇌절력 테스트: 밈(Meme) 중독도",
+  "description": "친구들과 대화할 때 나도 모르게 '어쩔티비'가 나온다면? 인터넷 용어 없이는 대화가 불가능한 당신을 위한 밈 중독 테스트. (항마력 주의)",
+  "resultType": "SCORE_BASED",
+  "questions": [
+    {
+      "order": 1,
+      "content": "친구가 썰렁한 개그를 했을 때, 나의 리액션은?",
+      "options": [
+        {
+          "content": "크크크 (그냥 웃음)",
+          "score": 0
+        },
+        {
+          "content": "너 T발 C야?",
+          "score": 3
+        },
+        {
+          "content": "어쩔티비 저쩔티비",
+          "score": 2
+        },
+        {
+          "content": "폼 미쳤다",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/meme-addiction-test/q1.webp?v=1769866350861"
+    },
+    {
+      "order": 2,
+      "content": "다음 중 무슨 뜻인지 '모르는' 단어의 개수는? (중꺾마, 갓생, 분조장, 알잘딱깔센, 캘박)",
+      "options": [
+        {
+          "content": "전부 다 안다",
+          "score": 5
+        },
+        {
+          "content": "1~2개 모름",
+          "score": 3
+        },
+        {
+          "content": "3~4개 모름",
+          "score": 1
+        },
+        {
+          "content": "하나도 모르겠다 (한국어 맞음?)",
+          "score": 0
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/meme-addiction-test/q2.webp?v=1769866351075"
+    },
+    {
+      "order": 3,
+      "content": "유튜브 댓글창을 볼 때 나는?",
+      "options": [
+        {
+          "content": "영상보다 드립 댓글이 더 재밌음",
+          "score": 4
+        },
+        {
+          "content": "베댓(베스트 댓글)만 쓱 보고 맘",
+          "score": 2
+        },
+        {
+          "content": "댓글 잘 안 봄",
+          "score": 0
+        },
+        {
+          "content": "내가 직접 드립 댓글을 남김",
+          "score": 5
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/meme-addiction-test/q3.webp?v=1769866351265"
+    },
+    {
+      "order": 4,
+      "content": "일상생활에서 무의식적으로 밈을 쓴 적이 있다.",
+      "options": [
+        {
+          "content": "면접이나 발표 같은 중요한 자리에서 씀 (흑역사)",
+          "score": 5
+        },
+        {
+          "content": "부장님한테 썼다가 분위기 싸해짐",
+          "score": 4
+        },
+        {
+          "content": "친구들끼리 있을 때만 씀",
+          "score": 2
+        },
+        {
+          "content": "절대 안 씀. 표준어 사랑",
+          "score": 0
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/meme-addiction-test/q4.webp?v=1769866351529"
+    },
+    {
+      "order": 5,
+      "content": "어떤 노래의 전주만 들어도 틱톡/릴스 챌린지 안무가 자동 재생된다.",
+      "options": [
+        {
+          "content": "몸이 먼저 반응함 (제로투 등)",
+          "score": 4
+        },
+        {
+          "content": "뭔지는 아는데 출 줄은 모름",
+          "score": 2
+        },
+        {
+          "content": "그게 뭔데?",
+          "score": 0
+        },
+        {
+          "content": "내가 챌린지 찍어서 올림",
+          "score": 5
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/meme-addiction-test/q5.webp?v=1769866351722"
+    },
+    {
+      "order": 6,
+      "content": "가장 좋아하는 짤(이미지) 폴더가 따로 있다.",
+      "options": [
+        {
+          "content": "상황별 짤 1000개 보유",
+          "score": 5
+        },
+        {
+          "content": "몇 개 저장해 둔 건 있음",
+          "score": 2
+        },
+        {
+          "content": "없음. 용량 아까움",
+          "score": 0
+        },
+        {
+          "content": "내가 짤을 만듦",
+          "score": 4
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/meme-addiction-test/q6.webp?v=1769866351887"
+    }
+  ],
+  "results": [
+    {
+      "typeCode": "LOW",
+      "title": "청정 1급수 '머글' (The Muggle)",
+      "description": "인터넷 세상? 그게 뭐죠? \\n\\n당신은 인터넷 유행어에 전혀 오염되지 않은 순수한 영혼입니다. 친구들이 \"너 T야?\"라고 물으면 진짜 혈액형을 말할지도 몰라요. 대화가 가끔 안 통할 때도 있지만, 유행에 휘둘리지 않는 뚝심이 매력적입니다. 혹시 2G폰 쓰시나요?",
+      "isPremium": false,
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/meme-addiction-test/result-low.webp?v=1769866352032"
+    },
+    {
+      "typeCode": "MID",
+      "title": "적당한 '눈팅러' (The Lurker)",
+      "description": "유행은 따라가야 제맛! \\n\\n유튜브나 인스타를 보며 요즘 뭐가 핫한지는 알고 있습니다. 친구들이 쓰는 말은 대충 알아듣고 웃을 수 있는 수준. 하지만 굳이 내가 나서서 쓰지는 않아요. 현생과 인터넷 현생의 밸런스를 아주 잘 맞추고 계시는군요. 딱 좋습니다.",
+      "isPremium": false,
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/meme-addiction-test/result-mid.webp?v=1769866352233"
+    },
+    {
+      "typeCode": "HIGH",
+      "title": "걸어다니는 '인간 밈' (Living Meme)",
+      "description": "님 혹시 커뮤니티 하세요? \\n\\n현실 말투보다 인터넷 말투가 더 편한 당신. 모든 상황을 짤방으로 요약할 수 있는 능력이 있습니다. 친구들 사이에서 드립력 1타 강사로 통하지만, 가끔 일반인들 앞에서 필터링 없이 말하다가 갑분싸를 만들 수도 있으니 주의하세요. 당신의 뇌는 이미 절여졌습니다.",
+      "isPremium": false,
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/meme-addiction-test/result-high.webp?v=1769866352475"
+    },
+    {
+      "typeCode": "MAX",
+      "title": "도파민의 화신 '밈 중독 말기' (Meme Lord)",
+      "description": "더 이상 치료 불가능. \\n\\n당신은 밈을 소비하는 단계를 넘어 밈 그 자체가 되었습니다. 숨 쉬는 것보다 드립 치는 게 더 자연스럽고, 인생의 모든 순간이 콘텐츠각입니다. 나중에 역사책에 21세기를 대표하는 인류로 기록될지도 모릅니다. 제발 밖에도 좀 나가주세요!",
+      "isPremium": false,
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/meme-addiction-test/result-max.webp?v=1769866352671"
+    }
+  ],
+  "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/meme-addiction-test/main-cover.webp?v=1769866352872"
+}

@@ -1,0 +1,227 @@
+{
+  "title": "화성 이주, 나의 직업은?",
+  "description": "더 이상 지구에 희망이 없다면? 2026년 화성 이주 프로젝트에 선발된 당신! 붉은 행성에서 당신이 맡게 될 역할은 무엇일까요?",
+  "resultType": "TYPE_BASED",
+  "questions": [
+    {
+      "order": 1,
+      "content": "화성행 우주선에 탑승했다. 6개월 동안 뭐 하면서 갈까?",
+      "options": [
+        {
+          "content": "우주선 작동 원리 공부 & 시스템 점검",
+          "resultTypeCode": "EN",
+          "score": 1
+        },
+        {
+          "content": "도착해서 뭐 할지 지도 보며 계획 세우기",
+          "resultTypeCode": "EX",
+          "score": 1
+        },
+        {
+          "content": "가져온 식물 상태 확인 & 돌보기",
+          "resultTypeCode": "BO",
+          "score": 1
+        },
+        {
+          "content": "동료들과 대화하며 친목 도모",
+          "resultTypeCode": "DI",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/mars-colonist-role/q1.webp?v=1769866782732"
+    },
+    {
+      "order": 2,
+      "content": "화성 도착 첫날, 기지에 문제가 생겨 정전이 되었다.",
+      "options": [
+        {
+          "content": "내가 고칠게! 배전반으로 달려감",
+          "resultTypeCode": "EN",
+          "score": 1
+        },
+        {
+          "content": "비상 식량과 산소부터 확보함",
+          "resultTypeCode": "BO",
+          "score": 1
+        },
+        {
+          "content": "사람들을 진정시키고 질서를 잡음",
+          "resultTypeCode": "DI",
+          "score": 1
+        },
+        {
+          "content": "밖은 어떤지 살피러 나감 (원인 파악)",
+          "resultTypeCode": "EX",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/mars-colonist-role/q2.webp?v=1769866782984"
+    },
+    {
+      "order": 3,
+      "content": "미지의 외계 생명체(또는 흔적)를 발견했다!",
+      "options": [
+        {
+          "content": "위험한지 아닌지 분석부터함",
+          "resultTypeCode": "EN",
+          "score": 1
+        },
+        {
+          "content": "신기해! 가까이 가서 관찰함",
+          "resultTypeCode": "EX",
+          "score": 1
+        },
+        {
+          "content": "얘랑 대화가 통할까? (소통 시도)",
+          "resultTypeCode": "DI",
+          "score": 1
+        },
+        {
+          "content": "생태계에 미칠 영향 고민",
+          "resultTypeCode": "BO",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/mars-colonist-role/q3.webp?v=1769866783166"
+    },
+    {
+      "order": 4,
+      "content": "화성에서 가장 필요한 자원은 무엇이라고 생각하는가?",
+      "options": [
+        {
+          "content": "살아갈 수 있는 '기술력'",
+          "resultTypeCode": "EN",
+          "score": 1
+        },
+        {
+          "content": "새로운 곳을 찾는 '개척 정신'",
+          "resultTypeCode": "EX",
+          "score": 1
+        },
+        {
+          "content": "먹고사는 문제 '식량 생산'",
+          "resultTypeCode": "BO",
+          "score": 1
+        },
+        {
+          "content": "무너지지 않는 '협동심'",
+          "resultTypeCode": "DI",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/mars-colonist-role/q4.webp?v=1769866783352"
+    },
+    {
+      "order": 5,
+      "content": "지구에 있는 가족에게 영상 편지를 보낸다면?",
+      "options": [
+        {
+          "content": "나 여기서 엄청난 거 발견했어! (자랑)",
+          "resultTypeCode": "EX",
+          "score": 1
+        },
+        {
+          "content": "여기 기지는 내가 다 먹여 살리는 중. (뿌듯)",
+          "resultTypeCode": "BO",
+          "score": 1
+        },
+        {
+          "content": "다들 잘 지내지? 보고 싶다. (안부)",
+          "resultTypeCode": "DI",
+          "score": 1
+        },
+        {
+          "content": "여기 시스템이 아주 흥미로워. (설명충)",
+          "resultTypeCode": "EN",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/mars-colonist-role/q5.webp?v=1769866783545"
+    },
+    {
+      "order": 6,
+      "content": "화성 생활 1년 차, 가장 힘든 점은?",
+      "options": [
+        {
+          "content": "매일 똑같은 기계 소리, 반복 작업",
+          "resultTypeCode": "EX",
+          "score": 1
+        },
+        {
+          "content": "고장 나면 부품 구하기 힘듦",
+          "resultTypeCode": "EN",
+          "score": 1
+        },
+        {
+          "content": "신선한 음식이 그리움",
+          "resultTypeCode": "BO",
+          "score": 1
+        },
+        {
+          "content": "사람이 적어서 심심함",
+          "resultTypeCode": "DI",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/mars-colonist-role/q6.webp?v=1769866783718"
+    },
+    {
+      "order": 7,
+      "content": "나의 화성 이주 최종 목표는?",
+      "options": [
+        {
+          "content": "화성을 제2의 지구로 테라포밍",
+          "resultTypeCode": "BO",
+          "score": 1
+        },
+        {
+          "content": "최첨단 과학 도시 건설",
+          "resultTypeCode": "EN",
+          "score": 1
+        },
+        {
+          "content": "우주 연합의 초대 대통령",
+          "resultTypeCode": "DI",
+          "score": 1
+        },
+        {
+          "content": "더 먼 우주로 나가는 전초기지 만들기",
+          "resultTypeCode": "EX",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/mars-colonist-role/q7.webp?v=1769866783917"
+    }
+  ],
+  "results": [
+    {
+      "typeCode": "EN",
+      "title": "천재 메카닉 '엔지니어' (Engineer)",
+      "description": "내가 없으면 여긴 그냥 고철 덩어리야. \\n\\n당신은 화성 기지의 심장을 담당합니다. 산소 발생기, 물 정화 시스템, 이동 로버까지... 당신의 손길이 닿지 않는 기계는 없습니다. 문제가 생기면 가장 먼저 달려가 해결하는 맥가이버! 당신 덕분에 모두가 숨 쉬고 살 수 있습니다.",
+      "isPremium": false,
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/mars-colonist-role/result-en.webp?v=1769866784131"
+    },
+    {
+      "typeCode": "EX",
+      "title": "호기심 대장 '탐험가' (Explorer)",
+      "description": "저 언덕 너머엔 뭐가 있을까? \\n\\n당신은 기지 안에 가만히 있는 걸 못 견딥니다. 위험을 무릅쓰고 미지의 구역을 지도에 기록하는 개척자입니다. 붉은 사막을 누비며 새로운 자원을 찾아내고, 화성의 비밀을 밝혀내는 인디아나 존스 같은 존재! 당신 덕분에 인류의 영역이 넓어집니다.",
+      "isPremium": false,
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/mars-colonist-role/result-ex.webp?v=1769866784400"
+    },
+    {
+      "typeCode": "BO",
+      "title": "화성의 농부 '식물학자' (Botanist)",
+      "description": "화성에서 감자를 키울 수 있다고요! \\n\\n삭막한 붉은 땅에 초록빛 생명을 피워내는 마법사입니다. 식량 생산뿐만 아니라 기지의 공기 정화와 대원들의 멘탈 케어(원예 치료)까지 담당하죠. 당신의 온실은 기지에서 가장 인기 있는 핫플레이스입니다. 마션의 주인공이 바로 당신!",
+      "isPremium": false,
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/mars-colonist-role/result-bo.webp?v=1769866784638"
+    },
+    {
+      "typeCode": "DI",
+      "title": "평화의 수호자 '행정관' (Diplomat)",
+      "description": "싸우지 말고 말로 합시다. \\n\\n극한 상황에서는 사소한 갈등도 큰 문제가 될 수 있습니다. 당신은 대원들 사이의 갈등을 중재하고, 지구 본부와 소통하며 기지를 평화롭게 이끄는 리더입니다. 멘탈이 강하고 말주변이 좋아서 모두가 당신을 의지합니다. 훗날 화성 초대 대통령이 될 상이군요.",
+      "isPremium": false,
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/mars-colonist-role/result-di.webp?v=1769866784823"
+    }
+  ],
+  "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/mars-colonist-role/main-cover.webp?v=1769866784993"
+}

@@ -1,0 +1,227 @@
+{
+  "title": "2026 여행 트렌드, 나의 최적 휴가지?",
+  "description": "우주 여행부터 디지털 디톡스까지! 달라진 여행 트렌드 속에서 나에게 딱 맞는 힐링 스팟을 찾아드립니다. 떠나자!",
+  "resultType": "TYPE_BASED",
+  "questions": [
+    {
+      "order": 1,
+      "content": "여행 가방을 쌀 때 가장 챙기고 싶은 것은?",
+      "options": [
+        {
+          "content": "인생샷 남길 카메라와 조명",
+          "resultTypeCode": "C",
+          "score": 1
+        },
+        {
+          "content": "편한 신발과 등산복",
+          "resultTypeCode": "N",
+          "score": 1
+        },
+        {
+          "content": "영화/드라마 몰아볼 태블릿 PC",
+          "resultTypeCode": "R",
+          "score": 1
+        },
+        {
+          "content": "현지 맛집 리스트와 지도",
+          "resultTypeCode": "F",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/travel-style-2026/q1.webp?v=1769866213852"
+    },
+    {
+      "order": 2,
+      "content": "공항에 도착했다. 비행기 탑승 전 나의 행동은?",
+      "options": [
+        {
+          "content": "면세점 쇼핑! 할인 쿠폰 야무지게 씀",
+          "resultTypeCode": "C",
+          "score": 1
+        },
+        {
+          "content": "라운지에서 와인 한잔하며 여유",
+          "resultTypeCode": "R",
+          "score": 1
+        },
+        {
+          "content": "이미 현지 유심/로밍 세팅 완료",
+          "resultTypeCode": "F",
+          "score": 1
+        },
+        {
+          "content": "비행기 뜨는 거 구경하며 멍 때림",
+          "resultTypeCode": "N",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/travel-style-2026/q2.webp?v=1769866214074"
+    },
+    {
+      "order": 3,
+      "content": "가장 선호하는 숙소 형태는?",
+      "options": [
+        {
+          "content": "수영장 딸린 5성급 호캉스",
+          "resultTypeCode": "R",
+          "score": 1
+        },
+        {
+          "content": "별이 쏟아지는 글램핑/차박",
+          "resultTypeCode": "N",
+          "score": 1
+        },
+        {
+          "content": "현지 느낌 물씬 나는 에어비앤비",
+          "resultTypeCode": "F",
+          "score": 1
+        },
+        {
+          "content": "최첨단 시설의 우주 호텔/캡슐 호텔",
+          "resultTypeCode": "C",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/travel-style-2026/q3.webp?v=1769866214277"
+    },
+    {
+      "order": 4,
+      "content": "여행지에서 길을 잃었다. 당신의 대처법은?",
+      "options": [
+        {
+          "content": "이것도 낭만이지. 발길 닿는 대로 간다.",
+          "resultTypeCode": "F",
+          "score": 1
+        },
+        {
+          "content": "지나가던 현지인에게 바디랭귀지로 묻는다.",
+          "resultTypeCode": "N",
+          "score": 1
+        },
+        {
+          "content": "구글맵 켜고 최단 경로 재검색.",
+          "resultTypeCode": "C",
+          "score": 1
+        },
+        {
+          "content": "일단 택시 타고 숙소로 복귀.",
+          "resultTypeCode": "R",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/travel-style-2026/q4.webp?v=1769866214484"
+    },
+    {
+      "order": 5,
+      "content": "여행 중 가장 행복한 순간은?",
+      "options": [
+        {
+          "content": "맛있는 현지 음식 먹을 때",
+          "resultTypeCode": "F",
+          "score": 1
+        },
+        {
+          "content": "아무 생각 없이 푹 쉴 때",
+          "resultTypeCode": "R",
+          "score": 1
+        },
+        {
+          "content": "대자연의 풍경을 마주했을 때",
+          "resultTypeCode": "N",
+          "score": 1
+        },
+        {
+          "content": "SNS에 올린 사진에 좋아요 폭발할 때",
+          "resultTypeCode": "C",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/travel-style-2026/q5.webp?v=1769866214647"
+    },
+    {
+      "order": 6,
+      "content": "같이 가고 싶은 여행 메이트는?",
+      "options": [
+        {
+          "content": "사진 잘 찍어주는 금손 친구",
+          "resultTypeCode": "C",
+          "score": 1
+        },
+        {
+          "content": "불평 없이 잘 먹고 잘 걷는 친구",
+          "resultTypeCode": "F",
+          "score": 1
+        },
+        {
+          "content": "운전 잘하고 계획 잘 짜는 친구",
+          "resultTypeCode": "N",
+          "score": 1
+        },
+        {
+          "content": "혼자가 최고! 나 홀로 여행",
+          "resultTypeCode": "R",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/travel-style-2026/q6.webp?v=1769866214821"
+    },
+    {
+      "order": 7,
+      "content": "여행 후 남겨오고 싶은 기념품은?",
+      "options": [
+        {
+          "content": "예쁜 쓰레기 (마그넷, 스노우볼)",
+          "resultTypeCode": "C",
+          "score": 1
+        },
+        {
+          "content": "현지 특산물/식재료",
+          "resultTypeCode": "F",
+          "score": 1
+        },
+        {
+          "content": "면세점 화장품/명품",
+          "resultTypeCode": "R",
+          "score": 1
+        },
+        {
+          "content": "눈과 마음에 담은 추억 (안 삼)",
+          "resultTypeCode": "N",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/travel-style-2026/q7.webp?v=1769866215067"
+    }
+  ],
+  "results": [
+    {
+      "typeCode": "C",
+      "title": "화려한 도시의 별 '사이버 시티 투어' (City Popper)",
+      "description": "잠들지 않는 도시가 나를 부른다! \\n\\n당신은 트렌드에 민감하고 새로운 문물을 즐기는 타입입니다. 네온사인이 번쩍이는 도쿄, 뉴욕, 혹은 2026년의 최첨단 스마트 시티가 어울립니다. 맛집 투어, 쇼핑, 그리고 인생샷 스팟은 필수 코스! 지루할 틈 없이 꽉 찬 일정을 소화하는 강철 체력의 소유자군요.",
+      "isPremium": false,
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/travel-style-2026/result-c.webp?v=1769866215247"
+    },
+    {
+      "typeCode": "N",
+      "title": "야생의 숨결 '디지털 디톡스 섬' (Nature Lover)",
+      "description": "와이파이는 꺼두셔도 좋습니다. \\n\\n복잡한 건 딱 질색! 당신은 대자연 속에서 진정한 자유를 느낍니다. 몽골의 초원, 아이슬란드의 오로라, 혹은 무인도 체험이 어울리는군요. 불편함 따위는 낭만으로 승화시키는 진정한 모험가. 스마트폰을 내려놓고 바람 소리에 귀 기울여 보세요.",
+      "isPremium": false,
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/travel-style-2026/result-n.webp?v=1769866215443"
+    },
+    {
+      "typeCode": "R",
+      "title": "럭셔리 힐링 '우주 호텔 호캉스' (Luxury Relaxer)",
+      "description": "돈 쓰러 왔습니다. 대접해 주세요. \\n\\n여행까지 와서 고생하고 싶지 않습니다. 최고급 침구, 룸서비스, 스파가 있는 곳이 천국이죠. 2026년 트렌드인 '우주 뷰' 호텔이나 풀빌라에서 아무것도 안 하고 숨만 쉬는 게 목표입니다. 당신에게 여행은 '충전' 그 자체니까요.",
+      "isPremium": false,
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/travel-style-2026/result-r.webp?v=1769866215605"
+    },
+    {
+      "typeCode": "F",
+      "title": "현지인 빙의 '로컬 골목 투어' (Local Explorer)",
+      "description": "관광지는 NO! 진짜를 원해. \\n\\n남들 다 가는 유명 관광지보다 동네 시장, 현지인들이 가는 노포를 좋아합니다. 지도 없이 골목을 누비며 우연히 발견하는 소소한 행복을 즐기는 타입. '한달 살기'가 가장 잘 어울리는 여행자입니다.",
+      "isPremium": false,
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/travel-style-2026/result-f.webp?v=1769866215757"
+    }
+  ],
+  "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/travel-style-2026/main-cover.webp?v=1769866215921"
+}

@@ -2,14 +2,12 @@
   "title": "2026 나의 '창작 오라' 찾기",
   "description": "내 안의 잠재된 창의력은 어떤 색깔일까? 2026년 당신을 감싸고 있는 신비로운 '오라(Aura)'를 찾아보세요.",
   "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/my-creative-aura-2026/main-cover-new.webp?v=1769856493692",
-  "imagePrompt": "A beautiful and cozy creative workspace, sunlight streaming through a window onto a wooden desk, colorful art supplies, paints, and a glowing digital tablet, a magical rainbow aura gently floating in the air, warm and inviting atmosphere, Studio Ghibli background art style, high definition, detailed and concrete scene, no scary figures",
   "resultType": "TYPE_BASED",
   "questions": [
     {
       "order": 1,
       "content": "아무도 없는 하얀 방에 들어왔다. 가장 먼저 무엇을 채우고 싶은가?",
       "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/my-creative-aura-2026/q1.webp?v=1769856493944",
-      "imagePrompt": "An empty bright room with white walls, sunlight streaming in, wooden floor, waiting to be decorated, cozy and peaceful, Studio Ghibli style, soft watercolor",
       "options": [
         {
           "content": "화려한 조명과 신나는 음악",
@@ -37,7 +35,6 @@
       "order": 2,
       "content": "새로운 아이디어가 떠올랐을 때, 나는?",
       "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/my-creative-aura-2026/q2.webp?v=1769856494131",
-      "imagePrompt": "A sketchbook open on a wooden desk with a hand-drawn glowing lightbulb, colorful sparks around it, creative atmosphere, Studio Ghibli style, soft watercolor",
       "options": [
         {
           "content": "일단 사람들한테 말하고 본다!",
@@ -65,7 +62,6 @@
       "order": 3,
       "content": "친구가 엉뚱한 고민을 털어놓을 때, 나의 반응은?",
       "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/my-creative-aura-2026/q3.webp?v=1769856494374",
-      "imagePrompt": "Two steaming mugs of tea on a small wooden table, warm conversation vibe, soft sunlight, cozy interior, Studio Ghibli style, soft watercolor",
       "options": [
         {
           "content": "야, 그거 진짜 재밌겠다! (같이 흥분)",
@@ -93,7 +89,6 @@
       "order": 4,
       "content": "주말에 갑자기 약속이 취소되었다. 나의 기분은?",
       "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/my-creative-aura-2026/q4.webp?v=1769856494600",
-      "imagePrompt": "A cozy window seat with cushions, looking out at a gentle rain or garden, open book, peaceful solo time, Studio Ghibli style, soft watercolor",
       "options": [
         {
           "content": "아... 심심한데 누구 부르지? (전화번호부 뒤적)",
@@ -121,7 +116,6 @@
       "order": 5,
       "content": "여행을 떠난다면 어떤 숙소가 좋을까?",
       "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/my-creative-aura-2026/q5.webp?v=1769856494846",
-      "imagePrompt": "A vintage travel suitcase packed with excitement, a map, and a camera on a bed, ready for a trip, Studio Ghibli style, soft watercolor",
       "options": [
         {
           "content": "매일 파티가 열리는 게스트하우스",
@@ -149,7 +143,6 @@
       "order": 6,
       "content": "나를 색깔로 표현한다면?",
       "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/my-creative-aura-2026/q6.webp?v=1769856495038",
-      "imagePrompt": "An artist's palette with various colorful paints mixing together, paint brushes, artistic mess, Studio Ghibli style, soft watercolor",
       "options": [
         {
           "content": "눈에 확 띄는 네온 컬러",
@@ -177,7 +170,6 @@
       "order": 7,
       "content": "2026년, 내가 가장 듣고 싶은 칭찬은?",
       "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/my-creative-aura-2026/q7.webp?v=1769856495205",
-      "imagePrompt": "A wooden desk with a small golden star sticker or a handwritten 'Great Job' note, warm lighting, sense of achievement, Studio Ghibli style, soft watercolor",
       "options": [
         {
           "content": "너랑 있으면 진짜 에너지 넘쳐!",
@@ -208,7 +200,6 @@
       "title": "홀로 팝 (Holo Pop)",
       "description": "당신은 어디서나 빛나는 존재감의 소유자! 톡톡 튀는 아이디어와 넘치는 에너지로 주변을 환하게 밝힙니다. \\n\\n지루한 건 딱 질색, 늘 새로운 자극을 찾아다니는 당신의 창작 오라는 화려하고 변화무쌍한 홀로그램 같습니다. 사람들의 시선을 즐기고, 트렌드를 이끄는 본투비 인플루언서 재질이네요!",
       "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/my-creative-aura-2026/result-hd.webp?v=1769856495399",
-      "imagePrompt": "A vibrant artist studio filled with colorful paintings, party lights, confetti, energetic and happy atmosphere, Studio Ghibli style, soft watercolor",
       "isPremium": false
     },
     {
@@ -216,7 +207,6 @@
       "title": "네온 플럭스 (Neon Flux)",
       "description": "당신의 에너지는 직선적이고 강렬합니다! 현실 감각이 뛰어나면서도 추진력이 좋아 생각한 것을 바로 실행에 옮깁니다. \\n\\n당신의 창작 오라는 밤거리를 화려하게 수놓는 네온사인처럼 선명하고 확실합니다. 모호한 것보다는 확실한 성과를 좋아하며, 팀 프로젝트에서 리더 역할을 맡으면 하드캐리하는 타입입니다.",
       "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/my-creative-aura-2026/result-hr.webp?v=1769856495554",
-      "imagePrompt": "A clean and modern workspace with a cool neon sign on the wall, organized desk, vibrant blue and pink accents, Studio Ghibli style, soft watercolor",
       "isPremium": false
     },
     {
@@ -224,7 +214,6 @@
       "title": "문라이트 펄 (Moonlight Pearl)",
       "description": "당신은 은은하고 깊이 있는 감성의 소유자입니다. 겉으로 드러내기보단 내면의 세계가 우주처럼 넓고 신비롭습니다. \\n\\n당신의 창작 오라는 어두운 밤바다를 비추는 달빛 머금은 진주처럼 영롱합니다. 남들이 보지 못하는 섬세한 감정을 포착해내는 예술가적 기질이 다분하며, 당신의 작품은 사람들에게 깊은 울림을 줍니다.",
       "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/my-creative-aura-2026/result-cd.webp?v=1769856495778",
-      "imagePrompt": "A quiet room with a window view of the moon and night sea, soft purple and blue tones, serene and dreamy, Studio Ghibli style, soft watercolor",
       "isPremium": false
     },
     {
@@ -232,7 +221,6 @@
       "title": "글래시 프리즘 (Glassy Prism)",
       "description": "당신은 맑고 투명하지만 단단한 내면을 가졌습니다. 감정에 휩쓸리기보다는 이성적이고 논리적으로 세상을 바라봅니다. \\n\\n당신의 창작 오라는 빛을 정직하게 굴절시키는 투명한 프리즘 같습니다. 복잡한 문제를 명쾌하게 정리하고, 군더더기 없는 미니멀한 아름다움을 추구합니다. 당신의 결과물은 언제나 완벽에 가깝습니다.",
       "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/my-creative-aura-2026/result-cr.webp?v=1769856495990",
-      "imagePrompt": "A bright sunroom with crystal glass objects catching light, creating rainbows on white walls, clean and minimalist, Studio Ghibli style, soft watercolor",
       "isPremium": false
     }
   ]

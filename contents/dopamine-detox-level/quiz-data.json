@@ -1,0 +1,199 @@
+{
+  "title": "나의 도파민 중독 레벨 테스트",
+  "description": "숏폼 보다가 새벽 3시에 잠든 적 있다? 없다? 당신의 뇌는 지금 도파민에 절여져 있을지도 모릅니다. 뇌절력 테스트 시작!",
+  "resultType": "SCORE_BASED",
+  "questions": [
+    {
+      "order": 1,
+      "content": "유튜브/인스타 숏폼을 보다가 '딱 10분만 더 봐야지' 했는데, 정신 차려보니...",
+      "options": [
+        {
+          "content": "1시간 순삭됨",
+          "score": 3
+        },
+        {
+          "content": "진짜 10분만 보고 껐음 (자기통제 가능)",
+          "score": 0
+        },
+        {
+          "content": "밤샘... 해 뜨는 거 봄",
+          "score": 5
+        },
+        {
+          "content": "30분 정도 더 봄",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/dopamine-detox-level/q1.webp?v=1769866219430"
+    },
+    {
+      "order": 2,
+      "content": "밥 먹을 때 영상(유튜브/넷플)이 없으면?",
+      "options": [
+        {
+          "content": "밥이 안 넘어감. 무조건 틀어야 함",
+          "score": 3
+        },
+        {
+          "content": "심심해서 폰 보긴 함",
+          "score": 1
+        },
+        {
+          "content": "영상 고르다가 밥 다 먹음",
+          "score": 2
+        },
+        {
+          "content": "그냥 맛을 음미하며 먹음",
+          "score": 0
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/dopamine-detox-level/q2.webp?v=1769866219666"
+    },
+    {
+      "order": 3,
+      "content": "화장실 갈 때 스마트폰을 깜빡하고 안 가져갔다.",
+      "options": [
+        {
+          "content": "불안 초조... 샴푸 성분표라도 읽음",
+          "score": 3
+        },
+        {
+          "content": "다시 가지러 나옴",
+          "score": 4
+        },
+        {
+          "content": "그냥 멍 때리다 나옴",
+          "score": 0
+        },
+        {
+          "content": "휴지 개수 셈",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/dopamine-detox-level/q3.webp?v=1769866219853"
+    },
+    {
+      "order": 4,
+      "content": "긴 글(3줄 이상)이나 자막 없는 10분짜리 영상을 볼 때...",
+      "options": [
+        {
+          "content": "2배속으로 보거나 10초 스킵 연타",
+          "score": 3
+        },
+        {
+          "content": "요약본(댓글)부터 찾음",
+          "score": 4
+        },
+        {
+          "content": "재밌으면 끝까지 봄",
+          "score": 1
+        },
+        {
+          "content": "정독/정주행 가능",
+          "score": 0
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/dopamine-detox-level/q4.webp?v=1769866220038"
+    },
+    {
+      "order": 5,
+      "content": "멍 때리는 시간(아무것도 안 하는 시간)을 견딜 수 있나?",
+      "options": [
+        {
+          "content": "절대 못 견딤. 뭐라도 해야 함",
+          "score": 4
+        },
+        {
+          "content": "잠깐은 가능한데 심심함",
+          "score": 2
+        },
+        {
+          "content": "멍 때리기 대회 나가면 우승 가능",
+          "score": 0
+        },
+        {
+          "content": "상상의 나래를 펼침",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/dopamine-detox-level/q5.webp?v=1769866220214"
+    },
+    {
+      "order": 6,
+      "content": "알림이 안 왔는데 폰을 켜서 확인한 적이 있다.",
+      "options": [
+        {
+          "content": "수시로 확인 함 (습관)",
+          "score": 3
+        },
+        {
+          "content": "가끔 착각해서",
+          "score": 1
+        },
+        {
+          "content": "거의 없음",
+          "score": 0
+        },
+        {
+          "content": "환청 들린 적 있음 (심각)",
+          "score": 5
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/dopamine-detox-level/q6.webp?v=1769866220380"
+    },
+    {
+      "order": 7,
+      "content": "지금 당장 스마트폰을 끄고 24시간 동안 지내라고 한다면?",
+      "options": [
+        {
+          "content": "가능은 한데... 마약 금단증상 올 듯",
+          "score": 3
+        },
+        {
+          "content": "절대 불가능. 연락 끊기면 어떡해?",
+          "score": 5
+        },
+        {
+          "content": "안 그래도 쉬고 싶었어. 땡큐",
+          "score": 0
+        },
+        {
+          "content": "책 읽거나 청소하면 버틸 만함",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/dopamine-detox-level/q7.webp?v=1769866220529"
+    }
+  ],
+  "results": [
+    {
+      "typeCode": "LOW",
+      "title": "청정 뇌구역 (Zen Master)",
+      "description": "축하합니다! 당신의 뇌는 갓 태어난 아기처럼 깨끗해요. \\n\\n도파민의 유혹에도 흔들리지 않는 강인한 정신력을 가졌군요. 디지털 디톡스가 필요 없는 수준입니다. 혹시 산속에서 도 닦고 오셨나요? 주변 친구들이 스마트폰 좀비가 되어갈 때 유일하게 제정신을 유지하는 생존자입니다.",
+      "isPremium": false,
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/dopamine-detox-level/result-low.webp?v=1769866220695"
+    },
+    {
+      "typeCode": "MID",
+      "title": "경계 단계 (Warning)",
+      "description": "아직은 괜찮지만... 방심하면 훅 갑니다. \\n\\n심심할 때마다 습관적으로 폰을 켜는 당신. 아직 일상생활에 지장은 없지만, 숏폼의 늪에 한 번 빠지면 헤어 나오기 힘들어하고 있네요. '스마트폰 사용 시간 제한' 기능을 켜보는 건 어떨까요? 지금 멈추지 않으면 당신의 뇌는 팝콘처럼 튀겨질지도 몰라요!",
+      "isPremium": false,
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/dopamine-detox-level/result-mid.webp?v=1769866220960"
+    },
+    {
+      "typeCode": "HIGH",
+      "title": "도파민 노예 (Dopamine Slave)",
+      "description": "삐빅- 위험합니다! 당신의 뇌는 자극에 절여져 있어요. \\n\\n1분짜리 영상도 길어서 스킵하고, 3줄 이상 글은 읽기 힘들어하네요. 현실보다 스마트폰 속 세상이 더 재미있다고 느끼는 단계입니다. 지금 당장 폰을 끄고 산책이라도 나가지 않으면, 거북목과 안구건조증, 그리고 멍청해진 뇌를 얻게 될 거예요.",
+      "isPremium": false,
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/dopamine-detox-level/result-high.webp?v=1769866221158"
+    },
+    {
+      "typeCode": "MAX",
+      "title": "도파민 중독 말기 (System Error)",
+      "description": "시스템 종료... 뇌가 녹아내리고 있습니다. \\n\\n폰이 없으면 불안증세를 보이고, 24시간 온라인 상태여야 안심이 됩니다. 현실 감각이 희미해지고 모든 자극에 무뎌진 상태. 이 테스트를 끝까지 읽은 것만으로도 기적입니다. 당장 병원에 가보거나 스마트폰을 갖다 버리세요! 긴급 디톡스 처방이 필요합니다.",
+      "isPremium": false,
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/dopamine-detox-level/result-max.webp?v=1769866221385"
+    }
+  ],
+  "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/dopamine-detox-level/main-cover.webp?v=1769866221533"
+}

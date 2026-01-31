@@ -1,0 +1,227 @@
+{
+  "title": "콜 포비아(전화 공포증) 테스트",
+  "description": "벨 소리가 울리면 심장이 쿵 내려앉나요? 전화보다는 카톡이, 카톡보다는 읽씹이 편한 당신을 위한 소통 유형 검사.",
+  "resultType": "TYPE_BASED",
+  "questions": [
+    {
+      "order": 1,
+      "content": "모르는 번호로 전화가 걸려왔다.",
+      "options": [
+        {
+          "content": "절대 안 받음. 검색해보고 끊기면 차단",
+          "resultTypeCode": "T",
+          "score": 1
+        },
+        {
+          "content": "\"여보세요?\" 일단 받음",
+          "resultTypeCode": "C",
+          "score": 1
+        },
+        {
+          "content": "고민하다가 타이밍 놓쳐서 끊김",
+          "resultTypeCode": "M",
+          "score": 1
+        },
+        {
+          "content": "거절하고 바로 문자 보냄 \"누구세요?\"",
+          "resultTypeCode": "S",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/phone-phobia-test/q1.webp?v=1769866442646"
+    },
+    {
+      "order": 2,
+      "content": "배달 음식을 주문해야 하는데 앱 결제가 안 된다. 전화 주문만 가능한 상황.",
+      "options": [
+        {
+          "content": "그냥 다른 가게 시킴 (전화 절대 불가)",
+          "resultTypeCode": "T",
+          "score": 1
+        },
+        {
+          "content": "심호흡하고 전화함. 할 말 미리 적어둠",
+          "resultTypeCode": "M",
+          "score": 1
+        },
+        {
+          "content": "바로 전화 때림. \"사장님 여기 짜장 하나요\"",
+          "resultTypeCode": "C",
+          "score": 1
+        },
+        {
+          "content": "같이 있는 친구한테 대신 해달라고 함",
+          "resultTypeCode": "T",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/phone-phobia-test/q2.webp?v=1769866442862"
+    },
+    {
+      "order": 3,
+      "content": "친구랑 카톡 하다가 갑자기 친구가 보이스톡(전화)을 걸었다.",
+      "options": [
+        {
+          "content": "반갑게 받아서 수다 떰",
+          "resultTypeCode": "C",
+          "score": 1
+        },
+        {
+          "content": "깜짝 놀라서 거절 누름. \"왜? 급한 일?\"",
+          "resultTypeCode": "T",
+          "score": 1
+        },
+        {
+          "content": "안 받고 카톡으로 \"나 지금 통화 못 해\" (거짓말)",
+          "resultTypeCode": "S",
+          "score": 1
+        },
+        {
+          "content": "받긴 하는데 빨리 끊고 싶음",
+          "resultTypeCode": "M",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/phone-phobia-test/q3.webp?v=1769866443043"
+    },
+    {
+      "order": 4,
+      "content": "업무/조별 과제 중 궁금한 게 생겼다. 가장 선호하는 소통 방식은?",
+      "options": [
+        {
+          "content": "이메일이나 메신저 (기록 남고 생각할 시간 있음)",
+          "resultTypeCode": "T",
+          "score": 1
+        },
+        {
+          "content": "전화로 바로 물어봄 (빠른 해결)",
+          "resultTypeCode": "C",
+          "score": 1
+        },
+        {
+          "content": "직접 가서 얼굴 보고 말함",
+          "resultTypeCode": "F",
+          "score": 1
+        },
+        {
+          "content": "일단 혼자 최대한 찾아봄",
+          "resultTypeCode": "S",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/phone-phobia-test/q4.webp?v=1769866443446"
+    },
+    {
+      "order": 5,
+      "content": "미용실에 예약을 해야 한다.",
+      "options": [
+        {
+          "content": "네이버 예약/앱 예약 안 되면 안 감",
+          "resultTypeCode": "T",
+          "score": 1
+        },
+        {
+          "content": "전화해서 \"오늘 3시 되나요?\" 물어봄",
+          "resultTypeCode": "C",
+          "score": 1
+        },
+        {
+          "content": "지나가다 들러서 예약함",
+          "resultTypeCode": "F",
+          "score": 1
+        },
+        {
+          "content": "문자로 예약 가능한지 문의함",
+          "resultTypeCode": "S",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/phone-phobia-test/q5.webp?v=1769866443605"
+    },
+    {
+      "order": 6,
+      "content": "가장 공포스러운 상황은?",
+      "options": [
+        {
+          "content": "부재중 전화 10통 와 있을 때",
+          "resultTypeCode": "T",
+          "score": 1
+        },
+        {
+          "content": "말하다가 정적 흐르는 순간",
+          "resultTypeCode": "M",
+          "score": 1
+        },
+        {
+          "content": "배터리 1% 남았을 때",
+          "resultTypeCode": "C",
+          "score": 1
+        },
+        {
+          "content": "데이터 안 터지는 곳에 갇힘",
+          "resultTypeCode": "S",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/phone-phobia-test/q6.webp?v=1769866443771"
+    },
+    {
+      "order": 7,
+      "content": "내가 생각하는 전화 통화의 장점은?",
+      "options": [
+        {
+          "content": "목소리 들으면 감정이 잘 전달됨",
+          "resultTypeCode": "C",
+          "score": 1
+        },
+        {
+          "content": "글자 치는 것보다 훨씬 빠름",
+          "resultTypeCode": "F",
+          "score": 1
+        },
+        {
+          "content": "장점 없음. 단점만 있음.",
+          "resultTypeCode": "T",
+          "score": 1
+        },
+        {
+          "content": "오해를 줄일 수 있음",
+          "resultTypeCode": "M",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/phone-phobia-test/q7.webp?v=1769866444024"
+    }
+  ],
+  "results": [
+    {
+      "typeCode": "T",
+      "title": "엄지족 텍스트 러버 (Text Lover)",
+      "description": "전화기는 스마트한 '타자기'일 뿐. \\n\\n당신에게 통화 버튼은 장식입니다. 모든 대화는 텍스트로 해야 마음이 편해요. 전화가 오면 심박수가 올라가고, '제발 끊겨라'라고 기도합니다. 할 말이 있으면 카톡으로 정리해서 보내는 게 훨씬 효율적이라고 생각하죠. 비대면 소통의 달인입니다.",
+      "isPremium": false,
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/phone-phobia-test/result-t.webp?v=1769866444240"
+    },
+    {
+      "typeCode": "C",
+      "title": "수다쟁이 콜 마스터 (Call Master)",
+      "description": "답답한 거 딱 질색! 말로 해! \\n\\n타자 칠 시간에 전화해서 해결하는 게 속 편한 당신. 통화량이 매달 무제한을 찍습니다. 친구랑 통화하다가 잠들기도 하고, 길 가면서도 끊임없이 누군가와 통화하죠. 목소리를 들어야 진정한 소통이라고 생각하는 아날로그 감성의 소유자입니다.",
+      "isPremium": false,
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/phone-phobia-test/result-c.webp?v=1769866444413"
+    },
+    {
+      "typeCode": "M",
+      "title": "선택적 콜 포비아 (Mild Anxiety)",
+      "description": "친한 친구는 OK, 모르는 번호는 NO. \\n\\n상황에 따라 다릅니다. 업무 전화나 배달 주문 주문 같은 '목적 있는 통화'는 긴장되지만, 찐친과의 수다는 밤새도록 가능하죠. 할 말을 미리 대본처럼 적어두기도 합니다. 약간의 울렁증은 있지만 사회생활은 가능한 수준!",
+      "isPremium": false,
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/phone-phobia-test/result-m.webp?v=1769866444567"
+    },
+    {
+      "typeCode": "F",
+      "title": "대면 소통 끝판왕 (Face to Face)",
+      "description": "만나서 얘기해. 나오라고 해. \\n\\n전화도 문자도 답답합니다. 눈을 보고 육성으로 말해야 직성이 풀리는 스타일. 오해 생기는 게 싫어서 중요한 얘기는 무조건 만나서 합니다. 사람 냄새나는 끈끈한 관계를 선호하네요. 당신 주변엔 항상 사람이 많을 것 같아요.",
+      "isPremium": false,
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/phone-phobia-test/result-f.webp?v=1769866444752"
+    }
+  ],
+  "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/phone-phobia-test/main-cover.webp?v=1769866444896"
+}

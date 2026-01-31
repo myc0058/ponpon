@@ -1,13 +1,13 @@
 {
   "title": "나의 '필(Feel)' 소비력 테스트",
   "description": "내가 돈을 쓰는 진짜 이유는 기분 때문?! 내 통장이 텅장이 되는 원인을 분석해드립니다",
-  "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/feel-consumption-test/main-cover.webp?v=1769821977963",
+  "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/feel-consumption-test/main-cover.webp?v=1769866233444",
   "resultType": "TYPE_BASED",
   "questions": [
     {
       "order": 1,
       "content": "퇴근길, 오늘 하루 너무 고생한 나에게 선물을 주고 싶다. 나의 선택은?",
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/feel-consumption-test/q1.webp?v=1769821977963",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/feel-consumption-test/q1.webp?v=1769866233678",
       "options": [
         {
           "content": "금융치료! 맛있는 배달 음식",
@@ -34,7 +34,7 @@
     {
       "order": 2,
       "content": "SNS를 보는데 핫한 신상 디저트 카페가 떴다. 주말에 갈까?",
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/feel-consumption-test/q2.webp?v=1769821977963",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/feel-consumption-test/q2.webp?v=1769866233910",
       "options": [
         {
           "content": "무조건 오픈런! 인증샷 필수",
@@ -61,7 +61,7 @@
     {
       "order": 3,
       "content": "월급날이다! 통장을 스치고 지나가는 월급... 남은 돈을 보며 드는 생각은?",
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/feel-consumption-test/q3.webp?v=1769821977963",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/feel-consumption-test/q3.webp?v=1769866234122",
       "options": [
         {
           "content": "오 남았네? 오늘 내가 쏜다!",
@@ -88,7 +88,7 @@
     {
       "order": 4,
       "content": "친구들이 다들 '이거 요즘 필수템이래'라며 사는 물건이 있다. 나는?",
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/feel-consumption-test/q4.webp?v=1769821977963",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/feel-consumption-test/q4.webp?v=1769866234321",
       "options": [
         {
           "content": "나만 없으면 소외감, 따라 삼",
@@ -115,7 +115,7 @@
     {
       "order": 5,
       "content": "스트레스를 엄청 받았다. 해소를 위해 쇼핑을 한다면?",
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/feel-consumption-test/q5.webp?v=1769821977963",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/feel-consumption-test/q5.webp?v=1769866234543",
       "options": [
         {
           "content": "다이소 가서 귀여운 거 털기",
@@ -142,7 +142,7 @@
     {
       "order": 6,
       "content": "마트에 갔는데 '1+1 할인' 행사를 하고 있다. 목록에 없던 물건인데...",
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/feel-consumption-test/q6.webp?v=1769821977963",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/feel-consumption-test/q6.webp?v=1769866234740",
       "options": [
         {
           "content": "언젠가 쓰겠지! 일단 담음",
@@ -169,7 +169,7 @@
     {
       "order": 7,
       "content": "좋아하는 연예인이 광고하는 화장품이 출시됐다.",
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/feel-consumption-test/q7.webp?v=1769821977963",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/feel-consumption-test/q7.webp?v=1769866234958",
       "options": [
         {
           "content": "최애가 광고하니 의리로 구매",
@@ -196,7 +196,7 @@
     {
       "order": 8,
       "content": "여행을 갈 때 숙소를 정하는 기준은?",
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/feel-consumption-test/q8.webp?v=1769821977963",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/feel-consumption-test/q8.webp?v=1769866235134",
       "options": [
         {
           "content": "인스타 핫플! 사진 잘 나오는 곳",
@@ -223,7 +223,7 @@
     {
       "order": 9,
       "content": "결국 통장이 텅장이 되었다. 나의 반응은?",
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/feel-consumption-test/q9.webp?v=1769821977963",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/feel-consumption-test/q9.webp?v=1769866235375",
       "options": [
         {
           "content": "행복했으면 됐다! 미래의 나에게",
@@ -253,28 +253,28 @@
       "typeCode": "FS",
       "title": "도파민 중독자 (기분파 탕진러)",
       "description": "\"기분이 저기압일 땐 고기앞으로!\" 당신의 소비는 철저히 '나의 기분'에 달려있습니다. 스트레스를 받으면 매운 걸 먹거나 뭔가를 질러야 풀리는 스타일! 남의 시선보다는 내가 지금 당장 행복한 게 제일 중요해요. 소소한 탕진이 모여 태산이 되는 타입이라, 가끔 카드 명세서를 보고 깜짝 놀라기도 하죠. 하지만 후회는 짧고 행복은 깁니다. 처방전: '장바구니에 담고 24시간 뒤에 결제하기' 규칙을 만들어보세요!",
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/feel-consumption-test/result-fs.webp?v=1769821977963",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/feel-consumption-test/result-fs.webp?v=1769866235621",
       "isPremium": false
     },
     {
       "typeCode": "FT",
       "title": "트렌드 팔로워 (유행 탑승러)",
       "description": "\"이거 봤어? 요즘 이게 핫하대!\" 당신은 세상의 흐름에 뒤처지는 걸 견딜 수 없습니다. 남들이 좋다는 건 일단 해봐야 하고, SNS에 인증샷 하나쯤은 남겨야 직성이 풀리죠. 물건을 사는 행위 자체보다, 그것을 통해 소속감을 느끼는 것을 좋아합니다. 귀가 얇은 편이라 '마감 임박', '한정판' 같은 단어에 약해요. 유행을 선도하는 것도 좋지만, 가끔은 나의 취향이 무엇인지 돌아볼 필요가 있어요. 처방전: SNS 알림을 끄고 온전히 나에게 집중하는 시간을 가져보세요.",
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/feel-consumption-test/result-ft.webp?v=1769821977963",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/feel-consumption-test/result-ft.webp?v=1769866235866",
       "isPremium": false
     },
     {
       "typeCode": "RS",
       "title": "가치소비 힙스터 (실속 챙김러)",
       "description": "\"그래서 이게 나한테 정말 필요해?\" 당신은 충동구매와는 거리가 먼 합리적인 소비자입니다. 하지만 무조건 아끼는 건 아니에요. 삶의 질을 높여주는 물건, 내가 정말 가치 있다고 생각하는 곳에는 과감하게 투자합니다. 남들이 다 사는 명품보다는 나만 아는 브랜드, 질 좋은 물건을 선호하죠. 당신의 소비는 실패할 확률이 낮습니다. 주변 친구들이 물건 사기 전에 당신에게 물어보는 이유가 다 있다니까요? 처방전: 가끔은 이유 없이 예쁜 쓰레기를 사보는 일탈도 나쁘지 않아요!",
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/feel-consumption-test/result-rs.webp?v=1769821977963",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/feel-consumption-test/result-rs.webp?v=1769866236020",
       "isPremium": false
     },
     {
       "typeCode": "RT",
       "title": "AI급 스마트 컨슈머 (리뷰 분석가)",
       "description": "\"최저가 검색 완료. 쿠폰 적용 완료.\" 당신은 쇼핑계의 알파고! 물건 하나를 사더라도 가격 비교, 리뷰 분석, 스펙 체크까지 완벽하게 끝내야 구매 버튼을 누릅니다. 유행하는 아이템도 그냥 사지 않고, 가장 합리적인 옵션을 찾아내죠. 가성비를 중요하게 생각해서 1+1 행사나 할인 정보를 누구보다 빨리 캐치합니다. 당신의 통장은 꽤나 안전하겠지만, 쇼핑하느라 쓰는 에너지가 너무 많지는 않나요? 처방전: 10분 이상 고민되면 그냥 사세요. 당신의 시간도 돈이니까요!",
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/feel-consumption-test/result-rt.webp?v=1769821977963",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/feel-consumption-test/result-rt.webp?v=1769866236246",
       "isPremium": false
     }
   ]

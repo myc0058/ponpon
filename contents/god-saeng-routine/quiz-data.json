@@ -1,0 +1,227 @@
+{
+  "title": "갓생 살기 프로젝트! 나에게 딱 맞는 루틴은?",
+  "description": "작심삼일은 이제 그만! 아침형 인간? 아니면 올빼미족? 당신의 생체 리듬과 성향에 딱 맞는 갓생(God-Saeng) 루틴을 처방해 드립니다.",
+  "resultType": "TYPE_BASED",
+  "questions": [
+    {
+      "order": 1,
+      "content": "가장 집중이 잘 되는 시간대는?",
+      "options": [
+        {
+          "content": "새벽 5~7시 (미라클 모닝)",
+          "resultTypeCode": "M",
+          "score": 1
+        },
+        {
+          "content": "밤 10시 ~ 새벽 2시 (새벽 감성)",
+          "resultTypeCode": "O",
+          "score": 1
+        },
+        {
+          "content": "오후 2~5시 (카페인 파워)",
+          "resultTypeCode": "D",
+          "score": 1
+        },
+        {
+          "content": "그때그때 다름 (feel 꽂힐 때)",
+          "resultTypeCode": "F",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/god-saeng-routine/q1.webp?v=1769865468920"
+    },
+    {
+      "order": 2,
+      "content": "계획표를 짤 때 나의 스타일은?",
+      "options": [
+        {
+          "content": "분 단위로 쪼개서 철저하게",
+          "resultTypeCode": "M",
+          "score": 1
+        },
+        {
+          "content": "큰 목표만 적어둠 (유동적)",
+          "resultTypeCode": "F",
+          "score": 1
+        },
+        {
+          "content": "해야 할 일 리스트(To-Do)만 작성",
+          "resultTypeCode": "D",
+          "score": 1
+        },
+        {
+          "content": "머릿속에 다 있음 (안 적음)",
+          "resultTypeCode": "O",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/god-saeng-routine/q2.webp?v=1769865469159"
+    },
+    {
+      "order": 3,
+      "content": "갓생을 살고 싶은 이유는?",
+      "options": [
+        {
+          "content": "성공해서 부자 되려고",
+          "resultTypeCode": "D",
+          "score": 1
+        },
+        {
+          "content": "건강하고 활기찬 삶을 위해",
+          "resultTypeCode": "M",
+          "score": 1
+        },
+        {
+          "content": "나만의 시간을 즐기기 위해",
+          "resultTypeCode": "O",
+          "score": 1
+        },
+        {
+          "content": "남들한테 뒤처지기 싫어서",
+          "resultTypeCode": "F",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/god-saeng-routine/q3.webp?v=1769865469341"
+    },
+    {
+      "order": 4,
+      "content": "루틴을 지키지 못했을 때 나의 반응은?",
+      "options": [
+        {
+          "content": "자책하며 스트레스받음",
+          "resultTypeCode": "M",
+          "score": 1
+        },
+        {
+          "content": "내일부터 다시 하면 되지 뭐",
+          "resultTypeCode": "F",
+          "score": 1
+        },
+        {
+          "content": "왜 못했지? 원인 분석 후 수정",
+          "resultTypeCode": "D",
+          "score": 1
+        },
+        {
+          "content": "아 몰라 그냥 살래 (포기)",
+          "resultTypeCode": "O",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/god-saeng-routine/q4.webp?v=1769865469485"
+    },
+    {
+      "order": 5,
+      "content": "운동을 한다면 어떤 방식이 좋을까?",
+      "options": [
+        {
+          "content": "아침 공복 러닝/요가",
+          "resultTypeCode": "M",
+          "score": 1
+        },
+        {
+          "content": "퇴근 후 헬스장 쇠질",
+          "resultTypeCode": "D",
+          "score": 1
+        },
+        {
+          "content": "집에서 유튜브 보며 홈트",
+          "resultTypeCode": "O",
+          "score": 1
+        },
+        {
+          "content": "주말에 친구랑 등산/배드민턴",
+          "resultTypeCode": "F",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/god-saeng-routine/q5.webp?v=1769865469774"
+    },
+    {
+      "order": 6,
+      "content": "나에게 휴식이란?",
+      "options": [
+        {
+          "content": "다음 일을 위한 재충전 (효율 중시)",
+          "resultTypeCode": "D",
+          "score": 1
+        },
+        {
+          "content": "아무것도 안 하고 누워있기",
+          "resultTypeCode": "O",
+          "score": 1
+        },
+        {
+          "content": "맛있는 거 먹고 수다 떨기",
+          "resultTypeCode": "F",
+          "score": 1
+        },
+        {
+          "content": "명상이나 독서로 마음 챙김",
+          "resultTypeCode": "M",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/god-saeng-routine/q6.webp?v=1769865469934"
+    },
+    {
+      "order": 7,
+      "content": "가장 갖고 싶은 초능력은?",
+      "options": [
+        {
+          "content": "잠 안 자도 피곤하지 않은 체력",
+          "resultTypeCode": "O",
+          "score": 1
+        },
+        {
+          "content": "시간을 멈추거나 되돌리는 능력",
+          "resultTypeCode": "F",
+          "score": 1
+        },
+        {
+          "content": "책을 한번 보면 다 외우는 기억력",
+          "resultTypeCode": "D",
+          "score": 1
+        },
+        {
+          "content": "지치지 않는 강인한 멘탈",
+          "resultTypeCode": "M",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/god-saeng-routine/q7.webp?v=1769866208286"
+    }
+  ],
+  "results": [
+    {
+      "typeCode": "M",
+      "title": "미라클 모닝 '새벽형 인간' (Morning Lark)",
+      "description": "세상이 잠든 시간에 나는 깨어난다. \\n\\n당신은 아침 시간을 지배하는 자입니다. 누구보다 일찍 일어나 하루를 계획하고, 명상과 독서로 마음을 다스릴 때 성취감을 느낍니다. 남들이 출근할 때 이미 갓생의 절반을 끝낸 당신! 다만 저녁 약속엔 체력이 방전될 수 있으니 주의하세요.",
+      "isPremium": false,
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/god-saeng-routine/result-m.webp?v=1769865470123"
+    },
+    {
+      "typeCode": "O",
+      "title": "크리에이티브 '올빼미족' (Night Owl)",
+      "description": "밤이 깊어질수록 눈이 초롱초롱해집니다. \\n\\n모두가 잠든 고요한 밤에 영감이 샘솟는 타입. 낮에는 좀비처럼 지내다가 밤만 되면 예술혼을 불태웁니다. 억지로 아침형 인간이 되려고 하지 마세요. 당신의 골든 타임은 자정이니까요. 다만 비타민D 챙겨 드시는 거 잊지 마세요!",
+      "isPremium": false,
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/god-saeng-routine/result-o.webp?v=1769865470293"
+    },
+    {
+      "typeCode": "D",
+      "title": "효율 끝판왕 '목표 지향형' (Go-Getter)",
+      "description": "성과 없는 노력은 시간 낭비다. \\n\\n당신은 확실한 목표가 있어야 움직이는 스타일입니다. 단순히 부지런한 게 아니라, '왜' 해야 하는지가 중요하죠. 시간을 낭비하는 걸 극도로 싫어하며, 멀티태스킹에도 능합니다. 워커홀릭 기질이 있으니 가끔은 뇌를 쉬게 해주세요.",
+      "isPremium": false,
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/god-saeng-routine/result-d.webp?v=1769865470473"
+    },
+    {
+      "typeCode": "F",
+      "title": "자유로운 영혼 '필(Feel) 충만형' (Free Spirit)",
+      "description": "루틴? 그게 뭔데? 먹는 거야? \\n\\n짜여진 틀에 갇히는 걸 답답해합니다. 그때그때 꽂히는 걸 해야 능률이 오르는 타입이죠. 겉보기엔 게으른 것 같지만, 한번 몰입하면 무서운 집중력을 발휘합니다. 강박적인 계획보다는 유연한 리스트가 당신에게 맞습니다. 벼락치기의 달인!",
+      "isPremium": false,
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/god-saeng-routine/result-f.webp?v=1769865470642"
+    }
+  ],
+  "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/god-saeng-routine/main-cover.webp?v=1769865470864"
+}

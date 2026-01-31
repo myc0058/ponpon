@@ -1,0 +1,200 @@
+{
+  "title": "단톡방에서 나는 어떤 빌런?",
+  "description": "읽씹 장인부터 이모티콘 중독자까지! 친구들 단톡방, 혹은 회사 단톡방에서 나는 어떤 존재감을 담당하고 있을까?",
+  "resultType": "TYPE_BASED",
+  "questions": [
+    {
+      "order": 1,
+      "content": "단톡방 알림이 300개가 쌓여있다.",
+      "options": [
+        {
+          "content": "들어가서 정독하고 답장함",
+          "resultTypeCode": "T",
+          "score": 1
+        },
+        {
+          "content": "맨 밑으로 내려서 막줄만 읽음",
+          "resultTypeCode": "G",
+          "score": 1
+        },
+        {
+          "content": "알림 끄고 안 읽은 척 둠",
+          "resultTypeCode": "R",
+          "score": 1
+        },
+        {
+          "content": "\"요약 좀\" 시전",
+          "resultTypeCode": "E",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/group-chat-role/q1.webp?v=1769866864171"
+    },
+    {
+      "order": 2,
+      "content": "약속 시간을 정해야 하는데 아무도 말을 안 한다.",
+      "options": [
+        {
+          "content": "답답해서 내가 투표창 올림",
+          "resultTypeCode": "T",
+          "score": 1
+        },
+        {
+          "content": "누가 말할 때까지 기다림 (눈치)",
+          "resultTypeCode": "R",
+          "score": 1
+        },
+        {
+          "content": "재밌는 짤 보내서 분위기 띄움",
+          "resultTypeCode": "E",
+          "score": 1
+        },
+        {
+          "content": "읽씹함",
+          "resultTypeCode": "G",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/group-chat-role/q2.webp?v=1769866864390"
+    },
+    {
+      "order": 3,
+      "content": "친구가 웃긴 이야기를 했을 때 나의 리액션은?",
+      "options": [
+        {
+          "content": "ㅋㅋㅋㅋㅋㅋㅋ (ㅋ 개수로 승부)",
+          "resultTypeCode": "T",
+          "score": 1
+        },
+        {
+          "content": "적절한 이모티콘 하나 딱 보냄",
+          "resultTypeCode": "E",
+          "score": 1
+        },
+        {
+          "content": "읽고 웃음 (답장은 안 함)",
+          "resultTypeCode": "R",
+          "score": 1
+        },
+        {
+          "content": "안 웃긴데? 진지하게 반응",
+          "resultTypeCode": "G",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/group-chat-role/q3.webp?v=1769866864629"
+    },
+    {
+      "order": 4,
+      "content": "단톡방을 나가고 싶을 때는?",
+      "options": [
+        {
+          "content": "조용히 나간다 (초대하지 마)",
+          "resultTypeCode": "G",
+          "score": 1
+        },
+        {
+          "content": "인사하고 당당하게 나감",
+          "resultTypeCode": "T",
+          "score": 1
+        },
+        {
+          "content": "알림만 꺼두고 방치 (유령회원)",
+          "resultTypeCode": "R",
+          "score": 1
+        },
+        {
+          "content": "못 본 척하고 계속 있음",
+          "resultTypeCode": "E",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/group-chat-role/q4.webp?v=1769866864844"
+    },
+    {
+      "order": 5,
+      "content": "내가 가장 자주 쓰는 말은?",
+      "options": [
+        {
+          "content": "ㅇㅇ, ㅇㅋ (단답)",
+          "resultTypeCode": "G",
+          "score": 1
+        },
+        {
+          "content": "진짜? 대박! (리액션)",
+          "resultTypeCode": "E",
+          "score": 1
+        },
+        {
+          "content": "(정보/링크 공유)",
+          "resultTypeCode": "T",
+          "score": 1
+        },
+        {
+          "content": "말을 거의 안 함",
+          "resultTypeCode": "R",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/group-chat-role/q5.webp?v=1769866865060"
+    },
+    {
+      "order": 6,
+      "content": "친구들이 나를 부르는 별명은?",
+      "options": [
+        {
+          "content": "읽씹왕 / 잠수함",
+          "resultTypeCode": "R",
+          "score": 1
+        },
+        {
+          "content": "단톡방 방장 / 공지봇",
+          "resultTypeCode": "T",
+          "score": 1
+        },
+        {
+          "content": "이모티콘 부자 / 리액션 봇",
+          "resultTypeCode": "E",
+          "score": 1
+        },
+        {
+          "content": "마이웨이 / 핑프(핑거 프린세스)",
+          "resultTypeCode": "G",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/group-chat-role/q6.webp?v=1769866865314"
+    }
+  ],
+  "results": [
+    {
+      "typeCode": "R",
+      "title": "투명인간 '유령 회원' (The Ghost)",
+      "description": "살아는 있니...? \\n\\n분명 숫자는 줄어드는데 대답이 없습니다. 모든 대화를 보고는 있지만, 굳이 끼어들 필요성을 못 느끼는 관망파. 가끔 생존 신고 차원에서 'ㅋㅋㅋ' 하나 남기고 다시 사라집니다. 존재감은 없지만 단톡방 내용을 다 알고 있는 무서운 사람.",
+      "isPremium": false,
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/group-chat-role/result-r.webp?v=1769866865526"
+    },
+    {
+      "typeCode": "T",
+      "title": "실질적 리더 '공지 봇' (The Moderator)",
+      "description": "자, 투표 올립니다. 확인 부탁드립니다. \\n\\n답답한 꼴을 못 봐서 총대 메는 스타일. 약속 장소, 시간, 회비 정산까지 당신이 없으면 단톡방이 안 굴러갑니다. '뉴스 봇'처럼 유용한 정보를 물어오기도 하죠. 고맙긴 한데 가끔 너무 업무적으로 느껴질 때도 있어요.",
+      "isPremium": false,
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/group-chat-role/result-t.webp?v=1769866865692"
+    },
+    {
+      "typeCode": "E",
+      "title": "분위기 메이커 '이모티콘 중독자' (Emoji Spammer)",
+      "description": "말보다 그림으로 대화함. \\n\\n상황에 맞는 짤과 이모티콘을 1초 만에 찾아내는 능력자! 당신 덕분에 삭막한 단톡방에 웃음꽃이 핍니다. 리액션이 좋아서 친구들이 무슨 말을 하면 제일 먼저 반응해 주죠. 다만 진지한 상황에서도 이모티콘을 날리면 곤란해요!",
+      "isPremium": false,
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/group-chat-role/result-e.webp?v=1769866865868"
+    },
+    {
+      "typeCode": "G",
+      "title": "마이웨이 '단답형 쿨가이' (Cool Guy)",
+      "description": "ㅇㅇ \\n\\n용건만 간단히! 불필요한 사담은 싫어합니다. 질문을 하면 단답으로 끝내버려서 대화가 이어지기 힘든 타입. 읽씹도 자주 하지만 악의는 없습니다. 그냥 귀찮을 뿐. 츤데레 매력이 있지만 가끔은 친구들이 서운해할 수도 있어요.",
+      "isPremium": false,
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/group-chat-role/result-g.webp?v=1769866866055"
+    }
+  ],
+  "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/group-chat-role/main-cover.webp?v=1769866866239"
+}

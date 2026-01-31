@@ -1,0 +1,227 @@
+{
+  "title": "연애계의 빌런? 나의 레드플래그 찾기",
+  "description": "내 연애는 왜 항상 꼬일까? 혹시 내가 문제는 아닐까? 나도 모르게 상대방을 질리게 만드는 나의 '레드플래그(위험신호)'를 진단해 드립니다.",
+  "resultType": "TYPE_BASED",
+  "questions": [
+    {
+      "order": 1,
+      "content": "연인과 싸울 때 내가 가장 많이 하는 생각은?",
+      "options": [
+        {
+          "content": "네가 예민한 거야. 이게 화낼 일이야?",
+          "resultTypeCode": "G",
+          "score": 1
+        },
+        {
+          "content": "아 몰라... 일단 피하고 보자. (잠수)",
+          "resultTypeCode": "S",
+          "score": 1
+        },
+        {
+          "content": "내가 다 해줬잖아! 어떻게 나한테 이래?",
+          "resultTypeCode": "L",
+          "score": 1
+        },
+        {
+          "content": "이 관계가 나한테 이득인가? 손해인가?",
+          "resultTypeCode": "C",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/dating-red-flag/q1.webp?v=1769866538195"
+    },
+    {
+      "order": 2,
+      "content": "썸 탈 때 나의 행동 패턴은?",
+      "options": [
+        {
+          "content": "상대방을 시험해 보거나 밀당을 심하게 함",
+          "resultTypeCode": "G",
+          "score": 1
+        },
+        {
+          "content": "하루 종일 연락하고 선물 공세 퍼부음",
+          "resultTypeCode": "L",
+          "score": 1
+        },
+        {
+          "content": "좀만 안 맞아도 칼같이 손절",
+          "resultTypeCode": "S",
+          "score": 1
+        },
+        {
+          "content": "재력, 능력, 조건부터 스캔",
+          "resultTypeCode": "C",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/dating-red-flag/q2.webp?v=1769866538443"
+    },
+    {
+      "order": 3,
+      "content": "연인이 친구를 만나러 간다고 한다.",
+      "options": [
+        {
+          "content": "누구랑? 어디서? 몇 시까지? 꼬치꼬치 캐묻음",
+          "resultTypeCode": "G",
+          "score": 1
+        },
+        {
+          "content": "가지 마... 나랑 놀자. (집착)",
+          "resultTypeCode": "L",
+          "score": 1
+        },
+        {
+          "content": "어 그래~ 잘 갔다 와 (관심 없음)",
+          "resultTypeCode": "S",
+          "score": 1
+        },
+        {
+          "content": "그럼 나도 내 친구 만나야지 (보상 심리)",
+          "resultTypeCode": "C",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/dating-red-flag/q3.webp?v=1769866538646"
+    },
+    {
+      "order": 4,
+      "content": "이별을 결심하게 되는 순간은?",
+      "options": [
+        {
+          "content": "내 말을 안 듣거나 통제가 안 될 때",
+          "resultTypeCode": "G",
+          "score": 1
+        },
+        {
+          "content": "식은 것 같아서 불안할 때",
+          "resultTypeCode": "L",
+          "score": 1
+        },
+        {
+          "content": "그냥 흥미가 떨어지고 귀찮아질 때",
+          "resultTypeCode": "S",
+          "score": 1
+        },
+        {
+          "content": "더 좋은 사람이 나타났을 때",
+          "resultTypeCode": "C",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/dating-red-flag/q4.webp?v=1769866538815"
+    },
+    {
+      "order": 5,
+      "content": "연인이 서운함을 토로할 때 나의 반응은?",
+      "options": [
+        {
+          "content": "논리적으로 반박해서 이기려 든다",
+          "resultTypeCode": "G",
+          "score": 1
+        },
+        {
+          "content": "미안해 ㅠㅠ 다신 안 그럴게 (지키지 못할 약속)",
+          "resultTypeCode": "L",
+          "score": 1
+        },
+        {
+          "content": "읽씹하거나 대화 주제를 돌림",
+          "resultTypeCode": "S",
+          "score": 1
+        },
+        {
+          "content": "뭘 원해? 선물 사주면 돼?",
+          "resultTypeCode": "C",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/dating-red-flag/q5.webp?v=1769866539008"
+    },
+    {
+      "order": 6,
+      "content": "가장 듣기 싫은 말은?",
+      "options": [
+        {
+          "content": "\"너 진짜 이기적이다.\"",
+          "resultTypeCode": "G",
+          "score": 1
+        },
+        {
+          "content": "\"좀 부담스러워.\"",
+          "resultTypeCode": "L",
+          "score": 1
+        },
+        {
+          "content": "\"연락 좀 해.\"",
+          "resultTypeCode": "S",
+          "score": 1
+        },
+        {
+          "content": "\"넌 계산적인 게 문제야.\"",
+          "resultTypeCode": "C",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/dating-red-flag/q6.webp?v=1769866539187"
+    },
+    {
+      "order": 7,
+      "content": "나의 연애 스타일을 한 단어로 표현하면?",
+      "options": [
+        {
+          "content": "내가 리드하는 연애 (통제)",
+          "resultTypeCode": "G",
+          "score": 1
+        },
+        {
+          "content": "불같은 사랑 (열정)",
+          "resultTypeCode": "L",
+          "score": 1
+        },
+        {
+          "content": "쿨하고 자유로운 연애 (회피)",
+          "resultTypeCode": "S",
+          "score": 1
+        },
+        {
+          "content": "주고받는 게 확실한 연애 (거래)",
+          "resultTypeCode": "C",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/dating-red-flag/q7.webp?v=1769866663211"
+    }
+  ],
+  "results": [
+    {
+      "typeCode": "G",
+      "title": "너 다 잘 되라고 그러는 거야 '통제광' (Gaslighter)",
+      "description": "내가 맞고, 너는 틀려. \\n\\n당신은 연인을 자신이 원하는 대로 개조하려고 합니다. \"너 예민해\", \"나니까 너 만나주는 거야\" 같은 말로 상대방의 자존감을 갉아먹고 있진 않나요? 사랑이라는 이름으로 포장된 통제는 사랑이 아닙니다. 상대방을 있는 그대로 존중해 주세요.",
+      "isPremium": false,
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/dating-red-flag/result-g.webp?v=1769866599483"
+    },
+    {
+      "typeCode": "S",
+      "title": "갑자기 분위기 잠수 '회피형' (Ghoster)",
+      "description": "문제가 생기면 동굴로 들어갑니다. \\n\\n갈등을 해결하려 하지 않고 일단 피하고 봅니다. 상대방 속은 타들어가는데 혼자만의 시간이 필요하다며 며칠씩 잠수를 타버리죠. 헤어질 때도 카톡 하나 남기고 차단하는 스타일. 회피는 평화를 가져오는 게 아니라 문제를 썩게 만듭니다.",
+      "isPremium": false,
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/dating-red-flag/result-s.webp?v=1769866599634"
+    },
+    {
+      "typeCode": "L",
+      "title": "부담 백배 사랑꾼 '금사빠/러브바머' (Love Bomber)",
+      "description": "사랑해! 영원히 함께하자! (만난 지 3일 됨) \\n\\n초반에 모든 걸 다 퍼부어주는 스타일입니다. 상대방이 준비되기도 전에 너무 빠른 속도로 다가가서 부담을 줍니다. 그리고 상대방이 그만큼 돌려주지 않으면 금방 식어버리거나 서운해하죠. 불같이 타오르면 금방 꺼지는 법입니다. 속도 조절이 필요해요.",
+      "isPremium": false,
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/dating-red-flag/result-l.webp?v=1769866599959"
+    },
+    {
+      "typeCode": "C",
+      "title": "사랑도 비즈니스 '계산기' (The Calculator)",
+      "description": "이 연애, 가성비 나오나? \\n\\n감정보다는 이득을 먼저 따집니다. 데이트 비용, 선물 가격, 상대방의 스펙까지 꼼꼼하게 계산하죠. 손해 보는 연애는 절대 안 합니다. 합리적인 것도 좋지만, 계산기 두드리는 소리가 상대방에게 다 들리고 있어요. 찐사랑은 머리가 아니라 가슴으로 하는 겁니다.",
+      "isPremium": false,
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/dating-red-flag/result-c.webp?v=1769866600180"
+    }
+  ],
+  "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/dating-red-flag/main-cover.webp?v=1769866600359"
+}

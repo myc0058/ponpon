@@ -1,0 +1,173 @@
+{
+  "title": "내가 만약 재벌 3세라면?",
+  "description": "K-드라마 주인공처럼 재벌 3세로 다시 태어난 당신! 수조 원의 자산과 복잡한 가족 관계 속에서 당신은 어떤 삶을 살게 될까요?",
+  "resultType": "TYPE_BASED",
+  "questions": [
+    {
+      "order": 1,
+      "content": "아침에 눈을 뜨니 집사가 묻는다. \"오늘 일정은 어떻게 하시겠습니까?\"",
+      "options": [
+        {
+          "content": "회사로 출근해야지. 경영 수업 받는다.",
+          "resultTypeCode": "C",
+          "score": 1
+        },
+        {
+          "content": "백화점 가서 쇼핑이나 할래. (VVIP 룸)",
+          "resultTypeCode": "F",
+          "score": 1
+        },
+        {
+          "content": "몰래 빠져나가서 친구들 만난다.",
+          "resultTypeCode": "R",
+          "score": 1
+        },
+        {
+          "content": "미술관이나 갤러리 투어.",
+          "resultTypeCode": "A",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/chaebol-simulator/q1.webp?v=1769867233444"
+    },
+    {
+      "order": 2,
+      "content": "가장 갖고 싶은 럭셔리 아이템은?",
+      "options": [
+        {
+          "content": "한정판 슈퍼카 컬렉션",
+          "resultTypeCode": "F",
+          "score": 1
+        },
+        {
+          "content": "도심이 내려다보이는 펜트하우스",
+          "resultTypeCode": "C",
+          "score": 1
+        },
+        {
+          "content": "나만의 개인 전용기",
+          "resultTypeCode": "R",
+          "score": 1
+        },
+        {
+          "content": "유명 화가의 예술 작품",
+          "resultTypeCode": "A",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/chaebol-simulator/q2.webp?v=1769867233671"
+    },
+    {
+      "order": 3,
+      "content": "정략결혼 이야기가 나왔다. 상대는 라이벌 기업의 자제.",
+      "options": [
+        {
+          "content": "회사를 위해서라면 받아들인다. (비즈니스)",
+          "resultTypeCode": "C",
+          "score": 1
+        },
+        {
+          "content": "절대 싫어! 사랑 없는 결혼은 안 해.",
+          "resultTypeCode": "R",
+          "score": 1
+        },
+        {
+          "content": "상대가 누구냐에 따라 결정한다. (조건 확인)",
+          "resultTypeCode": "F",
+          "score": 1
+        },
+        {
+          "content": "일단 만나보고 매력 없으면 파혼.",
+          "resultTypeCode": "A",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/chaebol-simulator/q3.webp?v=1769867233913"
+    },
+    {
+      "order": 4,
+      "content": "이복형제가 내 후계자 자리를 노리고 있다.",
+      "options": [
+        {
+          "content": "실력으로 찍어 누른다. (능력 증명)",
+          "resultTypeCode": "C",
+          "score": 1
+        },
+        {
+          "content": "더러워서 안 해. 그냥 너 가져라.",
+          "resultTypeCode": "R",
+          "score": 1
+        },
+        {
+          "content": "뒤에서 은밀하게 약점을 잡는다.",
+          "resultTypeCode": "A",
+          "score": 1
+        },
+        {
+          "content": "할아버지(회장님)에게 아부한다.",
+          "resultTypeCode": "F",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/chaebol-simulator/q4.webp?v=1769867234097"
+    },
+    {
+      "order": 5,
+      "content": "스트레스가 쌓였을 때 푸는 방법은?",
+      "options": [
+        {
+          "content": "친구들 불러서 프라이빗 파티",
+          "resultTypeCode": "F",
+          "score": 1
+        },
+        {
+          "content": "혼자 스포츠카 타고 드라이브",
+          "resultTypeCode": "R",
+          "score": 1
+        },
+        {
+          "content": "조용히 승마나 골프 치기",
+          "resultTypeCode": "C",
+          "score": 1
+        },
+        {
+          "content": "비밀 아지트에서 아무도 모르게 쉼",
+          "resultTypeCode": "A",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/chaebol-simulator/q5.webp?v=1769867234292"
+    }
+  ],
+  "results": [
+    {
+      "typeCode": "C",
+      "title": "냉철한 승부사 '경영 후계자' (The CEO)",
+      "description": "이 회사는 제 겁니다. \\n\\n당신은 타고난 리더십과 야망을 가진 진정한 로열패밀리입니다. 노는 것보다 일하는 게 더 즐겁고, 회사를 키우는 데 관심이 많습니다. 감정보다는 이성을 중시하며, 정략결혼도 비즈니스의 일부로 받아들일 준비가 되어 있군요. 차기 회장님 당첨!",
+      "isPremium": false,
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/chaebol-simulator/result-c.webp?v=1769867234485"
+    },
+    {
+      "typeCode": "F",
+      "title": "화려한 셀럽 '파티 피플' (The Celebrity)",
+      "description": "오늘 내가 쏜다! \\n\\n세상의 중심은 나! 넘치는 돈으로 화려한 인생을 즐기는 타입입니다. 패션, 파티, 여행 등 노는 데 도가 텄으며 SNS에서 엄청난 팔로워를 거느린 인플루언서 재벌입니다. 경영권 다툼 따위 머리 아파서 싫어합니다. 그냥 배당금 받아서 평생 놀고 싶어 하네요.",
+      "isPremium": false,
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/chaebol-simulator/result-f.webp?v=1769867234714"
+    },
+    {
+      "typeCode": "R",
+      "title": "자유로운 영혼 '반항아' (The Rebel)",
+      "description": "돈도 명예도 다 필요 없어. \\n\\n재벌가라는 울타리가 답답하기만 한 당신. 정해진 길을 거부하고 나만의 길을 가려 합니다. 오토바이를 타거나 서민 체험을 하는 등 일탈을 즐기는 드라마 속 남주/여주 스타일. 결국 사랑하는 사람을 위해 모든 것을 버릴 수도 있는 로맨티스트.",
+      "isPremium": false,
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/chaebol-simulator/result-r.webp?v=1769867234888"
+    },
+    {
+      "typeCode": "A",
+      "title": "우아한 귀족 '아트 컬렉터' (The Aristocrat)",
+      "description": "품격이 곧 권력이다. \\n\\n돈 자랑하는 졸부들을 경멸합니다. 당신은 예술과 문화를 사랑하는 고상한 취향의 소유자. 갤러리를 운영하거나 자선 재단을 맡아 조용하지만 강력한 영향력을 행사합니다. 드러내지 않는 은은한 럭셔리(Old Money)가 당신의 스타일입니다.",
+      "isPremium": false,
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/chaebol-simulator/result-a.webp?v=1769867235127"
+    }
+  ],
+  "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/chaebol-simulator/main-cover.webp?v=1769867235293"
+}

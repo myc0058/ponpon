@@ -1,0 +1,227 @@
+{
+  "title": "나의 '반려 오브제' 찾기 테스트",
+  "description": "반려동물은 키우고 싶은데 책임질 자신이 없다면? 나를 위로해 줄 완벽한 '반려 오브제'를 찾아드립니다. (feat. 힐링)",
+  "resultType": "TYPE_BASED",
+  "questions": [
+    {
+      "order": 1,
+      "content": "퇴근 후 집에 돌아왔다. 나를 반겨주는 존재가 있다면 어떤 느낌이면 좋을까?",
+      "options": [
+        {
+          "content": "조용히 그 자리에 있어 주는 묵직함",
+          "resultTypeCode": "S",
+          "score": 1
+        },
+        {
+          "content": "내가 말을 걸면 반응해 주는 스마트함",
+          "resultTypeCode": "A",
+          "score": 1
+        },
+        {
+          "content": "초록초록한 생명력으로 힐링",
+          "resultTypeCode": "P",
+          "score": 1
+        },
+        {
+          "content": "폭신하고 부드러운 촉감",
+          "resultTypeCode": "D",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/companion-object-test/q1.webp?v=1769864741513"
+    },
+    {
+      "order": 2,
+      "content": "내가 감당할 수 있는 '관리 난이도'는?",
+      "options": [
+        {
+          "content": "물 주기 귀찮아... 관리는 0에 수렴해야 함",
+          "resultTypeCode": "S",
+          "score": 1
+        },
+        {
+          "content": "가끔 물 갈아주거나 햇빛 보여주는 정도?",
+          "resultTypeCode": "P",
+          "score": 1
+        },
+        {
+          "content": "충전만 잘 해주면 됨",
+          "resultTypeCode": "A",
+          "score": 1
+        },
+        {
+          "content": "가끔 세탁해주거나 먼지 털어주기",
+          "resultTypeCode": "D",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/companion-object-test/q2.webp?v=1769864741683"
+    },
+    {
+      "order": 3,
+      "content": "우울한 날, 위로받고 싶은 방식은?",
+      "options": [
+        {
+          "content": "아무 말 없이 내 이야기를 들어주기만 해",
+          "resultTypeCode": "S",
+          "score": 1
+        },
+        {
+          "content": "껴안고 펑펑 울 수 있는 포근함",
+          "resultTypeCode": "D",
+          "score": 1
+        },
+        {
+          "content": "재라 있는 것만으로도 공기가 맑아지는 기분",
+          "resultTypeCode": "P",
+          "score": 1
+        },
+        {
+          "content": "나를 분석해서 적절한 솔루션/음악 추천",
+          "resultTypeCode": "A",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/companion-object-test/q3.webp?v=1769864741890"
+    },
+    {
+      "order": 4,
+      "content": "나의 공간(방/집)에 어울리는 인테리어 무드는?",
+      "options": [
+        {
+          "content": "모던하고 시크한 미니멀리즘",
+          "resultTypeCode": "S",
+          "score": 1
+        },
+        {
+          "content": "따뜻하고 아기자기한 감성",
+          "resultTypeCode": "D",
+          "score": 1
+        },
+        {
+          "content": "식물이 가득한 플랜테리어",
+          "resultTypeCode": "P",
+          "score": 1
+        },
+        {
+          "content": "미래지향적인 얼리어답터 방",
+          "resultTypeCode": "A",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/companion-object-test/q4.webp?v=1769864742085"
+    },
+    {
+      "order": 5,
+      "content": "반려 존재에게 내가 해주고 싶은 것은?",
+      "options": [
+        {
+          "content": "예쁜 옷 입혀주기 / 꾸며주기",
+          "resultTypeCode": "S",
+          "score": 1
+        },
+        {
+          "content": "말 걸어주고 쓰다듬어 주기",
+          "resultTypeCode": "D",
+          "score": 1
+        },
+        {
+          "content": "깨끗한 환경 만들어 주기",
+          "resultTypeCode": "P",
+          "score": 1
+        },
+        {
+          "content": "업그레이드 / 악세사리 장착",
+          "resultTypeCode": "A",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/companion-object-test/q5.webp?v=1769864742271"
+    },
+    {
+      "order": 6,
+      "content": "오래 집을 비우게 되었다. 데려갈 것인가?",
+      "options": [
+        {
+          "content": "무거워. 집에 잘 있으라고 한다.",
+          "resultTypeCode": "S",
+          "score": 1
+        },
+        {
+          "content": "당연히 데려가야지! 내 분신인데.",
+          "resultTypeCode": "D",
+          "score": 1
+        },
+        {
+          "content": "죽지만 않게 조치해두고 감.",
+          "resultTypeCode": "P",
+          "score": 1
+        },
+        {
+          "content": "전원 끄고 감.",
+          "resultTypeCode": "A",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/companion-object-test/q6.webp?v=1769864742466"
+    },
+    {
+      "order": 7,
+      "content": "가장 중요하게 생각하는 가치는?",
+      "options": [
+        {
+          "content": "변하지 않는 영원함",
+          "resultTypeCode": "S",
+          "score": 1
+        },
+        {
+          "content": "생명력과 성장",
+          "resultTypeCode": "P",
+          "score": 1
+        },
+        {
+          "content": "기능과 편리함",
+          "resultTypeCode": "A",
+          "score": 1
+        },
+        {
+          "content": "정서적 유대감과 안정",
+          "resultTypeCode": "D",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/companion-object-test/q7.webp?v=1769864742638"
+    }
+  ],
+  "results": [
+    {
+      "typeCode": "S",
+      "title": "묵묵한 수호신 '반려돌' (Pet Stone)",
+      "description": "변치 않는 단단함으로 당신을 지켜줍니다. \\n\\n세상이 시끄럽고 사람에 치일 때, 아무 말 없이 그 자리에 있는 돌멩이 하나가 큰 위로가 됩니다. 밥을 줄 필요도, 씻겨줄 필요도 없어요. 가끔 모자를 씌워주거나 예쁜 집을 만들어주는 소소한 재미만 있을 뿐. 당신의 비밀을 가장 무겁게 지켜줄 친구입니다.",
+      "isPremium": false,
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/companion-object-test/result-s.webp?v=1769864742816"
+    },
+    {
+      "typeCode": "P",
+      "title": "동동 떠다니는 기분 '마리모' (Marimo)",
+      "description": "물속에서 평화롭게 살아가는 초록 친구. \\n\\n당신은 혼자 있는 시간도 중요하지만, 살아있는 생명이 주는 온기도 필요하군요. 마리모는 손이 많이 가지 않으면서도 '성장'하는 기쁨을 줍니다. 기분이 좋으면 물 위로 동동 뜬다는 전설을 믿으며, 멍하니 물멍을 때리는 시간이 당신에게 힐링이 될 거예요.",
+      "isPremium": false,
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/companion-object-test/result-p.webp?v=1769864742967"
+    },
+    {
+      "typeCode": "A",
+      "title": "똑똑한 내 친구 'AI 펫 로봇' (AI Pet)",
+      "description": "감성은 챙기고 싶지만 귀찮은 건 딱 질색! \\n\\n당신은 합리적인 힐링을 원합니다. 털 날림도 없고 배변 훈련도 필요 없는 로봇 강아/고양이가 딱이네요. 당신의 표정을 읽고 애교를 부리거나, 오늘의 날씨를 알려주는 스마트함까지 겸비했습니다. 충전기만 꽂아주면 무한한 사랑을 주는 현대적인 친구입니다.",
+      "isPremium": false,
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/companion-object-test/result-a.webp?v=1769864743200"
+    },
+    {
+      "typeCode": "D",
+      "title": "포근한 '애착 인형' (Plushie)",
+      "description": "나에게 필요한 건 따뜻한 포옹! \\n\\n당신은 촉각적인 안정감을 중요하게 생각합니다. 부드러운 털, 말랑말랑한 솜이 채워진 인형을 끌어안고 있을 때 세상에서 가장 안전하다고 느끼죠. 다 큰 어른이 무슨 인형이냐고요? 윌슨도 배구공이었습니다. 당신의 외로움을 달래줄 가장 확실한 처방전이에요.",
+      "isPremium": false,
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/companion-object-test/result-d.webp?v=1769864743405"
+    }
+  ],
+  "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/companion-object-test/main-cover.webp?v=1769864743635"
+}

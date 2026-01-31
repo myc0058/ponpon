@@ -1,0 +1,173 @@
+{
+  "title": "탐정 사무소 개업! 나의 추리 스타일은?",
+  "description": "셜록 홈즈? 명탐정 코난? 당신이 탐정이라면 어떤 방식으로 사건을 해결할까요? 당신의 숨겨진 추리 능력을 테스트해드립니다.",
+  "resultType": "TYPE_BASED",
+  "questions": [
+    {
+      "order": 1,
+      "content": "사건 현장에 도착했다. 가장 먼저 확인하는 것은?",
+      "options": [
+        {
+          "content": "떨어진 물건이나 흔적 (단서 수집)",
+          "resultTypeCode": "L",
+          "score": 1
+        },
+        {
+          "content": "주변 사람들의 표정과 행동 (심리 파악)",
+          "resultTypeCode": "I",
+          "score": 1
+        },
+        {
+          "content": "현장의 전체적인 분위기와 직감",
+          "resultTypeCode": "F",
+          "score": 1
+        },
+        {
+          "content": "CCTV나 디지털 기록 확보",
+          "resultTypeCode": "D",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/detective-type-test/q1.webp?v=1769866949156"
+    },
+    {
+      "order": 2,
+      "content": "용의자가 알리바이를 주장한다. 당신의 반응은?",
+      "options": [
+        {
+          "content": "시간대별로 꼼꼼하게 팩트 체크한다.",
+          "resultTypeCode": "L",
+          "score": 1
+        },
+        {
+          "content": "눈빛이 흔들리는 걸 보니 거짓말이다.",
+          "resultTypeCode": "I",
+          "score": 1
+        },
+        {
+          "content": "일단 믿어주는 척하며 방심하게 만든다.",
+          "resultTypeCode": "F",
+          "score": 1
+        },
+        {
+          "content": "스마트폰 위치 기록을 조회한다.",
+          "resultTypeCode": "D",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/detective-type-test/q2.webp?v=1769866950458"
+    },
+    {
+      "order": 3,
+      "content": "범인이 남긴 암호를 발견했다.",
+      "options": [
+        {
+          "content": "수학/논리적으로 패턴을 분석한다.",
+          "resultTypeCode": "L",
+          "score": 1
+        },
+        {
+          "content": "범인의 입장이 되어 생각한다.",
+          "resultTypeCode": "I",
+          "score": 1
+        },
+        {
+          "content": "그냥 딱 보니 답이 보인다. (천재)",
+          "resultTypeCode": "F",
+          "score": 1
+        },
+        {
+          "content": "암호 해독 프로그램 돌린다.",
+          "resultTypeCode": "D",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/detective-type-test/q3.webp?v=1769866950652"
+    },
+    {
+      "order": 4,
+      "content": "조수(왓슨)를 뽑는다면 어떤 사람이 좋을까?",
+      "options": [
+        {
+          "content": "내 명령을 잘 따르고 힘이 센 사람",
+          "resultTypeCode": "L",
+          "score": 1
+        },
+        {
+          "content": "함께 토론하며 아이디어를 주는 사람",
+          "resultTypeCode": "F",
+          "score": 1
+        },
+        {
+          "content": "발이 넓어서 정보를 잘 물어오는 사람",
+          "resultTypeCode": "I",
+          "score": 1
+        },
+        {
+          "content": "최신 장비를 잘 다루는 해커",
+          "resultTypeCode": "D",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/detective-type-test/q4.webp?v=1769866950847"
+    },
+    {
+      "order": 5,
+      "content": "드디어 모든 퍼즐이 맞춰졌다! 범인을 지목할 때 나는?",
+      "options": [
+        {
+          "content": "모든 사람들 앞에서 화려하게 추리 쇼를 펼친다.",
+          "resultTypeCode": "F",
+          "score": 1
+        },
+        {
+          "content": "조용히 경찰에 증거를 넘긴다.",
+          "resultTypeCode": "L",
+          "score": 1
+        },
+        {
+          "content": "범인을 따로 만나 자수를 권유한다.",
+          "resultTypeCode": "I",
+          "score": 1
+        },
+        {
+          "content": "익명으로 제보하고 사라진다.",
+          "resultTypeCode": "D",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/detective-type-test/q5.webp?v=1769866951052"
+    }
+  ],
+  "results": [
+    {
+      "typeCode": "L",
+      "title": "논리의 제왕 '셜록 홈즈' (The Logician)",
+      "description": "불가능한 것을 제하면, 남은 것이 진실이다. \\n\\n당신은 철저한 논리와 증거를 바탕으로 수사하는 정통파 탐정입니다. 감정에 휘둘리지 않고 냉철하게 사건을 분석하죠. 사소한 단서 하나도 놓치지 않는 관찰력이 당신의 무기! 다만 너무 팩트만 따져서 주변 사람들이 피곤해할 수도?",
+      "isPremium": false,
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/detective-type-test/result-l.webp?v=1769866951207"
+    },
+    {
+      "typeCode": "I",
+      "title": "심리전의 대가 '멘탈리스트' (The Profiler)",
+      "description": "범인은 이 안에 있어! (너의 마음속에) \\n\\n당신은 사람의 심리를 꿰뚫어 보는 능력이 탁월합니다. 증거가 없어도 범인의 행동과 말투만으로 거짓말을 간파해 내죠. 범죄자의 심리에 깊이 공감하고, 그들의 패턴을 예측하여 함정에 빠뜨리는 스타일입니다.",
+      "isPremium": false,
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/detective-type-test/result-i.webp?v=1769866951414"
+    },
+    {
+      "typeCode": "F",
+      "title": "직감 천재 '명탐정 코난' (The Intuitive)",
+      "description": "진실은 언제나 하나! \\n\\n이유는 모르겠지만 그냥 알 것 같아! 당신은 타고난 '촉'이 엄청난 천재형 탐정입니다. 논리적으로 설명하긴 어렵지만, 번뜩이는 영감으로 사건의 핵심을 찌릅니다. 운도 따르는 편이라 우연히 결정적인 단서를 발견하기도 하죠.",
+      "isPremium": false,
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/detective-type-test/result-f.webp?v=1769866951607"
+    },
+    {
+      "typeCode": "D",
+      "title": "디지털 수사관 '해커' (The Tech Expert)",
+      "description": "모든 기록은 서버에 남아있지. \\n\\n당신은 발로 뛰어다니기보다는 키보드로 세상과 싸우는 탐정입니다. CCTV 해킹, 데이터 복구, SNS 추적으로 앉은 자리에서 범인을 잡아냅니다. 현대 사회에서 가장 유능하고 무서운 탐정이 될 수 있겠네요.",
+      "isPremium": false,
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/detective-type-test/result-d.webp?v=1769866951802"
+    }
+  ],
+  "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/detective-type-test/main-cover.webp?v=1769866951967"
+}

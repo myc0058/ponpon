@@ -1,0 +1,227 @@
+{
+  "title": "AI 시대, 내 생존 확률은?",
+  "description": "챗GPT가 상사가 된다면? AI가 지배하는 사무실에서 당신은 살아남을 수 있을까? 당신의 'AI 적응력'을 테스트해드립니다.",
+  "resultType": "TYPE_BASED",
+  "questions": [
+    {
+      "order": 1,
+      "content": "상사가 '이거 AI로 요약해와'라고 시켰다. 당신의 반응은?",
+      "options": [
+        {
+          "content": "오히려 좋아! 3초 컷 가능",
+          "resultTypeCode": "A",
+          "score": 1
+        },
+        {
+          "content": "어떤 툴 쓸지 고민하다 1시간 지남",
+          "resultTypeCode": "H",
+          "score": 1
+        },
+        {
+          "content": "직접 읽는 게 더 빠를 거 같은데...?",
+          "resultTypeCode": "H",
+          "score": 1
+        },
+        {
+          "content": "AI가 요약한 거 내가 다시 검수함 (불신)",
+          "resultTypeCode": "M",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/ai-work-survival/q1.webp?v=1769863091871"
+    },
+    {
+      "order": 2,
+      "content": "회의 중 AI 통역기가 오작동해서 이상한 말을 했다. 분위기가 싸해졌을 때?",
+      "options": [
+        {
+          "content": "기계니까 그럴 수지. 쿨하게 넘김",
+          "resultTypeCode": "A",
+          "score": 1
+        },
+        {
+          "content": "센스 있는 농담으로 분위기 수습",
+          "resultTypeCode": "H",
+          "score": 1
+        },
+        {
+          "content": "당황해서 아무 말 대잔치",
+          "resultTypeCode": "M",
+          "score": 1
+        },
+        {
+          "content": "속으로 '이래서 아직 기계는 멀었어'라고 생각함",
+          "resultTypeCode": "M",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/ai-work-survival/q2.webp?v=1769863092151"
+    },
+    {
+      "order": 3,
+      "content": "퇴근 10분 전, AI가 내 업무 실수를 발견해서 알림을 보냈다.",
+      "options": [
+        {
+          "content": "고마워! 수정하고 칼퇴 (도구로 활용)",
+          "resultTypeCode": "A",
+          "score": 1
+        },
+        {
+          "content": "아... 모른 척하고 싶다 (스트레스)",
+          "resultTypeCode": "H",
+          "score": 1
+        },
+        {
+          "content": "얘는 융통성이 없네. 내일 할게!",
+          "resultTypeCode": "H",
+          "score": 1
+        },
+        {
+          "content": "네가 고쳐줄 순 없니? (의존)",
+          "resultTypeCode": "M",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/ai-work-survival/q3.webp?v=1769863092342"
+    },
+    {
+      "order": 4,
+      "content": "AI가 창작한 그림이나 글을 볼 때 드는 생각은?",
+      "options": [
+        {
+          "content": "와 진짜 잘 만들었다. 효율 굿",
+          "resultTypeCode": "A",
+          "score": 1
+        },
+        {
+          "content": "뭔가 영혼이 없어 보임 (감성 중시)",
+          "resultTypeCode": "H",
+          "score": 1
+        },
+        {
+          "content": "저작권 문제 없나? (현실적 고민)",
+          "resultTypeCode": "M",
+          "score": 1
+        },
+        {
+          "content": "내가 더 잘할 수 있을 듯 (자신감)",
+          "resultTypeCode": "M",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/ai-work-survival/q4.webp?v=1769863092520"
+    },
+    {
+      "order": 5,
+      "content": "내 직업이 AI로 대체될 확률이 99%라는 기사를 봤다.",
+      "options": [
+        {
+          "content": "빨리 AI 다루는 법 배워서 관리자 돼야지",
+          "resultTypeCode": "A",
+          "score": 1
+        },
+        {
+          "content": "인간만이 할 수 있는 일을 찾는다",
+          "resultTypeCode": "H",
+          "score": 1
+        },
+        {
+          "content": "에이 설마 나 때까진 괜찮겠지 (낙관)",
+          "resultTypeCode": "M",
+          "score": 1
+        },
+        {
+          "content": "기본소득 주겠지 뭐... (해탈)",
+          "resultTypeCode": "M",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/ai-work-survival/q5.webp?v=1769863092722"
+    },
+    {
+      "order": 6,
+      "content": "유튜브 알고리즘이 내 취향을 너무 정확하게 파악해서 영상을 추천한다.",
+      "options": [
+        {
+          "content": "개이득! 검색할 시간 줄었다",
+          "resultTypeCode": "A",
+          "score": 1
+        },
+        {
+          "content": "소름 돋음. 감시 당하는 기분",
+          "resultTypeCode": "H",
+          "score": 1
+        },
+        {
+          "content": "일부러 이상한 거 검색해서 혼란 줌",
+          "resultTypeCode": "M",
+          "score": 1
+        },
+        {
+          "content": "그냥 아무 생각 없이 봄",
+          "resultTypeCode": "A",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/ai-work-survival/q6.webp?v=1769863092893"
+    },
+    {
+      "order": 7,
+      "content": "전쟁터 같은 업무 환경에서, 나만의 생존 무기는?",
+      "options": [
+        {
+          "content": "최신 기술 습득력 & 적응력",
+          "resultTypeCode": "A",
+          "score": 1
+        },
+        {
+          "content": "대체 불가능한 공감 능력 & 소통",
+          "resultTypeCode": "H",
+          "score": 1
+        },
+        {
+          "content": "어떤 상황도 버티는 멘탈 & 깡",
+          "resultTypeCode": "M",
+          "score": 1
+        },
+        {
+          "content": "정치력 & 라인 타기",
+          "resultTypeCode": "M",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/ai-work-survival/q7.webp?v=1769863093072"
+    }
+  ],
+  "results": [
+    {
+      "typeCode": "AI",
+      "title": "AI 조련사 (The AI Master)",
+      "description": "당신은 AI를 두려워하기보다 도구로 부리는 '주인'입니다. \\n\\n새로운 기술에 거부감이 없고 변화의 파도 위에서 서핑을 즐기는 타입이군요. 챗GPT도 당신의 프롬프트 한 방이면 순한 양이 됩니다. 미래 사회에서 가장 성공할 확률이 높은 인재! 하지만 가끔 인간적인 따뜻함이 부족하다는 오해를 받을 수도 있어요. (생존확률: 99.9%)",
+      "isPremium": false,
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/ai-work-survival/result-ai.webp?v=1769863093316"
+    },
+    {
+      "typeCode": "HU",
+      "title": "감성 장인 (The Human Touch)",
+      "description": "AI가 절대 대체할 수 없는 '인간미'의 소유자! \\n\\n기계적인 효율성보다는 사람 사이의 관계, 감정, 창의성을 중요하게 생각합니다. AI가 쓴 완벽한 글보다 당신이 쓴 투박한 손편지가 더 감동을 주죠. 삭막한 미래 사회에서 당신은 사람들에게 꼭 필요한 힐러 같은 존재가 될 거예요. (생존확률: 85%)",
+      "isPremium": false,
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/ai-work-survival/result-hu.webp?v=1769863093489"
+    },
+    {
+      "typeCode": "MI",
+      "title": "현실적 균형러 (The Pragmatist)",
+      "description": "기술은 좋지만 맹신하지는 않는, 딱 중간의 밸런스! \\n\\nAI의 편리함은 누리면서도 최후의 결정권은 내가 쥐고 싶어 합니다. 돌다리도 두들겨 보고 건너는 신중함 덕분에 큰 실수는 안 하겠네요. 하지만 너무 재기만 하다가는 급변하는 세상에서 타이밍을 놓칠 수도 있어요. 조금 더 과감해져도 좋습니다! (생존확률: 70%)",
+      "isPremium": false,
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/ai-work-survival/result-mi.webp?v=1769863093656"
+    },
+    {
+      "typeCode": "NA",
+      "title": "아날로그 마이웨이 (The Retro Soul)",
+      "description": "\"기계따위가 감히?\" 디지털보다는 아날로그 감성을 사랑합니다. \\n\\n빠른 변화가 피곤하고 옛날 방식이 편하다고 느끼는 당신. AI가 그림을 그리고 글을 쓰는 세상이 영 마음에 들지 않습니다. 하지만 걱정 마세요. 모든 것이 디지털화될수록 당신 같은 '찐 인간'의 희소성은 더욱 올라갈 테니까요! (생존확률: 50% or 대박)",
+      "isPremium": false,
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/ai-work-survival/result-na.webp?v=1769863093853"
+    }
+  ],
+  "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/ai-work-survival/main-cover.webp?v=1769863094079"
+}

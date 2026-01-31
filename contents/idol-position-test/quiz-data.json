@@ -1,0 +1,227 @@
+{
+  "title": "아이돌 데뷔, 내 담당 포지션은?",
+  "description": "만약 당신이 2026년 대형 기획사 신인 아이돌로 데뷔한다면? 메인보컬? 센터? 아니면 예능캐? 당신의 숨겨진 아이돌 재능을 찾아드립니다.",
+  "resultType": "TYPE_BASED",
+  "questions": [
+    {
+      "order": 1,
+      "content": "오디션 장에 들어선 나. 심사위원의 '자기소개 해보세요'라는 말에?",
+      "options": [
+        {
+          "content": "준비한 멘트와 개인기로 시선 제압",
+          "resultTypeCode": "V",
+          "score": 1
+        },
+        {
+          "content": "떨리지만 차분하게 노래부터 시작",
+          "resultTypeCode": "M",
+          "score": 1
+        },
+        {
+          "content": "패기 넘치게 \"안녕하십니까!\" 인사부터 크게",
+          "resultTypeCode": "L",
+          "score": 1
+        },
+        {
+          "content": "일단 비주얼로 압살 (미소 발사)",
+          "resultTypeCode": "C",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/idol-position-test/q1.webp?v=1769866390938"
+    },
+    {
+      "order": 2,
+      "content": "그룹 연습 중 안무가 계속 틀리는 멤버가 있다. 나의 대처는?",
+      "options": [
+        {
+          "content": "\"여기 박자가 좀 빨라\" 친절하게 티칭",
+          "resultTypeCode": "M",
+          "score": 1
+        },
+        {
+          "content": "\"자 집중하자! 한 번만 더 해보자!\" 독려",
+          "resultTypeCode": "L",
+          "score": 1
+        },
+        {
+          "content": "분위기 풀려고 장난치거나 간식 돌림",
+          "resultTypeCode": "V",
+          "score": 1
+        },
+        {
+          "content": "묵묵히 내 거 연습해서 모범을 보임",
+          "resultTypeCode": "C",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/idol-position-test/q2.webp?v=1769866391208"
+    },
+    {
+      "order": 3,
+      "content": "데뷔곡 파트 분배 시간. 내가 가장 탐나는 파트는?",
+      "options": [
+        {
+          "content": "고음 애드리브가 터지는 클라이맥스",
+          "resultTypeCode": "M",
+          "score": 1
+        },
+        {
+          "content": "엔딩 요정이 될 수 있는 킬링 파트",
+          "resultTypeCode": "C",
+          "score": 1
+        },
+        {
+          "content": "가사는 적어도 임팩트 있는 도입부",
+          "resultTypeCode": "V",
+          "score": 1
+        },
+        {
+          "content": "전체적인 흐름을 잡아주는 브릿지",
+          "resultTypeCode": "L",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/idol-position-test/q3.webp?v=1769866391494"
+    },
+    {
+      "order": 4,
+      "content": "팬 사인회에서 긴장해서 아무 말 못 하는 팬을 만났다.",
+      "options": [
+        {
+          "content": "먼저 말을 걸며 다정하게 손잡아줌",
+          "resultTypeCode": "C",
+          "score": 1
+        },
+        {
+          "content": "팬의 이름이나 특징을 기억해 주려고 노력",
+          "resultTypeCode": "L",
+          "score": 1
+        },
+        {
+          "content": "재밌는 농담으로 빵 터지게 만듦",
+          "resultTypeCode": "V",
+          "score": 1
+        },
+        {
+          "content": "꿀 떨어지는 눈빛으로 아이컨택",
+          "resultTypeCode": "M",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/idol-position-test/q4.webp?v=1769866391727"
+    },
+    {
+      "order": 5,
+      "content": "예능 프로그램에 나갔다. MC가 개인기를 시킨다면?",
+      "options": [
+        {
+          "content": "망가짐 불사! 코믹 댄스나 성대모사",
+          "resultTypeCode": "V",
+          "score": 1
+        },
+        {
+          "content": "짧고 굵게 포인트 안무나 노래 한 소절",
+          "resultTypeCode": "C",
+          "score": 1
+        },
+        {
+          "content": "수줍게 하긴 하는데 뭔가 어설픔",
+          "resultTypeCode": "M",
+          "score": 1
+        },
+        {
+          "content": "멤버들이 잘 할 수 있게 판을 깔아줌",
+          "resultTypeCode": "L",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/idol-position-test/q5.webp?v=1769866391944"
+    },
+    {
+      "order": 6,
+      "content": "악플이나 힘든 스케줄로 멘탈이 흔들릴 때...",
+      "options": [
+        {
+          "content": "혼자 노래 부르거나 연습하면서 품",
+          "resultTypeCode": "M",
+          "score": 1
+        },
+        {
+          "content": "팬들이 쓴 편지 읽으면서 위로받음",
+          "resultTypeCode": "C",
+          "score": 1
+        },
+        {
+          "content": "멤버들 불러서 맛있는 거 먹고 털어버림",
+          "resultTypeCode": "L",
+          "score": 1
+        },
+        {
+          "content": "SNS나 소통 앱으로 팬들과 수다 떨기",
+          "resultTypeCode": "V",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/idol-position-test/q6.webp?v=1769867214626"
+    },
+    {
+      "order": 7,
+      "content": "내가 아이돌을 하는 가장 큰 이유는?",
+      "options": [
+        {
+          "content": "무대 위에서 노래하고 춤추는 게 행복해서",
+          "resultTypeCode": "M",
+          "score": 1
+        },
+        {
+          "content": "나를 사랑해 주는 팬들을 위해서",
+          "resultTypeCode": "C",
+          "score": 1
+        },
+        {
+          "content": "우리 그룹이 정상에 서는 걸 보고 싶어서",
+          "resultTypeCode": "L",
+          "score": 1
+        },
+        {
+          "content": "유명해지고 관심받는 게 짜릿해서",
+          "resultTypeCode": "V",
+          "score": 1
+        }
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/idol-position-test/q7.webp?v=1769866392212"
+    }
+  ],
+  "results": [
+    {
+      "typeCode": "M",
+      "title": "믿고 듣는 '확신의 메인보컬' (Main Vocal)",
+      "description": "성대 차력쇼 담당! \\n\\n당신은 타고난 성량과 감성으로 무대를 찢어놓습니다. 3단 고음은 기본, 라이브가 CD를 삼킨 수준이죠. 평소엔 조용하다가도 노래만 시작하면 눈빛이 변합니다. 팀의 음악적 중심을 잡아주는 없어서는 안 될 기둥 같은 존재! (복면가왕 가왕 출신)",
+      "isPremium": false,
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/idol-position-test/result-m.webp?v=1769866392453"
+    },
+    {
+      "typeCode": "C",
+      "title": "숨만 쉬어도 입덕 '확신의 센터' (Visual Center)",
+      "description": "비주얼 쇼크! 엔딩 요정! \\n\\n당신은 태어날 때부터 아이돌 DNA를 장착했습니다. 카메라가 당신을 사랑하고, 당신이 화면에 잡히면 시청률이 올라갑니다. 뛰어난 외모는 물론, 사람을 홀리는 끼를 타고났어요. 팀의 입덕 문이자 얼굴 간판입니다. (광고 섭외 1순위)",
+      "isPremium": false,
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/idol-position-test/result-c.webp?v=1769866392700"
+    },
+    {
+      "typeCode": "L",
+      "title": "멘탈 지주 '참된 리더' (The Leader)",
+      "description": "우리 애들 건드리면 가만 안 둬. \\n\\n당신은 팀을 하나로 묶어주는 든든한 버팀목입니다. 멤버들의 고충을 들어주고, 회사와 싸우며(?), 수상 소감을 기가 막히게 말합니다. 화려한 조명보다 멤버들의 성장을 볼 때 더 뿌듯해하는 엄마/아빠 같은 존재. 당신이 있어서 팀이 롱런할 수 있어요.",
+      "isPremium": false,
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/idol-position-test/result-l.webp?v=1769866392898"
+    },
+    {
+      "typeCode": "V",
+      "title": "예능 치트키 '입덕 요정' (Variety Star)",
+      "description": "방송 분량 제조기! \\n\\n노래와 춤은 기본, 유머 감각과 센스까지 겸비했습니다. 예능 프로그램에 나가면 무조건 고정 픽! 털털하고 친근한 매력으로 대중적인 인지도가 가장 높습니다. 팬들과 소통왕이며, 팀의 분위기 메이커 역할을 톡톡히 합니다. (유튜브 개인 채널 구독자 100만)",
+      "isPremium": false,
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/idol-position-test/result-v.webp?v=1769866393114"
+    }
+  ],
+  "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/idol-position-test/main-cover.webp?v=1769866393310"
+}
