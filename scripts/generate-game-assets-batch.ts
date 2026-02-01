@@ -52,22 +52,18 @@ async function generateWithAiStudio(prompt: string, gameSlug: string, filename: 
 }
 
 const jobs = [
-    // Batch 6
-    { slug: 'galaxy-defender', prompt: '8-bit pixel art cool starship, top view, vibrant colors, centered on white background, game asset', file: 'player.png' },
-    { slug: 'galaxy-defender', prompt: '8-bit pixel art menacing alien spaceship, top view, centered on white background, game asset', file: 'enemy.png' },
-    { slug: 'galaxy-defender', prompt: '8-bit pixel art deep space background with stars and nebulae, retro game style, game asset', file: 'bg.png' },
-    { slug: 'box-tower', prompt: '8-bit pixel art simple cardboard box, centered on white background, game asset', file: 'box.png' },
-    { slug: 'box-tower', prompt: '8-bit pixel art city alley background with brick walls, retro game style, game asset', file: 'bg.png' },
-    { slug: 'fruit-slicer', prompt: '8-bit pixel art juicy red apple, centered on white background, game asset', file: 'apple.png' },
-    { slug: 'fruit-slicer', prompt: '8-bit pixel art bright yellow banana, centered on white background, game asset', file: 'banana.png' },
-    { slug: 'fruit-slicer', prompt: '8-bit pixel art dark wooden board texture background, clean and simple, game asset', file: 'bg.png' },
-    { slug: 'traffic-control', prompt: '8-bit pixel art red sports car, top view, centered on white background, game asset', file: 'car_red.png' },
-    { slug: 'traffic-control', prompt: '8-bit pixel art blue sedan car, top view, centered on white background, game asset', file: 'car_blue.png' },
-    { slug: 'traffic-control', prompt: '8-bit pixel art city road intersection background, top view, retro game style, game asset', file: 'intersection.png' },
-    { slug: 'nonogram-logic', prompt: '8-bit pixel art solid blue filled square tile, centered on white background, game asset', file: 'tile_filled.png' },
-    { slug: 'nonogram-logic', prompt: '8-bit pixel art clean grid paper background, subtle lines, game asset', file: 'bg.png' },
-    { slug: 'clicker-hero', prompt: '8-bit pixel art cute green slime monster with big eyes, centered on white background, game asset', file: 'monster.png' },
-    { slug: 'clicker-hero', prompt: '8-bit pixel art lush green field background with a distance castle, retro game style, game asset', file: 'bg.png' }
+    // Batch 1-C: Board & Puzzle (Chroma Key & Shadows)
+    { slug: 'connect-four', prompt: '8-bit pixel art yellow game board for connect four, with empty circular holes, on a pure fluorescent green background (#00FF00), retro game style, clean edges', file: 'board.png' },
+    { slug: 'connect-four', prompt: '8-bit pixel art red circular game chip for connect four, on a pure fluorescent green background (#00FF00), with a soft subtle shadow beneath, retro game style, clean edges', file: 'red_chip.png' },
+    { slug: 'connect-four', prompt: '8-bit pixel art yellow circular game chip for connect four, on a pure fluorescent green background (#00FF00), with a soft subtle shadow beneath, retro game style, clean edges', file: 'yellow_chip.png' },
+    { slug: 'minesweeper', prompt: '8-bit pixel art classic sea mine with spikes for minesweeper, on a pure fluorescent green background (#00FF00), with a soft subtle shadow beneath, retro game style, clean edges', file: 'mine.png' },
+    { slug: 'minesweeper', prompt: '8-bit pixel art red military flag for minesweeper, on a pure fluorescent green background (#00FF00), with a soft subtle shadow beneath, retro game style, clean edges', file: 'flag.png' },
+    { slug: 'tic-tac-toe', prompt: '8-bit pixel art wooden circle O symbol for tic-tac-toe, on a pure fluorescent green background (#00FF00), retro game style, clean edges, vibrant colors', file: 'o.png' },
+    { slug: 'tic-tac-toe', prompt: '8-bit pixel art wooden cross X symbol for tic-tac-toe, on a pure fluorescent green background (#00FF00), retro game style, clean edges, vibrant colors', file: 'x.png' },
+    { slug: 'memory-match', prompt: '8-bit pixel art retro game card back with a golden question mark, on a pure fluorescent green background (#00FF00), with a soft subtle shadow beneath, retro game style, clean edges', file: 'back.png' },
+    { slug: 'memory-match', prompt: '8-bit pixel art colorful diamond icon for memory card, on a pure fluorescent green background (#00FF00), retro game style, clean edges', file: 'card1.png' },
+    { slug: 'memory-match', prompt: '8-bit pixel art colorful star icon for memory card, on a pure fluorescent green background (#00FF00), retro game style, clean edges', file: 'card2.png' },
+    { slug: 'memory-match', prompt: '8-bit pixel art colorful heart icon for memory card, on a pure fluorescent green background (#00FF00), retro game style, clean edges', file: 'card3.png' }
 ]
 
 async function main() {
