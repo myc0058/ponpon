@@ -1,0 +1,95 @@
+{
+    "title": "내면의 세계관 탐구 테스트 (예시)",
+    "description": "당신의 잠재의식 속 숨겨진 성향을 다각도로 분석합니다.",
+    "resultType": "TYPE_BASED",
+    "typeCodeLimit": 2,
+    "validCodes": [
+        "RA",
+        "RS",
+        "CA",
+        "CS"
+    ],
+    "notes": "R/C (Rational/Creative), A/S (Active/Stable) 두 가지 축을 가진 차원형 예시",
+    "questions": [
+        {
+            "order": 1,
+            "content": "새로운 프로젝트를 시작할 때 당신의 첫 번째 행동은?",
+            "options": [
+                {
+                    "content": "철저한 자료 조사와 계획 수립",
+                    "resultTypeCode": "R",
+                    "score": 1,
+                    "weights": {
+                        "R": 5,
+                        "S": 2
+                    },
+                    "notes": "R 축에 강한 점수, S 축에 약한 점수 부여"
+                },
+                {
+                    "content": "직관적으로 떠오르는 아이디어 스케치",
+                    "resultTypeCode": "C",
+                    "score": 1,
+                    "weights": {
+                        "C": 5,
+                        "A": 3
+                    },
+                    "notes": "C 축에 강한 점수, A 축에 중간 점수 부여"
+                }
+            ]
+        },
+        {
+            "order": 2,
+            "content": "예상치 못한 문제가 발생했을 때",
+            "options": [
+                {
+                    "content": "차분하게 원인을 분석하고 해결책 모색",
+                    "resultTypeCode": "S",
+                    "score": 1,
+                    "weights": {
+                        "S": 5,
+                        "R": 2
+                    }
+                },
+                {
+                    "content": "즉각적으로 행동하며 몸으로 부딪힘",
+                    "resultTypeCode": "A",
+                    "score": 1,
+                    "weights": {
+                        "A": 5,
+                        "C": 2
+                    }
+                }
+            ]
+        }
+    ],
+    "results": [
+        {
+            "typeCode": "RA",
+            "title": "전략적 선구자 (Strategic Pioneer)",
+            "description": "당신은 이성적인 판단력과 빠른 실행력을 동시에 갖춘 사람입니다. \\n\\n상황을 객관적으로 파악하면서도 기회가 왔을 때 망설이지 않고 뛰어듭니다. 가끔은 너무 앞서 나가 주위를 당황시키기도 하지만, 결국 결과를 만들어내는 해결사입니다.",
+            "keywords": [
+                "#전략가",
+                "#행행가",
+                "#논리적인"
+            ],
+            "compatibility": {
+                "bestMatch": "CS",
+                "worstMatch": "CA"
+            }
+        },
+        {
+            "typeCode": "CS",
+            "title": "감성적 중재자 (Emotional Mediator)",
+            "description": "창의적인 영감을 소중히 여기면서도 안정적인 조화를 추구하는 타입입니다. \\n\\n사람들의 마음을 읽는 능력이 탁월하며, 예술적인 감수성과 차분한 태도로 주변에 긍정적인 영향을 줍니다. 갈등 상황에서도 평온을 유지하려 노력하는 평화주의자입니다.",
+            "keywords": [
+                "#감성",
+                "#평화",
+                "#아이디어"
+            ],
+            "compatibility": {
+                "bestMatch": "RA",
+                "worstMatch": "RS"
+            }
+        }
+    ]
+}
