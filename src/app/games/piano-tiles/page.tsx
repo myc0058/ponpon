@@ -113,12 +113,12 @@ function PianoTilesGame({ onGameOver }: { onGameOver: (score: number) => void })
                 </div>
             ))}
             {!gameStarted && (
-                <div style={{ position: 'absolute', inset: 0, display: 'flex', justifyContent: 'center', alignItems: 'center', background: 'rgba(0,0,0,0.3)', color: 'white', z- index: 20 }}>
-            <h2>TAP TO START</h2>
+                <div style={{ position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', background: 'rgba(0,0,0,0.7)', color: 'white', zIndex: 20 }}>
+                    <h2 style={{ fontSize: '2rem', marginBottom: '1rem' }}>TAP TO START</h2>
+                    <p>검은색 타일을 탭하세요!</p>
+                </div>
+            )}
         </div>
-    )
-}
-        </div >
     );
 }
 

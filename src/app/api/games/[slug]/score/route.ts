@@ -19,7 +19,7 @@ export async function POST(
         const key = `leaderboard:${slug}`;
 
         // ZADD with GT updates only if the new score is greater than the existing score
-        await redis.zadd(key, { score, member: nickname, gt: true });
+        await redis.zadd(key, { gt: true }, { score, member: nickname });
 
         // Get the user's rank (0-based index, so add 1)
         // ZREVRANK returns the rank from high to low
