@@ -6,6 +6,7 @@ export interface Quiz {
     resultType: 'SCORE_BASED' | 'TYPE_BASED'
     typeCodeLimit: number
     isFeatured: boolean
+    isHot: boolean
     isVisible: boolean
     createdAt: Date
     updatedAt: Date
@@ -39,4 +40,16 @@ export interface Result {
     maxScore: number
     typeCode?: string | null
     isPremium: boolean
+}
+
+export interface MiniGame {
+    id: string
+    slug: string
+    title: string
+    description: string
+    thumbnailUrl?: string | null
+    isActive: boolean
+    isFeatured: boolean
+    createdAt: Date
+    updatedAt: Date
 }

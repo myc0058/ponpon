@@ -16,6 +16,7 @@ model Quiz {
   resultType    ResultType @default(SCORE_BASED)
   typeCodeLimit Int        @default(2)
   isFeatured    Boolean    @default(false)
+  isHot         Boolean    @default(false)
   isVisible     Boolean    @default(false)
   createdAt     DateTime   @default(now())
   updatedAt     DateTime   @updatedAt

@@ -33,6 +33,51 @@
     flex-direction: column;
 }
 
+.hotBadge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: linear-gradient(135deg, #ff4d4d, #f9cb28);
+    padding: 2px 10px;
+    /* 수직 패딩 소폭 감소 */
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(255, 77, 77, 0.4);
+    z-index: 2;
+    animation: pulse 2s infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 42px;
+    /* 일정한 너비 확보 */
+    height: 22px;
+    /* 일정한 높이 확보 */
+}
+
+.hotText {
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        filter: brightness(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+        filter: brightness(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+        filter: brightness(1);
+    }
+}
+
 .cardTitle {
     font-size: 1.1rem;
     font-weight: 700;

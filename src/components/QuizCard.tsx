@@ -24,6 +24,11 @@ export default function QuizCard({ quiz, priority = false }: QuizCardProps) {
                     className={styles.thumbnail}
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
+                {quiz.isHot && (
+                    <div className={styles.hotBadge}>
+                        <span className={styles.hotText}>HOT</span>
+                    </div>
+                )}
             </div>
             <div className={styles.cardContent}>
                 <h2 className={styles.cardTitle}>{quiz.title}</h2>
