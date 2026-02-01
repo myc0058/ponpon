@@ -37,7 +37,7 @@
 }
 
 .cellMine {
-    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/minesweeper/mine.webp?v=1769859800256');
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/minesweeper/mine.webp?v=1769939350061');
     background-size: 80%;
     background-repeat: no-repeat;
     background-position: center;
@@ -45,7 +45,7 @@
 }
 
 .cellFlagged {
-    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/minesweeper/flag.webp?v=1769859800049');
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/minesweeper/flag.webp?v=1769939350061');
     background-size: 80%;
     background-repeat: no-repeat;
     background-position: center;

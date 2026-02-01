@@ -3,7 +3,7 @@
     max-width: 400px;
     margin: 0 auto;
     background-color: #0c0a09;
-    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/higher-lower/bg.webp?v=1769870013954');
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/higher-lower/bg.webp?v=1769939350059');
     background-size: cover;
     padding: 30px;
     border-radius: 16px;
@@ -23,7 +23,7 @@
     width: 120px;
     height: 180px;
     background: linear-gradient(135deg, #1e293b, #0f172a);
-    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/higher-lower/card_back.webp?v=1769870014144');
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/higher-lower/card_back.webp?v=1769939350059');
     background-size: cover;
     border: 3px solid #334155;
     border-radius: 12px;

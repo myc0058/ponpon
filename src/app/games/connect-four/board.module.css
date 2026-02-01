@@ -3,7 +3,7 @@
     max-width: 450px;
     margin: 0 auto;
     background-color: #1d4ed8;
-    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/connect-four/board.webp?v=1769870010862');
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/connect-four/board.webp?v=1769939350056');
     background-size: 100% 100%;
     /* Blue board */
     padding: 15px;
@@ -33,13 +33,13 @@
 }
 
 .red {
-    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/connect-four/red_chip.webp?v=1769870011072');
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/connect-four/red_chip.webp?v=1769939350056');
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 .yellow {
-    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/connect-four/yellow_chip.webp?v=1769870011308');
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/connect-four/yellow_chip.webp?v=1769939350056');
     background-size: contain;
     background-repeat: no-repeat;
 }

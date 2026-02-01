@@ -4,7 +4,7 @@
     height: 400px;
     margin: 0 auto;
     background-color: #27272a;
-    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/fruit-slicer/bg.webp?v=1769870405898');
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/fruit-slicer/bg.webp?v=1769939350058');
     background-size: cover;
     position: relative;
     overflow: hidden;
@@ -31,11 +31,11 @@
 }
 
 .apple {
-    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/fruit-slicer/apple.webp?v=1769870405552');
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/fruit-slicer/apple.webp?v=1769939350058');
 }
 
 .banana {
-    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/fruit-slicer/banana.webp?v=1769870405786');
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/fruit-slicer/banana.webp?v=1769939350058');
 }
 
 .slash {

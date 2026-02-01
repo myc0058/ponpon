@@ -40,7 +40,7 @@
 }
 
 .cellX {
-    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/tic-tac-toe/x.webp?v=1769859801118');
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/tic-tac-toe/x.webp?v=1769939350063');
     background-size: 80%;
     background-repeat: no-repeat;
     background-position: center;
@@ -48,7 +48,7 @@
 }
 
 .cellO {
-    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/tic-tac-toe/o.webp?v=1769859800941');
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/tic-tac-toe/o.webp?v=1769939350063');
     background-size: 80%;
     background-repeat: no-repeat;
     background-position: center;

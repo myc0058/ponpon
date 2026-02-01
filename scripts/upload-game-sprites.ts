@@ -1,9 +1,8 @@
 
 import 'dotenv/config'
 import { createClient } from '@supabase/supabase-js'
-import { existsSync, readdirSync, lstatSync } from 'fs'
+import { existsSync, readdirSync, lstatSync, readFileSync, unlinkSync } from 'fs'
 import path from 'path'
-import sharp from 'sharp'
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
 const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY || ''
@@ -17,13 +16,11 @@ async function uploadSprite(filePath: string, gameSlug: string, assetName: strin
     console.log(`🚀 Uploading sprite: ${gameSlug}/${assetName}...`)
 
     try {
-        const webpBuffer = await sharp(filePath)
-            .webp({ quality: 90 })
-            .toBuffer()
+        const fileBuffer = readFileSync(filePath)
 
         const { error } = await supabase.storage
             .from('quiz-images')
-            .upload(remotePath, webpBuffer, {
+            .upload(remotePath, fileBuffer, {
                 contentType: 'image/webp',
                 upsert: true
             })
@@ -53,12 +50,22 @@ async function main() {
         if (!lstatSync(gameDirPath).isDirectory()) continue
 
         const spriteFiles = readdirSync(gameDirPath)
-        for (const spriteFile of spriteFiles) {
-            const assetName = path.parse(spriteFile).name
-            const fullPath = path.join(gameDirPath, spriteFile)
+        // .webp 파일들만 업로드
+        const webpFiles = spriteFiles.filter(f => f.endsWith('.webp'))
+
+        for (const webpFile of webpFiles) {
+            const assetName = path.parse(webpFile).name
+            const fullPath = path.join(gameDirPath, webpFile)
             const url = await uploadSprite(fullPath, gameSlug, assetName)
             if (url) {
                 console.log(`✅ ${gameSlug}/${assetName}: ${url}`)
+            }
+        }
+
+        // 업로드 후 로컬 PNG 삭제 (사용자 요청: webp 파일만 남기게 해줘)
+        for (const file of spriteFiles) {
+            if (file.endsWith('.png')) {
+                unlinkSync(path.join(gameDirPath, file))
             }
         }
     }

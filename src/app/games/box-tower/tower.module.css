@@ -4,7 +4,7 @@
     height: 500px;
     margin: 0 auto;
     background-color: #fca5a5;
-    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/box-tower/bg.webp?v=1769870405527');
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/box-tower/bg.webp?v=1769939350053');
     background-size: cover;
     position: relative;
     overflow: hidden;
@@ -16,7 +16,7 @@
     position: absolute;
     width: 50px;
     height: 50px;
-    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/box-tower/box.webp?v=1769870405321');
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/box-tower/box.webp?v=1769939350053');
     background-size: contain;
     background-repeat: no-repeat;
     z-index: 5;

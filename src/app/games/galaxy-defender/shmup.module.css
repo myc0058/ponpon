@@ -4,7 +4,7 @@
     height: 500px;
     margin: 0 auto;
     background-color: #020617;
-    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/galaxy-defender/bg.webp?v=1769870405103');
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/galaxy-defender/bg.webp?v=1769939350058');
     background-size: cover;
     position: relative;
     overflow: hidden;
@@ -16,7 +16,7 @@
     position: absolute;
     width: 40px;
     height: 40px;
-    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/galaxy-defender/player.webp?v=1769870404616');
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/galaxy-defender/player.webp?v=1769939350058');
     background-size: contain;
     background-repeat: no-repeat;
     z-index: 10;
@@ -35,7 +35,7 @@
     position: absolute;
     width: 35px;
     height: 35px;
-    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/galaxy-defender/enemy.webp?v=1769870404882');
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/galaxy-defender/enemy.webp?v=1769939350058');
     background-size: contain;
     background-repeat: no-repeat;
 }

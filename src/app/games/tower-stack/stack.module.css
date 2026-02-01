@@ -1,7 +1,7 @@
 .gameContainer {
     width: 300px;
     height: 500px;
-    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/tower-stack/bg.webp?v=1769860105193');
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/tower-stack/bg.webp?v=1769939350063');
     background-size: cover;
     background-position: center;
     margin: 0 auto;
@@ -14,7 +14,7 @@
     position: absolute;
     height: 30px;
     border-radius: 4px;
-    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/tower-stack/block.webp?v=1769861018865');
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/tower-stack/block.webp?v=1769939350063');
     background-size: cover;
     background-blend-mode: multiply;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);

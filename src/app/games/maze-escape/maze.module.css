@@ -22,7 +22,7 @@
 }
 
 .wall {
-    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/maze-escape/wall.webp?v=1769870235311');
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/maze-escape/wall.webp?v=1769939350060');
     background-size: cover;
 }
 
@@ -31,14 +31,14 @@
 }
 
 .player {
-    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/maze-escape/player.webp?v=1769870235023');
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/maze-escape/player.webp?v=1769939350060');
     background-size: contain;
     background-repeat: no-repeat;
     z-index: 5;
 }
 
 .exit {
-    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/maze-escape/exit.webp?v=1769870235552');
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/maze-escape/exit.webp?v=1769939350060');
     background-size: contain;
     background-repeat: no-repeat;
     box-shadow: 0 0 15px #10b981;

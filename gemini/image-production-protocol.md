@@ -12,6 +12,11 @@
 - **저장소**: Supabase Storage (`quiz-images` 버킷)
 - **캐싱**: URL 끝에 `?v=timestamp`를 붙여 캐시 버스팅 적용
 - **텍스트 금지 (No Text)**: 이미지 내에 어떠한 글자, 숫자, 기호도 포함하지 않습니다. (프롬프트에 명시 필수)
+- **투명 배경 필요 시 (Transparency)**: 배경을 투명하게 처리해야 하는 에셋(게임 스프라이트 등)의 경우, 프롬프트에 **"pure fluorescent green background (#0000FF)"** 또는 **"chroma key green background"**를 명시하여 생성합니다.
+- **반투명/그림자 처리 (Semi-transparency)**: 유리창이나 부드러운 그림자가 필요한 경우에도 동일한 **형광 녹색(#00FF00)** 배경을 사용합니다.
+    - **Color Un-mixing 원리**: 픽셀에서 배경색(초록)의 비율을 계산하여 이를 Alpha로 변환하는 기법입니다.
+    - **수학적 모델**: `Alpha = 1.0 - (Green - max(Red, Blue))`. 이 수식을 통해 그림자의 깊이를 정밀하게 추출합니다.
+    - **De-spill**: 반투명 영역에 남은 초록색 색조를 제거하기 위해 `Green = max(Red, Blue)` 처리를 병행합니다.
 
 ---
 

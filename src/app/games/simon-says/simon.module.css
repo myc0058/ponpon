@@ -2,7 +2,7 @@
     width: 100%;
     max-width: 400px;
     margin: 0 auto;
-    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/simon-says/bg.webp?v=1769861619660');
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/simon-says/bg.webp?v=1769939350062');
     background-size: cover;
     background-color: #1e293b;
     padding: 30px;
@@ -40,7 +40,7 @@
 
 .green {
     background-color: #22c55e;
-    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/simon-says/green.webp?v=1769861619223');
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/simon-says/green.webp?v=1769939350062');
     background-size: cover;
     background-blend-mode: hard-light;
     border-top-left-radius: 100%;
@@ -49,7 +49,7 @@
 
 .red {
     background-color: #ef4444;
-    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/simon-says/red.webp?v=1769861618770');
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/simon-says/red.webp?v=1769939350062');
     background-size: cover;
     background-blend-mode: hard-light;
     border-top-right-radius: 100%;
@@ -58,7 +58,7 @@
 
 .yellow {
     background-color: #eab308;
-    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/simon-says/yellow.webp?v=1769861619448');
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/simon-says/yellow.webp?v=1769939350062');
     background-size: cover;
     background-blend-mode: hard-light;
     border-bottom-left-radius: 100%;
@@ -67,7 +67,7 @@
 
 .blue {
     background-color: #3b82f6;
-    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/simon-says/blue.webp?v=1769861618991');
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/simon-says/blue.webp?v=1769939350062');
     background-size: cover;
     background-blend-mode: hard-light;
     border-bottom-right-radius: 100%;

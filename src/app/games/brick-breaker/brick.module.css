@@ -3,7 +3,7 @@
     max-width: 400px;
     height: 500px;
     margin: 0 auto;
-    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/brick-breaker/bg.webp?v=1769861014163');
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/brick-breaker/bg.webp?v=1769939350054');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -17,7 +17,7 @@
     position: absolute;
     bottom: 20px;
     height: 12px;
-    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/brick-breaker/paddle.webp?v=1769861013774');
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/brick-breaker/paddle.webp?v=1769939350054');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-color: transparent;
@@ -29,7 +29,7 @@
     position: absolute;
     width: 12px;
     height: 12px;
-    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/brick-breaker/ball.webp?v=1769861013589');
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/brick-breaker/ball.webp?v=1769939350054');
     background-size: contain;
     background-repeat: no-repeat;
     background-color: transparent;
@@ -41,7 +41,7 @@
     position: absolute;
     height: 20px;
     border-radius: 2px;
-    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/brick-breaker/brick.webp?v=1769861013961');
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/brick-breaker/brick.webp?v=1769939350054');
     background-size: 100% 100%;
     background-blend-mode: multiply;
     border: 1px solid rgba(0, 0, 0, 0.1);

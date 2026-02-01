@@ -4,7 +4,7 @@
     height: 500px;
     margin: 0 auto;
     background-color: #3f6212;
-    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/traffic-control/intersection.webp?v=1769870410023');
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/traffic-control/intersection.webp?v=1769939350064');
     background-size: cover;
     /* Grass */
     position: relative;
@@ -23,7 +23,7 @@
     position: absolute;
     width: 40px;
     height: 70px;
-    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/traffic-control/car_red.webp?v=1769870409739');
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/traffic-control/car_red.webp?v=1769939350064');
     background-size: contain;
     background-repeat: no-repeat;
     cursor: pointer;
@@ -31,7 +31,7 @@
 }
 
 .carBlue {
-    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/traffic-control/car_blue.webp?v=1769870409552');
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/traffic-control/car_blue.webp?v=1769939350064');
 }
 
 

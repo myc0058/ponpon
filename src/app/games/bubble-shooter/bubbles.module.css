@@ -4,7 +4,7 @@
     height: 500px;
     margin: 0 auto;
     background-color: #1e1b4b;
-    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/bubble-shooter/bg.webp?v=1769870020112');
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/bubble-shooter/bg.webp?v=1769939350055');
     background-size: cover;
     position: relative;
     overflow: hidden;
@@ -27,7 +27,7 @@
     left: 50%;
     width: 80px;
     height: 80px;
-    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/bubble-shooter/shooter.webp?v=1769870019912');
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/bubble-shooter/shooter.webp?v=1769939350055');
     background-size: contain;
     background-repeat: no-repeat;
     transform-origin: center 70%;
@@ -57,15 +57,15 @@
 
 /* Colors */
 .red {
-    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/bubble-shooter/bubble_red.webp?v=1769870019282');
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/bubble-shooter/bubble_red.webp?v=1769939350055');
 }
 
 .blue {
-    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/bubble-shooter/bubble_blue.webp?v=1769870019512');
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/bubble-shooter/bubble_blue.webp?v=1769939350055');
 }
 
 .green {
-    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/bubble-shooter/bubble_green.webp?v=1769870019712');
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/bubble-shooter/bubble_green.webp?v=1769939350055');
 }
 
 .yellow {

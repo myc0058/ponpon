@@ -3,7 +3,7 @@
     max-width: 500px;
     margin: 0 auto;
     background-color: #064e3b;
-    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/card-solitaire/bg.webp?v=1769870010488');
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/card-solitaire/bg.webp?v=1769939350055');
     background-size: cover;
     padding: 20px;
     border-radius: 12px;
@@ -16,7 +16,7 @@
 .tile {
     aspect-ratio: 3/4;
     background-color: #fef3c7;
-    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/card-solitaire/card_back.webp?v=1769870010299');
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/card-solitaire/card_back.webp?v=1769939350055');
     background-size: cover;
     border-radius: 4px;
     border: 1px solid #d97706;

@@ -4,7 +4,7 @@
     height: 500px;
     margin: 0 auto;
     background-color: #f0f9ff;
-    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/jump-jump/bg.webp?v=1769870234250');
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/jump-jump/bg.webp?v=1769939350059');
     background-size: cover;
     position: relative;
     overflow: hidden;
@@ -16,7 +16,7 @@
     position: absolute;
     width: 40px;
     height: 40px;
-    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/jump-jump/player.webp?v=1769870234034');
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/jump-jump/player.webp?v=1769939350059');
     background-size: contain;
     background-repeat: no-repeat;
     z-index: 10;
@@ -27,7 +27,7 @@
     position: absolute;
     width: 80px;
     height: 25px;
-    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/jump-jump/platform.webp?v=1769870234140');
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/jump-jump/platform.webp?v=1769939350059');
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }

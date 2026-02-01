@@ -26,13 +26,13 @@
 }
 
 .snakeHead {
-    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/snake/head.webp?v=1769858310782');
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/snake/head.webp?v=1769939350062');
     background-size: cover;
     z-index: 2;
 }
 
 .food {
-    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/snake/apple.webp?v=1769858310588');
+    background-image: url('https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/games/sprites/snake/apple.webp?v=1769939350062');
     background-size: contain;
     background-repeat: no-repeat;
     animation: pulse 1s infinite alternate;
