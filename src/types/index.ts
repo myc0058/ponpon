@@ -42,14 +42,3 @@ export interface Result {
     isPremium: boolean
 }
 
-export interface MiniGame {
-    id: string
-    slug: string
-    title: string
-    description: string
-    thumbnailUrl?: string | null
-    isActive: boolean
-    isFeatured: boolean
-    createdAt: Date
-    updatedAt: Date
-}

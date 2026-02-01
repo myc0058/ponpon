@@ -50,8 +50,6 @@
 ```
 
 ## 3. 이미지 생성 (Asset Production)
-모든 이미지 생성은 [통합 이미지 생성 프로토콜](image-production-protocol.md)을 엄격히 준수합니다.
-
 `generate_image` 도구를 사용하여 이미지를 생성하며, 쿼터가 부족하거나 대량의 이미지가 필요한 경우 **NanoBanana (Gemini 2.5 Flash Image)** 방식을 우선 사용합니다.
 
 1.  **이미지 컨셉 선정**:

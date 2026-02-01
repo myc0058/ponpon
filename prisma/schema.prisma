@@ -64,17 +64,6 @@ model ShortUrl {
   visits      Int      @default(0)
 }
 
-model MiniGame {
-  id           String   @id @default(cuid())
-  slug         String   @unique
-  title        String
-  description  String
-  thumbnailUrl String?
-  isActive     Boolean  @default(true)
-  isFeatured   Boolean  @default(false)
-  createdAt    DateTime @default(now())
-  updatedAt    DateTime @updatedAt
-}
 
 enum ResultType {
   SCORE_BASED
