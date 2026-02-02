@@ -28,7 +28,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/fantasy-class-test/q1.webp?v=1769867225378"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/fantasy-class-test/q1.webp?v=1769995698899"
     },
     {
       "order": 2,
@@ -55,7 +55,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/fantasy-class-test/q2.webp?v=1769867225633"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/fantasy-class-test/q2.webp?v=1769995699058"
     },
     {
       "order": 3,
@@ -82,7 +82,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/fantasy-class-test/q3.webp?v=1769867225845"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/fantasy-class-test/q3.webp?v=1769995699254"
     },
     {
       "order": 4,
@@ -109,7 +109,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/fantasy-class-test/q4.webp?v=1769867226081"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/fantasy-class-test/q4.webp?v=1769995699410"
     },
     {
       "order": 5,
@@ -136,7 +136,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/fantasy-class-test/q5.webp?v=1769867226331"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/fantasy-class-test/q5.webp?v=1769995699637"
     }
   ],
   "results": [
@@ -145,29 +145,29 @@
       "title": "든든한 방패 '탱커' (The Tank)",
       "description": "내 뒤에 숨어! \\n\\n당신은 파티의 기둥입니다. 남을 보호하려는 본능이 강하고 책임감이 넘치죠. 어떤 고난이 닥쳐도 묵묵히 버텨내는 인내심의 소유자. 겉으로는 무뚝뚝해 보일 수 있지만, 속은 누구보다 따뜻합니다. 당신 없이는 파티가 유지될 수 없어요.",
       "isPremium": false,
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/fantasy-class-test/result-t.webp?v=1769867226563"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/fantasy-class-test/result-t.webp?v=1769995700297"
     },
     {
       "typeCode": "D",
       "title": "폭발적 화력 '딜러' (The Damage Dealer)",
       "description": "최선의 방어는 공격이다. \\n\\n답답한 건 질색! 화끈하게 적을 쓸어버리는 스타일입니다. 승부욕이 강하고 자신이 돋보이는 것을 좋아하죠. 가끔 무리해서 위험에 빠지기도 하지만, 결정적인 순간에 해결사 역할을 하는 것은 바로 당신입니다.",
       "isPremium": false,
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/fantasy-class-test/result-d.webp?v=1769867226767"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/fantasy-class-test/result-d.webp?v=1769995699796"
     },
     {
       "typeCode": "H",
       "title": "생명의 빛 '힐러' (The Healer)",
       "description": "다치지 마세요. \\n\\n당신은 타인을 돕는 것에서 기쁨을 느낍니다. 세심하고 배려심이 깊어 파티원들의 상태를 누구보다 잘 파악하죠. 싸움을 싫어하는 평화주이자와 같지만, 동료가 위험해지면 누구보다 무섭게 변할 수도 있습니다.",
       "isPremium": false,
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/fantasy-class-test/result-h.webp?v=1769867226931"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/fantasy-class-test/result-h.webp?v=1769995699991"
     },
     {
       "typeCode": "S",
       "title": "만능 지휘자 '서포터' (The Support)",
       "description": "전략은 나에게 맡겨. \\n\\n직접 싸우기보다는 판을 읽고 조율하는 능력이 뛰어납니다. 버프를 걸어주거나 적을 교란하는 등 다양한 방식으로 승리를 돕습니다. 상황 판단력이 빠르고 눈치가 백단이라 어디서든 환영받는 존재입니다.",
       "isPremium": false,
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/fantasy-class-test/result-s.webp?v=1769867227155"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/fantasy-class-test/result-s.webp?v=1769995700145"
     }
   ],
-  "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/fantasy-class-test/main-cover.webp?v=1769867227359"
+  "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/fantasy-class-test/main-cover.webp?v=1769995698739"
 }

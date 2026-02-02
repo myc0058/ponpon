@@ -28,7 +28,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/idol-position-test/q1.webp?v=1769866390938"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/idol-position-test/q1.webp?v=1769995709906"
     },
     {
       "order": 2,
@@ -55,7 +55,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/idol-position-test/q2.webp?v=1769866391208"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/idol-position-test/q2.webp?v=1769995710073"
     },
     {
       "order": 3,
@@ -82,7 +82,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/idol-position-test/q3.webp?v=1769866391494"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/idol-position-test/q3.webp?v=1769995710239"
     },
     {
       "order": 4,
@@ -109,7 +109,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/idol-position-test/q4.webp?v=1769866391727"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/idol-position-test/q4.webp?v=1769995710468"
     },
     {
       "order": 5,
@@ -136,7 +136,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/idol-position-test/q5.webp?v=1769866391944"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/idol-position-test/q5.webp?v=1769995710690"
     },
     {
       "order": 6,
@@ -163,7 +163,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/idol-position-test/q6.webp?v=1769867214626"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/idol-position-test/q6.webp?v=1769995710865"
     },
     {
       "order": 7,
@@ -190,7 +190,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/idol-position-test/q7.webp?v=1769866392212"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/idol-position-test/q7.webp?v=1769995711055"
     }
   ],
   "results": [
@@ -199,29 +199,29 @@
       "title": "믿고 듣는 '확신의 메인보컬' (Main Vocal)",
       "description": "성대 차력쇼 담당! \\n\\n당신은 타고난 성량과 감성으로 무대를 찢어놓습니다. 3단 고음은 기본, 라이브가 CD를 삼킨 수준이죠. 평소엔 조용하다가도 노래만 시작하면 눈빛이 변합니다. 팀의 음악적 중심을 잡아주는 없어서는 안 될 기둥 같은 존재! (복면가왕 가왕 출신)",
       "isPremium": false,
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/idol-position-test/result-m.webp?v=1769866392453"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/idol-position-test/result-m.webp?v=1769995712897"
     },
     {
       "typeCode": "C",
       "title": "숨만 쉬어도 입덕 '확신의 센터' (Visual Center)",
       "description": "비주얼 쇼크! 엔딩 요정! \\n\\n당신은 태어날 때부터 아이돌 DNA를 장착했습니다. 카메라가 당신을 사랑하고, 당신이 화면에 잡히면 시청률이 올라갑니다. 뛰어난 외모는 물론, 사람을 홀리는 끼를 타고났어요. 팀의 입덕 문이자 얼굴 간판입니다. (광고 섭외 1순위)",
       "isPremium": false,
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/idol-position-test/result-c.webp?v=1769866392700"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/idol-position-test/result-c.webp?v=1769995711235"
     },
     {
       "typeCode": "L",
       "title": "멘탈 지주 '참된 리더' (The Leader)",
       "description": "우리 애들 건드리면 가만 안 둬. \\n\\n당신은 팀을 하나로 묶어주는 든든한 버팀목입니다. 멤버들의 고충을 들어주고, 회사와 싸우며(?), 수상 소감을 기가 막히게 말합니다. 화려한 조명보다 멤버들의 성장을 볼 때 더 뿌듯해하는 엄마/아빠 같은 존재. 당신이 있어서 팀이 롱런할 수 있어요.",
       "isPremium": false,
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/idol-position-test/result-l.webp?v=1769866392898"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/idol-position-test/result-l.webp?v=1769995711411"
     },
     {
       "typeCode": "V",
       "title": "예능 치트키 '입덕 요정' (Variety Star)",
       "description": "방송 분량 제조기! \\n\\n노래와 춤은 기본, 유머 감각과 센스까지 겸비했습니다. 예능 프로그램에 나가면 무조건 고정 픽! 털털하고 친근한 매력으로 대중적인 인지도가 가장 높습니다. 팬들과 소통왕이며, 팀의 분위기 메이커 역할을 톡톡히 합니다. (유튜브 개인 채널 구독자 100만)",
       "isPremium": false,
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/idol-position-test/result-v.webp?v=1769866393114"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/idol-position-test/result-v.webp?v=1769995713085"
     }
   ],
-  "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/idol-position-test/main-cover.webp?v=1769866393310"
+  "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/idol-position-test/main-cover.webp?v=1769995709747"
 }

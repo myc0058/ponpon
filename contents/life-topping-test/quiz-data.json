@@ -3,12 +3,12 @@
   "description": "2026년 대유행 트렌드 '토핑경제' 반영! 밋밋한 도우 같은 일상에 맛을 더해줄 나만의 찰떡 토핑은 무엇일까요? #심리테스트 #2026트렌드",
   "resultType": "TYPE_BASED",
   "typeCodeLimit": 2,
-  "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/life-topping-test/main-cover.webp?v=1769821995458",
+  "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/life-topping-test/main-cover.webp?v=1769995718494",
   "questions": [
     {
       "order": 1,
       "content": "오랜만에 찾아온 꿀 같은 휴일! 어떻게 보낼까?",
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/life-topping-test/q1.webp?v=1769821995458",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/life-topping-test/q1.webp?v=1769995718653",
       "options": [
         {
           "content": "이불 밖은 위험해! 침대와 한 몸으로 넷플릭스 정주행",
@@ -23,7 +23,7 @@
     {
       "order": 2,
       "content": "친구들과 모임 메뉴를 정하는 시간! 나의 포지션은?",
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/life-topping-test/q2.webp?v=1769821995458",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/life-topping-test/q2.webp?v=1769995718813",
       "options": [
         {
           "content": "내가 찾아온 리스트 공유! '여기랑 저기 중에 골라봐'",
@@ -38,7 +38,7 @@
     {
       "order": 3,
       "content": "우울하다는 친구의 전화, 나의 첫 마디는?",
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/life-topping-test/q3.webp?v=1769821995458",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/life-topping-test/q3.webp?v=1769995718973",
       "options": [
         {
           "content": "무슨 일이야? 누구야? (상황 파악부터 빠르게)",
@@ -53,7 +53,7 @@
     {
       "order": 4,
       "content": "2026년 새해 목표, 어떻게 세웠어?",
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/life-topping-test/q4.webp?v=1769821995458",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/life-topping-test/q4.webp?v=1769995719135",
       "options": [
         {
           "content": "월별/주별 계획 꼼꼼하게! 달성률 체크는 필수",
@@ -68,7 +68,7 @@
     {
       "order": 5,
       "content": "갖고 싶었던 물건을 발견했다! 나의 행동은?",
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/life-topping-test/q5.webp?v=1769821995458",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/life-topping-test/q5.webp?v=1769995719341",
       "options": [
         {
           "content": "최저가 비교, 후기 검색, 할인 쿠폰까지 야무지게 체크",
@@ -83,7 +83,7 @@
     {
       "order": 6,
       "content": "예상치 못한 문제가 생겼을 때 나는?",
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/life-topping-test/q6.webp?v=1769821995458",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/life-topping-test/q6.webp?v=1769995719510",
       "options": [
         {
           "content": "원인이 뭐지? 해결 방법부터 논리적으로 분석",
@@ -98,7 +98,7 @@
     {
       "order": 7,
       "content": "단체 사진 찍을 때 나의 위치는?",
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/life-topping-test/q7.webp?v=1769821995458",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/life-topping-test/q7.webp?v=1769995719765",
       "options": [
         {
           "content": "센터는 나의 것! 자신감 있게 포즈 취하기",
@@ -115,25 +115,25 @@
     {
       "typeCode": "ET",
       "title": "화끈한 존재감 '페퍼로니'",
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/life-topping-test/result-et.webp?v=1769821995458",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/life-topping-test/result-et.webp?v=1769995720121",
       "description": "열정 만수르! 어디서나 존재감을 뽐내는 당신은 인생의 주인공이에요. 목표를 향해 직진하는 에너지로 주변을 이끄는 리더 스타일!"
     },
     {
       "typeCode": "EF",
       "title": "달콤한 힐러 '고구마 무스'",
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/life-topping-test/result-ef.webp?v=1769821995458",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/life-topping-test/result-ef.webp?v=1769995719921",
       "description": "다정함의 의인화! 주변 사람들을 기분 좋게 만드는 당신은 인기쟁이 분위기 메이커. 달콤한 말과 공감으로 모두를 녹여버려요."
     },
     {
       "typeCode": "IT",
       "title": "시크한 매력 '블랙 올리브'",
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/life-topping-test/result-it.webp?v=1769821995458",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/life-topping-test/result-it.webp?v=1769995720434",
       "description": "알면 알수록 진국! 남다른 취향과 깊이 있는 내면을 가진 당신은 매력적인 마니아. 혼자만의 시간을 즐길 줄 아는 멋진 사람이에요."
     },
     {
       "typeCode": "IF",
       "title": "풍미 가득 '치즈 폭탄'",
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/life-topping-test/result-if.webp?v=1769821995458",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/life-topping-test/result-if.webp?v=1769995720278",
       "description": "부드러운 평화주의자! 누구와도 잘 어울리는 유연함과 따뜻한 포용력을 가졌어요. 겉은 조용하지만 속은 깊은 치즈처럼 진한 사람."
     }
   ]

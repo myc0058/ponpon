@@ -28,7 +28,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/dating-red-flag/q1.webp?v=1769866538195"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/dating-red-flag/q1.webp?v=1769995692862"
     },
     {
       "order": 2,
@@ -55,7 +55,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/dating-red-flag/q2.webp?v=1769866538443"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/dating-red-flag/q2.webp?v=1769995693062"
     },
     {
       "order": 3,
@@ -82,7 +82,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/dating-red-flag/q3.webp?v=1769866538646"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/dating-red-flag/q3.webp?v=1769995693224"
     },
     {
       "order": 4,
@@ -109,7 +109,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/dating-red-flag/q4.webp?v=1769866538815"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/dating-red-flag/q4.webp?v=1769995693370"
     },
     {
       "order": 5,
@@ -136,7 +136,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/dating-red-flag/q5.webp?v=1769866539008"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/dating-red-flag/q5.webp?v=1769995693549"
     },
     {
       "order": 6,
@@ -163,7 +163,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/dating-red-flag/q6.webp?v=1769866539187"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/dating-red-flag/q6.webp?v=1769995693698"
     },
     {
       "order": 7,
@@ -190,7 +190,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/dating-red-flag/q7.webp?v=1769866663211"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/dating-red-flag/q7.webp?v=1769995693866"
     }
   ],
   "results": [
@@ -199,29 +199,29 @@
       "title": "너 다 잘 되라고 그러는 거야 '통제광' (Gaslighter)",
       "description": "내가 맞고, 너는 틀려. \\n\\n당신은 연인을 자신이 원하는 대로 개조하려고 합니다. \"너 예민해\", \"나니까 너 만나주는 거야\" 같은 말로 상대방의 자존감을 갉아먹고 있진 않나요? 사랑이라는 이름으로 포장된 통제는 사랑이 아닙니다. 상대방을 있는 그대로 존중해 주세요.",
       "isPremium": false,
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/dating-red-flag/result-g.webp?v=1769866599483"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/dating-red-flag/result-g.webp?v=1769995694189"
     },
     {
       "typeCode": "S",
       "title": "갑자기 분위기 잠수 '회피형' (Ghoster)",
       "description": "문제가 생기면 동굴로 들어갑니다. \\n\\n갈등을 해결하려 하지 않고 일단 피하고 봅니다. 상대방 속은 타들어가는데 혼자만의 시간이 필요하다며 며칠씩 잠수를 타버리죠. 헤어질 때도 카톡 하나 남기고 차단하는 스타일. 회피는 평화를 가져오는 게 아니라 문제를 썩게 만듭니다.",
       "isPremium": false,
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/dating-red-flag/result-s.webp?v=1769866599634"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/dating-red-flag/result-s.webp?v=1769995694646"
     },
     {
       "typeCode": "L",
       "title": "부담 백배 사랑꾼 '금사빠/러브바머' (Love Bomber)",
       "description": "사랑해! 영원히 함께하자! (만난 지 3일 됨) \\n\\n초반에 모든 걸 다 퍼부어주는 스타일입니다. 상대방이 준비되기도 전에 너무 빠른 속도로 다가가서 부담을 줍니다. 그리고 상대방이 그만큼 돌려주지 않으면 금방 식어버리거나 서운해하죠. 불같이 타오르면 금방 꺼지는 법입니다. 속도 조절이 필요해요.",
       "isPremium": false,
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/dating-red-flag/result-l.webp?v=1769866599959"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/dating-red-flag/result-l.webp?v=1769995694502"
     },
     {
       "typeCode": "C",
       "title": "사랑도 비즈니스 '계산기' (The Calculator)",
       "description": "이 연애, 가성비 나오나? \\n\\n감정보다는 이득을 먼저 따집니다. 데이트 비용, 선물 가격, 상대방의 스펙까지 꼼꼼하게 계산하죠. 손해 보는 연애는 절대 안 합니다. 합리적인 것도 좋지만, 계산기 두드리는 소리가 상대방에게 다 들리고 있어요. 찐사랑은 머리가 아니라 가슴으로 하는 겁니다.",
       "isPremium": false,
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/dating-red-flag/result-c.webp?v=1769866600180"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/dating-red-flag/result-c.webp?v=1769995694044"
     }
   ],
-  "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/dating-red-flag/main-cover.webp?v=1769866600359"
+  "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/dating-red-flag/main-cover.webp?v=1769995692698"
 }

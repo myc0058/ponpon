@@ -1,13 +1,13 @@
 {
   "title": "K-드라마 속 나의 '막장(운명)' 역할 테스트",
   "description": "막장 드라마 세계관에 빙의했다! 출생의 비밀, 김치 싸대기, 재벌의 돈봉투... 이 혼란 속 나의 역할은 과연 무엇일까?",
-  "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/k-drama-role-2026/main-cover.webp?v=1769821982167",
+  "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/k-drama-role-2026/main-cover.webp?v=1769995716433",
   "resultType": "TYPE_BASED",
   "questions": [
     {
       "order": 1,
       "content": "눈을 떠보니 으리으리한 호텔 같은 침실이다. 가장 먼저 드는 생각은?",
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/k-drama-role-2026/q1.webp?v=1769821982167",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/k-drama-role-2026/q1.webp?v=1769995716604",
       "options": [
         {
           "content": "대박... 나 로또 맞았나? (일단 즐김)",
@@ -34,7 +34,7 @@
     {
       "order": 2,
       "content": "출근/등교 길, 모퉁이를 돌다 누군가와 부딪혔다!",
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/k-drama-role-2026/q2.webp?v=1769821982167",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/k-drama-role-2026/q2.webp?v=1769995716805",
       "options": [
         {
           "content": "죄송합니다! 괜찮으세요? (걱정)",
@@ -61,7 +61,7 @@
     {
       "order": 3,
       "content": "카페에 앉아있는데, 중년 여성이 오더니 흰 봉투를 내민다. \"이거 받고 떨어져.\"",
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/k-drama-role-2026/q3.webp?v=1769839212462",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/k-drama-role-2026/q3.webp?v=1769995716989",
       "options": [
         {
           "content": "어머님, 저는 돈 같은 거 필요 없어요! (거절)",
@@ -88,7 +88,7 @@
     {
       "order": 4,
       "content": "우연히 들어간 서재에서 충격적인 서류(유전자 검사 결과)를 발견했다.",
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/k-drama-role-2026/q4.webp?v=1769821982167",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/k-drama-role-2026/q4.webp?v=1769995717129",
       "options": [
         {
           "content": "손이 떨린다... 아무에게도 말 못 하고 숨긴다.",
@@ -115,7 +115,7 @@
     {
       "order": 5,
       "content": "전 애인의 결혼식장. 문을 박차고 들어가서 할 말은?",
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/k-drama-role-2026/q5.webp?v=1769839212681",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/k-drama-role-2026/q5.webp?v=1769995717290",
       "options": [
         {
           "content": "행복해라... (뒤에서 눈물 훔침)",
@@ -142,7 +142,7 @@
     {
       "order": 6,
       "content": "라이벌이 내 뺨을 때렸다! 나의 반응은?",
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/k-drama-role-2026/q6.webp?v=1769839212884",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/k-drama-role-2026/q6.webp?v=1769995717469",
       "options": [
         {
           "content": "너무 놀라서 눈물만 뚝뚝... (비련)",
@@ -169,7 +169,7 @@
     {
       "order": 7,
       "content": "마지막 회, 내가 원하는 결말은?",
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/k-drama-role-2026/q7.webp?v=1769839213088",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/k-drama-role-2026/q7.webp?v=1769995717622",
       "options": [
         {
           "content": "모두가 용서하고 화해하는 해피엔딩",
@@ -199,28 +199,28 @@
       "typeCode": "C",
       "title": "눈물 젖은 캔디 (The Candy)",
       "description": "가난해도, 외로워도 굳세게 자란 당신! \\n\\n당신은 K-드라마의 정석적인 주인공입니다. 온갖 시련과 고난이 닥쳐오지만 특유의 긍정적인 에너지로 이겨냅니다. 재벌 2세와 얽히고설키며 신데렐라 스토리를 쓰게 될 운명이네요. 착하고 순수해서 가끔 답답하다는 소리를 듣지만, 결국엔 모두가 당신을 사랑하게 됩니다.",
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/k-drama-role-2026/result-h.webp?v=1769839213288",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/k-drama-role-2026/result-h.webp?v=1769995717771",
       "isPremium": false
     },
     {
       "typeCode": "V",
       "title": "야망의 빌런 (The Villain)",
       "description": "\"난, 내가 원하는 건 가져야 해.\" \\n\\n당신은 갖고 싶은 건 수단과 방법을 가리지 않고 쟁취하는 야망가입니다. 화려한 외모와 뛰어난 능력으로 주인공을 압박하며 긴장감을 불어넣습니다. 사실은 누구보다 인정받고 싶어 하는 외로운 내면을 가졌을지도? 시청자들에게 '욕하면서 빠져드는' 매력적인 악역입니다.",
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/k-drama-role-2026/result-v.webp?v=1769839213503",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/k-drama-role-2026/result-v.webp?v=1769995718271",
       "isPremium": false
     },
     {
       "typeCode": "R",
       "title": "복수의 화신 (The Avenger)",
       "description": "\"연진아, 나 지금 되게 신나...\" \\n\\n당신은 과거의 상처를 품고 오직 복수만을 향해 달리는 다크 히어로입니다. 치밀한 계획과 서늘한 카리스마로 적들을 하나씩 무너뜨릴 때 희열을 느낍니다. 로맨스보다는 사이다 복수극이 어울리는 당신! 결말에는 허무함을 느낄 수도 있으니 주위를 둘러보세요.",
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/k-drama-role-2026/result-r.webp?v=1769839213691",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/k-drama-role-2026/result-r.webp?v=1769995717924",
       "isPremium": false
     },
     {
       "typeCode": "S",
       "title": "팝콘각 신스틸러 (Scene Stealer)",
       "description": "드라마에 없어서는 안 될 미친 존재감! \\n\\n당신은 주인공의 절친이거나, 주인공이 알바하는 가게 사장님처럼 등장할 때마다 빵빵 터뜨리는 감초 역할입니다. 남의 연애사에 참견하기 좋아하고, 심각한 상황에서도 눈치 없이 팩트 폭력을 날립니다. 시청자 인기 투표 1위는 따놓은 당상!",
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/k-drama-role-2026/result-s.webp?v=1769839213928",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/k-drama-role-2026/result-s.webp?v=1769995718079",
       "isPremium": false
     }
   ]

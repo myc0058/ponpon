@@ -28,7 +28,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/god-saeng-routine/q1.webp?v=1769865468920"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/god-saeng-routine/q1.webp?v=1769995703642"
     },
     {
       "order": 2,
@@ -55,7 +55,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/god-saeng-routine/q2.webp?v=1769865469159"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/god-saeng-routine/q2.webp?v=1769995703851"
     },
     {
       "order": 3,
@@ -82,7 +82,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/god-saeng-routine/q3.webp?v=1769865469341"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/god-saeng-routine/q3.webp?v=1769995703988"
     },
     {
       "order": 4,
@@ -109,7 +109,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/god-saeng-routine/q4.webp?v=1769865469485"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/god-saeng-routine/q4.webp?v=1769995704139"
     },
     {
       "order": 5,
@@ -136,7 +136,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/god-saeng-routine/q5.webp?v=1769865469774"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/god-saeng-routine/q5.webp?v=1769995704298"
     },
     {
       "order": 6,
@@ -163,7 +163,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/god-saeng-routine/q6.webp?v=1769865469934"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/god-saeng-routine/q6.webp?v=1769995704457"
     },
     {
       "order": 7,
@@ -190,7 +190,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/god-saeng-routine/q7.webp?v=1769866208286"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/god-saeng-routine/q7.webp?v=1769995704613"
     }
   ],
   "results": [
@@ -199,29 +199,29 @@
       "title": "미라클 모닝 '새벽형 인간' (Morning Lark)",
       "description": "세상이 잠든 시간에 나는 깨어난다. \\n\\n당신은 아침 시간을 지배하는 자입니다. 누구보다 일찍 일어나 하루를 계획하고, 명상과 독서로 마음을 다스릴 때 성취감을 느낍니다. 남들이 출근할 때 이미 갓생의 절반을 끝낸 당신! 다만 저녁 약속엔 체력이 방전될 수 있으니 주의하세요.",
       "isPremium": false,
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/god-saeng-routine/result-m.webp?v=1769865470123"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/god-saeng-routine/result-m.webp?v=1769995705175"
     },
     {
       "typeCode": "O",
       "title": "크리에이티브 '올빼미족' (Night Owl)",
       "description": "밤이 깊어질수록 눈이 초롱초롱해집니다. \\n\\n모두가 잠든 고요한 밤에 영감이 샘솟는 타입. 낮에는 좀비처럼 지내다가 밤만 되면 예술혼을 불태웁니다. 억지로 아침형 인간이 되려고 하지 마세요. 당신의 골든 타임은 자정이니까요. 다만 비타민D 챙겨 드시는 거 잊지 마세요!",
       "isPremium": false,
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/god-saeng-routine/result-o.webp?v=1769865470293"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/god-saeng-routine/result-o.webp?v=1769995705355"
     },
     {
       "typeCode": "D",
       "title": "효율 끝판왕 '목표 지향형' (Go-Getter)",
       "description": "성과 없는 노력은 시간 낭비다. \\n\\n당신은 확실한 목표가 있어야 움직이는 스타일입니다. 단순히 부지런한 게 아니라, '왜' 해야 하는지가 중요하죠. 시간을 낭비하는 걸 극도로 싫어하며, 멀티태스킹에도 능합니다. 워커홀릭 기질이 있으니 가끔은 뇌를 쉬게 해주세요.",
       "isPremium": false,
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/god-saeng-routine/result-d.webp?v=1769865470473"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/god-saeng-routine/result-d.webp?v=1769995704807"
     },
     {
       "typeCode": "F",
       "title": "자유로운 영혼 '필(Feel) 충만형' (Free Spirit)",
       "description": "루틴? 그게 뭔데? 먹는 거야? \\n\\n짜여진 틀에 갇히는 걸 답답해합니다. 그때그때 꽂히는 걸 해야 능률이 오르는 타입이죠. 겉보기엔 게으른 것 같지만, 한번 몰입하면 무서운 집중력을 발휘합니다. 강박적인 계획보다는 유연한 리스트가 당신에게 맞습니다. 벼락치기의 달인!",
       "isPremium": false,
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/god-saeng-routine/result-f.webp?v=1769865470642"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/god-saeng-routine/result-f.webp?v=1769995705011"
     }
   ],
-  "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/god-saeng-routine/main-cover.webp?v=1769865470864"
+  "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/god-saeng-routine/main-cover.webp?v=1769995703454"
 }

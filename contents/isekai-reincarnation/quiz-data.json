@@ -28,7 +28,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/isekai-reincarnation/q1.webp?v=1769864652588"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/isekai-reincarnation/q1.webp?v=1769995713501"
     },
     {
       "order": 2,
@@ -55,7 +55,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/isekai-reincarnation/q2.webp?v=1769864652795"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/isekai-reincarnation/q2.webp?v=1769995713693"
     },
     {
       "order": 3,
@@ -82,7 +82,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/isekai-reincarnation/q3.webp?v=1769864653116"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/isekai-reincarnation/q3.webp?v=1769995713960"
     },
     {
       "order": 4,
@@ -109,7 +109,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/isekai-reincarnation/q4.webp?v=1769864653263"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/isekai-reincarnation/q4.webp?v=1769995714130"
     },
     {
       "order": 5,
@@ -136,7 +136,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/isekai-reincarnation/q5.webp?v=1769864653430"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/isekai-reincarnation/q5.webp?v=1769995714272"
     },
     {
       "order": 6,
@@ -163,7 +163,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/isekai-reincarnation/q6.webp?v=1769864653660"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/isekai-reincarnation/q6.webp?v=1769995715568"
     },
     {
       "order": 7,
@@ -190,7 +190,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/isekai-reincarnation/q7.webp?v=1769864653860"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/isekai-reincarnation/q7.webp?v=1769995715729"
     }
   ],
   "results": [
@@ -199,14 +199,14 @@
       "title": "먼치킨 용사 '소드마스터' (The Sword Master)",
       "description": "힘이 곧 정의다! \\n\\n당신은 압도적인 피지컬과 전투 능력을 가진 용사로 전생했습니다. 복잡한 생각보다는 몸으로 부딪히는 스타일. 평소엔 둔해 보이지만 싸울 때만큼은 누구보다 빛납니다. 동료들이 당신만 믿고 따르겠네요. 마왕 목 따러 가시죠!",
       "isPremium": false,
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/isekai-reincarnation/result-s.webp?v=1769864654034"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/isekai-reincarnation/result-s.webp?v=1769995716049"
     },
     {
       "typeCode": "M",
       "title": "흑막 대마법사 '현자' (Accession Mage)",
       "description": "세상의 진리를 꿰뚫는 자. \\n\\n당신은 마나의 축복을 받은 천재 마법사입니다. 육체노동은 질색, 손가락 하나 까딱해서 적을 섬멸합니다. 마법 연구에 미쳐있는 매드 사이언티스트 기질도 있군요. 뒤에서 파티를 조종하는 실질적인 리더일지도 모릅니다.",
       "isPremium": false,
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/isekai-reincarnation/result-m.webp?v=1769864654230"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/isekai-reincarnation/result-m.webp?v=1769995715880"
     },
     {
       "typeCode": "N",
@@ -220,8 +220,8 @@
       "title": "사랑받는 '성녀/아이돌' (The Saint)",
       "description": "귀여운 게 세상을 구한다. \\n\\n전투 능력은 0, 하지만 힐링 능력과 매력은 999! 당신의 미소 한 방이면 적군도 무기를 버립니다. 모든 종족에게 사랑받는 평화의 상징. 어쩌면 마왕조차 당신 앞에서는 얼굴을 붉힐지도 몰라요. 진정한 세계 정복자는 바로 당신!",
       "isPremium": false,
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/isekai-reincarnation/result-v.webp?v=1769864654606"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/isekai-reincarnation/result-v.webp?v=1769995716235"
     }
   ],
-  "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/isekai-reincarnation/main-cover.webp?v=1769864654818"
+  "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/isekai-reincarnation/main-cover.webp?v=1769995713291"
 }

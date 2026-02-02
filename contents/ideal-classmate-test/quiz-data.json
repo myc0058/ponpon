@@ -28,7 +28,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/ideal-classmate-test/q1.webp?v=1769867053570"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/ideal-classmate-test/q1.webp?v=1769995707659"
     },
     {
       "order": 2,
@@ -55,7 +55,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/ideal-classmate-test/q2.webp?v=1769867053892"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/ideal-classmate-test/q2.webp?v=1769995707853"
     },
     {
       "order": 3,
@@ -82,7 +82,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/ideal-classmate-test/q3.webp?v=1769867054139"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/ideal-classmate-test/q3.webp?v=1769995708109"
     },
     {
       "order": 4,
@@ -109,7 +109,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/ideal-classmate-test/q4.webp?v=1769867054384"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/ideal-classmate-test/q4.webp?v=1769995708279"
     },
     {
       "order": 5,
@@ -136,7 +136,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/ideal-classmate-test/q5.webp?v=1769867054579"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/ideal-classmate-test/q5.webp?v=1769995708438"
     },
     {
       "order": 6,
@@ -163,7 +163,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/ideal-classmate-test/q6.webp?v=1769867054792"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/ideal-classmate-test/q6.webp?v=1769995708619"
     }
   ],
   "results": [
@@ -179,22 +179,22 @@
       "title": "시크한 모범생 '전교 1등' (The Top Student)",
       "description": "조용히 좀 해줄래? \\n\\n평소엔 말이 없지만 알고 보면 전교 1등! 수업 시간에 졸고 있는 당신을 한심하게 쳐다볼 수도 있습니다. 하지만 친해지면 시험 족보도 공유해 주고, 모르는 문제도 친절하게 알려주는 츤데레 매력이 있습니다. 노트 필기 보여달라고 해보세요!",
       "isPremium": false,
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/ideal-classmate-test/result-q.webp?v=1769867055332"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/ideal-classmate-test/result-q.webp?v=1769995709396"
     },
     {
       "typeCode": "A",
       "title": "에너지 뿜뿜 '운동부 에이스' (The Athlete)",
       "description": "매점 빵 내기 한판? \\n\\n수업 시간엔 자고 쉬는 시간만 되면 살아나는 체육계 친구입니다. 단순하고 털털해서 뒤끝이 없습니다. 장난치는 걸 좋아해서 당신을 귀찮게 할 수도 있지만, 의리 하나는 최고! 괴롭힘당하는 일이 있으면 제일 먼저 달려와 줄 든든한 보디가드.",
       "isPremium": false,
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/ideal-classmate-test/result-a.webp?v=1769867055514"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/ideal-classmate-test/result-a.webp?v=1769995709157"
     },
     {
       "typeCode": "S",
       "title": "정보통 '소식통' (The Gossip)",
       "description": "너 그거 들었어? 대박 사건! \\n\\n학교의 모든 소문은 이 친구를 통합니다. 연애사, 선생님 뒷담화, 급식 메뉴까지 모르는 게 없습니다. 수다 떠는 걸 너무 좋아해서 수업 시간에도 쪽지를 보내올 거예요. 이 친구랑 짝꿍 하면 1년 내내 심심할 틈이 없습니다. (단, 비밀 유지 주의)",
       "isPremium": false,
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/ideal-classmate-test/result-s.webp?v=1769867055766"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/ideal-classmate-test/result-s.webp?v=1769995709564"
     }
   ],
-  "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/ideal-classmate-test/main-cover.webp?v=1769867055951"
+  "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/ideal-classmate-test/main-cover.webp?v=1769995707487"
 }

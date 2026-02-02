@@ -28,7 +28,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/travel-style-2026/q1.webp?v=1769866213852"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/travel-style-2026/q1.webp?v=1769995798268"
     },
     {
       "order": 2,
@@ -55,7 +55,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/travel-style-2026/q2.webp?v=1769866214074"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/travel-style-2026/q2.webp?v=1769995798570"
     },
     {
       "order": 3,
@@ -82,7 +82,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/travel-style-2026/q3.webp?v=1769866214277"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/travel-style-2026/q3.webp?v=1769995798732"
     },
     {
       "order": 4,
@@ -109,7 +109,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/travel-style-2026/q4.webp?v=1769866214484"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/travel-style-2026/q4.webp?v=1769995798889"
     },
     {
       "order": 5,
@@ -136,7 +136,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/travel-style-2026/q5.webp?v=1769866214647"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/travel-style-2026/q5.webp?v=1769995799078"
     },
     {
       "order": 6,
@@ -163,7 +163,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/travel-style-2026/q6.webp?v=1769866214821"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/travel-style-2026/q6.webp?v=1769995799247"
     },
     {
       "order": 7,
@@ -190,7 +190,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/travel-style-2026/q7.webp?v=1769866215067"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/travel-style-2026/q7.webp?v=1769995799381"
     }
   ],
   "results": [
@@ -199,29 +199,29 @@
       "title": "화려한 도시의 별 '사이버 시티 투어' (City Popper)",
       "description": "잠들지 않는 도시가 나를 부른다! \\n\\n당신은 트렌드에 민감하고 새로운 문물을 즐기는 타입입니다. 네온사인이 번쩍이는 도쿄, 뉴욕, 혹은 2026년의 최첨단 스마트 시티가 어울립니다. 맛집 투어, 쇼핑, 그리고 인생샷 스팟은 필수 코스! 지루할 틈 없이 꽉 찬 일정을 소화하는 강철 체력의 소유자군요.",
       "isPremium": false,
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/travel-style-2026/result-c.webp?v=1769866215247"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/travel-style-2026/result-c.webp?v=1769995799533"
     },
     {
       "typeCode": "N",
       "title": "야생의 숨결 '디지털 디톡스 섬' (Nature Lover)",
       "description": "와이파이는 꺼두셔도 좋습니다. \\n\\n복잡한 건 딱 질색! 당신은 대자연 속에서 진정한 자유를 느낍니다. 몽골의 초원, 아이슬란드의 오로라, 혹은 무인도 체험이 어울리는군요. 불편함 따위는 낭만으로 승화시키는 진정한 모험가. 스마트폰을 내려놓고 바람 소리에 귀 기울여 보세요.",
       "isPremium": false,
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/travel-style-2026/result-n.webp?v=1769866215443"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/travel-style-2026/result-n.webp?v=1769995799875"
     },
     {
       "typeCode": "R",
       "title": "럭셔리 힐링 '우주 호텔 호캉스' (Luxury Relaxer)",
       "description": "돈 쓰러 왔습니다. 대접해 주세요. \\n\\n여행까지 와서 고생하고 싶지 않습니다. 최고급 침구, 룸서비스, 스파가 있는 곳이 천국이죠. 2026년 트렌드인 '우주 뷰' 호텔이나 풀빌라에서 아무것도 안 하고 숨만 쉬는 게 목표입니다. 당신에게 여행은 '충전' 그 자체니까요.",
       "isPremium": false,
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/travel-style-2026/result-r.webp?v=1769866215605"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/travel-style-2026/result-r.webp?v=1769995800034"
     },
     {
       "typeCode": "F",
       "title": "현지인 빙의 '로컬 골목 투어' (Local Explorer)",
       "description": "관광지는 NO! 진짜를 원해. \\n\\n남들 다 가는 유명 관광지보다 동네 시장, 현지인들이 가는 노포를 좋아합니다. 지도 없이 골목을 누비며 우연히 발견하는 소소한 행복을 즐기는 타입. '한달 살기'가 가장 잘 어울리는 여행자입니다.",
       "isPremium": false,
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/travel-style-2026/result-f.webp?v=1769866215757"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/travel-style-2026/result-f.webp?v=1769995799718"
     }
   ],
-  "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/travel-style-2026/main-cover.webp?v=1769866215921"
+  "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/travel-style-2026/main-cover.webp?v=1769995798100"
 }

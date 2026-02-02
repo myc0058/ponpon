@@ -28,7 +28,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/past-life-test/q1.webp?v=1769867132955"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/past-life-test/q1.webp?v=1769995788577"
     },
     {
       "order": 2,
@@ -55,7 +55,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/past-life-test/q2.webp?v=1769867133160"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/past-life-test/q2.webp?v=1769995788734"
     },
     {
       "order": 3,
@@ -82,7 +82,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/past-life-test/q3.webp?v=1769867133360"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/past-life-test/q3.webp?v=1769995788913"
     },
     {
       "order": 4,
@@ -109,7 +109,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/past-life-test/q4.webp?v=1769867133684"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/past-life-test/q4.webp?v=1769995789108"
     },
     {
       "order": 5,
@@ -136,7 +136,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/past-life-test/q5.webp?v=1769867133860"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/past-life-test/q5.webp?v=1769995789273"
     }
   ],
   "results": [
@@ -145,29 +145,29 @@
       "title": "비운의 '망국의 왕족' (The Royalty)",
       "description": "내 피에는 푸른 피가 흐른다. \\n\\n당신은 전생에 한 나라를 다스리거나 왕족이었습니다. 태어날 때부터 풍요로움을 누렸지만, 권력 다툼과 배신으로 씁쓸한 최후를 맞이했을 가능성이 큽니다. 현생에서도 고급스러운 취향을 가지고 있으며, 남에게 지시하는 것을 자연스러워하는군요.",
       "isPremium": false,
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/past-life-test/result-r.webp?v=1769867134088"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/past-life-test/result-r.webp?v=1769995789676"
     },
     {
       "typeCode": "W",
       "title": "전장을 누비던 '무사' (The Warrior)",
       "description": "검 하나에 목숨을 걸었다. \\n\\n나라를 구하거나 누군가를 지키기 위해 싸웠던 용맹한 전사였습니다. 의리와 명예를 목숨보다 중요하게 생각했죠. 현생에서도 불의를 보면 참지 못하는 정의감이 남아있습니다. 활동적이고 승부욕이 강한 편이네요.",
       "isPremium": false,
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/past-life-test/result-w.webp?v=1769867134331"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/past-life-test/result-w.webp?v=1769995790002"
     },
     {
       "typeCode": "S",
       "title": "세상을 유랑하던 '학자/예술가' (The Scholar)",
       "description": "붓은 칼보다 강하다. \\n\\n당신은 책을 사랑하는 학자였거나, 아름다움을 노래하는 예술가였습니다. 권력보다는 자유와 지식을 탐구하며 살았군요. 사색에 잠기는 것을 좋아하고, 혼자만의 시간을 소중히 여깁니다. 현생에서도 감수성이 풍부하네요.",
       "isPremium": false,
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/past-life-test/result-s.webp?v=1769867134521"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/past-life-test/result-s.webp?v=1769995789854"
     },
     {
       "typeCode": "M",
       "title": "신을 섬기던 '제사장' (The Priest)",
       "description": "하늘의 뜻을 받들라. \\n\\n당신은 신과 소통하며 사람들을 이끄는 제사장이거나 무녀였습니다. 영적인 능력이 뛰어나고 신비로운 분위기를 풍겼죠. 현생에서도 직감이 남들보다 예리하고, 종교나 미스테리에 관심이 많을 수 있습니다.",
       "isPremium": false,
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/past-life-test/result-m.webp?v=1769867134686"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/past-life-test/result-m.webp?v=1769995789508"
     }
   ],
-  "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/past-life-test/main-cover.webp?v=1769867134890"
+  "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/past-life-test/main-cover.webp?v=1769995788387"
 }

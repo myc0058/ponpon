@@ -28,7 +28,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/phone-phobia-test/q1.webp?v=1769866442646"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/phone-phobia-test/q1.webp?v=1769995790335"
     },
     {
       "order": 2,
@@ -55,7 +55,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/phone-phobia-test/q2.webp?v=1769866442862"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/phone-phobia-test/q2.webp?v=1769995790494"
     },
     {
       "order": 3,
@@ -82,7 +82,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/phone-phobia-test/q3.webp?v=1769866443043"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/phone-phobia-test/q3.webp?v=1769995790628"
     },
     {
       "order": 4,
@@ -109,7 +109,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/phone-phobia-test/q4.webp?v=1769866443446"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/phone-phobia-test/q4.webp?v=1769995790762"
     },
     {
       "order": 5,
@@ -136,7 +136,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/phone-phobia-test/q5.webp?v=1769866443605"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/phone-phobia-test/q5.webp?v=1769995790892"
     },
     {
       "order": 6,
@@ -163,7 +163,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/phone-phobia-test/q6.webp?v=1769866443771"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/phone-phobia-test/q6.webp?v=1769995791087"
     },
     {
       "order": 7,
@@ -199,29 +199,29 @@
       "title": "엄지족 텍스트 러버 (Text Lover)",
       "description": "전화기는 스마트한 '타자기'일 뿐. \\n\\n당신에게 통화 버튼은 장식입니다. 모든 대화는 텍스트로 해야 마음이 편해요. 전화가 오면 심박수가 올라가고, '제발 끊겨라'라고 기도합니다. 할 말이 있으면 카톡으로 정리해서 보내는 게 훨씬 효율적이라고 생각하죠. 비대면 소통의 달인입니다.",
       "isPremium": false,
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/phone-phobia-test/result-t.webp?v=1769866444240"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/phone-phobia-test/result-t.webp?v=1769995791638"
     },
     {
       "typeCode": "C",
       "title": "수다쟁이 콜 마스터 (Call Master)",
       "description": "답답한 거 딱 질색! 말로 해! \\n\\n타자 칠 시간에 전화해서 해결하는 게 속 편한 당신. 통화량이 매달 무제한을 찍습니다. 친구랑 통화하다가 잠들기도 하고, 길 가면서도 끊임없이 누군가와 통화하죠. 목소리를 들어야 진정한 소통이라고 생각하는 아날로그 감성의 소유자입니다.",
       "isPremium": false,
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/phone-phobia-test/result-c.webp?v=1769866444413"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/phone-phobia-test/result-c.webp?v=1769995791212"
     },
     {
       "typeCode": "M",
       "title": "선택적 콜 포비아 (Mild Anxiety)",
       "description": "친한 친구는 OK, 모르는 번호는 NO. \\n\\n상황에 따라 다릅니다. 업무 전화나 배달 주문 주문 같은 '목적 있는 통화'는 긴장되지만, 찐친과의 수다는 밤새도록 가능하죠. 할 말을 미리 대본처럼 적어두기도 합니다. 약간의 울렁증은 있지만 사회생활은 가능한 수준!",
       "isPremium": false,
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/phone-phobia-test/result-m.webp?v=1769866444567"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/phone-phobia-test/result-m.webp?v=1769995791499"
     },
     {
       "typeCode": "F",
       "title": "대면 소통 끝판왕 (Face to Face)",
       "description": "만나서 얘기해. 나오라고 해. \\n\\n전화도 문자도 답답합니다. 눈을 보고 육성으로 말해야 직성이 풀리는 스타일. 오해 생기는 게 싫어서 중요한 얘기는 무조건 만나서 합니다. 사람 냄새나는 끈끈한 관계를 선호하네요. 당신 주변엔 항상 사람이 많을 것 같아요.",
       "isPremium": false,
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/phone-phobia-test/result-f.webp?v=1769866444752"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/phone-phobia-test/result-f.webp?v=1769995791359"
     }
   ],
-  "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/phone-phobia-test/main-cover.webp?v=1769866444896"
+  "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/phone-phobia-test/main-cover.webp?v=1769995790153"
 }

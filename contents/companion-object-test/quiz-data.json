@@ -28,7 +28,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/companion-object-test/q1.webp?v=1769864741513"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/companion-object-test/q1.webp?v=1769995690864"
     },
     {
       "order": 2,
@@ -55,7 +55,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/companion-object-test/q2.webp?v=1769864741683"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/companion-object-test/q2.webp?v=1769995690997"
     },
     {
       "order": 3,
@@ -82,7 +82,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/companion-object-test/q3.webp?v=1769864741890"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/companion-object-test/q3.webp?v=1769995691167"
     },
     {
       "order": 4,
@@ -109,7 +109,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/companion-object-test/q4.webp?v=1769864742085"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/companion-object-test/q4.webp?v=1769995691327"
     },
     {
       "order": 5,
@@ -136,7 +136,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/companion-object-test/q5.webp?v=1769864742271"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/companion-object-test/q5.webp?v=1769995691471"
     },
     {
       "order": 6,
@@ -163,7 +163,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/companion-object-test/q6.webp?v=1769864742466"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/companion-object-test/q6.webp?v=1769995691628"
     },
     {
       "order": 7,
@@ -190,7 +190,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/companion-object-test/q7.webp?v=1769864742638"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/companion-object-test/q7.webp?v=1769995691773"
     }
   ],
   "results": [
@@ -199,29 +199,29 @@
       "title": "묵묵한 수호신 '반려돌' (Pet Stone)",
       "description": "변치 않는 단단함으로 당신을 지켜줍니다. \\n\\n세상이 시끄럽고 사람에 치일 때, 아무 말 없이 그 자리에 있는 돌멩이 하나가 큰 위로가 됩니다. 밥을 줄 필요도, 씻겨줄 필요도 없어요. 가끔 모자를 씌워주거나 예쁜 집을 만들어주는 소소한 재미만 있을 뿐. 당신의 비밀을 가장 무겁게 지켜줄 친구입니다.",
       "isPremium": false,
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/companion-object-test/result-s.webp?v=1769864742816"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/companion-object-test/result-s.webp?v=1769995692497"
     },
     {
       "typeCode": "P",
       "title": "동동 떠다니는 기분 '마리모' (Marimo)",
       "description": "물속에서 평화롭게 살아가는 초록 친구. \\n\\n당신은 혼자 있는 시간도 중요하지만, 살아있는 생명이 주는 온기도 필요하군요. 마리모는 손이 많이 가지 않으면서도 '성장'하는 기쁨을 줍니다. 기분이 좋으면 물 위로 동동 뜬다는 전설을 믿으며, 멍하니 물멍을 때리는 시간이 당신에게 힐링이 될 거예요.",
       "isPremium": false,
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/companion-object-test/result-p.webp?v=1769864742967"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/companion-object-test/result-p.webp?v=1769995692362"
     },
     {
       "typeCode": "A",
       "title": "똑똑한 내 친구 'AI 펫 로봇' (AI Pet)",
       "description": "감성은 챙기고 싶지만 귀찮은 건 딱 질색! \\n\\n당신은 합리적인 힐링을 원합니다. 털 날림도 없고 배변 훈련도 필요 없는 로봇 강아/고양이가 딱이네요. 당신의 표정을 읽고 애교를 부리거나, 오늘의 날씨를 알려주는 스마트함까지 겸비했습니다. 충전기만 꽂아주면 무한한 사랑을 주는 현대적인 친구입니다.",
       "isPremium": false,
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/companion-object-test/result-a.webp?v=1769864743200"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/companion-object-test/result-a.webp?v=1769995692001"
     },
     {
       "typeCode": "D",
       "title": "포근한 '애착 인형' (Plushie)",
       "description": "나에게 필요한 건 따뜻한 포옹! \\n\\n당신은 촉각적인 안정감을 중요하게 생각합니다. 부드러운 털, 말랑말랑한 솜이 채워진 인형을 끌어안고 있을 때 세상에서 가장 안전하다고 느끼죠. 다 큰 어른이 무슨 인형이냐고요? 윌슨도 배구공이었습니다. 당신의 외로움을 달래줄 가장 확실한 처방전이에요.",
       "isPremium": false,
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/companion-object-test/result-d.webp?v=1769864743405"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/companion-object-test/result-d.webp?v=1769995692141"
     }
   ],
-  "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/companion-object-test/main-cover.webp?v=1769864743635"
+  "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/companion-object-test/main-cover.webp?v=1769995690687"
 }

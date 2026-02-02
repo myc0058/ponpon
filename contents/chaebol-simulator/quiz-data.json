@@ -28,7 +28,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/chaebol-simulator/q1.webp?v=1769867233444"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/chaebol-simulator/q1.webp?v=1769995689350"
     },
     {
       "order": 2,
@@ -55,7 +55,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/chaebol-simulator/q2.webp?v=1769867233671"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/chaebol-simulator/q2.webp?v=1769995689508"
     },
     {
       "order": 3,
@@ -82,7 +82,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/chaebol-simulator/q3.webp?v=1769867233913"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/chaebol-simulator/q3.webp?v=1769995689729"
     },
     {
       "order": 4,
@@ -109,7 +109,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/chaebol-simulator/q4.webp?v=1769867234097"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/chaebol-simulator/q4.webp?v=1769995689878"
     },
     {
       "order": 5,
@@ -136,7 +136,7 @@
           "score": 1
         }
       ],
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/chaebol-simulator/q5.webp?v=1769867234292"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/chaebol-simulator/q5.webp?v=1769995690046"
     }
   ],
   "results": [
@@ -145,29 +145,29 @@
       "title": "냉철한 승부사 '경영 후계자' (The CEO)",
       "description": "이 회사는 제 겁니다. \\n\\n당신은 타고난 리더십과 야망을 가진 진정한 로열패밀리입니다. 노는 것보다 일하는 게 더 즐겁고, 회사를 키우는 데 관심이 많습니다. 감정보다는 이성을 중시하며, 정략결혼도 비즈니스의 일부로 받아들일 준비가 되어 있군요. 차기 회장님 당첨!",
       "isPremium": false,
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/chaebol-simulator/result-c.webp?v=1769867234485"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/chaebol-simulator/result-c.webp?v=1769995690178"
     },
     {
       "typeCode": "F",
       "title": "화려한 셀럽 '파티 피플' (The Celebrity)",
       "description": "오늘 내가 쏜다! \\n\\n세상의 중심은 나! 넘치는 돈으로 화려한 인생을 즐기는 타입입니다. 패션, 파티, 여행 등 노는 데 도가 텄으며 SNS에서 엄청난 팔로워를 거느린 인플루언서 재벌입니다. 경영권 다툼 따위 머리 아파서 싫어합니다. 그냥 배당금 받아서 평생 놀고 싶어 하네요.",
       "isPremium": false,
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/chaebol-simulator/result-f.webp?v=1769867234714"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/chaebol-simulator/result-f.webp?v=1769995690365"
     },
     {
       "typeCode": "R",
       "title": "자유로운 영혼 '반항아' (The Rebel)",
       "description": "돈도 명예도 다 필요 없어. \\n\\n재벌가라는 울타리가 답답하기만 한 당신. 정해진 길을 거부하고 나만의 길을 가려 합니다. 오토바이를 타거나 서민 체험을 하는 등 일탈을 즐기는 드라마 속 남주/여주 스타일. 결국 사랑하는 사람을 위해 모든 것을 버릴 수도 있는 로맨티스트.",
       "isPremium": false,
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/chaebol-simulator/result-r.webp?v=1769867234888"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/chaebol-simulator/result-r.webp?v=1769995690541"
     },
     {
       "typeCode": "A",
       "title": "우아한 귀족 '아트 컬렉터' (The Aristocrat)",
       "description": "품격이 곧 권력이다. \\n\\n돈 자랑하는 졸부들을 경멸합니다. 당신은 예술과 문화를 사랑하는 고상한 취향의 소유자. 갤러리를 운영하거나 자선 재단을 맡아 조용하지만 강력한 영향력을 행사합니다. 드러내지 않는 은은한 럭셔리(Old Money)가 당신의 스타일입니다.",
       "isPremium": false,
-      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/chaebol-simulator/result-a.webp?v=1769867235127"
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/chaebol-simulator/result-a.webp?v=1769995690221"
     }
   ],
-  "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/chaebol-simulator/main-cover.webp?v=1769867235293"
+  "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/chaebol-simulator/main-cover.webp?v=1769995689120"
 }

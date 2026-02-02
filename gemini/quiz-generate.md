@@ -28,9 +28,37 @@
 `gemini/complex-quiz-template.json`을 참고하여 작성하십시오. (가중치 점수 및 다차원 코드 처리 예시 포함)
 
 ## 3. 이미지 및 배포 (Asset & Deployment)
-1.  **일관성 유지**: 커버, 질문, 결과 이미지는 반드시 동일한 화풍(예: 8비트 픽셀아트, 수채화, 사이버펑크 등)이어야 합니다.
-2.  **노 텍스트**: 이미지 내 글자 포함 금지.
-3.  **자동화 스크립트 활용**: 이미지 업로드(`upload-folder-images.ts`) 및 시딩(`seed-from-json.ts`)을 통해 배포를 완료합니다.
+1.  **일관성 유지**:     
+    *   **Style Examples**: 아래는 예시일 뿐, 퀴즈의 성격에 맞는 스타일로 변경하여 사용하십시오.
+        *   **3D Pixar style**: 귀엽고 생동감 있는 캐릭터 중심 (범용적/대중적)
+        *   **Studio Ghibli style**: 따뜻하고 감성적인 수채화 느낌 (힐링/추억/서정적)
+        *   **Cyberpunk/Neon**: 화려하고 강렬한 대비, 미래적인 분위기 (트렌디/게임/기술)
+        *   **Dark Fantasy/Gothic**: 어둡고 신비로운, 무거운 분위기 (미스터리/공포/심오함)
+        *   **Film Noir/Monochrome**: 흑백의 미학, 그림자가 강조된 드라마틱한 연출 (심리/추리)
+        *   **Minimalist Flat Illustration**: 깔끔하고 현대적인 디자인 (실용/정보/MZ타겟)
+        *   **8-bit Pixel Art**: 레트로하고 아기자기한 느낌 (추억/유머/B급감성)
+        *   **Pop Art/Vibrant**: 원색 위주의 강렬하고 에너제틱한 화풍 (MZ/개성/패션)
+        *   **Oil Painting/Classical**: 중후하고 고급스러운 예술적 느낌 (사주/운세/중장년층)
+        *   **Ukiyo-e/Oriental Ink**: 동양적인 선과 색감, 우아하고 고전적인 미학 (사주/전통/역사)
+        *   **Synthwave/Vaporwave**: 80년대 레트로 감성, 네온 핑크와 퍼플 조화 (음악/꿈/감성)
+        *   **Claymation/Stop-motion**: 찰흙 질감의 독특하고 입체적인 느낌 (유머/키치/아동)
+        *   **Cyber-Y2K/Glitch**: 2000년대 초반 감성, 디지털 노이즈와 사이버틱한 연출 (Y2K/트렌드)
+        *   **Hand-drawn Doodle**: 낙서 같은 자유로운 선, 친근하고 편안한 느낌 (일상/공감/다이어리)
+        *   **Bauhaus/Geometric**: 절제된 도형과 색상, 추상적이고 지적인 분위기 (직업/논리/디자인)
+        *   **Watercolor/Pastel**: 맑고 투명한 수채화 느낌, 부드러운 파스텔 톤 (힐링/심리/감성)
+        *   **Stained Glass**: 모자이크 패턴과 빛의 투과, 굵은 윤곽선 (운세/성격유형/신비)
+        *   **American Comic Book**: 벤데이 점, 말풍선, 역동적인 기법 (영웅/액션/유머)
+        *   **Paper Cutout/Craft**: 종이를 오려 붙인 듯한 그림자와 질감, 스크랩북 감성 (포근함/DIY/아동)
+        *   **Holographic/Iridescent**: 빛에 따라 변하는 색감, 메탈릭하고 글로시한 질감 (트렌디/뷰티/패션)
+    **CRITICAL RULE**: **이미지 내에 어떠한 텍스트(글자, 숫자 등)도 포함하지 마십시오.** (No text in images)
+    **CRITICAL RULE**: **단일 퀴즈 내의 모든 이미지(커버, 질문, 결과)는 반드시 동일한 화풍과 톤앤매너를 유지**해야 합니다. (일관성 유지)
+    **리뷰**: 커버이미지를 한장만 만들고 허가를 받아서 나머지 파일들도 생성한다.
+2.  **이미지 생성**: 선정된 스타일을 포함하여 JSON의 `imagePrompt`를 기반으로 `generate_image`를 호출합니다.  
+    **주의**: 이미지 사이즈는 반드시 512x512로 생성해야 합니다.
+    **주의**: 이미지 생성 도구(`generate_image`) 사용 중 **쿼터 제한(Limit)**에 걸린다면, 즉시 `scripts/generate-nanobanana-assets.ts --topic=[slug] --use-ai-studio` 명령어를 실행하여 서비스를 중단 없이 이어가야 합니다.
+3.  **파일 저장**: 생성된 이미지는 `contents/[topic-slug]/images/` 폴더에 저장합니다.
+    *   네이밍: `main-cover.png`, `q1.png`, `q2.png`, `result-es.png`, `result-ih.png`... (생성 후 반드시 WebP로 변환하여 업로드하고 webP파일을 남기고, png파일들은 삭제)
+4.  **자동화 스크립트 활용**: 이미지 업로드(`upload-folder-images.ts`) 및 시딩(`seed-from-json.ts`)을 통해 배포를 완료합니다.
 
 ## 🔍 에이전트 체크리스트
 - [ ] 질문이 12개 이상인가?
