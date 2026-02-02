@@ -1,0 +1,492 @@
+{
+  "title": "야생에서 살아남기 : 나의 동물적 본능 MBTI",
+  "description": "만약 당신이 낯선 야생에 떨어진다면? 위기의 순간 드러나는 당신의 본능적 선택으로 알아보는 나의 성격 동물 타입을 확인해보세요!",
+  "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/animal-instinct-mbti/main-cover.webp?v=1770012609871",
+  "isFeatured": true,
+  "category": "MBTI",
+  "imagePrompt": "High-quality 3D render, Pixar style animation, a group of cute and expressive animals (lion, red panda, dolphin, eagle, elephant) in a vibrant, sun-drenched enchanted forest. Bright clear colors, cinematic lighting, sharp details, professional 3D character design.",
+  "questions": [
+    {
+      "id": "q1",
+      "order": 1,
+      "text": "눈을 떠보니 울창한 숲 한가운데에 있다. 당신의 첫 행동은?",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/animal-instinct-mbti/q1.webp?v=1770012611079",
+      "imagePrompt": "A cute stylized 3D Pixar character waking up in a lush mystical forest with bright colors, cinematic lighting, and forest floor with glowing mushrooms.",
+      "options": [
+        {
+          "text": "주변에 다른 생존자가 있는지 소리쳐 부른다",
+          "score": {
+            "E": 1
+          }
+        },
+        {
+          "text": "숨을 죽이고 차분히 지형지물을 파악한다",
+          "score": {
+            "I": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "order": 2,
+      "text": "갈림길이 나타났다. 한쪽은 발자국이 많고, 한쪽은 미지의 정적만 흐른다. 당신은?",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/animal-instinct-mbti/q2.webp?v=1770012611279",
+      "imagePrompt": "A 3D Pixar style view of a forest fork road, one path with many animal footprints, one path quiet and mysterious, vibrant colors, enchanted forest.",
+      "options": [
+        {
+          "text": "이미 검증된 것 같은 발자국이 많은 길을 택한다",
+          "score": {
+            "S": 1
+          }
+        },
+        {
+          "text": "왠지 모를 탐험심을 자극하는 조용한 길로 향한다",
+          "score": {
+            "N": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "order": 3,
+      "text": "동료가 덫에 걸려 다쳤다. 하지만 지금 도와주면 탈출 시간을 놓칠 수 있다.",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/animal-instinct-mbti/q3.webp?v=1770012611488",
+      "imagePrompt": "A 3D Pixar style scene of a small cute forest animal trapped in a wooden cage, cinematic emotional lighting, vibrant colors, lush forest background.",
+      "options": [
+        {
+          "text": "냉정하게 전체의 생존 가능성을 위해 이동을 우선시한다",
+          "score": {
+            "T": 1
+          }
+        },
+        {
+          "text": "위험을 감수하더라도 동료를 구하기 위해 뒤에 남는다",
+          "score": {
+            "F": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "order": 4,
+      "text": "야영지에 도착했다. 당신은 잠들기 전 무엇을 하는가?",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/animal-instinct-mbti/q4.webp?v=1770012611698",
+      "imagePrompt": "A 3D Pixar style cozy campfire at night in a forest, bright embers, soft moonlight, starry sky, cinematic lighting.",
+      "options": [
+        {
+          "text": "내일 이동할 경로와 할 일을 미리 계획해둔다",
+          "score": {
+            "J": 1
+          }
+        },
+        {
+          "text": "피곤하니 일단 쉬고 상황에 맞춰 움직이기로 한다",
+          "score": {
+            "P": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "order": 5,
+      "text": "밤이 되자 캠프파이어 주변으로 생존자들이 모였다.",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/animal-instinct-mbti/q5.webp?v=1770012611882",
+      "imagePrompt": "A 3D Pixar style group of diverse cute animals (rabbit, fox, squirrel) gathered around a flickering campfire at night, storytelling atmosphere, warm glow.",
+      "options": [
+        {
+          "text": "오늘 있었던 일들을 신나게 이야기하며 분위기를 주도한다",
+          "score": {
+            "E": 1
+          }
+        },
+        {
+          "text": "조용히 불을 바라보며 혼자만의 생각에 잠긴다",
+          "score": {
+            "I": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "order": 6,
+      "text": "식량이 부족하다는 소문을 들었다. 당신은?",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/animal-instinct-mbti/q6.webp?v=1770012612082",
+      "imagePrompt": "3D Pixar style scene of a cute animal counting a small pile of berries and nuts precisely, inventory management, forest setting.",
+      "options": [
+        {
+          "text": "현재 가지고 있는 식량의 개수와 보존 기간을 정확히 체크한다",
+          "score": {
+            "S": 1
+          }
+        },
+        {
+          "text": "이 위기를 극복할 수 있는 새로운 사냥법이나 수집법을 상상해본다",
+          "score": {
+            "N": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "order": 7,
+      "text": "규칙을 어긴 생존자에 대해 처벌을 논의하는 시간이다.",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/animal-instinct-mbti/q7.webp?v=1770012612242",
+      "imagePrompt": "3D Pixar style forest clearing where a group of animals are having a serious discussion, wise owl on a branch, cinematic lighting.",
+      "options": [
+        {
+          "text": "공정성을 위해 사전에 정해진 원칙대로 단호하게 처리해야 한다",
+          "score": {
+            "T": 1
+          }
+        },
+        {
+          "text": "그럴 만한 사정이 있었는지 감안하여 최대한 포용해야 한다",
+          "score": {
+            "F": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q8",
+      "order": 8,
+      "text": "예상치 못한 천적의 습격을 받았다! 대피할 때 당신은?",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/animal-instinct-mbti/q8.webp?v=1770012612441",
+      "imagePrompt": "3D Pixar style fast-paced scene of a small animal running away from a fast-approaching shadow, motion blur, lush jungle.",
+      "options": [
+        {
+          "text": "미리 봐둔 탈출 경로를 따라 빠르게 이동한다",
+          "score": {
+            "J": 1
+          }
+        },
+        {
+          "text": "순간적인 기지를 발휘해 가장 가까운 덤불로 숨어든다",
+          "score": {
+            "P": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q9",
+      "order": 9,
+      "text": "새로운 숲을 발견했다. 당신의 반응은?",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/animal-instinct-mbti/q9.webp?v=1770012612668",
+      "imagePrompt": "3D Pixar style bird's eye view of a hidden lush green valley in a mystical forest, waterfalls, vibrant nature.",
+      "options": [
+        {
+          "text": "숲 입구에서 만난 다른 동물들에게 적극적으로 말을 건다",
+          "score": {
+            "E": 1
+          }
+        },
+        {
+          "text": "멀리서 동물들의 행동을 관찰하며 정보를 수집한다",
+          "score": {
+            "I": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "order": 10,
+      "text": "폭풍우가 몰아치려 한다. 당신은 어떻게 대비하는가?",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/animal-instinct-mbti/q10.webp?v=1770012612872",
+      "imagePrompt": "3D Pixar style dark sky with heavy rain clouds and lightning over a dark forest, dramatic cinematic lighting.",
+      "options": [
+        {
+          "text": "과거의 경험상 가장 안전했던 동굴로 들어간다",
+          "score": {
+            "S": 1
+          }
+        },
+        {
+          "text": "바람의 방향과 구름의 모양을 보고 태풍의 경로를 예측해본다",
+          "score": {
+            "N": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "order": 11,
+      "text": "두 동료 사이에서 다툼이 일어났다. 당신의 역할은?",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/animal-instinct-mbti/q11.webp?v=1770012613044",
+      "imagePrompt": "3D Pixar style scene of two cute animals arguing over a piece of fruit, a third neutral animal watching, expressive faces.",
+      "options": [
+        {
+          "text": "누구의 주장이 논리적으로 타당한지 따져서 시시비비를 가려준다",
+          "score": {
+            "T": 1
+          }
+        },
+        {
+          "text": "양쪽의 기분을 살피며 서로 화해할 수 있도록 중재한다",
+          "score": {
+            "F": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "order": 12,
+      "text": "사냥 도구 가방을 정리하는 법은?",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/animal-instinct-mbti/q12.webp?v=1770012613253",
+      "imagePrompt": "3D Pixar style inside of a hollow tree trunk used as a storage, bags and tools perfectly organized in shelves.",
+      "options": [
+        {
+          "text": "용도와 크기별로 칸을 나누어 완벽하게 수납한다",
+          "score": {
+            "J": 1
+          }
+        },
+        {
+          "text": "그때그때 필요한 것을 쉽게 꺼낼 수 있도록 자연스럽게 둔다",
+          "score": {
+            "P": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "order": 13,
+      "text": "목표 지점에 도착해 파티를 열었다. 당신은?",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/animal-instinct-mbti/q13.webp?v=1770012613422",
+      "imagePrompt": "3D Pixar style festive party in a forest clearing at dusk, lanterns, many animals dancing and celebrating, happy atmosphere.",
+      "options": [
+        {
+          "text": "가장 활기찬 중앙에서 춤을 추며 축제를 즐긴다",
+          "score": {
+            "E": 1
+          }
+        },
+        {
+          "text": "가장자리에서 마음 맞는 친구 몇 명과 조용히 이야기를 나눈다",
+          "score": {
+            "I": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q14",
+      "order": 14,
+      "text": "낯선 나무 열매를 발견했을 때 당신은?",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/animal-instinct-mbti/q14.webp?v=1770012613622",
+      "imagePrompt": "3D Pixar style close-up of a glowing, exotic-looking fruit on a branch, shimmering aura, fantasy forest.",
+      "options": [
+        {
+          "text": "도감에서 본 적이 있는지, 먹어본 냄새인지 꼼꼼히 살핀다",
+          "score": {
+            "S": 1
+          }
+        },
+        {
+          "text": "이 열매를 먹으면 어떤 신비한 힘이 생길지 상상해본다",
+          "score": {
+            "N": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "order": 15,
+      "text": "중요한 결정을 내려야 할 때 당신은 무엇을 가장 고려하는가?",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/animal-instinct-mbti/q15.webp?v=1770012613781",
+      "imagePrompt": "3D Pixar style wise character thinking under a large ancient tree, mystical light, thoughtful expression.",
+      "options": [
+        {
+          "text": "객관적인 사실과 명확한 인과관계",
+          "score": {
+            "T": 1
+          }
+        },
+        {
+          "text": "나와 동료들의 인간적인 가치와 행복",
+          "score": {
+            "F": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "order": 16,
+      "text": "마침내 탈출에 성공했다. 당신이 가장 먼저 한 생각은?",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/animal-instinct-mbti/q16.webp?v=1770012614014",
+      "imagePrompt": "3D Pixar style scene of exiting a dense forest into a wide, beautiful sunlit meadow, feeling of relief and completion.",
+      "options": [
+        {
+          "text": "다음에 또 이런 일이 생기면 보완해야 할 점들을 리스트업한다",
+          "score": {
+            "J": 1
+          }
+        },
+        {
+          "text": "일단 살아남았다는 사실에 안도하며 발길 닿는 대로 집으로 간다",
+          "score": {
+            "P": 1
+          }
+        }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "id": "ENTJ",
+      "typeCode": "ENTJ",
+      "mbti": "ENTJ",
+      "title": "야생의 제왕, 사자",
+      "description": "당신은 타고난 전략가이자 결단력 있는 지도자입니다. 위기 상황에서도 흔들림 없이 목표를 향해 나아가며, 최적의 효율로 무리를 안전하게 이끄는 야생의 지배자 타입입니다!",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/animal-instinct-mbti/result-entj.webp?v=1770012614231",
+      "imagePrompt": "3D Pixar style majestic Lion standing on a rock, king of the forest, charismatic, strong pose, cinematic sunlight."
+    },
+    {
+      "id": "INTJ",
+      "typeCode": "INTJ",
+      "mbti": "INTJ",
+      "title": "비상하는 전략가, 독수리",
+      "description": "높은 하늘에서 숲 전체를 조망하는 독수리처럼, 당신은 통찰력이 뛰어나고 고독한 사색을 즐깁니다. 치밀한 계산과 앞선 통찰력으로 누구보다 먼 곳을 내다보는 냉철한 전략가입니다.",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/animal-instinct-mbti/result-intj.webp?v=1770012614390",
+      "imagePrompt": "3D Pixar style Eagle perched on a high mountain peak, sharp eyes, strategic look, vast landscape background."
+    },
+    {
+      "id": "ENTP",
+      "typeCode": "ENTP",
+      "mbti": "ENTP",
+      "title": "숲의 발명가, 원숭이",
+      "description": "세상의 모든 것에 호기심을 느끼는 당신은 번뜩이는 아이디어로 위기를 즐거움으로 바꾸는 발명가입니다. 지루한 것은 참지 못하며, 기발한 잔머리로 불가능해 보이는 상황도 탈출해버립니다.",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/animal-instinct-mbti/result-entp.webp?v=1770012614592",
+      "imagePrompt": "3D Pixar style mischievous Monkey playing with a mechanical toy it made from vines and sticks, forest inventor."
+    },
+    {
+      "id": "INTP",
+      "typeCode": "INTP",
+      "mbti": "INTP",
+      "title": "침묵의 현자, 부엉이",
+      "description": "어둠 속에서도 빛나는 눈을 가진 부엉이처럼, 당신은 세상의 원리를 탐구하고 분석하는 것을 즐깁니다. 타인의 시선보다는 자신만의 지적 만족과 논리적 완결성을 추구하는 사색의 고수입니다.",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/animal-instinct-mbti/result-intp.webp?v=1770012614771",
+      "imagePrompt": "3D Pixar style wise Owl wearing glasses, reading an ancient scroll in a hollow tree library, soft warm light."
+    },
+    {
+      "id": "ENFJ",
+      "typeCode": "ENFJ",
+      "mbti": "ENFJ",
+      "title": "숲의 따뜻한 지도자, 코끼리",
+      "description": "강력한 힘보다 더 큰 공감 능력을 가진 당신은 무리의 화합과 행복을 위해 헌신하는 리더입니다. 당신의 지혜롭고 따뜻한 한마디는 척박한 야생에서도 생존자들에게 희망을 줍니다.",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/animal-instinct-mbti/result-enfj.webp?v=1770012614958",
+      "imagePrompt": "3D Pixar style friendly Elephant leading a group of smaller animals through a 숲, wise and warm expression."
+    },
+    {
+      "id": "INFJ",
+      "typeCode": "INFJ",
+      "mbti": "INFJ",
+      "title": "신비로운 수호자, 늑대",
+      "description": "차갑고 날카로울 것 같지만, 내면은 누구보다 깊고 숭고한 신념을 가진 늑대 타입입니다. 소수의 동료를 위해 목숨도 거는 의리파이며, 통찰력 있는 눈으로 진실을 꿰뚫어 봅니다.",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/animal-instinct-mbti/result-infj.webp?v=1770012615218",
+      "imagePrompt": "3D Pixar style mystic Wolf with glowing highlights on fur, sitting under a bright full moon, guardian of sacred grove."
+    },
+    {
+      "id": "ENFP",
+      "typeCode": "ENFP",
+      "mbti": "ENFP",
+      "title": "호기심 대장, 수달",
+      "description": "숲 전체를 놀이터로 만드는 긍정의 아이콘! 당신은 넘치는 에너지로 주변에 활력을 불어넣습니다. 새로운 모험과 만남을 즐기며, 어떤 상황에서도 즐거움을 찾아내는 마법 같은 존재입니다.",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/animal-instinct-mbti/result-enfp.webp?v=1770012615452",
+      "imagePrompt": "3D Pixar style playful Otter splashing in a crystal clear river, holding a shiny pebble, energetic and happy."
+    },
+    {
+      "id": "INFP",
+      "typeCode": "INFP",
+      "mbti": "INFP",
+      "title": "꿈꾸는 숲의 예술가, 레서판다",
+      "description": "자신만의 세계가 뚜렷하고 감수성이 풍부한 힐링 캐릭터입니다. 야생의 치열함 속에서도 아름다움을 찾아내며, 조용히 자기만의 방식으로 평화를 지켜나가는 마음 따뜻한 사상가입니다.",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/animal-instinct-mbti/result-infp.webp?v=1770012615626",
+      "imagePrompt": "3D Pixar style cute Red Panda dreaming on a tree branch, surrounded by floating sparkles, soulful and creative."
+    },
+    {
+      "id": "ESTJ",
+      "typeCode": "ESTJ",
+      "mbti": "ESTJ",
+      "title": "원칙의 수호자, 곰",
+      "description": "강력한 체력과 우직한 성실함으로 야생의 질서를 세우는 관리자 타입입니다. 정해진 규칙을 수호하고 계획대로 밀어붙여 결국은 생존을 쟁취해내는 가장 믿음직스러운 동료입니다.",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/animal-instinct-mbti/result-estj.webp?v=1770012615787",
+      "imagePrompt": "3D Pixar style strong Bear with a neat scarf, keeping a logbook of forest rules, organized and authoritative."
+    },
+    {
+      "id": "ISTJ",
+      "typeCode": "ISTJ",
+      "mbti": "ISTJ",
+      "title": "완벽한 설계자, 비버",
+      "description": "한 치의 오차도 없이 견고한 집을 짓는 비버처럼, 당신은 실무적이고 계획적인 생존 전문가입니다. 말이 많지는 않지만, 당신이 준비한 비상식량과 도구들은 무리의 가장 큰 자산이 됩니다.",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/animal-instinct-mbti/result-istj.webp?v=1770012615996",
+      "imagePrompt": "3D Pixar style hardworking Beaver building a complex dam with precise geometric sticks, focused and steady."
+    },
+    {
+      "id": "ESFJ",
+      "typeCode": "ESFJ",
+      "mbti": "ESFJ",
+      "title": "숲의 다정한 친구, 펭귄",
+      "description": "혼자보다는 함께일 때 더 강해지는 당신! 모든 동료를 세심하게 챙기고 배려하며, 무리의 결속력을 높이는 데 핵심적인 역할을 합니다. 당신이 있는 곳은 어디든 따뜻한 온기가 흐릅니다.",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/animal-instinct-mbti/result-esfj.webp?v=1770012616191",
+      "imagePrompt": "3D Pixar style group of cute Penguins huddled together sharing a warm meal, cooperative and warm atmosphere."
+    },
+    {
+      "id": "ISFJ",
+      "typeCode": "ISFJ",
+      "mbti": "ISFJ",
+      "title": "우직한 수호자, 거북이",
+      "description": "느리지만 한 번도 뒤처지지 않는 성실함의 끝판왕! 당신은 묵묵히 자신의 자리를 지키며 주변 사람들을 보호합니다. 당신의 헌신적인 태도는 야생 서바이벌의 가장 든든한 버팀목이 됩니다.",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/animal-instinct-mbti/result-isfj.webp?v=1770012616358",
+      "imagePrompt": "3D Pixar style Turtle with a flowery shell, providing shelter to smaller animals under a leaf roof."
+    },
+    {
+      "id": "ESTP",
+      "typeCode": "ESTP",
+      "mbti": "ESTP",
+      "title": "야생의 스릴 광, 치타",
+      "description": "고민은 사치! 압도적인 순간 판단력과 신체 능력으로 야생을 뛰어다니는 행동파입니다. 위기 상황에서 가장 먼저 몸을 던지며, 짜릿한 모험을 즐길 줄 아는 본능적인 승부사입니다.",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/animal-instinct-mbti/result-estp.webp?v=1770012616529",
+      "imagePrompt": "3D Pixar style Cheetah mid-sprint, dust trails, look of excitement and speed, wild and bold."
+    },
+    {
+      "id": "ISTP",
+      "typeCode": "ISTP",
+      "mbti": "ISTP",
+      "title": "고독한 기술자, 흑표범",
+      "description": "조용히 움직여 완벽하게 목표를 달성하는 숙련자 타입입니다. 상황 파악 능력이 탁월하고 도구를 다루는 데 능숙하여, 어떤 험난한 지형에서도 살아남는 진정한 야생 서바이벌리스트입니다.",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/animal-instinct-mbti/result-istp.webp?v=1770012616946",
+      "imagePrompt": "3D Pixar style sleek Black Panther sharpening its claws with a handcrafted tool, solo hunter, masterful."
+    },
+    {
+      "id": "ESFP",
+      "typeCode": "ESFP",
+      "mbti": "ESFP",
+      "title": "바다의 스타, 돌고래",
+      "description": "단조로운 야생 생활도 당신과 함께라면 축제가 됩니다! 낙천적인 성격과 넘치는 흥으로 매 순간을 즐기며, 좌절하기 쉬운 순간에도 동료들에게 웃음을 선사하는 분위기 메이커입니다.",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/animal-instinct-mbti/result-esfp.webp?v=1770012617122",
+      "imagePrompt": "3D Pixar style Dolphin leaping through the air from a turquoise ocean, tropical sun, star performer."
+    },
+    {
+      "id": "ISFP",
+      "typeCode": "ISFP",
+      "mbti": "ISFP",
+      "title": "자유로운 예술가, 사슴",
+      "description": "아름다운 자연을 사랑하고 현재를 충실히 살아가는 감성가입니다. 남들과 경쟁하기보다는 자신만의 속도로 숲을 거닐며, 섬세한 감각으로 세상의 모든 기쁨을 느끼는 자유로운 영혼입니다.",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/animal-instinct-mbti/result-isfp.webp?v=1770012617300",
+      "imagePrompt": "3D Pixar style graceful Deer using its hooves to paint a beautiful landscape on a large leaf, artistic and peaceful."
+    }
+  ]
+}

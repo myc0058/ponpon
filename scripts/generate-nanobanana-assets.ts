@@ -81,14 +81,14 @@ async function main() {
     const jobs = [
         { prompt: quizData.imagePrompt || quizData.description, filename: 'main-cover.png', label: 'Main Cover' },
         ...quizData.questions.map((q: any) => ({
-            prompt: q.imagePrompt || q.content,
-            filename: `q${q.order}.png`,
-            label: `Question ${q.order}`
+            prompt: q.imagePrompt || q.content || q.text,
+            filename: q.imageUrl || `q${q.order || q.id.replace(/\D/g, '')}.png`,
+            label: `Question ${q.order || q.id}`
         })),
         ...quizData.results.map((r: any) => ({
-            prompt: r.imagePrompt || r.description,
-            filename: `result-${(r.typeCode || r.title).toLowerCase()}.png`,
-            label: `Result ${r.typeCode || r.title}`
+            prompt: r.imagePrompt || r.description || r.title,
+            filename: r.imageUrl || `result-${(r.typeCode || r.id || r.title).toLowerCase()}.png`,
+            label: `Result ${r.typeCode || r.id || r.title}`
         }))
     ]
 
