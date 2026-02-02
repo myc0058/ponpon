@@ -36,6 +36,7 @@ export const metadata: Metadata = {
   },
 };
 
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 import Header from "@/components/Header";
 import { ToastProvider } from "@/components/Toast";
 
@@ -47,19 +48,7 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body className={outfit.className}>
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-RRJNBF781Z"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-RRJNBF781Z');
-          `}
-        </Script>
+        <GoogleAnalytics />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
