@@ -1,0 +1,184 @@
+{
+  "title": "남들이 보는 나 vs 내가 아는 나 [반전 매력 테스트]",
+  "description": "타인이 생각하는 나의 첫인상과 내가 생각하는 나의 진짜 모습은 얼마나 다를까요? 10가지 질문을 통해 당신도 몰랐던 숨겨진 내면의 매력을 발견해보세요!",
+  "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/self-perception-test/main-cover.webp?v=1769998171477",
+  "typeCodeLimit": 5,
+  "questions": [
+    {
+      "order": 1,
+      "content": "엘리베이터 거울에 비친 내 모습을 봤을 때 드는 생각은?",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/self-perception-test/q1.webp?v=1769998171674",
+      "options": [
+        {
+          "content": "음~ 오늘 좀 괜찮은걸? (자기 만족)",
+          "resultTypeCode": "E"
+        },
+        {
+          "content": "옷이 좀 이상한가? 머리가 정리가 안 됐네. (자기 검열)",
+          "resultTypeCode": "I"
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "content": "오랜만에 나간 초등학교 동창회, 나의 태도는?",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/self-perception-test/q2.webp?v=1769998171831",
+      "options": [
+        {
+          "content": "여기저기 돌아다니며 말을 걸고 분위기를 주도한다.",
+          "resultTypeCode": "E"
+        },
+        {
+          "content": "친했던 친구 한두 명과 조용히 근황을 나눈다.",
+          "resultTypeCode": "I"
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "content": "친구가 나에게 \"너 오늘 분위기가 좀 달라 보인다?\"라고 한다면?",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/self-perception-test/q3.webp?v=1769998172004",
+      "options": [
+        {
+          "content": "\"정말? 뭐가 다른데? 예뻐 보여?\" (기분 좋음)",
+          "resultTypeCode": "E"
+        },
+        {
+          "content": "\"그래? 나 평소랑 똑같은데...\" (무슨 뜻인지 고민함)",
+          "resultTypeCode": "I"
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "content": "길을 걷다 갑자기 방송사 인터뷰 요청을 받게 되었다!",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/self-perception-test/q4.webp?v=1769998172202",
+      "options": [
+        {
+          "content": "당황하지만 은근히 즐기며 인터뷰에 응한다.",
+          "resultTypeCode": "E"
+        },
+        {
+          "content": "죄송하다고 정중히 거절하고 빠르게 자리를 피한다.",
+          "resultTypeCode": "I"
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "content": "갑자기 메시지 알림이 쏟아지는 단톡방, 나의 반응은?",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/self-perception-test/q5.webp?v=1769998172454",
+      "options": [
+        {
+          "content": "무슨 재미난 일이 있나? 실시간으로 확인하고 대화에 참여한다.",
+          "resultTypeCode": "E"
+        },
+        {
+          "content": "나중에 한꺼번에 확인한다. 알림을 바로 끄거나 무음으로 둔다.",
+          "resultTypeCode": "I"
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "content": "친구가 말도 안 되는 스타일의 옷을 사고 어떠냐고 묻는다.",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/self-perception-test/q6.webp?v=1769998173254",
+      "options": [
+        {
+          "content": "\"어... 개성 있고 좋은데? 네 스타일이야!\" (영혼 있는 리액션)",
+          "resultTypeCode": "S"
+        },
+        {
+          "content": "\"진심이야? 그건 좀 아닌 것 같아...\" (단호한 팩트 체크)",
+          "resultTypeCode": "H"
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "content": "함께 식사하던 친구가 내가 아끼는 컵을 깨뜨렸다!",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/self-perception-test/q7.webp?v=1769998173928",
+      "options": [
+        {
+          "content": "\"아... 내가 왜 그랬지. 이 컵 아끼던 건데 ㅠㅠ\" (자책 모드)",
+          "resultTypeCode": "S"
+        },
+        {
+          "content": "\"치워야겠다. 빗자루가 어디 있더라?\" (해결 모드)",
+          "resultTypeCode": "H"
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "content": "짝사랑하는 사람에게 선톡이 왔다! \"주말에 뭐해?\"",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/self-perception-test/q8.webp?v=1769998174118",
+      "options": [
+        {
+          "content": "\"미쳤다 미쳤다! 나한테 관심 있나? 프사 바꿀까?\" (온갖 상상의 나래)",
+          "resultTypeCode": "S"
+        },
+        {
+          "content": "\"만나자는 건가? 토요일엔 약속 있고 일요일은 비는데.\" (스케줄 확인)",
+          "resultTypeCode": "H"
+        }
+      ]
+    },
+    {
+      "order": 9,
+      "content": "엄청 슬픈 영화를 봤다. 친구들은 다 우는데 나는?",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/self-perception-test/q9.webp?v=1769998174314",
+      "options": [
+        {
+          "content": "이미 휴지 한 통 다 썼다. 주인공 감정에 빙의됨.",
+          "resultTypeCode": "S"
+        },
+        {
+          "content": "\"저 상황에서 저게 가능한가?\" 개연성과 연기력을 분석 중이다.",
+          "resultTypeCode": "H"
+        }
+      ]
+    },
+    {
+      "order": 10,
+      "content": "누군가 나를 이유 없이 싫어한다는 걸 알게 되었을 때?",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/self-perception-test/q10.webp?v=1769998174516",
+      "options": [
+        {
+          "content": "\"내가 뭘 잘못했나? 오해인가?\" 신경 쓰여서 잠이 안 온다.",
+          "resultTypeCode": "S"
+        },
+        {
+          "content": "\"어쩔 수 없지. 나도 걔 별로 안 좋아하면 됨.\" (타격감 제로)",
+          "resultTypeCode": "H"
+        }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "typeCode": "ES",
+      "title": "겉은 핵인싸, 속은 유리 멘탈",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/self-perception-test/result-es.webp?v=1769998174724",
+      "description": "\"너 진짜 쿨하다!\" 라는 말 자주 듣나요? 그거 다 연기잖아요! 당신은 겉으로는 사람들과 어울리는 걸 좋아하고 리액션도 빵빵한 분위기 메이커입니다. 하지만 집에 돌아오면 \"아까 그 말은 하지 말 걸 그랬나?\" 하며 이불킥하는 스타일! 남들이 보기에 당신은 걱정 없어 보이지만, 사실은 누구보다 사람들의 시선과 감정에 민감해요. 겉으로 웃고 있다고 속까지 웃고 있는 건 아니랍니다."
+    },
+    {
+      "typeCode": "EH",
+      "title": "브레이크 없는 쾌속 직진러",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/self-perception-test/result-eh.webp?v=1769998174901",
+      "description": "\"인생은 실전이야!\" 당신의 사전엔 \"후회\"란 없습니다. 어디 가서 기 죽는 법이 없고, 할 말은 해야 직성이 풀리는 사이다 같은 성격! 겉으로 보이는 당당함이 속마음과 일치하는 \"투명도 100%\" 인간입니다. 고민할 시간에 행동하는 편이라 리더십 있다는 소리도 많이 듣죠. 하지만 가끔은 당신의 팩트 폭격에 상처받는 친구들도 있을 수 있어요."
+    },
+    {
+      "typeCode": "IS",
+      "title": "알면 알수록 진국, 볼매 그 자체",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/self-perception-test/result-is.webp?v=1769998175083",
+      "description": "\"첫인상은 차갑다는 오해, 지겹지 않나요? 낯을 가려서 조용히 있을 뿐인데 \"화났어?\"라는 말을 자주 듣습니다. 하지만 친해지면 엽기 댄스도 가능한 반전 매력의 소유자! 겉으로는 무심해 보여도 속으로는 \"저 친구 물 필요하지 않을까?\" 하며 세심하게 챙기고 있습니다. 상처를 받아도 티를 잘 안 내고 혼자 삭히는 편이라, 친구들은 당신이 얼마나 여린지 모를 수 있어요."
+    },
+    {
+      "typeCode": "IH",
+      "title": "조용히 세상을 지배하는 흑막(?)",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/self-perception-test/result-ih.webp?v=1769998175265",
+      "description": "\"그래서 결론이 뭔데?\" 답답한 건 딱 질색! 감정 기복이 크지 않고 언제나 평정심을 유지하는 당신. 겉으로 조용한 건 낯을 가려서가 아니라, 굳이 쓸데없는 말을 섞기 귀찮아서일 수도 있습니다. 혼자서도 너무 잘 놀고, 관심 분야에는 덕후 기질도 발휘하죠. 남들이 감정에 호소할 때 당신은 머릿속으로 해결책을 내놓습니다. 차가워 보이지만 틀린 말은 안 하는 당신, 가끔 던지는 한 마디가 촌철살인이라 의외로 개그 캐릭터일지도?"
+    }
+  ]
+}
