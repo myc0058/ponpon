@@ -9,7 +9,7 @@ import { getBustedImageUrl } from '@/lib/image-utils'
 import { formatContent } from '@/lib/string-utils'
 import ReportModal from '@/components/ReportModal'
 import AdPopup from '@/components/AdPopup'
-import { Flag } from 'lucide-react'
+import { Flag, Heart, Briefcase, Search } from 'lucide-react'
 
 
 type Option = {
@@ -294,7 +294,10 @@ export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
                 {quiz.resultType === 'BRANCHING' && (
                     <div className={styles.statusOverlay}>
                         <div className={styles.statusItem}>
-                            <div className={styles.statusLabel}>체력 (HP)</div>
+                            <div className={styles.statusLabel}>
+                                <Heart size={14} className={styles.statusIcon} />
+                                <span>HP</span>
+                            </div>
                             <div className={styles.hpBarBackground}>
                                 <div
                                     className={styles.hpBarFill}
@@ -302,8 +305,14 @@ export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
                                 />
                             </div>
                         </div>
+
+                        <div className={styles.statusDivider} />
+
                         <div className={styles.statusItem}>
-                            <div className={styles.statusLabel}>인벤토리</div>
+                            <div className={styles.statusLabel}>
+                                <Briefcase size={14} className={styles.statusIcon} />
+                                <span>소지품</span>
+                            </div>
                             <div className={styles.inventoryList}>
                                 {playerState.inventory && playerState.inventory.length > 0 ? (
                                     playerState.inventory.map((item: string, idx: number) => (
@@ -314,13 +323,20 @@ export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
                                 )}
                             </div>
                         </div>
+
                         {playerState.evidence !== undefined && (
-                            <div className={styles.statusItem}>
-                                <div className={styles.statusLabel}>단서 기록</div>
-                                <div className={styles.evidenceBadge}>
-                                    🔍 단서 {playerState.evidence}개
+                            <>
+                                <div className={styles.statusDivider} />
+                                <div className={styles.statusItem}>
+                                    <div className={styles.statusLabel}>
+                                        <Search size={14} className={styles.statusIcon} />
+                                        <span>단서</span>
+                                    </div>
+                                    <div className={styles.evidenceBadge}>
+                                        {playerState.evidence}개
+                                    </div>
                                 </div>
-                            </div>
+                            </>
                         )}
                     </div>
                 )}
