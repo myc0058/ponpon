@@ -1,0 +1,37 @@
+.sideAdContainer {
+    position: fixed;
+    top: 100px;
+    width: 160px;
+    height: 600px;
+    display: none;
+    z-index: 10;
+}
+
+.left {
+    left: calc(50% - 300px - 180px);
+    /* 300 is half of app max-width 600px */
+}
+
+.right {
+    right: calc(50% - 300px - 180px);
+}
+
+@media (min-width: 1200px) {
+    .sideAdContainer {
+        display: block;
+    }
+}
+
+.placeholder {
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px dashed rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 1rem;
+}

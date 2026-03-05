@@ -38,6 +38,7 @@ export const metadata: Metadata = {
 
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import MetaPixel from "@/components/MetaPixel";
+import SideAd from "@/components/SideAd";
 import GoogleAdSense from "@/components/GoogleAdSense";
 import Header from "@/components/Header";
 import { ToastProvider } from "@/components/Toast";
@@ -52,6 +53,8 @@ export default function RootLayout({
       <body className={outfit.className}>
         <GoogleAnalytics />
         <MetaPixel />
+        <SideAd position="left" />
+        <SideAd position="right" />
         <GoogleAdSense />
         <script
           type="application/ld+json"

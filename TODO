@@ -1,6 +1,15 @@
-광고
-첫번쨰 질문은 꼭 이미지 로딩이 느림. 두번째 부터는 빠름
-컨텐츠 생산 자동화
-redis, db 보안문제 확인
-dev branch를 만들어야 함
-퀴즈 순서 어떻게 해야 될지 고민
+[ ] 메타 광고 및 수익 최적화 설정
+    - [ ] Meta Pixel ID 발급 및 `.env` 설정 (참고: [픽셀 설정 가이드](file:///home/myc0058/projects/ponpon/docs/pixel-setup-guide.md))
+    - [ ] Google AdSense 실제 Slot ID 연결 (QuizPlayer, Analyzing, ResultDisplay, AdPopup.tsx)
+    - [ ] 쿠팡 파트너스 다이내믹 배너 주소(iframeSrc) 업데이트 (ResultDisplay.tsx)
+    - [ ] 상세 작업 내용 및 가이드 확인 (참고: [최종 워크스루](file:///home/myc0058/projects/ponpon/docs/ad-optimization-walkthrough.md))
+[ ] 첫번째 질문 이미지 로딩 지연 문제 해결 (이미지 최적화 및 프리로딩 검토)
+[ ] 컨텐츠 생산 자동화 프로세스 구축
+[ ] Redis 및 DB 보안 설정 점검
+[ ] dev branch 생성 및 개발 워크플로우 설정
+[ ] 퀴즈 노출 순서 및 정렬 로직 기획
+
+
+
+
+

@@ -187,6 +187,16 @@ export default async function QuizResultPage({
         ty: finalTypeParam
     });
 
+    // 3. 추천 퀴즈 가져오기 (현재 퀴즈 제외)
+    const recommendedQuizzes = await prisma.quiz.findMany({
+        where: {
+            id: { not: id },
+            isVisible: true
+        },
+        take: 4,
+        orderBy: { createdAt: 'desc' }
+    })
+
     return (
         <ResultDisplay
             quiz={quiz}
@@ -195,6 +205,7 @@ export default async function QuizResultPage({
             resultType={quiz.resultType}
             typeCode={finalTypeParam}
             compressedData={resultToCompress}
+            recommendedQuizzes={recommendedQuizzes}
         />
     )
 }

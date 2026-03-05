@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import QuizGrid from '@/components/QuizGrid'
 import styles from './result.module.css'
 import { Share2, Home, Lock, Link as LinkIcon, RotateCcw } from 'lucide-react'
 import { generateShortUrl } from '@/app/actions/shorten-url'
@@ -33,7 +34,8 @@ export default function ResultDisplay({
     score,
     resultType,
     typeCode,
-    compressedData
+    compressedData,
+    recommendedQuizzes = []
 }: {
     quiz: Quiz
     result: Result
@@ -41,6 +43,7 @@ export default function ResultDisplay({
     resultType: 'SCORE_BASED' | 'TYPE_BASED'
     typeCode?: string
     compressedData: string
+    recommendedQuizzes?: any[]
 }) {
     const [isPaid, setIsPaid] = useState(false)
     const [isPaymentLoading, setIsPaymentLoading] = useState(false)
@@ -205,12 +208,30 @@ export default function ResultDisplay({
                 </button>
             </div>
 
-            <CoupangPartners />
+            <CoupangPartners iframeSrc="여기에_쿠팡에서_복사한_주소_붙여넣기" />
 
-            <div className={styles.adPlaceholder}>
-                <div className={styles.adLabel}>광고</div>
-                <div className={styles.adContent}>Google AdSense 영역</div>
+            {/* 구글 애드센스 - 결과와 추천 사이 */}
+            <div style={{ margin: '2rem 0', minHeight: '100px', background: 'rgba(255,255,255,0.03)', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', color: '#666', width: '100%' }}>
+                <div style={{ textAlign: 'center', width: '100%' }}>
+                    <p style={{ margin: '5px 0' }}>구글 애드센스 (중간 배너)</p>
+                    <ins className="adsbygoogle"
+                        style={{ display: 'block' }}
+                        data-ad-client="ca-pub-9702335674400881"
+                        data-ad-slot="RESULT_MIDDLE_SLOT"
+                        data-ad-format="auto"
+                        data-full-width-responsive="true"></ins>
+                </div>
             </div>
+
+            {recommendedQuizzes && recommendedQuizzes.length > 0 && (
+                <div style={{ width: '100%', marginTop: '2rem' }}>
+                    <h2 style={{ fontSize: '1.4rem', fontWeight: '800', marginBottom: '1.5rem', textAlign: 'center' }}>다른 테스트 더보기</h2>
+                    <QuizGrid quizzes={recommendedQuizzes} />
+                </div>
+            )}
+
+            {/* 하단 여백 추가용 투명 요소 */}
+            <div style={{ height: '3rem' }}></div>
 
             <ShareDrawer
                 isOpen={isShareOpen}

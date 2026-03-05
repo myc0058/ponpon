@@ -8,6 +8,7 @@ import { calculateTypeResult } from '@/lib/quiz-logic'
 import { getBustedImageUrl } from '@/lib/image-utils'
 import { formatContent } from '@/lib/string-utils'
 import ReportModal from '@/components/ReportModal'
+import AdPopup from '@/components/AdPopup'
 import { Flag } from 'lucide-react'
 
 
@@ -46,6 +47,8 @@ export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
     const progressRef = useRef<HTMLDivElement>(null)
     const router = useRouter()
     const [isReportOpen, setIsReportOpen] = useState(false)
+    const [isPopupOpen, setIsPopupOpen] = useState(false)
+    const [pendingAnswer, setPendingAnswer] = useState<Option | null>(null)
 
 
 
@@ -89,6 +92,17 @@ export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
     const progress = ((currentQuestionIndex + 1) / quiz.questions.length) * 100
 
     const handleAnswer = (option: Option) => {
+        // 30% chance to show popup ad
+        if (Math.random() < 0.3 && !isPopupOpen) {
+            setPendingAnswer(option)
+            setIsPopupOpen(true)
+            return
+        }
+
+        processAnswer(option)
+    }
+
+    const processAnswer = (option: Option) => {
         const nextIndex = currentQuestionIndex + 1
         const isLastQuestion = nextIndex === quiz.questions.length
 
@@ -116,9 +130,7 @@ export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
             setCurrentQuestionIndex(nextIndex)
         } else {
             // Determine final result and save to session storage
-            let resultQuery = ''
             if (quiz.resultType === 'SCORE_BASED') {
-                // Save result data for analyzing page
                 sessionStorage.setItem(`quiz_result_${quiz.id}`, JSON.stringify({
                     type: 'SCORE',
                     score: newScore
@@ -132,8 +144,6 @@ export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
                     resultType: finalType
                 }))
             }
-
-
 
             router.push(`/quiz/${quiz.id}/analyzing`)
         }
@@ -190,6 +200,19 @@ export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
                             </button>
                         ))}
                     </div>
+
+                    {/* 구글 애드센스 - 보기 하단 */}
+                    <div style={{ marginTop: '2rem', minHeight: '100px', background: 'rgba(255,255,255,0.03)', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', color: '#666' }}>
+                        <div style={{ textAlign: 'center', width: '100%' }}>
+                            <p>구글 애드센스 (사각/피드형)</p>
+                            <ins className="adsbygoogle"
+                                style={{ display: 'block' }}
+                                data-ad-client="ca-pub-9702335674400881"
+                                data-ad-slot="QUIZ_PLAY_BOTTOM_SLOT"
+                                data-ad-format="auto"
+                                data-full-width-responsive="true"></ins>
+                        </div>
+                    </div>
                 </div>
 
                 {/* Preload next image */}
@@ -219,6 +242,17 @@ export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
                 isOpen={isReportOpen}
                 onClose={() => setIsReportOpen(false)}
                 quizId={quiz.id}
+            />
+
+            <AdPopup
+                isOpen={isPopupOpen}
+                onClose={() => {
+                    setIsPopupOpen(false)
+                    if (pendingAnswer) {
+                        processAnswer(pendingAnswer)
+                        setPendingAnswer(null)
+                    }
+                }}
             />
         </main>
 
