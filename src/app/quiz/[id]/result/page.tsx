@@ -4,7 +4,7 @@ import { Metadata } from 'next'
 import { compressData, decompressData } from '@/lib/compression'
 
 // Helper function to find matching result
-async function getQuizResult(id: string, scoreParam?: string, typeParam?: string) {
+async function getQuizResult(id: string, scoreParam?: string, typeParam?: string, resultIdParam?: string) {
     const score = parseInt(scoreParam || '0')
 
     const quiz = await prisma.quiz.findUnique({
@@ -17,7 +17,12 @@ async function getQuizResult(id: string, scoreParam?: string, typeParam?: string
     if (!quiz) return { quiz: null, result: null }
 
     let result = null
-    if (quiz.resultType === 'TYPE_BASED' && typeParam) {
+
+    if (resultIdParam) {
+        result = quiz.results.find((r: any) => r.id === resultIdParam)
+    }
+
+    if (!result && quiz.resultType === 'TYPE_BASED' && typeParam) {
         const userCodes = typeParam.split('')
         let maxOverlap = -1
 
@@ -48,10 +53,10 @@ export async function generateMetadata({
     searchParams
 }: {
     params: Promise<{ id: string }>
-    searchParams: Promise<{ score?: string; type?: string; o?: string }>
+    searchParams: Promise<{ score?: string; type?: string; o?: string; resultId?: string }>
 }): Promise<Metadata> {
     const { id } = await params
-    const { score, type, o } = await searchParams
+    const { score, type, o, resultId } = await searchParams
 
     let quiz = null
     let result = null
@@ -71,7 +76,7 @@ export async function generateMetadata({
 
     // 2. 없으면 DB에서 조회
     if (!quiz || !result) {
-        const data = await getQuizResult(id, score, type)
+        const data = await getQuizResult(id, score, type, resultId)
         quiz = data.quiz
         result = data.result
     }
@@ -116,10 +121,10 @@ export default async function QuizResultPage({
     searchParams
 }: {
     params: Promise<{ id: string }>
-    searchParams: Promise<{ score?: string; type?: string; o?: string }>
+    searchParams: Promise<{ score?: string; type?: string; o?: string; resultId?: string }>
 }) {
     const { id } = await params
-    let { score: scoreParam, type: typeParam, o: compressedData } = await searchParams
+    let { score: scoreParam, type: typeParam, o: compressedData, resultId } = await searchParams
 
     let quiz = null
     let result = null
@@ -150,7 +155,7 @@ export default async function QuizResultPage({
 
     // 2. 없으면 DB 조회
     if (!quiz || !result) {
-        const data = await getQuizResult(id, scoreParam, finalTypeParam)
+        const data = await getQuizResult(id, scoreParam, finalTypeParam, resultId)
         quiz = data.quiz
         result = data.result
     }

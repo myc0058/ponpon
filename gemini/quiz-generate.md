@@ -51,6 +51,7 @@
         *   **Paper Cutout/Craft**: 종이를 오려 붙인 듯한 그림자와 질감, 스크랩북 감성 (포근함/DIY/아동)
         *   **Holographic/Iridescent**: 빛에 따라 변하는 색감, 메탈릭하고 글로시한 질감 (트렌디/뷰티/패션)
     **CRITICAL RULE**: **이미지 내에 어떠한 텍스트(글자, 숫자 등)도 포함하지 마십시오.** (No text in images)
+    **CRITICAL RULE**: **실존 인물이나 배우가 연상되는 이미지를 생성하지 마십시오.** (No real people/actors). 반드시 [통합 이미지 생성 프로토콜](gemini/image-production-protocol.md)을 준수하십시오.
     **CRITICAL RULE**: **단일 퀴즈 내의 모든 이미지(커버, 질문, 결과)는 반드시 동일한 화풍과 톤앤매너를 유지**해야 합니다. (일관성 유지)
     **리뷰**: 커버이미지를 한장만 만들고 허가를 받아서 나머지 파일들도 생성한다.
 2.  **이미지 생성**: 선정된 스타일을 포함하여 JSON의 `imagePrompt`를 기반으로 `generate_image`를 호출합니다.  

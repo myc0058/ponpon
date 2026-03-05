@@ -40,6 +40,8 @@ export default function AnalyzingPage({ params }: { params: Promise<{ id: string
                 setFinalUrl(`/quiz/${quizId}/result?score=${resultData.score}`)
             } else if (resultData.type === 'TYPE') {
                 setFinalUrl(`/quiz/${quizId}/result?type=${resultData.resultType}`)
+            } else if (resultData.type === 'BRANCHING') {
+                setFinalUrl(`/quiz/${quizId}/result?resultId=${resultData.resultId}`)
             } else {
                 // Invalid data
                 router.replace(`/quiz/${quizId}`)
@@ -71,7 +73,8 @@ export default function AnalyzingPage({ params }: { params: Promise<{ id: string
 
     return (
         <main className={styles.container}>
-            {/* 구글 애드센스 - 분석 상단 */}
+            {/* 구글 애드센스 - 분석 상단 (숨김 처리) */}
+            {/* 
             <div style={{ marginBottom: '1.5rem', minHeight: '60px', background: 'rgba(255,255,255,0.03)', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', color: '#666', width: '100%' }}>
                 <div style={{ textAlign: 'center', width: '100%' }}>
                     <p style={{ margin: '5px 0' }}>구글 애드센스 (상단 배너)</p>
@@ -83,6 +86,7 @@ export default function AnalyzingPage({ params }: { params: Promise<{ id: string
                         data-full-width-responsive="true"></ins>
                 </div>
             </div>
+            */}
 
             <div className={styles.questionCard}>
                 <h2 className={styles.calculatingTitle}>
@@ -98,11 +102,11 @@ export default function AnalyzingPage({ params }: { params: Promise<{ id: string
 
                 <p className={styles.calculatingText}>{Math.floor(progress)}% 완료</p>
 
-                {/* 하단 광고 샌드위치 영역 */}
+                {/* 하단 광고 샌드위치 영역 (숨김 처리) */}
                 <div style={{ marginTop: '2.5rem', width: '100%', display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
 
-                    {/* 샌드위치 1: 쿠팡 파트너스 (버튼 위) */}
-                    <CoupangPartners iframeSrc={coupangIframeSrc} />
+                    {/* 샌드위치 1: 쿠팡 파트너스 (버튼 위) - 숨김 */}
+                    {/* <CoupangPartners iframeSrc={coupangIframeSrc} /> */}
 
                     {showResultButton && (
                         <button
@@ -114,7 +118,8 @@ export default function AnalyzingPage({ params }: { params: Promise<{ id: string
                         </button>
                     )}
 
-                    {/* 샌드위치 2: 구글 애드센스 (버튼 아래) */}
+                    {/* 샌드위치 2: 구글 애드센스 (버튼 아래) - 숨김 */}
+                    {/* 
                     <div style={{ minHeight: '100px', background: 'rgba(255,255,255,0.03)', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', color: '#666' }}>
                         <div style={{ textAlign: 'center', width: '100%' }}>
                             <p style={{ margin: '5px 0' }}>구글 애드센스 (버튼 하단)</p>
@@ -126,6 +131,7 @@ export default function AnalyzingPage({ params }: { params: Promise<{ id: string
                                 data-full-width-responsive="true"></ins>
                         </div>
                     </div>
+                    */}
                 </div>
             </div>
         </main>

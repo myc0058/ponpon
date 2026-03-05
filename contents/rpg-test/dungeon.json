@@ -1,0 +1,123 @@
+{
+    "title": "던전 탈출: RPG 테스트",
+    "description": "체력과 인벤토리 시스템이 작동하는지 테스트하는 게임북입니다.",
+    "resultType": "BRANCHING",
+    "initialState": {
+        "hp": 100,
+        "inventory": []
+    },
+    "questions": [
+        {
+            "id": "q_start",
+            "text": "어두운 던전 입구에 서 있습니다. 벽에는 녹슨 '검'이 하나 걸려 있고, 아래쪽에는 수상한 '상자'가 있습니다.",
+            "order": 1,
+            "options": [
+                {
+                    "text": "벽에 걸린 검을 챙긴다",
+                    "stateChanges": {
+                        "items": [
+                            "녹슨 검"
+                        ]
+                    },
+                    "nextQuestionId": "q_hallway"
+                },
+                {
+                    "text": "상자를 열어본다",
+                    "stateChanges": {
+                        "hp": -20
+                    },
+                    "nextQuestionId": "q_trap"
+                }
+            ]
+        },
+        {
+            "id": "q_trap",
+            "text": "상자 안에서 독침이 튀어나와 팔을 찔렀습니다! (HP -20) 하지만 상자 바닥에서 '열쇠'를 발견했습니다.",
+            "order": 2,
+            "options": [
+                {
+                    "text": "열쇠를 챙기고 복도로 나간다",
+                    "stateChanges": {
+                        "items": [
+                            "열쇠"
+                        ]
+                    },
+                    "nextQuestionId": "q_hallway"
+                }
+            ]
+        },
+        {
+            "id": "q_hallway",
+            "text": "긴 복도 끝에 거대한 철문이 있습니다. 문 앞에는 굶주린 '늑대'가 잠자고 있습니다.",
+            "order": 3,
+            "options": [
+                {
+                    "text": "조용히 문을 열고 나간다 (열쇠 필요)",
+                    "conditions": [
+                        {
+                            "requiredItems": [
+                                "열쇠"
+                            ],
+                            "targetResultId": "res_escape"
+                        }
+                    ],
+                    "nextQuestionId": "q_locked"
+                },
+                {
+                    "text": "늑대와 싸운다 (검 필요)",
+                    "conditions": [
+                        {
+                            "requiredItems": [
+                                "녹슨 검"
+                            ],
+                            "stateChanges": {
+                                "hp": -30
+                            },
+                            "targetResultId": "res_escape"
+                        }
+                    ],
+                    "stateChanges": {
+                        "hp": -999
+                    },
+                    "nextQuestionId": "q_death"
+                }
+            ]
+        },
+        {
+            "id": "q_locked",
+            "text": "문이 굳게 잠겨 있습니다. 열쇠가 없으면 열 수 없을 것 같습니다.",
+            "order": 4,
+            "options": [
+                {
+                    "text": "다시 돌아간다",
+                    "nextQuestionId": "q_start"
+                }
+            ]
+        },
+        {
+            "id": "q_death",
+            "text": "늑대가 깨어나 당신을 덮쳤습니다! 무기도 없이 늑대를 이길 수는 없었습니다.",
+            "order": 5,
+            "options": [
+                {
+                    "text": "어둠 속으로...",
+                    "targetResultId": "res_death"
+                }
+            ]
+        }
+    ],
+    "results": [
+        {
+            "typeCode": "res_escape",
+            "title": "던전 탈출 성공!",
+            "description": "당신은 무사히 던전을 빠져나왔습니다. 축하합니다!",
+            "imageUrl": null
+        },
+        {
+            "typeCode": "res_death",
+            "title": "비극적인 결말",
+            "description": "당신은 차가운 던전 바닥에서 생을 마감했습니다.",
+            "imageUrl": null
+        }
+    ]
+}

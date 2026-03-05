@@ -17,6 +17,10 @@ type Option = {
     content: string
     score: number
     resultTypeCode: string | null
+    nextQuestionId: string | null
+    targetResultId: string | null
+    stateChanges: any | null
+    conditions: any | null
 }
 
 type Question = {
@@ -30,9 +34,10 @@ type Question = {
 type Quiz = {
     id: string
     title: string
-    resultType: 'SCORE_BASED' | 'TYPE_BASED'
+    resultType: 'SCORE_BASED' | 'TYPE_BASED' | 'BRANCHING'
     typeCodeLimit: number
     questions: Question[]
+    initialState: any | null
     results: {
         id: string
         typeCode: string | null
@@ -49,6 +54,16 @@ export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
     const [isReportOpen, setIsReportOpen] = useState(false)
     const [isPopupOpen, setIsPopupOpen] = useState(false)
     const [pendingAnswer, setPendingAnswer] = useState<Option | null>(null)
+
+    // RPG System State
+    const [playerState, setPlayerState] = useState<any>(() => {
+        // Parse initial state if exists
+        try {
+            return quiz.initialState || { hp: 100, inventory: [] }
+        } catch (e) {
+            return { hp: 100, inventory: [] }
+        }
+    })
 
 
 
@@ -92,12 +107,14 @@ export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
     const progress = ((currentQuestionIndex + 1) / quiz.questions.length) * 100
 
     const handleAnswer = (option: Option) => {
-        // 30% chance to show popup ad
+        // 30% chance to show popup ad (Disabled for now)
+        /*
         if (Math.random() < 0.3 && !isPopupOpen) {
             setPendingAnswer(option)
             setIsPopupOpen(true)
             return
         }
+        */
 
         processAnswer(option)
     }
@@ -120,6 +137,107 @@ export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
             }
         }
 
+        if (quiz.resultType === 'BRANCHING') {
+            // Apply RPG State Changes
+            if (option.stateChanges) {
+                const changes = option.stateChanges as any
+                setPlayerState((prev: any) => {
+                    const newState = { ...prev }
+                    if (changes.hp !== undefined) newState.hp = Math.max(0, (newState.hp || 0) + changes.hp)
+                    if (changes.items && Array.isArray(changes.items)) {
+                        newState.inventory = Array.from(new Set([...(newState.inventory || []), ...changes.items]))
+                    }
+                    return newState
+                })
+            }
+
+            // Check if player is dead
+            if (playerState.hp <= 0 && quiz.results.length > 0) {
+                // Find a "death" or failure result if possible, or just the first result as fallback
+                const deathResult = quiz.results.find(r => r.id.includes('death') || r.id.includes('bad')) || quiz.results[0]
+                sessionStorage.setItem(`quiz_result_${quiz.id}`, JSON.stringify({
+                    type: 'BRANCHING',
+                    resultId: deathResult.id
+                }))
+                router.push(`/quiz/${quiz.id}/analyzing`)
+                return
+            }
+
+            if (option.targetResultId) {
+                sessionStorage.setItem(`quiz_result_${quiz.id}`, JSON.stringify({
+                    type: 'BRANCHING',
+                    resultId: option.targetResultId
+                }))
+                router.push(`/quiz/${quiz.id}/analyzing`)
+                return
+            }
+
+            // check conditions for branching
+            if (option.conditions && Array.isArray(option.conditions)) {
+                for (const cond of option.conditions) {
+                    let met = true
+                    if (cond.requiredItems && Array.isArray(cond.requiredItems)) {
+                        if (!cond.requiredItems.every((item: string) => playerState.inventory?.includes(item))) {
+                            met = false
+                        }
+                    }
+                    if (cond.minHp !== undefined && playerState.hp < cond.minHp) {
+                        met = false
+                    }
+
+                    if (met && (cond.nextQuestionId || cond.targetResultId)) {
+                        if (cond.targetResultId) {
+                            sessionStorage.setItem(`quiz_result_${quiz.id}`, JSON.stringify({
+                                type: 'BRANCHING',
+                                resultId: cond.targetResultId
+                            }))
+                            router.push(`/quiz/${quiz.id}/analyzing`)
+                            return
+                        }
+                        if (cond.nextQuestionId) {
+                            const nextIdx = quiz.questions.findIndex(q => q.id === cond.nextQuestionId)
+                            if (nextIdx !== -1) {
+                                setCurrentQuestionIndex(nextIdx)
+                                return
+                            }
+                        }
+                    }
+                }
+            }
+
+            if (option.nextQuestionId) {
+                const nextQuestionIndex = quiz.questions.findIndex(q => q.id === option.nextQuestionId)
+                if (nextQuestionIndex !== -1) {
+                    setCurrentQuestionIndex(nextQuestionIndex)
+                } else {
+                    // Fallback to next question if ID not found
+                    if (!isLastQuestion) {
+                        setCurrentQuestionIndex(nextIndex)
+                    } else {
+                        // End of quiz fallback
+                        sessionStorage.setItem(`quiz_result_${quiz.id}`, JSON.stringify({
+                            type: 'BRANCHING',
+                            resultId: quiz.results[0]?.id || 'error'
+                        }))
+                        router.push(`/quiz/${quiz.id}/analyzing`)
+                    }
+                }
+                return
+            }
+
+            // If no jump info, just move to next or finish
+            if (!isLastQuestion) {
+                setCurrentQuestionIndex(nextIndex)
+            } else {
+                sessionStorage.setItem(`quiz_result_${quiz.id}`, JSON.stringify({
+                    type: 'BRANCHING',
+                    resultId: quiz.results[0]?.id || 'error'
+                }))
+                router.push(`/quiz/${quiz.id}/analyzing`)
+            }
+            return
+        }
+
         if (!isLastQuestion) {
             if (quiz.resultType === 'SCORE_BASED') {
                 setTotalScore(newScore)
@@ -135,7 +253,7 @@ export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
                     type: 'SCORE',
                     score: newScore
                 }))
-            } else {
+            } else if (quiz.resultType === 'TYPE_BASED') {
                 const validCodes = quiz.results.map(r => r.typeCode).filter(Boolean) as string[]
                 const finalType = calculateTypeResult(newTypes, quiz.typeCodeLimit, validCodes, newWeightedScores)
 
@@ -173,6 +291,32 @@ export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
                     </div>
                 </div>
 
+                {quiz.resultType === 'BRANCHING' && (
+                    <div className={styles.statusOverlay}>
+                        <div className={styles.statusItem}>
+                            <div className={styles.statusLabel}>체력 (HP)</div>
+                            <div className={styles.hpBarBackground}>
+                                <div
+                                    className={styles.hpBarFill}
+                                    style={{ width: `${playerState.hp || 0}%` }}
+                                />
+                            </div>
+                        </div>
+                        <div className={styles.statusItem}>
+                            <div className={styles.statusLabel}>인벤토리</div>
+                            <div className={styles.inventoryList}>
+                                {playerState.inventory && playerState.inventory.length > 0 ? (
+                                    playerState.inventory.map((item: string, idx: number) => (
+                                        <span key={idx} className={styles.inventoryBadge}>{item}</span>
+                                    ))
+                                ) : (
+                                    <span className={styles.emptyInventory}>비어있음</span>
+                                )}
+                            </div>
+                        </div>
+                    </div>
+                )}
+
                 {currentQuestion.imageUrl && (
                     <div className={styles.imageWrapper}>
                         <Image
@@ -201,7 +345,8 @@ export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
                         ))}
                     </div>
 
-                    {/* 구글 애드센스 - 보기 하단 */}
+                    {/* 구글 애드센스 - 보기 하단 (숨김 처리) */}
+                    {/* 
                     <div style={{ marginTop: '2rem', minHeight: '100px', background: 'rgba(255,255,255,0.03)', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', color: '#666' }}>
                         <div style={{ textAlign: 'center', width: '100%' }}>
                             <p>구글 애드센스 (사각/피드형)</p>
@@ -213,6 +358,7 @@ export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
                                 data-full-width-responsive="true"></ins>
                         </div>
                     </div>
+                    */}
                 </div>
 
                 {/* Preload next image */}

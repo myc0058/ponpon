@@ -208,9 +208,10 @@ export default function ResultDisplay({
                 </button>
             </div>
 
-            <CoupangPartners iframeSrc="여기에_쿠팡에서_복사한_주소_붙여넣기" />
+            {/* <CoupangPartners iframeSrc="여기에_쿠팡에서_복사한_주소_붙여넣기" /> */}
 
-            {/* 구글 애드센스 - 결과와 추천 사이 */}
+            {/* 구글 애드센스 - 결과와 추천 사이 (숨김 처리) */}
+            {/* 
             <div style={{ margin: '2rem 0', minHeight: '100px', background: 'rgba(255,255,255,0.03)', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', color: '#666', width: '100%' }}>
                 <div style={{ textAlign: 'center', width: '100%' }}>
                     <p style={{ margin: '5px 0' }}>구글 애드센스 (중간 배너)</p>
@@ -222,6 +223,7 @@ export default function ResultDisplay({
                         data-full-width-responsive="true"></ins>
                 </div>
             </div>
+            */}
 
             {recommendedQuizzes && recommendedQuizzes.length > 0 && (
                 <div style={{ width: '100%', marginTop: '2rem' }}>

@@ -21,6 +21,10 @@ model Quiz {
   createdAt     DateTime   @default(now())
   updatedAt     DateTime   @updatedAt
   plays         Int        @default(0)
+  
+  // RPG System
+  initialState  Json?      // e.g., { "hp": 100, "inventory": [] }
+  
   questions     Question[]
   results       Result[]
 }
@@ -41,6 +45,15 @@ model Option {
   content        String
   score          Int      @default(0)
   resultTypeCode String?
+  
+  // Gamebook branching fields
+  nextQuestionId String?
+  targetResultId String?
+  
+  // RPG System fields
+  stateChanges   Json?      // e.g., { "hp": -10, "items": ["key"] }
+  conditions     Json?      // e.g., { "requiredItems": ["key"], "minHp": 20 }
+  
   question       Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
 }
 
@@ -78,4 +91,5 @@ model Report {
 enum ResultType {
   SCORE_BASED
   TYPE_BASED
+  BRANCHING
 }

@@ -1,6 +1,7 @@
 [ ] 메타 광고 및 수익 최적화 설정
     - [ ] Meta Pixel ID 발급 및 `.env` 설정 (참고: [픽셀 설정 가이드](file:///home/myc0058/projects/ponpon/docs/pixel-setup-guide.md))
     - [ ] Google AdSense 실제 Slot ID 연결 (QuizPlayer, Analyzing, ResultDisplay, AdPopup.tsx)
+    - [ ] 권장 광고 사이즈 적용 (사이드바: 160x600, 인라인/팝업: 300x250, 320x100, 전면 팝업: 300x250)
     - [ ] 쿠팡 파트너스 다이내믹 배너 주소(iframeSrc) 업데이트 (ResultDisplay.tsx)
     - [ ] 상세 작업 내용 및 가이드 확인 (참고: [최종 워크스루](file:///home/myc0058/projects/ponpon/docs/ad-optimization-walkthrough.md))
 [ ] 첫번째 질문 이미지 로딩 지연 문제 해결 (이미지 최적화 및 프리로딩 검토)

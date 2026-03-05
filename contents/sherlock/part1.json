@@ -1,0 +1,191 @@
+{
+    "title": "셜록 홈즈: 얼룩 끈의 비밀 (The Speckled Band)",
+    "description": "공포에 질린 헬렌 스토너의 의뢰를 받은 당신은 홈즈와 함께 로일럿 박사의 저택으로 향합니다. 베일에 싸인 언니의 죽음과 기묘한 '얼룩 끈'의 정체를 밝혀내십시오. (RPG 입문용: 80+ 노드)",
+    "resultType": "BRANCHING",
+    "initialState": {
+        "hp": 100,
+        "inventory": [
+            "추리 수첩"
+        ],
+        "evidence": 0,
+        "time": 0
+    },
+    "questions": [
+        {
+            "id": "intro_1",
+            "text": "1883년 4월의 어느 이른 아침, 베이커가 221B번지의 거실. 창백한 안색의 여인 헬렌 스토너가 찾아왔습니다. 그녀는 2년 전 언니 줄리아의 기괴한 죽음과, 최근 자신에게도 들리기 시작한 '휘파람 소리'에 대해 이야기합니다.",
+            "order": 1,
+            "options": [
+                {
+                    "text": "그녀의 이야기에 집중하며 세부 사항을 묻는다",
+                    "nextQuestionId": "intro_detail"
+                },
+                {
+                    "text": "그녀의 떨리는 손을 진정시키며 따뜻한 차를 권한다",
+                    "nextQuestionId": "intro_comfort"
+                }
+            ]
+        },
+        {
+            "id": "intro_detail",
+            "text": "헬렌은 줄리아가 죽기 직전 '오, 헬렌! 얼룩진 끈이었어!'라고 외쳤던 것을 기억해냅니다. 홈즈는 날카로운 눈빛으로 그녀를 응시합니다. '의붓아버지 로일럿 박사는 어떤 사람입니까?'",
+            "order": 2,
+            "options": [
+                {
+                    "text": "로일럿 박사의 성격과 배경에 대해 묻는다",
+                    "nextQuestionId": "intro_roylott"
+                },
+                {
+                    "text": "줄리아의 방 구조에 대해 묻는다",
+                    "stateChanges": {
+                        "evidence": 1
+                    },
+                    "nextQuestionId": "intro_room"
+                }
+            ]
+        },
+        {
+            "id": "intro_comfort",
+            "text": "따뜻한 차를 마신 헬렌이 조금 진정되었습니다. 그녀는 로일럿 박사가 인도에서 돌아온 후 매우 폭력적으로 변했으며, 마을 사람들과도 어울리지 않는다고 말합니다. '그는 거대한 인도 원숭이와 표범을 키우고 있어요.'",
+            "order": 3,
+            "options": [
+                {
+                    "text": "로일럿 박사의 위험성에 대해 더 묻는다",
+                    "nextQuestionId": "intro_roylott"
+                },
+                {
+                    "text": "사건 당시의 소리에 대해 묻는다",
+                    "nextQuestionId": "intro_detail"
+                }
+            ]
+        },
+        {
+            "id": "intro_roylott",
+            "text": "로일럿 박사는 과거 인도에서 하인을 때려죽인 전과가 있으며, 현재는 재정적 어려움을 겪고 있다고 합니다. 만약 자매가 결혼하면 유산의 상당 부분이 그들에게 돌아가게 되어 있었죠.",
+            "order": 4,
+            "options": [
+                {
+                    "text": "결혼 계획이 있는지 묻는다",
+                    "nextQuestionId": "intro_marriage"
+                },
+                {
+                    "text": "그의 서재나 비밀 금고에 대해 묻는다",
+                    "stateChanges": {
+                        "evidence": 1
+                    },
+                    "nextQuestionId": "intro_secret"
+                }
+            ]
+        },
+        {
+            "id": "intro_marriage",
+            "text": "헬렌 자신도 최근 약혼을 했으며, 그 이후로 박사의 태도가 더욱 험악해졌다고 합니다. '그는 저를 줄리아가 쓰던 방으로 옮기게 했어요. 수리 중이라는 핑계로요.'",
+            "order": 5,
+            "options": [
+                {
+                    "text": "방을 옮긴 시점이 핵심이라고 지적한다",
+                    "stateChanges": {
+                        "evidence": 1
+                    },
+                    "nextQuestionId": "intro_prep"
+                }
+            ]
+        },
+        {
+            "id": "intro_room",
+            "text": "줄리아의 방(이제는 헬렌의 방)은 옆방인 로일럿 박사의 방과 벽 하나를 두고 붙어 있습니다. 창문은 쇠창살로 막혀 있어 외부 침입은 불가능해 보입니다.",
+            "order": 6,
+            "options": [
+                {
+                    "text": "환기구나 벨 줄의 위치를 묻는다",
+                    "stateChanges": {
+                        "evidence": 2
+                    },
+                    "nextQuestionId": "intro_prep"
+                }
+            ]
+        },
+        {
+            "id": "intro_secret",
+            "text": "박사는 방에 거대한 철제 금고를 두고 있으며, 누구도 접근하지 못하게 한다고 합니다. 가끔 밤마다 금고 안에서 무언가 긁는 소리가 들린다고 하네요.",
+            "order": 7,
+            "options": [
+                {
+                    "text": "금고의 소리에 주목한다",
+                    "stateChanges": {
+                        "evidence": 2
+                    },
+                    "nextQuestionId": "intro_prep"
+                }
+            ]
+        },
+        {
+            "id": "intro_prep",
+            "text": "헬렌이 떠난 후, 홈즈는 당신에게 말합니다. '왓슨, 갈 준비를 하게. 하지만 그전에 베이커가에서 챙겨갈 물건이 있네. 무엇을 가져가겠나?'",
+            "order": 8,
+            "options": [
+                {
+                    "text": "안전을 위해 권총(Revolver)을 챙긴다",
+                    "stateChanges": {
+                        "items": [
+                            "권총"
+                        ]
+                    },
+                    "nextQuestionId": "roylott_visit"
+                },
+                {
+                    "text": "어둠 속을 밝힐 강력한 랜턴(Lantern)을 챙긴다",
+                    "stateChanges": {
+                        "items": [
+                            "랜턴"
+                        ]
+                    },
+                    "nextQuestionId": "roylott_visit"
+                },
+                {
+                    "text": "돋보기와 수사 도구 가방을 챙긴다",
+                    "stateChanges": {
+                        "items": [
+                            "돋보기"
+                        ]
+                    },
+                    "nextQuestionId": "roylott_visit"
+                }
+            ]
+        },
+        {
+            "id": "roylott_visit",
+            "text": "갑자기 문이 거칠게 열리며 거구의 로일럿 박사가 들이닥칩니다! 그는 철제 부중수(poker)를 손바닥으로 구부리며 홈즈를 위협합니다. '내 일에 상관하지 마시오, 홈즈!'",
+            "order": 9,
+            "options": [
+                {
+                    "text": "침착하게 대응하며 그를 무시한다",
+                    "stateChanges": {
+                        "hp": -5
+                    },
+                    "nextQuestionId": "stokemoran_arrival"
+                },
+                {
+                    "text": "홈즈의 뒤에서 방어 태세를 갖춘다",
+                    "nextQuestionId": "stokemoran_arrival"
+                }
+            ]
+        },
+        {
+            "id": "stokemoran_arrival",
+            "text": "스토크 모란 기차역에 도착했습니다. 로일럿의 저택은 황량하고 스산한 분위기를 풍깁니다. 저택 입구에서 당신은 무언가 이상한 점을 발견합니다.",
+            "order": 10,
+            "options": [
+                {
+                    "text": "정원의 울타리와 나무 위를 살핀다",
+                    "nextQuestionId": "stokemoran_garden"
+                },
+                {
+                    "text": "저택 외벽의 균열과 창문을 살핀다",
+                    "nextQuestionId": "stokemoran_wall"
+                }
+            ]
+        }
+    ],
+    "results": []
+}
