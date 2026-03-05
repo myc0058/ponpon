@@ -1,0 +1,47 @@
+.container {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-secondary, #a0a0a0);
+}
+
+.bannerWrapper {
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.placeholderBanner {
+    padding: 2rem;
+    text-align: center;
+    color: #666;
+    font-size: 0.8rem;
+    border: 1px dashed rgba(255, 255, 255, 0.2);
+    width: 100%;
+    border-radius: 8px;
+}
+
+.disclaimer {
+    margin-top: 1rem;
+    font-size: 0.7rem;
+    color: var(--text-muted, #777);
+    line-height: 1.4;
+    text-align: center;
+}
