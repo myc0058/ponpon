@@ -43,7 +43,8 @@
           },
           "nextQuestionId": "q5"
         }
-      ]
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/sherlock/q2.webp?v=1772752833620"
     },
     {
       "id": "q3",
@@ -58,7 +59,8 @@
           "text": "그 무서운 '소리'가 들렸던 장소와 시간에 대해 묻는다",
           "nextQuestionId": "q2"
         }
-      ]
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/sherlock/q3.webp?v=1772752833811"
     },
     {
       "id": "q4",
@@ -76,7 +78,8 @@
           },
           "nextQuestionId": "q7"
         }
-      ]
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/sherlock/q4.webp?v=1772752833998"
     },
     {
       "id": "q5",
@@ -97,7 +100,8 @@
           },
           "nextQuestionId": "q8"
         }
-      ]
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/sherlock/q5.webp?v=1772752834475"
     },
     {
       "id": "q6",
@@ -115,7 +119,8 @@
           "text": "그 방이 박사 방과 얼마나 가까운지 위치를 묻는다",
           "nextQuestionId": "q8"
         }
-      ]
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/sherlock/q6.webp?v=1772752834650"
     },
     {
       "id": "q7",
@@ -136,7 +141,8 @@
           },
           "nextQuestionId": "q8"
         }
-      ]
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/sherlock/q7.webp?v=1772752834859"
     },
     {
       "id": "q8",
@@ -170,7 +176,8 @@
           },
           "nextQuestionId": "q9"
         }
-      ]
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/sherlock/q8.webp?v=1772752835024"
     },
     {
       "id": "q9",
@@ -200,11 +207,13 @@
           "text": "지체 없이 스토크 모란행 기차역으로 향한다",
           "nextQuestionId": "q11"
         }
-      ]
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/sherlock/q10.webp?v=1772752835238"
     },
     {
       "id": "q11",
       "text": "패딩턴 역에서 기차에 올랐습니다. 홈즈가 창밖을 보며 생각에 잠깁니다. 가는 동안 출발 전 준비해온 서류를 검토하거나 홈즈의 추론을 들을 수 있습니다.",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/sherlock/q11.webp?v=1772750199425",
       "order": 11,
       "options": [
         {
@@ -229,7 +238,8 @@
           },
           "nextQuestionId": "q14"
         }
-      ]
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/sherlock/q12.webp?v=1772752835387"
     },
     {
       "id": "q13",
@@ -243,7 +253,8 @@
           },
           "nextQuestionId": "q14"
         }
-      ]
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/sherlock/q13.webp?v=1772752835608"
     },
     {
       "id": "q14",
@@ -262,7 +273,8 @@
           "text": "시간이 없다며 곧장 저택으로 출발한다",
           "nextQuestionId": "q21"
         }
-      ]
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/sherlock/q14.webp?v=1772752835854"
     },
     {
       "id": "q15_pub",
@@ -276,7 +288,8 @@
           },
           "nextQuestionId": "q19"
         }
-      ]
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/sherlock/q15.webp?v=1772752836060"
     },
     {
       "id": "q15_post",
@@ -290,7 +303,8 @@
           },
           "nextQuestionId": "q19"
         }
-      ]
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/sherlock/q15.webp?v=1772752836526"
     },
     {
       "id": "q19",
@@ -305,7 +319,8 @@
           "text": "묵묵히 다가올 위험에 대비해 마음을 다잡는다",
           "nextQuestionId": "q21"
         }
-      ]
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/sherlock/q19.webp?v=1772752836691"
     },
     {
       "id": "q20",
@@ -316,11 +331,13 @@
           "text": "숨을 깊게 들이쉬고 저택 안으로 들어간다",
           "nextQuestionId": "q21"
         }
-      ]
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/sherlock/q20.webp?v=1772752837133"
     },
     {
       "id": "q21",
       "text": "가문의 문장이 부서진 철문을 지났습니다. 창고 뒤편에서 헬렌이 창백한 얼굴로 맞이합니다. '외출하셨어요. 언제 오실지 몰라요.' 정원 한구석에서 원숭이 한 마리가 기괴한 울음소리를 냅니다.",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/sherlock/q21.webp?v=1772750199944",
       "order": 19,
       "options": [
         {
@@ -349,7 +366,8 @@
           "text": "흔적을 무시하고 곧바로 쇠창살 구조를 확인한다",
           "nextQuestionId": "q23"
         }
-      ]
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/sherlock/q22.webp?v=1772752837396"
     },
     {
       "id": "q23",
@@ -375,7 +393,8 @@
           },
           "nextQuestionId": "q25"
         }
-      ]
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/sherlock/q23.webp?v=1772752837552"
     },
     {
       "id": "q24_magnify",
@@ -389,7 +408,8 @@
           },
           "nextQuestionId": "q25"
         }
-      ]
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/sherlock/q24.webp?v=1772752837717"
     },
     {
       "id": "q24",
@@ -403,11 +423,13 @@
           },
           "nextQuestionId": "q25"
         }
-      ]
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/sherlock/q24.webp?v=1772752838231"
     },
     {
       "id": "q25",
       "text": "이제 헬렌이 쓰는 죽음의 방에 들어왔습니다. 차가운 공기가 폐를 찌릅니다. 홈즈는 곧바로 세 곳을 지목합니다. '어디를 먼저 살피겠나?'",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/sherlock/q25.webp?v=1772750200110",
       "order": 24,
       "options": [
         {
@@ -436,7 +458,8 @@
           },
           "nextQuestionId": "q29"
         }
-      ]
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/sherlock/q26.webp?v=1772752838388"
     },
     {
       "id": "q27",
@@ -450,7 +473,8 @@
           },
           "nextQuestionId": "q29"
         }
-      ]
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/sherlock/q27.webp?v=1772752838536"
     },
     {
       "id": "q28",
@@ -464,7 +488,8 @@
           },
           "nextQuestionId": "q29"
         }
-      ]
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/sherlock/q28.webp?v=1772752838939"
     },
     {
       "id": "q29",
@@ -479,11 +504,13 @@
           "text": "혹시 모를 마주침에 대비해 소리 죽여 걷는다",
           "nextQuestionId": "q30"
         }
-      ]
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/sherlock/q29.webp?v=1772752839111"
     },
     {
       "id": "q30",
       "text": "잠기지 않은 서재문을 조심히 엽니다. 호랑이 가죽이 깔린 낡은 인도풍 서재입니다. 한구석에 육중한 철제 금고가 있고 그 위에 우유가 담긴 작은 접시, 책상엔 독특한 모양의 가죽 채찍이 있습니다.",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/sherlock/q30.webp?v=1772750200524",
       "order": 29,
       "options": [
         {
@@ -508,7 +535,8 @@
           },
           "nextQuestionId": "q31"
         }
-      ]
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/sherlock/q32.webp?v=1772752839327"
     },
     {
       "id": "q31",
@@ -523,7 +551,8 @@
           },
           "nextQuestionId": "q34"
         }
-      ]
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/sherlock/q31.webp?v=1772752839480"
     },
     {
       "id": "q33",
@@ -549,7 +578,8 @@
           },
           "nextQuestionId": "q34"
         }
-      ]
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/sherlock/q33.webp?v=1772752839668"
     },
     {
       "id": "q33_magnify",
@@ -563,7 +593,8 @@
           },
           "nextQuestionId": "q31"
         }
-      ]
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/sherlock/q33.webp?v=1772752840048"
     },
     {
       "id": "q34",
@@ -578,11 +609,13 @@
           "text": "발소리를 죽이고 서재를 빠져나가 복도로 뛴다",
           "nextQuestionId": "q36"
         }
-      ]
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/sherlock/q34.webp?v=1772752840206"
     },
     {
       "id": "q35",
       "text": "창문을 열고 정원 수풀로 뛰어내리는 순간, 무언가 거대한 검은 그림자와 눈이 맞았습니다. 방목 중인 표범입니다! 놈이 낮은 성대를 울리며 당장이라도 덮칠 기세로 이빨을 드러냅니다.",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/sherlock/q35.webp?v=1772750200739",
       "order": 36,
       "options": [
         {
@@ -615,7 +648,8 @@
           },
           "nextQuestionId": "q38"
         }
-      ]
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/sherlock/q36.webp?v=1772752840380"
     },
     {
       "id": "q36",
@@ -626,7 +660,8 @@
           "text": "가쁜 숨을 몰아쉬며 저택 맞은편 여관으로 피신한다",
           "nextQuestionId": "q38"
         }
-      ]
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/sherlock/q36.webp?v=1772752840797"
     },
     {
       "id": "q37",
@@ -637,7 +672,8 @@
           "text": "홈즈와 서로 안도하며 여관으로 조용히 후퇴한다",
           "nextQuestionId": "q38"
         }
-      ]
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/sherlock/q37.webp?v=1772752840959"
     },
     {
       "id": "q38",
@@ -658,7 +694,8 @@
           "text": "솔직히 그 괴물과 마주하기 두렵습니다. 런던으로 돌아가시죠",
           "nextQuestionId": "q40_bad"
         }
-      ]
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/sherlock/q38.webp?v=1772752841124"
     },
     {
       "id": "q40",
@@ -669,7 +706,8 @@
           "text": "아쉽지만 안전제일주의로 헬렌을 데리고 후퇴한다",
           "targetResultId": "res_noclue"
         }
-      ]
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/sherlock/q40.webp?v=1772752841339"
     },
     {
       "id": "q40_bad",
@@ -680,11 +718,13 @@
           "text": "무력감을 안고 짐을 싸 런던행 기차에 오른다",
           "targetResultId": "res_noclue"
         }
-      ]
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/sherlock/q40.webp?v=1772752841739"
     },
     {
       "id": "q41",
       "text": "홈즈의 눈이 차갑게 빛납니다. '좋아, 결론은 났어. 증거는 충분하고 범죄는 소명됐어. 11시, 헬렌 방의 불이 꺼지면 잠입한다.' 자정. 헬렌의 빈 방. 홈즈와 당신은 성냥 하나 켜지 않은 칠흑 같은 암흑 속에 나란히 앉아 호흡을 통제하며 청각에 모든 감각을 집중합니다.",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/sherlock/q41.webp?v=1772750200872",
       "order": 43,
       "options": [
         {
@@ -702,7 +742,8 @@
           "text": "행동을 개시할 타이밍임을 홈즈에게 툭 쳐 알린다",
           "nextQuestionId": "q43"
         }
-      ]
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/sherlock/q42.webp?v=1772752841933"
     },
     {
       "id": "q43",
@@ -743,7 +784,8 @@
           ],
           "nextQuestionId": "q43_weak"
         }
-      ]
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/sherlock/q43.webp?v=1772752842212"
     },
     {
       "id": "q43_weak",
@@ -757,11 +799,13 @@
           },
           "targetResultId": "res_death"
         }
-      ]
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/sherlock/q43.webp?v=1772752842379"
     },
     {
       "id": "q44",
       "text": "번쩍! 랜턴의 불기둥이 방 안을 강타했습니다. 노란색과 갈색 반점이 역겹게 뒤섞인 인도에서 가장 치명적인 늪살무사가 벨 줄 중간에 똬리를 틀고 입을 벌립니다. 섬광에 시야를 빼앗긴 뱀이 주춤합니다.",
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/sherlock/q44.webp?v=1772750201331",
       "order": 47,
       "options": [
         {
@@ -782,7 +826,8 @@
           },
           "targetResultId": "res_death"
         }
-      ]
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/sherlock/q45.webp?v=1772752842555"
     },
     {
       "id": "q46",
@@ -793,7 +838,8 @@
           "text": "비명이 들리길 기대하며 서재로 즉시 뛰어 들어간다",
           "nextQuestionId": "q51"
         }
-      ]
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/sherlock/q46.webp?v=1772752842711"
     },
     {
       "id": "q47",
@@ -807,7 +853,8 @@
           },
           "targetResultId": "res_death"
         }
-      ]
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/sherlock/q47.webp?v=1772752842875"
     },
     {
       "id": "q50",
@@ -818,7 +865,8 @@
           "text": "피가 식는 비명을 뒤로하고 서재로 즉시 치고 들어간다",
           "nextQuestionId": "q52"
         }
-      ]
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/sherlock/q50.webp?v=1772752843072"
     },
     {
       "id": "q51",
@@ -829,7 +877,8 @@
           "text": "추격하려 하지만 홈즈가 말리며 어깨를 두드린다",
           "nextQuestionId": "q53"
         }
-      ]
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/sherlock/q51.webp?v=1772752843226"
     },
     {
       "id": "q52",
@@ -840,7 +889,8 @@
           "text": "홈즈가 채찍으로 뱀을 능숙히 잡아 금고에 가둔다",
           "nextQuestionId": "q54"
         }
-      ]
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/sherlock/q52.webp?v=1772752843368"
     },
     {
       "id": "q53",
@@ -851,7 +901,8 @@
           "text": "떨고 있을 헬렌에게 무사함을 알리러 간다",
           "targetResultId": "res_normal"
         }
-      ]
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/sherlock/q53.webp?v=1772752843566"
     },
     {
       "id": "q54",
@@ -862,7 +913,8 @@
           "text": "사건의 최종 파일을 덮고 베이커가로 자부심 있게 돌아온다",
           "targetResultId": "res_true"
         }
-      ]
+      ],
+      "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/sherlock/q54.webp?v=1772752843718"
     }
   ],
   "results": [

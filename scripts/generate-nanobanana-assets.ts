@@ -82,20 +82,22 @@ async function main() {
         { prompt: quizData.imagePrompt || quizData.description, filename: 'main-cover.png', label: 'Main Cover' },
         ...quizData.questions.map((q: any) => ({
             prompt: q.imagePrompt || q.content || q.text,
-            filename: q.imageUrl || `q${q.order || q.id.replace(/\D/g, '')}.png`,
-            label: `Question ${q.order || q.id}`
+            filename: (q.imageUrl && !q.imageUrl.startsWith('http')) ? q.imageUrl : `q${q.id.replace(/\D/g, '')}.png`,
+            isRemote: q.imageUrl && q.imageUrl.startsWith('http'),
+            label: `Question ${q.id}`
         })),
         ...quizData.results.map((r: any) => ({
             prompt: r.imagePrompt || r.description || r.title,
-            filename: r.imageUrl || `result-${(r.typeCode || r.id || r.title).toLowerCase()}.png`,
-            label: `Result ${r.typeCode || r.id || r.title}`
+            filename: (r.imageUrl && !r.imageUrl.startsWith('http')) ? r.imageUrl : `result-${(r.typeCode || r.id).toLowerCase()}.png`,
+            isRemote: r.imageUrl && r.imageUrl.startsWith('http'),
+            label: `Result ${r.id || r.title}`
         }))
     ]
 
     for (const job of jobs) {
         const savePath = path.join(imagesDir, job.filename)
-        if (existsSync(savePath)) {
-            console.log(`\n--- Skipping ${job.label} (already exists) ---`)
+        if (job.isRemote || existsSync(savePath)) {
+            console.log(`\n--- Skipping ${job.label} (already exists or remote) ---`)
             continue
         }
 
