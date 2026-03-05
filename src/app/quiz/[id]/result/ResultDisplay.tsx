@@ -6,6 +6,7 @@ import styles from './result.module.css'
 import { Share2, Home, Lock, Link as LinkIcon, RotateCcw } from 'lucide-react'
 import { generateShortUrl } from '@/app/actions/shorten-url'
 import ShareDrawer from '@/components/ShareDrawer'
+import CoupangPartners from '@/components/CoupangPartners'
 import { getBustedImageUrl } from '@/lib/image-utils'
 import { useToast } from '@/components/Toast'
 import { formatContent } from '@/lib/string-utils'
@@ -204,6 +205,7 @@ export default function ResultDisplay({
                 </button>
             </div>
 
+            <CoupangPartners />
 
             <div className={styles.adPlaceholder}>
                 <div className={styles.adLabel}>광고</div>
