@@ -314,6 +314,14 @@ export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
                                 )}
                             </div>
                         </div>
+                        {playerState.evidence !== undefined && (
+                            <div className={styles.statusItem}>
+                                <div className={styles.statusLabel}>단서 기록</div>
+                                <div className={styles.evidenceBadge}>
+                                    🔍 단서 {playerState.evidence}개
+                                </div>
+                            </div>
+                        )}
                     </div>
                 )}
 
