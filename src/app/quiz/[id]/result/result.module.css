@@ -188,6 +188,30 @@
     background-color: #e5e7eb;
 }
 
+.reportButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: fit-content;
+    margin: 0 auto 1.5rem;
+    padding: 0.5rem 1rem;
+    background: transparent;
+    border: none;
+    color: #94a3b8;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    border-radius: 0.5rem;
+}
+
+.reportButton:hover {
+    color: #475569;
+    background-color: #f8fafc;
+}
+
+
 .adPlaceholder {
     background: white;
     border-radius: 0.75rem;

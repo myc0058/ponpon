@@ -64,6 +64,16 @@ model ShortUrl {
   visits      Int      @default(0)
 }
 
+model Report {
+  id        String   @id @default(cuid())
+  quizId    String
+  resultId  String?
+  reason    String
+  content   String?
+  createdAt DateTime @default(now())
+}
+
+
 
 enum ResultType {
   SCORE_BASED

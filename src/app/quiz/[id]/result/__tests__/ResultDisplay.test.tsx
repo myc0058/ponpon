@@ -15,6 +15,12 @@ jest.mock('@/app/actions/shorten-url', () => ({
     generateShortUrl: jest.fn()
 }))
 
+// Mock report action
+jest.mock('@/actions/report', () => ({
+    createReport: jest.fn()
+}))
+
+
 // Mock next/image
 jest.mock('next/image', () => ({
     __esModule: true,
@@ -255,4 +261,31 @@ describe('ResultDisplay', () => {
         const retryLink = screen.getByText('다시하기')
         expect(retryLink.closest('a')).toHaveAttribute('href', '/quiz/quiz1')
     })
+
+    it('should show report modal when report button is clicked', async () => {
+        await act(async () => {
+            render(
+                <ToastProvider>
+                    <ResultDisplay
+                        quiz={mockQuiz}
+                        result={mockResult}
+                        score={80}
+                        resultType="SCORE_BASED"
+                        compressedData="test"
+                    />
+                </ToastProvider>
+            )
+        })
+
+        const reportBtn = screen.getByText(/신고하기/)
+        expect(reportBtn).toBeInTheDocument()
+
+        await act(async () => {
+            fireEvent.click(reportBtn)
+        })
+
+        expect(screen.getByText('문제 신고하기')).toBeInTheDocument()
+        expect(screen.getByText('신고 사유')).toBeInTheDocument()
+    })
 })
+

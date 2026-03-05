@@ -7,6 +7,9 @@ import styles from './play.module.css'
 import { calculateTypeResult } from '@/lib/quiz-logic'
 import { getBustedImageUrl } from '@/lib/image-utils'
 import { formatContent } from '@/lib/string-utils'
+import ReportModal from '@/components/ReportModal'
+import { Flag } from 'lucide-react'
+
 
 type Option = {
     id: string
@@ -42,6 +45,8 @@ export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
     const [weightedScores, setWeightedScores] = useState<Record<string, number>>({})
     const progressRef = useRef<HTMLDivElement>(null)
     const router = useRouter()
+    const [isReportOpen, setIsReportOpen] = useState(false)
+
 
 
 
@@ -52,6 +57,17 @@ export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
             progressRef.current.scrollIntoView({ behavior: 'smooth' })
         }
     }, [currentQuestionIndex])
+
+    // Track Quiz Start
+    useEffect(() => {
+        if (typeof window !== 'undefined' && window.fbq) {
+            window.fbq('track', 'Lead', {
+                content_name: quiz.title,
+                content_category: 'Quiz',
+                content_ids: [quiz.id]
+            })
+        }
+    }, [])
 
     // Safety check: if no questions, show error
     if (!quiz.questions || quiz.questions.length === 0) {
@@ -190,7 +206,21 @@ export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
                     </div>
                 )}
 
+                <button
+                    className={styles.reportButton}
+                    onClick={() => setIsReportOpen(true)}
+                >
+                    <Flag size={14} />
+                    문제가 있나요? 신고하기
+                </button>
             </div>
+
+            <ReportModal
+                isOpen={isReportOpen}
+                onClose={() => setIsReportOpen(false)}
+                quizId={quiz.id}
+            />
         </main>
+
     )
 }

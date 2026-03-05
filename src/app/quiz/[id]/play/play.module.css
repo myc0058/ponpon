@@ -262,3 +262,25 @@
         transform: rotate(360deg);
     }
 }
+
+.reportButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background: transparent;
+    border: none;
+    color: #94a3b8;
+    font-size: 0.75rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    border-radius: 0.5rem;
+}
+
+.reportButton:hover {
+    color: #64748b;
+    background-color: #f1f5f9;
+}

@@ -9,6 +9,9 @@ import ShareDrawer from '@/components/ShareDrawer'
 import { getBustedImageUrl } from '@/lib/image-utils'
 import { useToast } from '@/components/Toast'
 import { formatContent } from '@/lib/string-utils'
+import ReportModal from '@/components/ReportModal'
+import { Flag } from 'lucide-react'
+
 
 type Result = {
     id: string
@@ -41,12 +44,28 @@ export default function ResultDisplay({
     const [isPaid, setIsPaid] = useState(false)
     const [isPaymentLoading, setIsPaymentLoading] = useState(false)
     const [isShareOpen, setIsShareOpen] = useState(false)
+    const [isReportOpen, setIsReportOpen] = useState(false)
+
 
     const handlePayment = async () => {
         setIsPaymentLoading(true)
+        if (typeof window !== 'undefined' && window.fbq) {
+            window.fbq('track', 'InitiateCheckout', {
+                content_name: 'Premium Result',
+                content_category: 'Quiz',
+                value: 1000,
+                currency: 'KRW'
+            })
+        }
         setTimeout(() => {
             setIsPaid(true)
             setIsPaymentLoading(false)
+            if (typeof window !== 'undefined' && window.fbq) {
+                window.fbq('track', 'Purchase', {
+                    value: 1000,
+                    currency: 'KRW'
+                })
+            }
         }, 1500)
     }
 
@@ -72,6 +91,17 @@ export default function ResultDisplay({
         }
         fetchShortUrl()
         window.scrollTo({ top: 0, behavior: 'smooth' })
+
+        // Track Quiz Result View
+        if (typeof window !== 'undefined' && window.fbq) {
+            window.fbq('track', 'ViewContent', {
+                content_name: result.title,
+                content_category: 'Quiz Result',
+                content_ids: [result.id],
+                value: 0,
+                currency: 'KRW'
+            })
+        }
     }, [compressedData, quiz.id])
 
     const { showToast } = useToast()
@@ -164,7 +194,16 @@ export default function ResultDisplay({
                     <Home size={20} />
                     홈으로 돌아가기
                 </Link>
+
+                <button
+                    className={styles.reportButton}
+                    onClick={() => setIsReportOpen(true)}
+                >
+                    <Flag size={14} />
+                    결과에 문제가 있나요? 신고하기
+                </button>
             </div>
+
 
             <div className={styles.adPlaceholder}>
                 <div className={styles.adLabel}>광고</div>
@@ -180,6 +219,14 @@ export default function ResultDisplay({
                 description={result.description}
                 imageUrl={getBustedImageUrl(result.imageUrl)}
             />
+
+            <ReportModal
+                isOpen={isReportOpen}
+                onClose={() => setIsReportOpen(false)}
+                quizId={quiz.id}
+                resultId={result.id}
+            />
         </main>
+
     )
 }

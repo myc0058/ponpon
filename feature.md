@@ -18,6 +18,8 @@
 - [x] **"테스트 다시하기" / "다른 퀴즈 보기" 버튼** - **테스트 완료 (`src/app/quiz/[id]/result/__tests__/ResultDisplay.test.tsx`)**
 - [x] **프리미엄 결과 보기 (결제 시뮬레이션)** - **테스트 완료 (`src/app/quiz/[id]/result/__tests__/ResultDisplay.test.tsx`)**
 - [x] **공유 링크용 URL 단축** - **테스트 완료 (`src/lib/__tests__/url-shortener.test.ts`)**
+- [x] **문제 신고하기 (서버 액션 및 모달)** - **테스트 완료 (`src/actions/__tests__/report.test.ts`, `src/app/quiz/[id]/result/__tests__/ResultDisplay.test.tsx`)**
+
 
 ### 1.4. 결과 계산 로직
 - [x] **점수 기반(Score-based) 계산** - **테스트 완료 (`src/lib/__tests__/quiz-logic.test.ts`)**

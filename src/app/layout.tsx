@@ -37,6 +37,8 @@ export const metadata: Metadata = {
 };
 
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import MetaPixel from "@/components/MetaPixel";
+import GoogleAdSense from "@/components/GoogleAdSense";
 import Header from "@/components/Header";
 import { ToastProvider } from "@/components/Toast";
 
@@ -49,6 +51,8 @@ export default function RootLayout({
     <html lang="ko">
       <body className={outfit.className}>
         <GoogleAnalytics />
+        <MetaPixel />
+        <GoogleAdSense />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
