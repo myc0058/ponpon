@@ -288,13 +288,15 @@
 .statusOverlay {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
-    padding: 1rem;
-    background: #f8fafc;
-    border-radius: 12px;
-    margin-bottom: 1.5rem;
-    margin-top: -1rem;
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+    gap: 1.5rem;
+    padding: 1.25rem;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+    margin-top: -0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    width: 100%;
 }
 
 .statusItem {
@@ -306,11 +308,13 @@
 }
 
 .statusLabel {
-    font-size: 0.75rem;
-    font-weight: 700;
-    color: #64748b;
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: #1e293b;
+    /* Dark slate for high readability */
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.075em;
+    margin-bottom: 0.2rem;
 }
 
 .hpBarBackground {
@@ -334,14 +338,16 @@
 }
 
 .inventoryBadge {
-    padding: 0.25rem 0.6rem;
-    background: #e0f2fe;
-    color: #0284c7;
+    padding: 0.3rem 0.75rem;
+    background: #f0f9ff;
+    color: #0369a1;
+    /* Darker blue */
     border: 1px solid #bae6fd;
     border-radius: 12px;
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     font-weight: 600;
     white-space: nowrap;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
 .emptyInventory {
@@ -352,15 +358,16 @@
 }
 
 .evidenceBadge {
-    padding: 0.25rem 0.6rem;
+    padding: 0.4rem 0.9rem;
     border-radius: 9999px;
-    background: rgba(255, 153, 0, 0.2);
-    color: #ffb74d;
-    font-size: 0.8rem;
-    font-weight: 600;
-    border: 1px solid rgba(255, 153, 0, 0.4);
+    background: #fff7ed;
+    color: #9a3412;
+    font-size: 0.85rem;
+    font-weight: 700;
+    border: 1px solid #fed7aa;
     white-space: nowrap;
     display: inline-flex;
     align-items: center;
-    gap: 4px;
+    gap: 6px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }

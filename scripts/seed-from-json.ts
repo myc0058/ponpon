@@ -23,20 +23,47 @@ async function main() {
 
     console.log(`Seeding RPG/Branching quiz: ${data.title}...`)
 
-    // 1. Create Quiz
-    const quiz = await prisma.quiz.create({
-        data: {
-            title: data.title,
-            description: data.description,
-            imageUrl: data.imageUrl,
-            isFeatured: data.isFeatured ?? true,
-            isHot: true,
-            isVisible: true,
-            resultType: data.resultType || 'BRANCHING',
-            typeCodeLimit: data.typeCodeLimit || 4,
-            initialState: data.initialState || null,
-        }
+    // 1. Find or Create Quiz
+    let quiz = await prisma.quiz.findFirst({
+        where: { title: data.title }
     })
+
+    if (quiz) {
+        console.log(`Updating existing quiz: ${quiz.id}`)
+        // Clean up existing related data to allow clean re-seed
+        await prisma.option.deleteMany({ where: { question: { quizId: quiz.id } } })
+        await prisma.question.deleteMany({ where: { quizId: quiz.id } })
+        await prisma.result.deleteMany({ where: { quizId: quiz.id } })
+
+        quiz = await prisma.quiz.update({
+            where: { id: quiz.id },
+            data: {
+                description: data.description,
+                imageUrl: data.imageUrl,
+                isFeatured: data.isFeatured ?? true,
+                isHot: true,
+                isVisible: true,
+                resultType: data.resultType || 'BRANCHING',
+                typeCodeLimit: data.typeCodeLimit || 4,
+                initialState: data.initialState || null,
+            }
+        })
+    } else {
+        console.log(`Creating new quiz...`)
+        quiz = await prisma.quiz.create({
+            data: {
+                title: data.title,
+                description: data.description,
+                imageUrl: data.imageUrl,
+                isFeatured: data.isFeatured ?? true,
+                isHot: true,
+                isVisible: true,
+                resultType: data.resultType || 'BRANCHING',
+                typeCodeLimit: data.typeCodeLimit || 4,
+                initialState: data.initialState || null,
+            }
+        })
+    }
 
     // 2. Create Results and build map
     const resultIdMap: Record<string, string> = {}
