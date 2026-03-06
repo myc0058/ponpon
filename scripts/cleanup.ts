@@ -19,10 +19,20 @@ async function run() {
 
     // Check missing images
     const latestQuiz = quizzes[quizzes.length - 1];
+    if (!latestQuiz) {
+        console.log('No quiz found to check.');
+        return;
+    }
+
     const fullQuiz = await prisma.quiz.findUnique({
         where: { id: latestQuiz.id },
         include: { questions: true, results: true }
     })
+
+    if (!fullQuiz) {
+        console.log('Could not find latest quiz details.');
+        return;
+    }
 
     console.log('--- Missing images in questions ---');
     fullQuiz.questions.forEach(q => {
