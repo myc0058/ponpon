@@ -6,7 +6,7 @@ import Image from 'next/image'
 import styles from './play.module.css'
 import { calculateTypeResult } from '@/lib/quiz-logic'
 import { getBustedImageUrl } from '@/lib/image-utils'
-import { formatContent } from '@/lib/string-utils'
+import { formatContentJSX } from '@/lib/string-utils'
 import ReportModal from '@/components/ReportModal'
 import AdPopup from '@/components/AdPopup'
 import { Flag, Heart, Briefcase, Search } from 'lucide-react'
@@ -355,7 +355,7 @@ export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
                 )}
 
                 <div className={styles.contentAnimation} key={currentQuestion.id}>
-                    <h2 className={styles.questionText}>{formatContent(currentQuestion.content)}</h2>
+                    <h2 className={styles.questionText}>{formatContentJSX(currentQuestion.content)}</h2>
 
                     <div className={styles.options}>
                         {currentQuestion.options.map((option) => (
@@ -364,7 +364,7 @@ export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
                                 className={styles.optionButton}
                                 onClick={() => handleAnswer(option)}
                             >
-                                {formatContent(option.content)}
+                                {formatContentJSX(option.content)}
                             </button>
                         ))}
                     </div>

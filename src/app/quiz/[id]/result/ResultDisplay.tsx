@@ -10,7 +10,7 @@ import ShareDrawer from '@/components/ShareDrawer'
 import CoupangPartners from '@/components/CoupangPartners'
 import { getBustedImageUrl } from '@/lib/image-utils'
 import { useToast } from '@/components/Toast'
-import { formatContent } from '@/lib/string-utils'
+import { formatContentJSX } from '@/lib/string-utils'
 import ReportModal from '@/components/ReportModal'
 import { Flag } from 'lucide-react'
 
@@ -168,7 +168,7 @@ export default function ResultDisplay({
 
                             <div className={styles.content}>
                                 <h1 className={styles.resultTitle}>{result.title}</h1>
-                                <p className={styles.resultDescription}>{formatContent(result.description)}</p>
+                                <p className={styles.resultDescription}>{formatContentJSX(result.description)}</p>
                             </div>
                         </div>
 
