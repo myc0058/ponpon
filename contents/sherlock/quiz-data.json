@@ -684,7 +684,7 @@
           "text": "단서가 충분히 모였습니다.\n의심 없이 오늘 밤 매복을 결행합시다",
           "conditions": [
             {
-              "minEvidence": 5,
+              "minEvidence": 8,
               "nextQuestionId": "q41"
             }
           ],
@@ -769,6 +769,7 @@
               "requiredItems": [
                 "권총"
               ],
+              "minHp": 50,
               "nextQuestionId": "q46"
             }
           ],
