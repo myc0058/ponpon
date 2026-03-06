@@ -40,7 +40,7 @@ export default function ResultDisplay({
     quiz: Quiz
     result: Result
     score: number
-    resultType: 'SCORE_BASED' | 'TYPE_BASED'
+    resultType: 'SCORE_BASED' | 'TYPE_BASED' | 'BRANCHING'
     typeCode?: string
     compressedData: string
     recommendedQuizzes?: any[]
@@ -134,9 +134,11 @@ export default function ResultDisplay({
             <div className={styles.resultCard}>
                 <div className={styles.header}>
                     <h3 className={styles.quizTitle}>{quiz.title}</h3>
-                    <div className={styles.scoreDisplay}>
-                        {resultType === 'TYPE_BASED' ? `나의 타입: ${typeCode || 'N/A'}` : `나의 점수: ${score}점`}
-                    </div>
+                    {resultType !== 'BRANCHING' && (
+                        <div className={styles.scoreDisplay}>
+                            {resultType === 'TYPE_BASED' ? `나의 타입: ${typeCode || 'N/A'}` : `나의 점수: ${score}점`}
+                        </div>
+                    )}
                 </div>
 
                 {showPremiumLock ? (
