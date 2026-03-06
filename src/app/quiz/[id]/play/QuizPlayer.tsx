@@ -259,7 +259,9 @@ export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
                 )}
 
                 <div className={styles.contentAnimation} key={currentQuestion.id}>
-                    <h2 className={styles.questionText}>{formatContentJSX(currentQuestion.content)}</h2>
+                    <div className={styles.storyBox}>
+                        <h2 className={styles.questionText}>{formatContentJSX(currentQuestion.content)}</h2>
+                    </div>
 
                     <div className={styles.options}>
                         {currentQuestion.options.map((option) => (

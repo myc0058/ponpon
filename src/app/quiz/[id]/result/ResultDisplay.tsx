@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import QuizGrid from '@/components/QuizGrid'
 import styles from './result.module.css'
-import { Share2, Home, Lock, Link as LinkIcon, RotateCcw } from 'lucide-react'
+import { Share2, Home, Lock, Link as LinkIcon, RotateCcw, Sparkles, AlertCircle } from 'lucide-react'
 import { generateShortUrl } from '@/app/actions/shorten-url'
 import ShareDrawer from '@/components/ShareDrawer'
 import CoupangPartners from '@/components/CoupangPartners'
@@ -128,6 +128,8 @@ export default function ResultDisplay({
 
 
     const showPremiumLock = result.isPremium && !isPaid
+    const isTrueEnding = typeCode === 'res_true';
+    const isBranching = resultType === 'BRANCHING';
 
     return (
         <main className={styles.container}>
@@ -169,8 +171,27 @@ export default function ResultDisplay({
                             )}
 
                             <div className={styles.content}>
+                                {isTrueEnding && (
+                                    <div className={styles.trueEndingBadge}>
+                                        <Sparkles size={16} />
+                                        진실한 결말 (True Ending)
+                                    </div>
+                                )}
                                 <h1 className={styles.resultTitle}>{result.title}</h1>
                                 <p className={styles.resultDescription}>{formatContentJSX(result.description)}</p>
+
+                                {isBranching && !isTrueEnding && (
+                                    <div className={styles.badEndingGuidance}>
+                                        <div className={styles.guidanceTitle}>
+                                            <AlertCircle size={20} />
+                                            아직 진실에 도달하지 못했습니다
+                                        </div>
+                                        <p className={styles.guidanceText}>
+                                            이것은 꿈의 단면일 뿐입니다. <br />
+                                            다른 선택을 통해 진짜 현실로 돌아가는 길을 찾아보세요!
+                                        </p>
+                                    </div>
+                                )}
                             </div>
                         </div>
 
