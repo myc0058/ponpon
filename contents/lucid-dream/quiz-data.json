@@ -1,0 +1,368 @@
+{
+    "title": "루시드 드림: 깨어나지 못하는 꿈",
+    "description": "반복되는 기시감, 어색한 정적... 당신은 지금 꿈속에 있습니다. 현실로 돌아가기 위한 사투가 시작됩니다.",
+    "resultType": "BRANCHING",
+    "initialState": null,
+    "isFeatured": true,
+    "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/lucid-dream/cover.webp",
+    "questions": [
+        {
+            "id": "q1",
+            "text": "눈을 떴을 땐 익숙한 천장이 보입니다. 하지만 뭔가 이상합니다.\n공기가 너무 정적이고, 멀리서 들려야 할 아침의 소음이 전혀 소리 나지 않습니다.\n당신은 지금 이 상황이 현실인지 의심하기 시작합니다.",
+            "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/lucid-dream/q1.webp",
+            "order": 1,
+            "options": [
+                {
+                    "id": "q1_o1",
+                    "text": "벽에 걸린 시계를 확인한다 (리얼리티 체크)",
+                    "nextQuestionId": "q2",
+                    "targetResultId": null
+                },
+                {
+                    "id": "q1_o2",
+                    "text": "침대에서 일어나 창밖을 확인한다",
+                    "nextQuestionId": "q3",
+                    "targetResultId": null
+                }
+            ]
+        },
+        {
+            "id": "q2",
+            "text": "시계를 봅니다. 시계 바늘이 비정상적으로 빠르게 회전하고 있습니다.\n'아, 이건 꿈이구나.'\n당신은 자각했습니다. 이제 어떻게 하시겠습니까?",
+            "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/lucid-dream/q2.webp",
+            "order": 2,
+            "options": [
+                {
+                    "id": "q2_o1",
+                    "text": "눈을 세게 감았다 뜨며 강제로 깨어나려 노력한다",
+                    "targetResultId": "res_fake_wake"
+                },
+                {
+                    "id": "q2_o2",
+                    "text": "꿈이라는 것을 인정하고 방을 나가 탐색한다",
+                    "nextQuestionId": "q4"
+                }
+            ]
+        },
+        {
+            "id": "q3",
+            "text": "커튼을 젖힙니다. 창밖에는 평화로운 거리 대신 끝없는 안개만이 자욱합니다.\n이곳은 정상이 아닙니다. 그때, 등 뒤에서 누군가의 시선이 느껴집니다.",
+            "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/lucid-dream/q3.webp",
+            "order": 3,
+            "options": [
+                {
+                    "id": "q3_o1",
+                    "text": "즉시 뒤를 돌아본다",
+                    "nextQuestionId": "q5"
+                },
+                {
+                    "id": "q3_o2",
+                    "text": "창문으로 달려들어 뛰어내린다 (깨어나기 위한 도박)",
+                    "targetResultId": "res_gravity_failure"
+                }
+            ]
+        },
+        {
+            "id": "q4",
+            "text": "방을 나오자 끝도 없이 이어진 긴 복도가 나타납니다.\n복도 양옆으로는 수많은 문이 있고, 각 문 너머로 다른 사람들의 웃음소리가 들립니다.\n당신은 어느 쪽으로 가시겠습니까?",
+            "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/lucid-dream/q4.webp",
+            "order": 4,
+            "options": [
+                {
+                    "id": "q4_o1",
+                    "text": "가장 가까운 문을 열고 들어간다",
+                    "nextQuestionId": "q6"
+                },
+                {
+                    "id": "q4_o2",
+                    "text": "복도 끝에 보이는 유일한 노란 불빛을 향해 달린다",
+                    "nextQuestionId": "q7"
+                }
+            ]
+        },
+        {
+            "id": "q5",
+            "text": "뒤를 돌아보자, 무표정한 얼굴의 '당신 자신'이 서 있습니다.\n그는 당신에게 손을 내밀며 조용히 속삭입니다.\n'여기가 더 행복하잖아. 나가지 마.'",
+            "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/lucid-dream/q5.webp",
+            "order": 5,
+            "options": [
+                {
+                    "id": "q5_o1",
+                    "text": "그의 손을 뿌리치고 방 밖으로 도망친다",
+                    "nextQuestionId": "q4"
+                },
+                {
+                    "id": "q5_o2",
+                    "text": "그의 말이 맞을지도 모른다 생각하며 손을 잡는다",
+                    "targetResultId": "res_ego_dissolution"
+                }
+            ]
+        },
+        {
+            "id": "q6",
+            "text": "문을 열자 끝없이 넓은 도서관이 나타납니다.\n책장들은 천장조차 보이지 않을 정도로 높고, 모든 책의 제목이 '당신의 이름'으로 되어 있습니다.\n가운데 책상에는 오래된 일기장이 펼쳐져 있습니다.",
+            "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/lucid-dream/q6.webp",
+            "order": 6,
+            "options": [
+                {
+                    "id": "q6_o1",
+                    "text": "일기장의 내용을 읽어본다",
+                    "nextQuestionId": "q8"
+                },
+                {
+                    "id": "q6_o2",
+                    "text": "이곳은 함정이다. 즉시 도서관을 빠져나갈 출구를 찾는다",
+                    "nextQuestionId": "q9"
+                }
+            ]
+        },
+        {
+            "id": "q7",
+            "text": "노란 불빛을 향해 한참을 달린 끝에, 낡은 로비에 도착했습니다.\n벽면에는 수많은 시계들이 걸려 있고, 각각의 시각이 모두 다릅니다.\n그때 입구 쪽에서 누군가 들어오고 있습니다. 당신의 어머니입니다.",
+            "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/lucid-dream/q7.webp",
+            "order": 7,
+            "options": [
+                {
+                    "id": "q7_o1",
+                    "text": "어머니에게 달려가 도움을 요청한다",
+                    "nextQuestionId": "q10"
+                },
+                {
+                    "id": "q7_o2",
+                    "text": "그녀는 가짜다. 시계들 중 가장 정확해 보이는 것을 찾아 파괴한다",
+                    "nextQuestionId": "q11"
+                }
+            ]
+        },
+        {
+            "id": "q8",
+            "text": "일기장에는 당신이 살면서 저지른 모든 부끄러운 기억들이 상세히 적혀 있습니다.\n글자들이 갑자기 검은 연기가 되어 당신의 목을 조르기 시작합니다.\n죄책감이 당신을 짓누릅니다.",
+            "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/lucid-dream/q8.webp",
+            "order": 8,
+            "options": [
+                {
+                    "id": "q8_o1",
+                    "text": "잘못을 인정하고 용서를 구한다",
+                    "targetResultId": "res_library_dust"
+                },
+                {
+                    "id": "q8_o2",
+                    "text": "이것은 과거일 뿐이다! 일기장을 찢어버린다",
+                    "nextQuestionId": "q12"
+                }
+            ]
+        },
+        {
+            "id": "q9",
+            "text": "도서관 출구를 향해 뛰지만, 책장들이 살아난 듯 당신의 앞길을 막아섭니다.\n갑자기 바닥이 거대한 거울로 변하며 당신의 발을 잡아당깁니다.\n거울 속의 당신이 비릿한 미소를 짓고 있습니다.",
+            "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/lucid-dream/q9.webp",
+            "order": 9,
+            "options": [
+                {
+                    "id": "q9_o1",
+                    "text": "거울 속의 '나'를 공격한다",
+                    "targetResultId": "res_mirror_shatter"
+                },
+                {
+                    "id": "q9_o2",
+                    "text": "눈을 감고 이것이 실체가 없음을 명상한다",
+                    "nextQuestionId": "q13"
+                }
+            ]
+        },
+        {
+            "id": "q10",
+            "text": "어머니는 인자한 미소로 당신을 안아줍니다.\n따뜻한 온기... 하지만 그녀의 등에 닿은 당신의 손에 딱딱한 금속의 질감이 느껴집니다.\n그녀는 사람이 아닙니다.",
+            "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/lucid-dream/q10.webp",
+            "order": 10,
+            "options": [
+                {
+                    "id": "q10_o1",
+                    "text": "비명을 지르며 그녀를 밀쳐낸다",
+                    "nextQuestionId": "q14"
+                },
+                {
+                    "id": "q10_o2",
+                    "text": "그녀가 무엇이든 상관없다. 이 거짓된 평온을 선택한다",
+                    "targetResultId": "res_echo_room"
+                }
+            ]
+        },
+        {
+            "id": "q11",
+            "text": "가장 정확해 보이는 시계를 부수자, 모든 시계가 멈추고 로비가 어둠에 잠깁니다.\n어둠 속에서 수많은 시계 초침 소리가 당신을 향해 다가옵니다.\n시간이 당신을 집어삼키려 합니다.",
+            "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/lucid-dream/q11.webp",
+            "order": 11,
+            "options": [
+                {
+                    "id": "q11_o1",
+                    "text": "빛을 찾아 필사적으로 도망친다",
+                    "nextQuestionId": "q15"
+                },
+                {
+                    "id": "q11_o2",
+                    "text": "시간의 흐름에 몸을 맡긴다",
+                    "targetResultId": "res_clock_obsession"
+                }
+            ]
+        },
+        {
+            "id": "q12",
+            "text": "일기장을 찢어버리자, 도서관 전체가 흔들리며 책들이 무너져 내립니다.\n당신은 책더미에 깔려 숨이 막히는 고통을 느낍니다.\n이것은 꿈이 아니라 현실의 고통과 같습니다.",
+            "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/lucid-dream/q12.webp",
+            "order": 12,
+            "options": [
+                {
+                    "id": "q12_o1",
+                    "text": "고통을 이겨내고 탈출구를 찾는다",
+                    "nextQuestionId": "q15"
+                },
+                {
+                    "id": "q12_o2",
+                    "text": "고통에 굴복하고 의식을 놓는다",
+                    "targetResultId": "res_void_falling"
+                }
+            ]
+        },
+        {
+            "id": "q13",
+            "text": "눈을 감고 명상하자, 거울의 속박이 풀리고 당신은 낯선 숲 속에 서 있습니다.\n안개가 자욱하고, 나무들은 기괴하게 뒤틀려 있습니다.\n어디선가 알 수 없는 소리가 들려옵니다.",
+            "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/lucid-dream/q13.webp",
+            "order": 13,
+            "options": [
+                {
+                    "id": "q13_o1",
+                    "text": "소리가 나는 곳으로 향한다",
+                    "nextQuestionId": "q15"
+                },
+                {
+                    "id": "q13_o2",
+                    "text": "소리를 무시하고 숲을 벗어날 길을 찾는다",
+                    "targetResultId": "res_forest_lost"
+                }
+            ]
+        },
+        {
+            "id": "q14",
+            "text": "어머니를 밀쳐내자, 그녀의 얼굴이 기계적으로 변하며 섬뜩한 미소를 짓습니다.\n로비의 벽이 열리고, 당신은 수술대 위에 묶여 있는 자신을 발견합니다.\n차가운 메스가 당신의 심장을 향해 내려옵니다.",
+            "imageUrl": "https://ngpkpjqdwffgxocrakae.supabase.co/storage/v1/object/public/quiz-images/lucid-dream/q14.webp",
+            "order": 14,
+            "options": [
+                {
+                    "id": "q14_o1",
+                    "text": "필사적으로 몸부림쳐 탈출한다",
+                    "nextQuestionId": "q15"
+                },
+                {
+                    "id": "q14_o2",
+                    "text": "이것 또한 꿈이다. 고통을 받아들인다",
+                    "targetResultId": "res_surgery_nightmare"
+                }
+            ]
+        },
+        {
+            "id": "q15",
+            "text": "모든 위험을 헤치고 마침내 당신은 빛나는 문 앞에 섰습니다.\n문 너머에서는 현실의 소음이 희미하게 들려옵니다.\n이 문을 열면 모든 것이 끝날 것입니다.",
+            "imageUrl": "lucid-dream/q1.webp",
+            "order": 15,
+            "options": [
+                {
+                    "id": "q15_o1",
+                    "text": "문을 열고 현실로 돌아간다",
+                    "targetResultId": "res_true"
+                },
+                {
+                    "id": "q15_o2",
+                    "text": "혹시 이것도 함정일까? 문을 열지 않고 다른 방법을 찾는다",
+                    "targetResultId": "res_fake_wake"
+                }
+            ]
+        }
+    ],
+    "results": [
+        {
+            "id": "res_true",
+            "typeCode": "res_true",
+            "title": "✨ 현실의 침대 위에서 눈을 뜨다",
+            "description": "거친 숨을 몰아쉬며 당신은 눈을 떴습니다.\n창밖에서는 새들의 지저귐과 차들의 소음이 들려옵니다.\n그 어느 때보다 소중한 일상이 당신을 맞이합니다.\n당신은 꿈의 미로를 뚫고 진정한 현실을 쟁취했습니다.",
+            "imageUrl": "lucid-dream/res_true.webp"
+        },
+        {
+            "id": "res_fake_wake",
+            "typeCode": "res_fake_wake",
+            "title": "🌀 거짓 각성 (False Awakening)",
+            "description": "눈을 뜨자 다시 당신의 방입니다.\n안도의 한숨을 내쉬며 아침을 준비하려 시계를 보지만, 시계에는 숫자가 존재하지 않습니다.\n당신은 꿈속의 꿈으로 더 깊이 침몰했습니다.\n영원히 반복되는 아침의 고리에 갇혀버렸습니다.",
+            "imageUrl": "lucid-dream/q1.webp"
+        },
+        {
+            "id": "res_gravity_failure",
+            "typeCode": "res_gravity_failure",
+            "title": "🪂 중력의 배신",
+            "description": "꿈이라 확신하며 창밖으로 몸을 던졌습니다.\n하지만 추락하는 순간 몸에 느껴지는 통증은 너무나 생생했습니다.\n당신은 꿈속에서조차 죽음을 피할 수 없었습니다.\n꿈속의 죽음은 정신적인 분쇄를 의미하며, 당신의 의식은 그대로 어둠 속에 흩어졌습니다.",
+            "imageUrl": "lucid-dream/res_gravity_failure.webp"
+        },
+        {
+            "id": "res_ego_dissolution",
+            "typeCode": "res_ego_dissolution",
+            "title": "👤 자아의 소멸",
+            "description": "또 다른 자신의 손을 잡는 순간, 당신의 기억이 빠르게 희미해집니다.\n이제 누가 진짜 '당신'인지 알 수 없게 되었습니다.\n당신은 꿈의 한 조각이 되어, 이 끝없는 루프를 지키는 파수꾼으로 남게 되었습니다.",
+            "imageUrl": "lucid-dream/q5.webp"
+        },
+        {
+            "id": "res_corridor_trap",
+            "typeCode": "res_corridor_trap",
+            "title": "🖼️ 멈춰버린 시간의 방",
+            "description": "문을 열고 들어간 곳은 당신의 유년 시절 방이었습니다.\n그리운 냄새에 취해 잠시 눈을 붙인 당신은 깨닫지 못했습니다.\n이곳에 머무는 시간이 길어질수록 현실의 육체는 점점 식어간다는 것을.\n당신은 과거의 기억 속에 영원히 박제되었습니다.",
+            "imageUrl": "lucid-dream/q1.webp"
+        },
+        {
+            "id": "res_library_dust",
+            "typeCode": "res_library_dust",
+            "title": "📚 잊혀진 기록의 먼지",
+            "description": "당신의 잘못을 인정하며 고개를 숙인 순간, 도서관의 모든 책들이 가루가 되어 당신을 덮었습니다.\n당신은 더 이상 존재하지 않는 과거의 잔해 밑에 묻혔습니다.\n누구도 기억하지 않는 수만 권의 책들 사이에서 당신은 하나의 문장으로 남았습니다.",
+            "imageUrl": "lucid-dream/q1.webp"
+        },
+        {
+            "id": "res_mirror_shatter",
+            "typeCode": "res_mirror_shatter",
+            "title": "🪞 깨진 거울의 파편",
+            "description": "거울 속의 당신을 공격하자, 온 세상이 유리처럼 조각나기 시작했습니다.\n하지만 조각난 것은 세상이 아니라 당신의 정신이었습니다.\n수천 개의 파편 속에 비친 당신은 서로 다른 표정으로 울부짖고 있습니다.\n당신은 결코 다시 하나가 될 수 없습니다.",
+            "imageUrl": "lucid-dream/q1.webp"
+        },
+        {
+            "id": "res_echo_room",
+            "typeCode": "res_echo_room",
+            "title": "🎭 공허한 메아리의 방",
+            "description": "거짓된 온기를 선택한 당신은 무한히 반복되는 어머니의 자장가를 듣게 되었습니다.\n그녀의 등 뒤에 숨겨진 차가운 기계 부품조차 당신은 더 이상 보이지 않습니다.\n당신은 가짜 행복이라는 감옥 속에 스스로를 투옥했습니다.",
+            "imageUrl": "lucid-dream/q1.webp"
+        },
+        {
+            "id": "res_clock_obsession",
+            "typeCode": "res_clock_obsession",
+            "title": "⏰ 시간의 노예",
+            "description": "시간의 흐름에 몸을 맡기자, 당신의 몸은 수많은 시계 부품으로 변해버렸습니다.\n이제 당신은 영원히 멈추지 않는 시간의 톱니바퀴가 되어, 끝없이 반복되는 꿈속에서 시간을 세고 있습니다.\n현실로 돌아갈 기회는 영원히 사라졌습니다.",
+            "imageUrl": "lucid-dream/q2.webp"
+        },
+        {
+            "id": "res_forest_lost",
+            "typeCode": "res_forest_lost",
+            "title": "🌲 미로의 숲에 갇히다",
+            "description": "소리를 무시하고 숲을 벗어나려 했지만, 숲은 끝없이 이어집니다.\n나무들은 당신의 길을 막고, 안개는 더욱 짙어져 방향 감각을 잃게 합니다.\n당신은 영원히 이 꿈의 숲을 헤매게 될 것입니다.",
+            "imageUrl": "lucid-dream/q1.webp"
+        },
+        {
+            "id": "res_surgery_nightmare",
+            "typeCode": "res_surgery_nightmare",
+            "title": "🔪 악몽의 수술대",
+            "description": "고통을 받아들이자, 메스는 당신의 심장을 정확히 관통했습니다.\n하지만 죽음은 오지 않고, 당신은 끝없는 고통 속에서 깨어납니다.\n반복되는 수술과 고통, 당신은 꿈속에서 영원히 해부되는 존재가 되었습니다.",
+            "imageUrl": "lucid-dream/q1.webp"
+        },
+        {
+            "id": "res_void_falling",
+            "typeCode": "res_void_falling",
+            "title": "🌌 끝없는 심연으로 추락",
+            "description": "고통에 굴복하자, 당신의 몸은 무한한 심연 속으로 떨어지기 시작했습니다.\n빛도 소리도 없는 어둠 속에서 당신은 존재의 의미를 잃어갑니다.\n영원히 떨어지는 꿈, 당신은 더 이상 현실로 돌아갈 수 없습니다.",
+            "imageUrl": "lucid-dream/res_gravity_failure.webp"
+        }
+    ]
+}

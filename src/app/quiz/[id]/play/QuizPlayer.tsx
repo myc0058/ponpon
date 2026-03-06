@@ -9,7 +9,7 @@ import { getBustedImageUrl } from '@/lib/image-utils'
 import { formatContentJSX } from '@/lib/string-utils'
 import ReportModal from '@/components/ReportModal'
 import AdPopup from '@/components/AdPopup'
-import { Flag, Heart, Briefcase, Search } from 'lucide-react'
+import { Flag } from 'lucide-react'
 
 
 type Option = {
@@ -55,15 +55,6 @@ export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
     const [isPopupOpen, setIsPopupOpen] = useState(false)
     const [pendingAnswer, setPendingAnswer] = useState<Option | null>(null)
 
-    // RPG System State
-    const [playerState, setPlayerState] = useState<any>(() => {
-        // Parse initial state if exists
-        try {
-            return quiz.initialState || { hp: 100, inventory: [] }
-        } catch (e) {
-            return { hp: 100, inventory: [] }
-        }
-    })
 
 
 
@@ -138,31 +129,6 @@ export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
         }
 
         if (quiz.resultType === 'BRANCHING') {
-            // Apply RPG State Changes
-            if (option.stateChanges) {
-                const changes = option.stateChanges as any
-                setPlayerState((prev: any) => {
-                    const newState = { ...prev }
-                    if (changes.hp !== undefined) newState.hp = Math.max(0, (newState.hp || 0) + changes.hp)
-                    if (changes.items && Array.isArray(changes.items)) {
-                        newState.inventory = Array.from(new Set([...(newState.inventory || []), ...changes.items]))
-                    }
-                    return newState
-                })
-            }
-
-            // Check if player is dead
-            if (playerState.hp <= 0 && quiz.results.length > 0) {
-                // Find a "death" or failure result if possible, or just the first result as fallback
-                const deathResult = quiz.results.find(r => r.id.includes('death') || r.id.includes('bad')) || quiz.results[0]
-                sessionStorage.setItem(`quiz_result_${quiz.id}`, JSON.stringify({
-                    type: 'BRANCHING',
-                    resultId: deathResult.id
-                }))
-                router.push(`/quiz/${quiz.id}/analyzing`)
-                return
-            }
-
             if (option.targetResultId) {
                 sessionStorage.setItem(`quiz_result_${quiz.id}`, JSON.stringify({
                     type: 'BRANCHING',
@@ -172,37 +138,24 @@ export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
                 return
             }
 
-            // check conditions for branching
-            if (option.conditions && Array.isArray(option.conditions)) {
-                for (const cond of option.conditions) {
-                    let met = true
-                    if (cond.requiredItems && Array.isArray(cond.requiredItems)) {
-                        if (!cond.requiredItems.every((item: string) => playerState.inventory?.includes(item))) {
-                            met = false
-                        }
-                    }
-                    if (cond.minHp !== undefined && playerState.hp < cond.minHp) {
-                        met = false
-                    }
-
-                    if (met && (cond.nextQuestionId || cond.targetResultId)) {
-                        if (cond.targetResultId) {
-                            sessionStorage.setItem(`quiz_result_${quiz.id}`, JSON.stringify({
-                                type: 'BRANCHING',
-                                resultId: cond.targetResultId
-                            }))
-                            router.push(`/quiz/${quiz.id}/analyzing`)
-                            return
-                        }
-                        if (cond.nextQuestionId) {
-                            const nextIdx = quiz.questions.findIndex(q => q.id === cond.nextQuestionId)
-                            if (nextIdx !== -1) {
-                                setCurrentQuestionIndex(nextIdx)
-                                return
-                            }
-                        }
+            if (option.nextQuestionId) {
+                const nextQuestionIndex = quiz.questions.findIndex(q => q.id === option.nextQuestionId)
+                if (nextQuestionIndex !== -1) {
+                    setCurrentQuestionIndex(nextQuestionIndex)
+                } else {
+                    // Fallback to next question if ID not found
+                    if (!isLastQuestion) {
+                        setCurrentQuestionIndex(nextIndex)
+                    } else {
+                        // End of quiz fallback
+                        sessionStorage.setItem(`quiz_result_${quiz.id}`, JSON.stringify({
+                            type: 'BRANCHING',
+                            resultId: quiz.results[0]?.id || 'error'
+                        }))
+                        router.push(`/quiz/${quiz.id}/analyzing`)
                     }
                 }
+                return
             }
 
             if (option.nextQuestionId) {
@@ -291,55 +244,6 @@ export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
                     </div>
                 </div>
 
-                {quiz.resultType === 'BRANCHING' && (
-                    <div className={styles.statusOverlay}>
-                        <div className={styles.statusItem}>
-                            <div className={styles.statusLabel}>
-                                <Heart size={14} className={styles.statusIcon} />
-                                <span>HP</span>
-                            </div>
-                            <div className={styles.hpBarBackground}>
-                                <div
-                                    className={styles.hpBarFill}
-                                    style={{ width: `${playerState.hp || 0}%` }}
-                                />
-                            </div>
-                        </div>
-
-                        <div className={styles.statusDivider} />
-
-                        <div className={styles.statusItem}>
-                            <div className={styles.statusLabel}>
-                                <Briefcase size={14} className={styles.statusIcon} />
-                                <span>소지품</span>
-                            </div>
-                            <div className={styles.inventoryList}>
-                                {playerState.inventory && playerState.inventory.length > 0 ? (
-                                    playerState.inventory.map((item: string, idx: number) => (
-                                        <span key={idx} className={styles.inventoryBadge}>{item}</span>
-                                    ))
-                                ) : (
-                                    <span className={styles.emptyInventory}>비어있음</span>
-                                )}
-                            </div>
-                        </div>
-
-                        {playerState.evidence !== undefined && (
-                            <>
-                                <div className={styles.statusDivider} />
-                                <div className={styles.statusItem}>
-                                    <div className={styles.statusLabel}>
-                                        <Search size={14} className={styles.statusIcon} />
-                                        <span>단서</span>
-                                    </div>
-                                    <div className={styles.evidenceBadge}>
-                                        {playerState.evidence}개
-                                    </div>
-                                </div>
-                            </>
-                        )}
-                    </div>
-                )}
 
                 {currentQuestion.imageUrl && (
                     <div className={styles.imageWrapper}>
