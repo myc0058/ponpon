@@ -3,7 +3,27 @@
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import styles from './analyzing.module.css'
-import CoupangPartners from '@/components/CoupangPartners'
+
+// 일반 퀴즈용 메시지
+const GENERAL_MESSAGES = [
+    '데이터를 정밀 분석 중...',
+    '당신의 답변을 처리하고 있습니다...',
+    '결과를 취합하는 중...',
+]
+
+// 게임북(BRANCHING)용 메시지 — 셜록 홈즈 테마지만 범용적으로도 쓸 수 있음
+const GAMEBOOK_MESSAGES = [
+    '이야기의 결말이 펼쳐지고 있습니다...',
+    '당신의 선택이 운명을 결정짓고 있습니다...',
+    '마지막 단서들이 맞춰지고 있습니다...',
+    '진실의 문이 열리고 있습니다...',
+    '이제 모든 것이 밝혀질 시간입니다...',
+]
+
+// 게임북 완료 메시지
+const GAMEBOOK_DONE_MESSAGES: Record<string, string> = {
+    default: '당신의 이야기가 완성되었습니다.',
+}
 
 export default function AnalyzingPage({ params }: { params: Promise<{ id: string }> }) {
     const [progress, setProgress] = useState(0)
@@ -11,15 +31,11 @@ export default function AnalyzingPage({ params }: { params: Promise<{ id: string
     const [finalUrl, setFinalUrl] = useState('')
     const router = useRouter()
     const [quizId, setQuizId] = useState<string>('')
-    const [coupangIframeSrc, setCoupangIframeSrc] = useState<string>('')
+    const [isGamebook, setIsGamebook] = useState(false)
+    const [messageIndex, setMessageIndex] = useState(0)
 
     useEffect(() => {
         params.then(p => setQuizId(p.id))
-
-        // Retrieve coupang iframe src from potential location or default
-        // In a real app, this might come from CMS or environment
-        const savedIframeSrc = localStorage.getItem('coupang_iframe_src') || '';
-        setCoupangIframeSrc(savedIframeSrc);
     }, [params])
 
     useEffect(() => {
@@ -35,6 +51,11 @@ export default function AnalyzingPage({ params }: { params: Promise<{ id: string
         try {
             const resultData = JSON.parse(storedResult)
 
+            // 게임북 여부 감지
+            if (resultData.type === 'BRANCHING') {
+                setIsGamebook(true)
+            }
+
             // Construct Final URL
             if (resultData.type === 'SCORE') {
                 setFinalUrl(`/quiz/${quizId}/result?score=${resultData.score}`)
@@ -43,12 +64,11 @@ export default function AnalyzingPage({ params }: { params: Promise<{ id: string
             } else if (resultData.type === 'BRANCHING') {
                 setFinalUrl(`/quiz/${quizId}/result?resultId=${resultData.resultId}`)
             } else {
-                // Invalid data
                 router.replace(`/quiz/${quizId}`)
                 return
             }
 
-            // Start animation
+            // Progress animation
             const timer = setInterval(() => {
                 setProgress((prev) => {
                     if (prev >= 100) {
@@ -58,7 +78,7 @@ export default function AnalyzingPage({ params }: { params: Promise<{ id: string
                     }
                     return Math.min(100, prev + 1)
                 })
-            }, 30) // 3 seconds approx (100 * 30ms = 3000ms)
+            }, 30)
 
             return () => clearInterval(timer)
 
@@ -69,69 +89,52 @@ export default function AnalyzingPage({ params }: { params: Promise<{ id: string
 
     }, [quizId, router])
 
+    // 메시지 순환 (게임북일 때만)
+    useEffect(() => {
+        if (!isGamebook || showResultButton) return
+        const msgs = GAMEBOOK_MESSAGES
+        const interval = setInterval(() => {
+            setMessageIndex(i => (i + 1) % msgs.length)
+        }, 1800)
+        return () => clearInterval(interval)
+    }, [isGamebook, showResultButton])
+
     if (!quizId) return null
+
+    const loadingMessage = isGamebook
+        ? GAMEBOOK_MESSAGES[messageIndex]
+        : GENERAL_MESSAGES[0]
+
+    const doneMessage = isGamebook
+        ? GAMEBOOK_DONE_MESSAGES.default
+        : '분석이 완료되었습니다!'
 
     return (
         <main className={styles.container}>
-            {/* 구글 애드센스 - 분석 상단 (숨김 처리) */}
-            {/* 
-            <div style={{ marginBottom: '1.5rem', minHeight: '60px', background: 'rgba(255,255,255,0.03)', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', color: '#666', width: '100%' }}>
-                <div style={{ textAlign: 'center', width: '100%' }}>
-                    <p style={{ margin: '5px 0' }}>구글 애드센스 (상단 배너)</p>
-                    <ins className="adsbygoogle"
-                        style={{ display: 'block' }}
-                        data-ad-client="ca-pub-9702335674400881"
-                        data-ad-slot="ANALYZING_TOP_SLOT"
-                        data-ad-format="horizontal"
-                        data-full-width-responsive="true"></ins>
-                </div>
-            </div>
-            */}
-
-            <div className={styles.questionCard}>
-                <h2 className={styles.calculatingTitle}>
-                    {showResultButton ? '분석이 완료되었습니다!' : '데이터를 정밀 분석 중...'}
+            <div className={`${styles.questionCard} ${isGamebook ? styles.gamebookCard : ''}`}>
+                <h2 className={`${styles.calculatingTitle} ${isGamebook ? styles.gamebookTitle : ''}`}>
+                    {showResultButton ? doneMessage : loadingMessage}
                 </h2>
 
                 <div className={styles.calculatingProgress}>
                     <div
-                        className={styles.calculatingBar}
+                        className={`${styles.calculatingBar} ${isGamebook ? styles.gamebookBar : ''}`}
                         style={{ width: `${progress}%` }}
                     />
                 </div>
 
                 <p className={styles.calculatingText}>{Math.floor(progress)}% 완료</p>
 
-                {/* 하단 광고 샌드위치 영역 (숨김 처리) */}
                 <div style={{ marginTop: '2.5rem', width: '100%', display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-
-                    {/* 샌드위치 1: 쿠팡 파트너스 (버튼 위) - 숨김 */}
-                    {/* <CoupangPartners iframeSrc={coupangIframeSrc} /> */}
-
                     {showResultButton && (
                         <button
-                            className={styles.resultButton}
+                            className={`${styles.resultButton} ${isGamebook ? styles.gamebookButton : ''}`}
                             onClick={() => router.push(finalUrl)}
                             style={{ margin: '0' }}
                         >
-                            결과 확인하기
+                            {isGamebook ? '결말 확인하기 →' : '결과 확인하기'}
                         </button>
                     )}
-
-                    {/* 샌드위치 2: 구글 애드센스 (버튼 아래) - 숨김 */}
-                    {/* 
-                    <div style={{ minHeight: '100px', background: 'rgba(255,255,255,0.03)', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', color: '#666' }}>
-                        <div style={{ textAlign: 'center', width: '100%' }}>
-                            <p style={{ margin: '5px 0' }}>구글 애드센스 (버튼 하단)</p>
-                            <ins className="adsbygoogle"
-                                style={{ display: 'block' }}
-                                data-ad-client="ca-pub-9702335674400881"
-                                data-ad-slot="ANALYZING_BOTTOM_SLOT"
-                                data-ad-format="auto"
-                                data-full-width-responsive="true"></ins>
-                        </div>
-                    </div>
-                    */}
                 </div>
             </div>
         </main>
