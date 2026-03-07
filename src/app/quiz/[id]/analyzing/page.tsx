@@ -62,7 +62,8 @@ export default function AnalyzingPage({ params }: { params: Promise<{ id: string
             } else if (resultData.type === 'TYPE') {
                 setFinalUrl(`/quiz/${quizId}/result?type=${resultData.resultType}`)
             } else if (resultData.type === 'BRANCHING') {
-                setFinalUrl(`/quiz/${quizId}/result?resultId=${resultData.resultId}`)
+                const choiceParam = resultData.lastChoice ? `&lc=${encodeURIComponent(resultData.lastChoice)}` : ''
+                setFinalUrl(`/quiz/${quizId}/result?resultId=${resultData.resultId}${choiceParam}`)
             } else {
                 router.replace(`/quiz/${quizId}`)
                 return

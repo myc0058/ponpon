@@ -121,10 +121,10 @@ export default async function QuizResultPage({
     searchParams
 }: {
     params: Promise<{ id: string }>
-    searchParams: Promise<{ score?: string; type?: string; o?: string; resultId?: string }>
+    searchParams: Promise<{ score?: string; type?: string; o?: string; resultId?: string; lc?: string }>
 }) {
     const { id } = await params
-    let { score: scoreParam, type: typeParam, o: compressedData, resultId } = await searchParams
+    let { score: scoreParam, type: typeParam, o: compressedData, resultId, lc } = await searchParams
 
     let quiz = null
     let result = null
@@ -211,6 +211,7 @@ export default async function QuizResultPage({
             typeCode={finalTypeParam}
             compressedData={resultToCompress}
             recommendedQuizzes={recommendedQuizzes}
+            lastChoice={lc}
         />
     )
 }

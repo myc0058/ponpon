@@ -35,7 +35,8 @@ export default function ResultDisplay({
     resultType,
     typeCode,
     compressedData,
-    recommendedQuizzes = []
+    recommendedQuizzes = [],
+    lastChoice
 }: {
     quiz: Quiz
     result: Result
@@ -44,6 +45,7 @@ export default function ResultDisplay({
     typeCode?: string
     compressedData: string
     recommendedQuizzes?: any[]
+    lastChoice?: string
 }) {
     const [isPaid, setIsPaid] = useState(false)
     const [isPaymentLoading, setIsPaymentLoading] = useState(false)
@@ -178,6 +180,12 @@ export default function ResultDisplay({
                                     </div>
                                 )}
                                 <h1 className={styles.resultTitle}>{result.title}</h1>
+                                {lastChoice && (
+                                    <div className={styles.lastChoiceCard}>
+                                        <span className={styles.choiceLabel}>나의 마지막 선택:</span>
+                                        <span className={styles.choiceValue}>"{lastChoice}"</span>
+                                    </div>
+                                )}
                                 <p className={styles.resultDescription}>{formatContentJSX(result.description)}</p>
 
                                 {isBranching && !isTrueEnding && (

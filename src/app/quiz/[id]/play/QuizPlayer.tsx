@@ -132,7 +132,8 @@ export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
             if (option.targetResultId) {
                 sessionStorage.setItem(`quiz_result_${quiz.id}`, JSON.stringify({
                     type: 'BRANCHING',
-                    resultId: option.targetResultId
+                    resultId: option.targetResultId,
+                    lastChoice: option.content
                 }))
                 router.push(`/quiz/${quiz.id}/analyzing`)
                 return
@@ -150,7 +151,8 @@ export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
                         // End of quiz fallback
                         sessionStorage.setItem(`quiz_result_${quiz.id}`, JSON.stringify({
                             type: 'BRANCHING',
-                            resultId: quiz.results[0]?.id || 'error'
+                            resultId: quiz.results[0]?.id || 'error',
+                            lastChoice: option.content
                         }))
                         router.push(`/quiz/${quiz.id}/analyzing`)
                     }
@@ -184,7 +186,8 @@ export default function QuizPlayer({ quiz }: { quiz: Quiz }) {
             } else {
                 sessionStorage.setItem(`quiz_result_${quiz.id}`, JSON.stringify({
                     type: 'BRANCHING',
-                    resultId: quiz.results[0]?.id || 'error'
+                    resultId: quiz.results[0]?.id || 'error',
+                    lastChoice: option.content
                 }))
                 router.push(`/quiz/${quiz.id}/analyzing`)
             }
